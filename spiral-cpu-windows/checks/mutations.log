@@ -1,0 +1,34 @@
+branch head bc2c48d07db54fdb4049e06bd34f35091655b5f3; the new tests come from it
+=== branch: 2 passed in 5.51s [7 s]
+    expected: both pass
+=== branch without downsample_factor in _WORKER_SETTINGS: 1 failed, 1 passed in 5.74s [7 s]
+    failed: tests/test_cc_labels.py::test_spawned_slab_workers_get_the_settings
+    E       AssertionError: assert {b'h:0': [], ...:48': [], ...} == {b'h:0': [[[0...], ...]], ...}
+    expected: the spawn test fails
+=== branch without dust_threshold in _WORKER_SETTINGS: 1 failed, 1 passed in 5.45s [6 s]
+    failed: tests/test_cc_labels.py::test_spawned_slab_workers_get_the_settings
+    E       AssertionError: assert {b'h:0': [], ...], ...]], ...} == {b'h:0': [[[0...], ...]], ...}
+    expected: the spawn test fails
+=== branch without max_area_threshold in _WORKER_SETTINGS: 1 failed, 1 passed in 6.17s [7 s]
+    failed: tests/test_cc_labels.py::test_spawned_slab_workers_get_the_settings
+    E       AssertionError: assert {b'h:0': [[[0...], ...]], ...} == {b'h:0': [[[0...], ...]], ...}
+    expected: the spawn test fails
+=== branch without path_mode in _WORKER_SETTINGS: 1 failed, 1 passed in 5.88s [7 s]
+    failed: tests/test_cc_labels.py::test_spawned_slab_workers_get_the_settings
+    E       AssertionError: assert {b'h:0': [[[0...], ...]], ...} == {b'h:0': [[[0...], ...]], ...}
+    expected: the spawn test fails
+=== main 97fb933: 2 failed in 0.37s [1 s]
+    failed: tests/test_cc_labels.py::test_spawned_slab_workers_get_the_settings
+    failed: tests/test_extract_surface_tracks.py::test_cpu_options_on_every_os
+    E       AttributeError: <module 'extract_surface_tracks' from 'C:\\Users\\me\\Dev\\vesuvius\\outils\\scratch\\vague23\\spirale\\tmp\\mut\\main\\spiral-fitting\\extract_surface_tracks.py'> has no attribute 'sys'
+    expected: both fail
+=== main with the extract_surface_tracks.py of #2520: 2 failed in 1.41s [2 s]
+    failed: tests/test_cc_labels.py::test_spawned_slab_workers_get_the_settings
+    failed: tests/test_extract_surface_tracks.py::test_cpu_options_on_every_os
+    E           ValueError: cannot find context for 'fork'
+    expected: both fail
+=== first commit 5562cd85c only: 1 failed, 1 passed in 5.57s [6 s]
+    failed: tests/test_extract_surface_tracks.py::test_cpu_options_on_every_os
+    E           AssertionError: assert 8 == 1
+    expected: test_cpu_options_on_every_os fails (Windows default still 8)
+FIN

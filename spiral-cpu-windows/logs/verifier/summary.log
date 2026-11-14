@@ -1,0 +1,13 @@
+Verification run of 2026-11-14 12:41, Python 3.14.10.
+Machine: 12th Gen Intel(R) Core(TM) i5-12450H, 12 logical processors, 15.7 GB RAM, Windows 11 (10.0.26300), no NVIDIA GPU (no nvidia-smi).
+Data: PHerc0332 surface_m7 prediction, level 0, z 4032 to 4096, local copy of the published chunks. Before: main 97fb9336c8898be27e78eff8cd23ce5e7185ec0a; after: branch bc2c48d07db54fdb4049e06bd34f35091655b5f3; #2520: b4e62efcaaea038a49c400243f8d61c36d89fd5a. Code extracted from these commits with git archive.
+Free memory at the start: 5.3 GB.
+1. main, README command: stops with NameError: name 'sys' is not defined (expected).
+2. main with #2520, README command: refused with "--slab-workers > 1 needs Linux (forked workers)" (expected).
+3. main, default settings: not finished after 120 s, stopped at vertical y-stride slabs 36/42; 315 processes started, CPU time 418 s (expected: not finished).
+4. main, --kimimaro-parallel 1: finished in 22.2 s, 100 keys (the reference for 5 and 6).
+5. branch, default settings: finished in 20.9 s; same 100 keys, byte for byte, as 4 (1983 tracks).
+6. branch, README command: finished in 21.1 s, 15 processes, peak committed memory 3.9 GB; same 100 keys, byte for byte, as 4.
+7. branch, tests: 36 passed, 6 skipped in 19.32s.
+Total time of the verification: 216 s.
+Result: everything as expected.

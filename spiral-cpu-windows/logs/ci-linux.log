@@ -1,0 +1,954 @@
+ubuntu-latest	Set up job	2026-11-14T10:46:53.4223004Z Current runner version: '2.338.2'
+ubuntu-latest	Set up job	2026-11-14T10:46:53.4240567Z ##[group]Runner Image Provisioner
+ubuntu-latest	Set up job	2026-11-14T10:46:53.4241404Z Hosted Compute Agent
+ubuntu-latest	Set up job	2026-11-14T10:46:53.4241757Z Version: 20261103.629
+ubuntu-latest	Set up job	2026-11-14T10:46:53.4242198Z Commit: 15dbd9ccb5dbf34fae002b6ed1a2670f52df37bc
+ubuntu-latest	Set up job	2026-11-14T10:46:53.4242677Z Build Date: 2026-11-03T17:26:59Z
+ubuntu-latest	Set up job	2026-11-14T10:46:53.4243355Z Worker ID: {e7c9a620-8a73-4cb1-a5ac-4117d51794a2}
+ubuntu-latest	Set up job	2026-11-14T10:46:53.4243792Z Region: centralus
+ubuntu-latest	Set up job	2026-11-14T10:46:53.4244133Z Cloud: Azure
+ubuntu-latest	Set up job	2026-11-14T10:46:53.4244498Z ##[endgroup]
+ubuntu-latest	Set up job	2026-11-14T10:46:53.4245343Z ##[group]Operating System
+ubuntu-latest	Set up job	2026-11-14T10:46:53.4245767Z Ubuntu
+ubuntu-latest	Set up job	2026-11-14T10:46:53.4246097Z 26.04.1
+ubuntu-latest	Set up job	2026-11-14T10:46:53.4246407Z LTS
+ubuntu-latest	Set up job	2026-11-14T10:46:53.4246758Z ##[endgroup]
+ubuntu-latest	Set up job	2026-11-14T10:46:53.4247123Z ##[group]Runner Image
+ubuntu-latest	Set up job	2026-11-14T10:46:53.4247471Z Image: ubuntu-26.04
+ubuntu-latest	Set up job	2026-11-14T10:46:53.4247857Z Version: 20261111.196.1
+ubuntu-latest	Set up job	2026-11-14T10:46:53.4248479Z Included Software: https://github.com/actions/runner-images/blob/ubuntu26/20261111.196/images/ubuntu/Ubuntu2604-Readme.md
+ubuntu-latest	Set up job	2026-11-14T10:46:53.4249577Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu26%2F20261111.196
+ubuntu-latest	Set up job	2026-11-14T10:46:53.4250137Z ##[endgroup]
+ubuntu-latest	Set up job	2026-11-14T10:46:53.4250856Z ##[group]GITHUB_TOKEN Permissions
+ubuntu-latest	Set up job	2026-11-14T10:46:53.4252410Z Contents: read
+ubuntu-latest	Set up job	2026-11-14T10:46:53.4252836Z Metadata: read
+ubuntu-latest	Set up job	2026-11-14T10:46:53.4253214Z ##[endgroup]
+ubuntu-latest	Set up job	2026-11-14T10:46:53.4254593Z Secret source: Actions
+ubuntu-latest	Set up job	2026-11-14T10:46:53.4255135Z Cache mode: write
+ubuntu-latest	Set up job	2026-11-14T10:46:53.4255572Z Prepare workflow directory
+ubuntu-latest	Set up job	2026-11-14T10:46:53.4595647Z Prepare all required actions
+ubuntu-latest	Set up job	2026-11-14T10:46:53.4628491Z Getting action download info
+ubuntu-latest	Set up job	2026-11-14T10:46:53.6974586Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+ubuntu-latest	Set up job	2026-11-14T10:46:53.7933822Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+ubuntu-latest	Set up job	2026-11-14T10:46:53.8919279Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+ubuntu-latest	Set up job	2026-11-14T10:46:54.0291183Z Complete job name: ubuntu-latest
+ubuntu-latest	Check out the check scripts	2026-11-14T10:46:54.0819790Z ##[group]Run actions/checkout@v4
+ubuntu-latest	Check out the check scripts	2026-11-14T10:46:54.0820249Z with:
+ubuntu-latest	Check out the check scripts	2026-11-14T10:46:54.0820490Z   path: checks
+ubuntu-latest	Check out the check scripts	2026-11-14T10:46:54.0820765Z   repository: Cmssmc-code/villa-pr-checks
+ubuntu-latest	Check out the check scripts	2026-11-14T10:46:54.0823115Z   token: ***
+ubuntu-latest	Check out the check scripts	2026-11-14T10:46:54.0823352Z   ssh-strict: true
+ubuntu-latest	Check out the check scripts	2026-11-14T10:46:54.0823595Z   ssh-user: git
+ubuntu-latest	Check out the check scripts	2026-11-14T10:46:54.0823851Z   persist-credentials: true
+ubuntu-latest	Check out the check scripts	2026-11-14T10:46:54.0824129Z   clean: true
+ubuntu-latest	Check out the check scripts	2026-11-14T10:46:54.0824388Z   sparse-checkout-cone-mode: true
+ubuntu-latest	Check out the check scripts	2026-11-14T10:46:54.0824683Z   fetch-depth: 1
+ubuntu-latest	Check out the check scripts	2026-11-14T10:46:54.0824932Z   fetch-tags: false
+ubuntu-latest	Check out the check scripts	2026-11-14T10:46:54.0825183Z   show-progress: true
+ubuntu-latest	Check out the check scripts	2026-11-14T10:46:54.0825436Z   lfs: false
+ubuntu-latest	Check out the check scripts	2026-11-14T10:46:54.0825670Z   submodules: false
+ubuntu-latest	Check out the check scripts	2026-11-14T10:46:54.0825929Z   set-safe-directory: true
+ubuntu-latest	Check out the check scripts	2026-11-14T10:46:54.0826215Z   allow-unsafe-pr-checkout: false
+ubuntu-latest	Check out the check scripts	2026-11-14T10:46:54.0826579Z env:
+ubuntu-latest	Check out the check scripts	2026-11-14T10:46:54.0826861Z   MAIN_REPO: https://github.com/ScrollPrize/villa.git
+ubuntu-latest	Check out the check scripts	2026-11-14T10:46:54.0827273Z   MAIN_SHA: 97fb9336c8898be27e78eff8cd23ce5e7185ec0a
+ubuntu-latest	Check out the check scripts	2026-11-14T10:46:54.0827686Z   BRANCH_REPO: https://github.com/Cmssmc-code/villa.git
+ubuntu-latest	Check out the check scripts	2026-11-14T10:46:54.0828075Z   BRANCH_SHA: bc2c48d07db54fdb4049e06bd34f35091655b5f3
+ubuntu-latest	Check out the check scripts	2026-11-14T10:46:54.0828924Z   PREDICTIONS: https://vesuvius-challenge-open-data.s3.us-east-1.amazonaws.com/PHerc0332/representations/predictions/surfaces/20251211183505-surface-20260413222639-surface-m7-L2-th0.2.zarr
+ubuntu-latest	Check out the check scripts	2026-11-14T10:46:54.0829725Z   Z_MIN: 4032
+ubuntu-latest	Check out the check scripts	2026-11-14T10:46:54.0829961Z   Z_MAX: 4096
+ubuntu-latest	Check out the check scripts	2026-11-14T10:46:54.0830204Z   PYTHONUNBUFFERED: 1
+ubuntu-latest	Check out the check scripts	2026-11-14T10:46:54.0830470Z   TQDM_MININTERVAL: 10
+ubuntu-latest	Check out the check scripts	2026-11-14T10:46:54.0830742Z   PIP_DISABLE_PIP_VERSION_CHECK: 1
+ubuntu-latest	Check out the check scripts	2026-11-14T10:46:54.0831147Z ##[endgroup]
+ubuntu-latest	Check out the check scripts	2026-11-14T10:46:54.2576040Z Syncing repository: Cmssmc-code/villa-pr-checks
+ubuntu-latest	Check out the check scripts	2026-11-14T10:46:54.2577978Z ##[group]Getting Git version info
+ubuntu-latest	Check out the check scripts	2026-11-14T10:46:54.2578750Z Working directory is '/home/runner/work/villa-pr-checks/villa-pr-checks/checks'
+ubuntu-latest	Check out the check scripts	2026-11-14T10:46:54.2580253Z [command]/usr/bin/git version
+ubuntu-latest	Check out the check scripts	2026-11-14T10:46:54.2580736Z git version 2.56.1
+ubuntu-latest	Check out the check scripts	2026-11-14T10:46:54.2593972Z ##[endgroup]
+ubuntu-latest	Check out the check scripts	2026-11-14T10:46:54.2600150Z Temporarily overriding HOME='/home/runner/work/_temp/b88d8ad7-a089-4be1-9146-1af910d62bd8' before making global git config changes
+ubuntu-latest	Check out the check scripts	2026-11-14T10:46:54.2601636Z Adding repository directory to the temporary git global config as a safe directory
+ubuntu-latest	Check out the check scripts	2026-11-14T10:46:54.2604497Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/villa-pr-checks/villa-pr-checks/checks
+ubuntu-latest	Check out the check scripts	2026-11-14T10:46:54.2654038Z ##[group]Initializing the repository
+ubuntu-latest	Check out the check scripts	2026-11-14T10:46:54.2657280Z [command]/usr/bin/git init /home/runner/work/villa-pr-checks/villa-pr-checks/checks
+ubuntu-latest	Check out the check scripts	2026-11-14T10:46:54.2731882Z hint: Using 'master' as the name for the initial branch. This default branch name
+ubuntu-latest	Check out the check scripts	2026-11-14T10:46:54.2732852Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+ubuntu-latest	Check out the check scripts	2026-11-14T10:46:54.2733391Z hint: to use in all of your new repositories, which will suppress this warning,
+ubuntu-latest	Check out the check scripts	2026-11-14T10:46:54.2733850Z hint: call:
+ubuntu-latest	Check out the check scripts	2026-11-14T10:46:54.2734092Z hint:
+ubuntu-latest	Check out the check scripts	2026-11-14T10:46:54.2734394Z hint: 	git config --global init.defaultBranch <name>
+ubuntu-latest	Check out the check scripts	2026-11-14T10:46:54.2734881Z hint:
+ubuntu-latest	Check out the check scripts	2026-11-14T10:46:54.2735203Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+ubuntu-latest	Check out the check scripts	2026-11-14T10:46:54.2735716Z hint: 'development'. The just-created branch can be renamed via this command:
+ubuntu-latest	Check out the check scripts	2026-11-14T10:46:54.2736123Z hint:
+ubuntu-latest	Check out the check scripts	2026-11-14T10:46:54.2736456Z hint: 	git branch -m <name>
+ubuntu-latest	Check out the check scripts	2026-11-14T10:46:54.2736724Z hint:
+ubuntu-latest	Check out the check scripts	2026-11-14T10:46:54.2737078Z hint: Disable this message with "git config set advice.defaultBranchName false"
+ubuntu-latest	Check out the check scripts	2026-11-14T10:46:54.2740251Z Initialized empty Git repository in /home/runner/work/villa-pr-checks/villa-pr-checks/checks/.git/
+ubuntu-latest	Check out the check scripts	2026-11-14T10:46:54.2750130Z [command]/usr/bin/git remote add origin https://github.com/Cmssmc-code/villa-pr-checks
+ubuntu-latest	Check out the check scripts	2026-11-14T10:46:54.2798355Z ##[endgroup]
+ubuntu-latest	Check out the check scripts	2026-11-14T10:46:54.2799125Z ##[group]Disabling automatic garbage collection
+ubuntu-latest	Check out the check scripts	2026-11-14T10:46:54.2801646Z [command]/usr/bin/git config --local gc.auto 0
+ubuntu-latest	Check out the check scripts	2026-11-14T10:46:54.2831498Z ##[endgroup]
+ubuntu-latest	Check out the check scripts	2026-11-14T10:46:54.2832133Z ##[group]Setting up auth
+ubuntu-latest	Check out the check scripts	2026-11-14T10:46:54.2836884Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+ubuntu-latest	Check out the check scripts	2026-11-14T10:46:54.2865412Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+ubuntu-latest	Check out the check scripts	2026-11-14T10:46:54.3234610Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+ubuntu-latest	Check out the check scripts	2026-11-14T10:46:54.3264064Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+ubuntu-latest	Check out the check scripts	2026-11-14T10:46:54.3486088Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+ubuntu-latest	Check out the check scripts	2026-11-14T10:46:54.3516032Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+ubuntu-latest	Check out the check scripts	2026-11-14T10:46:54.3734747Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+ubuntu-latest	Check out the check scripts	2026-11-14T10:46:54.3769084Z ##[endgroup]
+ubuntu-latest	Check out the check scripts	2026-11-14T10:46:54.3769792Z ##[group]Fetching the repository
+ubuntu-latest	Check out the check scripts	2026-11-14T10:46:54.3775610Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +abec80483575b007eef7b43eecc30c0eca2b02b0:refs/remotes/origin/main
+ubuntu-latest	Check out the check scripts	2026-11-14T10:46:54.6455046Z From https://github.com/Cmssmc-code/villa-pr-checks
+ubuntu-latest	Check out the check scripts	2026-11-14T10:46:54.6456143Z  * [new ref]         abec80483575b007eef7b43eecc30c0eca2b02b0 -> origin/main
+ubuntu-latest	Check out the check scripts	2026-11-14T10:46:54.6459733Z ##[endgroup]
+ubuntu-latest	Check out the check scripts	2026-11-14T10:46:54.6460570Z ##[group]Determining the checkout info
+ubuntu-latest	Check out the check scripts	2026-11-14T10:46:54.6462168Z ##[endgroup]
+ubuntu-latest	Check out the check scripts	2026-11-14T10:46:54.6466787Z [command]/usr/bin/git sparse-checkout disable
+ubuntu-latest	Check out the check scripts	2026-11-14T10:46:54.6881772Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+ubuntu-latest	Check out the check scripts	2026-11-14T10:46:54.6907702Z ##[group]Checking out the ref
+ubuntu-latest	Check out the check scripts	2026-11-14T10:46:54.6909793Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+ubuntu-latest	Check out the check scripts	2026-11-14T10:46:54.6965630Z Switched to a new branch 'main'
+ubuntu-latest	Check out the check scripts	2026-11-14T10:46:54.6969527Z branch 'main' set up to track 'origin/main'.
+ubuntu-latest	Check out the check scripts	2026-11-14T10:46:54.6974042Z ##[endgroup]
+ubuntu-latest	Check out the check scripts	2026-11-14T10:46:54.7006255Z [command]/usr/bin/git log -1 --format=%H
+ubuntu-latest	Check out the check scripts	2026-11-14T10:46:54.7026216Z abec80483575b007eef7b43eecc30c0eca2b02b0
+ubuntu-latest	Fetch spiral-fitting/ and vc_reader/ of main and of the branch (partial clones)	2026-11-14T10:46:54.7280079Z ##[group]Run mkdir -p work/logs
+ubuntu-latest	Fetch spiral-fitting/ and vc_reader/ of main and of the branch (partial clones)	2026-11-14T10:46:54.7280483Z mkdir -p work/logs
+ubuntu-latest	Fetch spiral-fitting/ and vc_reader/ of main and of the branch (partial clones)	2026-11-14T10:46:54.7280826Z fetch() {  # <directory> <repository> <commit>
+ubuntu-latest	Fetch spiral-fitting/ and vc_reader/ of main and of the branch (partial clones)	2026-11-14T10:46:54.7281409Z   git init -q "$1"
+ubuntu-latest	Fetch spiral-fitting/ and vc_reader/ of main and of the branch (partial clones)	2026-11-14T10:46:54.7281720Z   git -C "$1" remote add origin "$2"
+ubuntu-latest	Fetch spiral-fitting/ and vc_reader/ of main and of the branch (partial clones)	2026-11-14T10:46:54.7282127Z   git -C "$1" sparse-checkout set spiral-fitting vc_reader
+ubuntu-latest	Fetch spiral-fitting/ and vc_reader/ of main and of the branch (partial clones)	2026-11-14T10:46:54.7282595Z   git -C "$1" fetch -q --depth 1 --filter=blob:none origin "$3"
+ubuntu-latest	Fetch spiral-fitting/ and vc_reader/ of main and of the branch (partial clones)	2026-11-14T10:46:54.7283004Z   git -C "$1" checkout -q FETCH_HEAD
+ubuntu-latest	Fetch spiral-fitting/ and vc_reader/ of main and of the branch (partial clones)	2026-11-14T10:46:54.7283369Z   test "$(git -C "$1" rev-parse HEAD)" = "$3"
+ubuntu-latest	Fetch spiral-fitting/ and vc_reader/ of main and of the branch (partial clones)	2026-11-14T10:46:54.7283742Z   git -C "$1" log -1 --format="$1: %H %s"
+ubuntu-latest	Fetch spiral-fitting/ and vc_reader/ of main and of the branch (partial clones)	2026-11-14T10:46:54.7284069Z }
+ubuntu-latest	Fetch spiral-fitting/ and vc_reader/ of main and of the branch (partial clones)	2026-11-14T10:46:54.7284347Z fetch villa-main "$MAIN_REPO" "$MAIN_SHA"
+ubuntu-latest	Fetch spiral-fitting/ and vc_reader/ of main and of the branch (partial clones)	2026-11-14T10:46:54.7284736Z fetch villa-branch "$BRANCH_REPO" "$BRANCH_SHA"
+ubuntu-latest	Fetch spiral-fitting/ and vc_reader/ of main and of the branch (partial clones)	2026-11-14T10:46:54.7285112Z echo "Files the branch changes:"
+ubuntu-latest	Fetch spiral-fitting/ and vc_reader/ of main and of the branch (partial clones)	2026-11-14T10:46:54.7285577Z git -C villa-branch fetch -q --depth 1 --filter=blob:none origin "$MAIN_SHA"
+ubuntu-latest	Fetch spiral-fitting/ and vc_reader/ of main and of the branch (partial clones)	2026-11-14T10:46:54.7286099Z git -C villa-branch diff --stat "$MAIN_SHA" "$BRANCH_SHA"
+ubuntu-latest	Fetch spiral-fitting/ and vc_reader/ of main and of the branch (partial clones)	2026-11-14T10:46:54.7286605Z echo "vc_reader/ tree: main $(git -C villa-main rev-parse HEAD:vc_reader)," \
+ubuntu-latest	Fetch spiral-fitting/ and vc_reader/ of main and of the branch (partial clones)	2026-11-14T10:46:54.7287116Z   "branch $(git -C villa-branch rev-parse HEAD:vc_reader)"
+ubuntu-latest	Fetch spiral-fitting/ and vc_reader/ of main and of the branch (partial clones)	2026-11-14T10:46:54.7332129Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+ubuntu-latest	Fetch spiral-fitting/ and vc_reader/ of main and of the branch (partial clones)	2026-11-14T10:46:54.7332509Z env:
+ubuntu-latest	Fetch spiral-fitting/ and vc_reader/ of main and of the branch (partial clones)	2026-11-14T10:46:54.7332794Z   MAIN_REPO: https://github.com/ScrollPrize/villa.git
+ubuntu-latest	Fetch spiral-fitting/ and vc_reader/ of main and of the branch (partial clones)	2026-11-14T10:46:54.7333178Z   MAIN_SHA: 97fb9336c8898be27e78eff8cd23ce5e7185ec0a
+ubuntu-latest	Fetch spiral-fitting/ and vc_reader/ of main and of the branch (partial clones)	2026-11-14T10:46:54.7333563Z   BRANCH_REPO: https://github.com/Cmssmc-code/villa.git
+ubuntu-latest	Fetch spiral-fitting/ and vc_reader/ of main and of the branch (partial clones)	2026-11-14T10:46:54.7333950Z   BRANCH_SHA: bc2c48d07db54fdb4049e06bd34f35091655b5f3
+ubuntu-latest	Fetch spiral-fitting/ and vc_reader/ of main and of the branch (partial clones)	2026-11-14T10:46:54.7334799Z   PREDICTIONS: https://vesuvius-challenge-open-data.s3.us-east-1.amazonaws.com/PHerc0332/representations/predictions/surfaces/20251211183505-surface-20260413222639-surface-m7-L2-th0.2.zarr
+ubuntu-latest	Fetch spiral-fitting/ and vc_reader/ of main and of the branch (partial clones)	2026-11-14T10:46:54.7335603Z   Z_MIN: 4032
+ubuntu-latest	Fetch spiral-fitting/ and vc_reader/ of main and of the branch (partial clones)	2026-11-14T10:46:54.7335838Z   Z_MAX: 4096
+ubuntu-latest	Fetch spiral-fitting/ and vc_reader/ of main and of the branch (partial clones)	2026-11-14T10:46:54.7336082Z   PYTHONUNBUFFERED: 1
+ubuntu-latest	Fetch spiral-fitting/ and vc_reader/ of main and of the branch (partial clones)	2026-11-14T10:46:54.7336339Z   TQDM_MININTERVAL: 10
+ubuntu-latest	Fetch spiral-fitting/ and vc_reader/ of main and of the branch (partial clones)	2026-11-14T10:46:54.7336606Z   PIP_DISABLE_PIP_VERSION_CHECK: 1
+ubuntu-latest	Fetch spiral-fitting/ and vc_reader/ of main and of the branch (partial clones)	2026-11-14T10:46:54.7336899Z ##[endgroup]
+ubuntu-latest	Fetch spiral-fitting/ and vc_reader/ of main and of the branch (partial clones)	2026-11-14T10:46:56.6317654Z villa-main: 97fb9336c8898be27e78eff8cd23ce5e7185ec0a Update VC3D reader dependency to Delta3D 0.3.2 (#2531)
+ubuntu-latest	Fetch spiral-fitting/ and vc_reader/ of main and of the branch (partial clones)	2026-11-14T10:46:58.5102350Z villa-branch: bc2c48d07db54fdb4049e06bd34f35091655b5f3 spiral-fitting: test the spawned slab workers and the CPU defaults on every OS
+ubuntu-latest	Fetch spiral-fitting/ and vc_reader/ of main and of the branch (partial clones)	2026-11-14T10:46:58.5103525Z Files the branch changes:
+ubuntu-latest	Fetch spiral-fitting/ and vc_reader/ of main and of the branch (partial clones)	2026-11-14T10:46:59.0672955Z  spiral-fitting/README.md                           |  5 +--
+ubuntu-latest	Fetch spiral-fitting/ and vc_reader/ of main and of the branch (partial clones)	2026-11-14T10:46:59.0673573Z  spiral-fitting/extract_surface_tracks.py           | 38 +++++++++++++++++-----
+ubuntu-latest	Fetch spiral-fitting/ and vc_reader/ of main and of the branch (partial clones)	2026-11-14T10:46:59.0673886Z  spiral-fitting/tests/test_cc_labels.py             | 15 +++++++++
+ubuntu-latest	Fetch spiral-fitting/ and vc_reader/ of main and of the branch (partial clones)	2026-11-14T10:46:59.0674246Z  .../tests/test_extract_surface_tracks.py           | 16 +++++++++
+ubuntu-latest	Fetch spiral-fitting/ and vc_reader/ of main and of the branch (partial clones)	2026-11-14T10:46:59.0674839Z  4 files changed, 63 insertions(+), 11 deletions(-)
+ubuntu-latest	Fetch spiral-fitting/ and vc_reader/ of main and of the branch (partial clones)	2026-11-14T10:46:59.0708021Z vc_reader/ tree: main b5918913fbed9fd2d860c8242b6f7f573e4c53c8, branch b5918913fbed9fd2d860c8242b6f7f573e4c53c8
+ubuntu-latest	Python version (lower bound of requires-python in spiral-fitting/pyproject.toml)	2026-11-14T10:46:59.0741639Z ##[group]Run lower() { sed -n 's/^requires-python *= *">=\([0-9][0-9.]*\)".*/\1/p' "$1/spiral-fitting/pyproject.toml"; }
+ubuntu-latest	Python version (lower bound of requires-python in spiral-fitting/pyproject.toml)	2026-11-14T10:46:59.0742282Z lower() { sed -n 's/^requires-python *= *">=\([0-9][0-9.]*\)".*/\1/p' "$1/spiral-fitting/pyproject.toml"; }
+ubuntu-latest	Python version (lower bound of requires-python in spiral-fitting/pyproject.toml)	2026-11-14T10:46:59.0742584Z main=$(lower villa-main)
+ubuntu-latest	Python version (lower bound of requires-python in spiral-fitting/pyproject.toml)	2026-11-14T10:46:59.0742775Z branch=$(lower villa-branch)
+ubuntu-latest	Python version (lower bound of requires-python in spiral-fitting/pyproject.toml)	2026-11-14T10:46:59.0743027Z echo "requires-python: >=$main on main, >=$branch on the branch"
+ubuntu-latest	Python version (lower bound of requires-python in spiral-fitting/pyproject.toml)	2026-11-14T10:46:59.0743293Z test -n "$main" && test "$main" = "$branch"
+ubuntu-latest	Python version (lower bound of requires-python in spiral-fitting/pyproject.toml)	2026-11-14T10:46:59.0743533Z echo "version=$main" >> "$GITHUB_OUTPUT"
+ubuntu-latest	Python version (lower bound of requires-python in spiral-fitting/pyproject.toml)	2026-11-14T10:46:59.0787383Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+ubuntu-latest	Python version (lower bound of requires-python in spiral-fitting/pyproject.toml)	2026-11-14T10:46:59.0787625Z env:
+ubuntu-latest	Python version (lower bound of requires-python in spiral-fitting/pyproject.toml)	2026-11-14T10:46:59.0787839Z   MAIN_REPO: https://github.com/ScrollPrize/villa.git
+ubuntu-latest	Python version (lower bound of requires-python in spiral-fitting/pyproject.toml)	2026-11-14T10:46:59.0788092Z   MAIN_SHA: 97fb9336c8898be27e78eff8cd23ce5e7185ec0a
+ubuntu-latest	Python version (lower bound of requires-python in spiral-fitting/pyproject.toml)	2026-11-14T10:46:59.0788325Z   BRANCH_REPO: https://github.com/Cmssmc-code/villa.git
+ubuntu-latest	Python version (lower bound of requires-python in spiral-fitting/pyproject.toml)	2026-11-14T10:46:59.0788602Z   BRANCH_SHA: bc2c48d07db54fdb4049e06bd34f35091655b5f3
+ubuntu-latest	Python version (lower bound of requires-python in spiral-fitting/pyproject.toml)	2026-11-14T10:46:59.0789133Z   PREDICTIONS: https://vesuvius-challenge-open-data.s3.us-east-1.amazonaws.com/PHerc0332/representations/predictions/surfaces/20251211183505-surface-20260413222639-surface-m7-L2-th0.2.zarr
+ubuntu-latest	Python version (lower bound of requires-python in spiral-fitting/pyproject.toml)	2026-11-14T10:46:59.0789638Z   Z_MIN: 4032
+ubuntu-latest	Python version (lower bound of requires-python in spiral-fitting/pyproject.toml)	2026-11-14T10:46:59.0789779Z   Z_MAX: 4096
+ubuntu-latest	Python version (lower bound of requires-python in spiral-fitting/pyproject.toml)	2026-11-14T10:46:59.0789935Z   PYTHONUNBUFFERED: 1
+ubuntu-latest	Python version (lower bound of requires-python in spiral-fitting/pyproject.toml)	2026-11-14T10:46:59.0790098Z   TQDM_MININTERVAL: 10
+ubuntu-latest	Python version (lower bound of requires-python in spiral-fitting/pyproject.toml)	2026-11-14T10:46:59.0790265Z   PIP_DISABLE_PIP_VERSION_CHECK: 1
+ubuntu-latest	Python version (lower bound of requires-python in spiral-fitting/pyproject.toml)	2026-11-14T10:46:59.0790446Z ##[endgroup]
+ubuntu-latest	Python version (lower bound of requires-python in spiral-fitting/pyproject.toml)	2026-11-14T10:46:59.0871585Z requires-python: >=3.14 on main, >=3.14 on the branch
+ubuntu-latest	Set up Python	2026-11-14T10:46:59.0942308Z ##[group]Run actions/setup-python@v5
+ubuntu-latest	Set up Python	2026-11-14T10:46:59.0942519Z with:
+ubuntu-latest	Set up Python	2026-11-14T10:46:59.0942668Z   python-version: 3.14
+ubuntu-latest	Set up Python	2026-11-14T10:46:59.0942831Z   check-latest: false
+ubuntu-latest	Set up Python	2026-11-14T10:46:59.0944354Z   token: ***
+ubuntu-latest	Set up Python	2026-11-14T10:46:59.0944512Z   update-environment: true
+ubuntu-latest	Set up Python	2026-11-14T10:46:59.0944684Z   allow-prereleases: false
+ubuntu-latest	Set up Python	2026-11-14T10:46:59.0944860Z   freethreaded: false
+ubuntu-latest	Set up Python	2026-11-14T10:46:59.0945015Z env:
+ubuntu-latest	Set up Python	2026-11-14T10:46:59.0945193Z   MAIN_REPO: https://github.com/ScrollPrize/villa.git
+ubuntu-latest	Set up Python	2026-11-14T10:46:59.0945432Z   MAIN_SHA: 97fb9336c8898be27e78eff8cd23ce5e7185ec0a
+ubuntu-latest	Set up Python	2026-11-14T10:46:59.0945667Z   BRANCH_REPO: https://github.com/Cmssmc-code/villa.git
+ubuntu-latest	Set up Python	2026-11-14T10:46:59.0945902Z   BRANCH_SHA: bc2c48d07db54fdb4049e06bd34f35091655b5f3
+ubuntu-latest	Set up Python	2026-11-14T10:46:59.0946425Z   PREDICTIONS: https://vesuvius-challenge-open-data.s3.us-east-1.amazonaws.com/PHerc0332/representations/predictions/surfaces/20251211183505-surface-20260413222639-surface-m7-L2-th0.2.zarr
+ubuntu-latest	Set up Python	2026-11-14T10:46:59.0946904Z   Z_MIN: 4032
+ubuntu-latest	Set up Python	2026-11-14T10:46:59.0947070Z   Z_MAX: 4096
+ubuntu-latest	Set up Python	2026-11-14T10:46:59.0947213Z   PYTHONUNBUFFERED: 1
+ubuntu-latest	Set up Python	2026-11-14T10:46:59.0947373Z   TQDM_MININTERVAL: 10
+ubuntu-latest	Set up Python	2026-11-14T10:46:59.0947541Z   PIP_DISABLE_PIP_VERSION_CHECK: 1
+ubuntu-latest	Set up Python	2026-11-14T10:46:59.0947718Z ##[endgroup]
+ubuntu-latest	Set up Python	2026-11-14T10:46:59.1820579Z ##[group]Installed versions
+ubuntu-latest	Set up Python	2026-11-14T10:46:59.1892855Z (node:2250) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+ubuntu-latest	Set up Python	2026-11-14T10:46:59.1893525Z (Use `node --trace-deprecation ...` to show where the warning was created)
+ubuntu-latest	Set up Python	2026-11-14T10:46:59.1893930Z Successfully set up CPython (3.14.10)
+ubuntu-latest	Set up Python	2026-11-14T10:46:59.1894388Z ##[endgroup]
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:46:59.2034596Z ##[group]Run sudo apt-get update -q
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:46:59.2034871Z sudo apt-get update -q
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:46:59.2035170Z sudo apt-get install -y -q --no-install-recommends build-essential ninja-build pkg-config \
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:46:59.2035569Z   libblosc-dev libcurl4-openssl-dev libjpeg-dev liblz4-dev libpng-dev libsqlite3-dev \
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:46:59.2035901Z   libtiff-dev libzstd-dev nlohmann-json3-dev zlib1g-dev
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:46:59.2531548Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:46:59.2531910Z env:
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:46:59.2532142Z   MAIN_REPO: https://github.com/ScrollPrize/villa.git
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:46:59.2532605Z   MAIN_SHA: 97fb9336c8898be27e78eff8cd23ce5e7185ec0a
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:46:59.2532843Z   BRANCH_REPO: https://github.com/Cmssmc-code/villa.git
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:46:59.2533086Z   BRANCH_SHA: bc2c48d07db54fdb4049e06bd34f35091655b5f3
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:46:59.2533599Z   PREDICTIONS: https://vesuvius-challenge-open-data.s3.us-east-1.amazonaws.com/PHerc0332/representations/predictions/surfaces/20251211183505-surface-20260413222639-surface-m7-L2-th0.2.zarr
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:46:59.2534130Z   Z_MIN: 4032
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:46:59.2534273Z   Z_MAX: 4096
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:46:59.2534421Z   PYTHONUNBUFFERED: 1
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:46:59.2534578Z   TQDM_MININTERVAL: 10
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:46:59.2534742Z   PIP_DISABLE_PIP_VERSION_CHECK: 1
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:46:59.2534960Z   pythonLocation: /opt/hostedtoolcache/Python/3.14.10/x64
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:46:59.2535255Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.14.10/x64/lib/pkgconfig
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:46:59.2535533Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:46:59.2535790Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:46:59.2536036Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:46:59.2536286Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.14.10/x64/lib
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:46:59.2536506Z ##[endgroup]
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:46:59.3207740Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:46:59.3510266Z Hit:2 http://azure.archive.ubuntu.com/ubuntu resolute InRelease
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:46:59.3539562Z Get:3 http://azure.archive.ubuntu.com/ubuntu resolute-updates InRelease [137 kB]
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:46:59.3546254Z Get:6 https://packages.microsoft.com/ubuntu/26.04/prod resolute InRelease [3964 B]
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:46:59.3579380Z Get:4 http://azure.archive.ubuntu.com/ubuntu resolute-backports InRelease [137 kB]
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:46:59.3606370Z Get:5 http://azure.archive.ubuntu.com/ubuntu resolute-security InRelease [137 kB]
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:46:59.3747836Z Get:7 http://azure.archive.ubuntu.com/ubuntu resolute-updates/main amd64v3 Packages [869 kB]
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:46:59.3859408Z Get:11 https://packages.microsoft.com/ubuntu/26.04/prod resolute/main arm64 Packages [143 kB]
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:46:59.3932247Z Get:8 http://azure.archive.ubuntu.com/ubuntu resolute-updates/main Translation-en [195 kB]
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:46:59.3962631Z Get:9 http://azure.archive.ubuntu.com/ubuntu resolute-updates/universe amd64v3 Packages [390 kB]
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:46:59.3994108Z Get:12 https://packages.microsoft.com/ubuntu/26.04/prod resolute/main amd64 Packages [158 kB]
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:46:59.3995672Z Get:10 http://azure.archive.ubuntu.com/ubuntu resolute-updates/universe Translation-en [122 kB]
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:46:59.4018090Z Get:13 http://azure.archive.ubuntu.com/ubuntu resolute-security/main amd64v3 Packages [718 kB]
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:46:59.4044817Z Get:14 http://azure.archive.ubuntu.com/ubuntu resolute-security/main Translation-en [157 kB]
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:46:59.4066286Z Get:15 http://azure.archive.ubuntu.com/ubuntu resolute-security/universe amd64v3 Packages [220 kB]
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:46:59.4074296Z Get:16 http://azure.archive.ubuntu.com/ubuntu resolute-security/universe Translation-en [72.5 kB]
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:46:59.4098858Z Get:17 http://azure.archive.ubuntu.com/ubuntu resolute-security/restricted amd64v3 Packages [590 kB]
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:46:59.4113267Z Get:18 http://azure.archive.ubuntu.com/ubuntu resolute-security/restricted Translation-en [122 kB]
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:01.5928689Z Fetched 4172 kB in 0s (15.8 MB/s)
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:02.0049489Z Reading package lists...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:02.0334598Z Reading package lists...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:02.1511223Z Building dependency tree...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:02.1516376Z Reading state information...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:02.1766744Z pkg-config is already the newest version (2.5.1-4).
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:02.1767227Z liblz4-dev is already the newest version (1.10.0-8).
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:02.1767620Z libsqlite3-dev is already the newest version (3.46.1-9ubuntu0.3).
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:02.1768033Z libzstd-dev is already the newest version (1.5.7+dfsg-3).
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:02.1768350Z libzstd-dev set to manually installed.
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:02.1769274Z zlib1g-dev is already the newest version (1:1.3.dfsg+really1.3.1-1ubuntu3.2).
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:02.2162456Z Solving dependencies...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:02.2834729Z The following additional packages will be installed:
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:02.2835659Z   comerr-dev krb5-multidev libblosc1 libbrotli-dev libdeflate-dev
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:02.2836521Z   libevent-2.1-7t64 libgnutls-dane0t64 libgnutls-openssl27t64 libgnutls28-dev
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:02.2837329Z   libgssrpc4t64 libidn2-dev libjbig-dev libjpeg-turbo8-dev libjpeg8-dev
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:02.2838103Z   libkadm5clnt-mit12 libkadm5srv-mit12 libkdb5-10t64 libkrb5-dev libldap-dev
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:02.2840684Z   liblerc-dev libnghttp2-dev libp11-kit-dev libpsl-dev librtmp-dev
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:02.2841513Z   libsharpyuv-dev libssh2-1-dev libtasn1-6-dev libtiffxx6 libunbound8
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:02.2843538Z   libwebp-dev libwebpdecoder3 nettle-dev
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:02.2851520Z Suggested packages:
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:02.2852136Z   doc-base krb5-doc libcurl4-doc libidn-dev dns-root-data gnutls-bin
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:02.2852562Z   gnutls-doc krb5-user libnghttp2-doc p11-kit-doc
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:02.2852877Z Recommended packages:
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:02.2853125Z   libpng-tools libtasn1-doc
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:02.3156307Z The following NEW packages will be installed:
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:02.3156819Z   build-essential comerr-dev krb5-multidev libblosc-dev libblosc1
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:02.3157281Z   libbrotli-dev libcurl4-openssl-dev libdeflate-dev libevent-2.1-7t64
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:02.3157729Z   libgnutls-dane0t64 libgnutls-openssl27t64 libgnutls28-dev libgssrpc4t64
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:02.3158262Z   libidn2-dev libjbig-dev libjpeg-dev libjpeg-turbo8-dev libjpeg8-dev
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:02.3158777Z   libkadm5clnt-mit12 libkadm5srv-mit12 libkdb5-10t64 libkrb5-dev libldap-dev
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:02.3181819Z   liblerc-dev libnghttp2-dev libp11-kit-dev libpng-dev libpsl-dev librtmp-dev
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:02.3201654Z   libsharpyuv-dev libssh2-1-dev libtasn1-6-dev libtiff-dev libtiffxx6
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:02.3202143Z   libunbound8 libwebp-dev libwebpdecoder3 nettle-dev ninja-build
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:02.3202525Z   nlohmann-json3-dev
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:02.3366781Z 0 upgraded, 40 newly installed, 0 to remove and 24 not upgraded.
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:02.3367194Z Need to get 7634 kB of archives.
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:02.3367527Z After this operation, 29.7 MB of additional disk space will be used.
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:02.3368176Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:02.3930949Z Get:2 http://azure.archive.ubuntu.com/ubuntu resolute-updates/main amd64v3 build-essential amd64 12.12ubuntu2.26.04.2 [5172 B]
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:02.4287695Z Get:3 http://azure.archive.ubuntu.com/ubuntu resolute/main amd64v3 comerr-dev amd64 2.1-1.47.2-3ubuntu4 [44.6 kB]
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:02.4646175Z Get:4 http://azure.archive.ubuntu.com/ubuntu resolute-updates/main amd64v3 libgssrpc4t64 amd64 1.22.1-2ubuntu4.1 [58.3 kB]
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:02.5002444Z Get:5 http://azure.archive.ubuntu.com/ubuntu resolute-updates/main amd64v3 libkadm5clnt-mit12 amd64 1.22.1-2ubuntu4.1 [40.0 kB]
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:02.5357361Z Get:6 http://azure.archive.ubuntu.com/ubuntu resolute-updates/main amd64v3 libkdb5-10t64 amd64 1.22.1-2ubuntu4.1 [42.1 kB]
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:02.5711501Z Get:7 http://azure.archive.ubuntu.com/ubuntu resolute-updates/main amd64v3 libkadm5srv-mit12 amd64 1.22.1-2ubuntu4.1 [55.5 kB]
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:02.6067128Z Get:8 http://azure.archive.ubuntu.com/ubuntu resolute-updates/main amd64v3 krb5-multidev amd64 1.22.1-2ubuntu4.1 [126 kB]
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:02.6430984Z Get:9 http://azure.archive.ubuntu.com/ubuntu resolute/universe amd64v3 libblosc1 amd64 1.21.5+ds-2 [36.8 kB]
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:02.6785251Z Get:10 http://azure.archive.ubuntu.com/ubuntu resolute/universe amd64v3 libblosc-dev amd64 1.21.5+ds-2 [44.2 kB]
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:02.7141290Z Get:11 http://azure.archive.ubuntu.com/ubuntu resolute-updates/main amd64v3 libbrotli-dev amd64 1.2.0-3ubuntu0.1 [371 kB]
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:02.7529006Z Get:12 http://azure.archive.ubuntu.com/ubuntu resolute/main amd64v3 libidn2-dev amd64 2.3.8-4build1 [121 kB]
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:02.7887975Z Get:13 http://azure.archive.ubuntu.com/ubuntu resolute-updates/main amd64v3 libkrb5-dev amd64 1.22.1-2ubuntu4.1 [11.9 kB]
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:02.8241815Z Get:14 http://azure.archive.ubuntu.com/ubuntu resolute/main amd64v3 libldap-dev amd64 2.6.10+dfsg-1ubuntu5 [316 kB]
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:02.8624217Z Get:15 http://azure.archive.ubuntu.com/ubuntu resolute-updates/main amd64v3 libnghttp2-dev amd64 1.68.0-2ubuntu0.2 [115 kB]
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:02.8982480Z Get:16 http://azure.archive.ubuntu.com/ubuntu resolute/main amd64v3 libpsl-dev amd64 0.21.2-1.1build2 [78.7 kB]
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:02.9340345Z Get:17 http://azure.archive.ubuntu.com/ubuntu resolute-updates/main amd64v3 libevent-2.1-7t64 amd64 2.1.12-stable-10ubuntu0.2 [146 kB]
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:02.9703462Z Get:18 http://azure.archive.ubuntu.com/ubuntu resolute-updates/main amd64v3 libunbound8 amd64 1.24.2-1ubuntu2.4 [462 kB]
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:03.0099509Z Get:19 http://azure.archive.ubuntu.com/ubuntu resolute-updates/main amd64v3 libgnutls-dane0t64 amd64 3.8.12-2ubuntu1.1 [25.3 kB]
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:03.0865424Z Get:20 http://azure.archive.ubuntu.com/ubuntu resolute-updates/main amd64v3 libgnutls-openssl27t64 amd64 3.8.12-2ubuntu1.1 [25.5 kB]
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:03.1218441Z Get:21 http://azure.archive.ubuntu.com/ubuntu resolute/main amd64v3 libp11-kit-dev amd64 0.26.2-2 [30.9 kB]
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:03.1574303Z Get:22 http://azure.archive.ubuntu.com/ubuntu resolute/main amd64v3 libtasn1-6-dev amd64 4.21.0-2 [92.4 kB]
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:03.1930599Z Get:23 http://azure.archive.ubuntu.com/ubuntu resolute/main amd64v3 nettle-dev amd64 3.10.2-1 [1178 kB]
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:03.2410447Z Get:24 http://azure.archive.ubuntu.com/ubuntu resolute-updates/main amd64v3 libgnutls28-dev amd64 3.8.12-2ubuntu1.1 [1110 kB]
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:03.2881425Z Get:25 http://azure.archive.ubuntu.com/ubuntu resolute/main amd64v3 librtmp-dev amd64 2.4+20151223.gitfa8646d.1-3 [69.4 kB]
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:03.3238027Z Get:26 http://azure.archive.ubuntu.com/ubuntu resolute-updates/main amd64v3 libssh2-1-dev amd64 1.11.1-1ubuntu0.26.04.4 [284 kB]
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:03.3616640Z Get:27 http://azure.archive.ubuntu.com/ubuntu resolute-updates/main amd64v3 libcurl4-openssl-dev amd64 8.18.0-1ubuntu2.8 [547 kB]
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:03.4023438Z Get:28 http://azure.archive.ubuntu.com/ubuntu resolute/main amd64v3 libdeflate-dev amd64 1.23-2ubuntu1 [55.8 kB]
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:03.4378625Z Get:29 http://azure.archive.ubuntu.com/ubuntu resolute/main amd64v3 libjpeg-turbo8-dev amd64 2.1.5-4ubuntu4 [310 kB]
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:03.4759005Z Get:30 http://azure.archive.ubuntu.com/ubuntu resolute/main amd64v3 libjpeg8-dev amd64 8c-2ubuntu12 [1490 B]
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:03.5111264Z Get:31 http://azure.archive.ubuntu.com/ubuntu resolute/main amd64v3 libjpeg-dev amd64 8c-2ubuntu12 [1492 B]
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:03.5465378Z Get:32 http://azure.archive.ubuntu.com/ubuntu resolute/main amd64v3 liblerc-dev amd64 4.0.0+ds-5ubuntu2 [220 kB]
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:03.5839689Z Get:33 http://azure.archive.ubuntu.com/ubuntu resolute-updates/main amd64v3 libpng-dev amd64 1.6.57-1ubuntu0.1 [276 kB]
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:03.6219299Z Get:34 http://azure.archive.ubuntu.com/ubuntu resolute/main amd64v3 libsharpyuv-dev amd64 1.5.0-0.1build1 [19.5 kB]
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:03.6573200Z Get:35 http://azure.archive.ubuntu.com/ubuntu resolute/main amd64v3 libjbig-dev amd64 2.1-6.1ubuntu3 [28.3 kB]
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:03.6928454Z Get:36 http://azure.archive.ubuntu.com/ubuntu resolute/main amd64v3 libwebpdecoder3 amd64 1.5.0-0.1build1 [144 kB]
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:03.7291735Z Get:37 http://azure.archive.ubuntu.com/ubuntu resolute/main amd64v3 libwebp-dev amd64 1.5.0-0.1build1 [410 kB]
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:03.7682286Z Get:38 http://azure.archive.ubuntu.com/ubuntu resolute-updates/main amd64v3 libtiffxx6 amd64 4.7.0-3ubuntu5 [5784 B]
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:03.8470997Z Get:39 http://azure.archive.ubuntu.com/ubuntu resolute-updates/main amd64v3 libtiff-dev amd64 4.7.0-3ubuntu5 [362 kB]
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:03.8853912Z Get:40 http://azure.archive.ubuntu.com/ubuntu resolute/universe amd64v3 ninja-build amd64 1.13.2-1 [173 kB]
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:03.9217888Z Get:41 http://azure.archive.ubuntu.com/ubuntu resolute/main amd64v3 nlohmann-json3-dev all 3.12.0.really.3.12.0.really.3.11.3-3build1 [191 kB]
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:04.1706766Z Fetched 7634 kB in 2s (4776 kB/s)
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:04.1878115Z Selecting previously unselected package build-essential.
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:04.2091318Z (Reading database ... 
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:04.2091561Z (Reading database ... 5%
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:04.2091808Z (Reading database ... 10%
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:04.2092265Z (Reading database ... 15%
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:04.2092471Z (Reading database ... 20%
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:04.2092621Z (Reading database ... 25%
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:04.2092760Z (Reading database ... 30%
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:04.2092892Z (Reading database ... 35%
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:04.2093023Z (Reading database ... 40%
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:04.2093154Z (Reading database ... 45%
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:04.2093288Z (Reading database ... 50%
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:04.3016881Z (Reading database ... 55%
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:04.4600208Z (Reading database ... 60%
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:04.6028717Z (Reading database ... 65%
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:04.8022958Z (Reading database ... 70%
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:04.9640564Z (Reading database ... 75%
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:05.1466586Z (Reading database ... 80%
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:05.3525702Z (Reading database ... 85%
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:05.5151527Z (Reading database ... 90%
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:05.6648866Z (Reading database ... 95%
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:05.6649175Z (Reading database ... 100%
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:05.6649405Z (Reading database ... 213946 files and directories currently installed.)
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:05.6686207Z Preparing to unpack .../00-build-essential_12.12ubuntu2.26.04.2_amd64v3.deb ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:05.6705056Z Unpacking build-essential (12.12ubuntu2.26.04.2) ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:05.7133393Z Selecting previously unselected package comerr-dev:amd64.
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:05.7242163Z Preparing to unpack .../01-comerr-dev_2.1-1.47.2-3ubuntu4_amd64v3.deb ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:05.7278532Z Unpacking comerr-dev:amd64 (2.1-1.47.2-3ubuntu4) ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:05.7529469Z Selecting previously unselected package libgssrpc4t64:amd64.
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:05.7635128Z Preparing to unpack .../02-libgssrpc4t64_1.22.1-2ubuntu4.1_amd64v3.deb ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:05.7649080Z Unpacking libgssrpc4t64:amd64 (1.22.1-2ubuntu4.1) ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:05.7986899Z Selecting previously unselected package libkadm5clnt-mit12:amd64.
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:05.8094169Z Preparing to unpack .../03-libkadm5clnt-mit12_1.22.1-2ubuntu4.1_amd64v3.deb ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:05.8101920Z Unpacking libkadm5clnt-mit12:amd64 (1.22.1-2ubuntu4.1) ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:05.8303527Z Selecting previously unselected package libkdb5-10t64:amd64.
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:05.8409068Z Preparing to unpack .../04-libkdb5-10t64_1.22.1-2ubuntu4.1_amd64v3.deb ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:05.8416753Z Unpacking libkdb5-10t64:amd64 (1.22.1-2ubuntu4.1) ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:05.8619637Z Selecting previously unselected package libkadm5srv-mit12:amd64.
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:05.8724475Z Preparing to unpack .../05-libkadm5srv-mit12_1.22.1-2ubuntu4.1_amd64v3.deb ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:05.8732199Z Unpacking libkadm5srv-mit12:amd64 (1.22.1-2ubuntu4.1) ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:05.8959451Z Selecting previously unselected package krb5-multidev:amd64.
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:05.9062727Z Preparing to unpack .../06-krb5-multidev_1.22.1-2ubuntu4.1_amd64v3.deb ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:05.9068886Z Unpacking krb5-multidev:amd64 (1.22.1-2ubuntu4.1) ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:05.9321842Z Selecting previously unselected package libblosc1:amd64.
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:05.9428759Z Preparing to unpack .../07-libblosc1_1.21.5+ds-2_amd64v3.deb ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:05.9435607Z Unpacking libblosc1:amd64 (1.21.5+ds-2) ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:05.9770693Z Selecting previously unselected package libblosc-dev:amd64.
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:05.9875618Z Preparing to unpack .../08-libblosc-dev_1.21.5+ds-2_amd64v3.deb ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:05.9882130Z Unpacking libblosc-dev:amd64 (1.21.5+ds-2) ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:06.0083642Z Selecting previously unselected package libbrotli-dev:amd64.
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:06.0187763Z Preparing to unpack .../09-libbrotli-dev_1.2.0-3ubuntu0.1_amd64v3.deb ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:06.0194553Z Unpacking libbrotli-dev:amd64 (1.2.0-3ubuntu0.1) ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:06.0422626Z Selecting previously unselected package libidn2-dev:amd64.
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:06.0529126Z Preparing to unpack .../10-libidn2-dev_2.3.8-4build1_amd64v3.deb ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:06.0536949Z Unpacking libidn2-dev:amd64 (2.3.8-4build1) ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:06.0808007Z Selecting previously unselected package libkrb5-dev:amd64.
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:06.0915152Z Preparing to unpack .../11-libkrb5-dev_1.22.1-2ubuntu4.1_amd64v3.deb ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:06.0922229Z Unpacking libkrb5-dev:amd64 (1.22.1-2ubuntu4.1) ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:06.1160802Z Selecting previously unselected package libldap-dev:amd64.
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:06.1273489Z Preparing to unpack .../12-libldap-dev_2.6.10+dfsg-1ubuntu5_amd64v3.deb ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:06.1280965Z Unpacking libldap-dev:amd64 (2.6.10+dfsg-1ubuntu5) ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:06.1783708Z Selecting previously unselected package libnghttp2-dev:amd64.
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:06.1898121Z Preparing to unpack .../13-libnghttp2-dev_1.68.0-2ubuntu0.2_amd64v3.deb ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:06.1906637Z Unpacking libnghttp2-dev:amd64 (1.68.0-2ubuntu0.2) ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:06.2117668Z Selecting previously unselected package libpsl-dev:amd64.
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:06.2224917Z Preparing to unpack .../14-libpsl-dev_0.21.2-1.1build2_amd64v3.deb ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:06.2231190Z Unpacking libpsl-dev:amd64 (0.21.2-1.1build2) ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:06.2447193Z Selecting previously unselected package libevent-2.1-7t64:amd64.
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:06.2551844Z Preparing to unpack .../15-libevent-2.1-7t64_2.1.12-stable-10ubuntu0.2_amd64v3.deb ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:06.2569542Z Unpacking libevent-2.1-7t64:amd64 (2.1.12-stable-10ubuntu0.2) ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:06.2770035Z Selecting previously unselected package libunbound8:amd64.
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:06.2875471Z Preparing to unpack .../16-libunbound8_1.24.2-1ubuntu2.4_amd64v3.deb ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:06.2883369Z Unpacking libunbound8:amd64 (1.24.2-1ubuntu2.4) ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:06.3116109Z Selecting previously unselected package libgnutls-dane0t64:amd64.
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:06.3225274Z Preparing to unpack .../17-libgnutls-dane0t64_3.8.12-2ubuntu1.1_amd64v3.deb ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:06.3232856Z Unpacking libgnutls-dane0t64:amd64 (3.8.12-2ubuntu1.1) ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:06.3433167Z Selecting previously unselected package libgnutls-openssl27t64:amd64.
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:06.3538070Z Preparing to unpack .../18-libgnutls-openssl27t64_3.8.12-2ubuntu1.1_amd64v3.deb ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:06.3544343Z Unpacking libgnutls-openssl27t64:amd64 (3.8.12-2ubuntu1.1) ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:06.3917528Z Selecting previously unselected package libp11-kit-dev:amd64.
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:06.4021372Z Preparing to unpack .../19-libp11-kit-dev_0.26.2-2_amd64v3.deb ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:06.4027694Z Unpacking libp11-kit-dev:amd64 (0.26.2-2) ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:06.4220604Z Selecting previously unselected package libtasn1-6-dev:amd64.
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:06.4324083Z Preparing to unpack .../20-libtasn1-6-dev_4.21.0-2_amd64v3.deb ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:06.4331197Z Unpacking libtasn1-6-dev:amd64 (4.21.0-2) ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:06.4559737Z Selecting previously unselected package nettle-dev:amd64.
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:06.4665301Z Preparing to unpack .../21-nettle-dev_3.10.2-1_amd64v3.deb ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:06.4671967Z Unpacking nettle-dev:amd64 (3.10.2-1) ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:06.5063603Z Selecting previously unselected package libgnutls28-dev:amd64.
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:06.5171283Z Preparing to unpack .../22-libgnutls28-dev_3.8.12-2ubuntu1.1_amd64v3.deb ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:06.5177926Z Unpacking libgnutls28-dev:amd64 (3.8.12-2ubuntu1.1) ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:06.5722867Z Selecting previously unselected package librtmp-dev:amd64.
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:06.5828517Z Preparing to unpack .../23-librtmp-dev_2.4+20151223.gitfa8646d.1-3_amd64v3.deb ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:06.5834089Z Unpacking librtmp-dev:amd64 (2.4+20151223.gitfa8646d.1-3) ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:06.6029246Z Selecting previously unselected package libssh2-1-dev:amd64.
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:06.6131710Z Preparing to unpack .../24-libssh2-1-dev_1.11.1-1ubuntu0.26.04.4_amd64v3.deb ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:06.6138603Z Unpacking libssh2-1-dev:amd64 (1.11.1-1ubuntu0.26.04.4) ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:06.6536449Z Selecting previously unselected package libcurl4-openssl-dev:amd64.
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:06.6642070Z Preparing to unpack .../25-libcurl4-openssl-dev_8.18.0-1ubuntu2.8_amd64v3.deb ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:06.6648829Z Unpacking libcurl4-openssl-dev:amd64 (8.18.0-1ubuntu2.8) ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:06.6963578Z Selecting previously unselected package libdeflate-dev:amd64.
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:06.7069695Z Preparing to unpack .../26-libdeflate-dev_1.23-2ubuntu1_amd64v3.deb ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:06.7076224Z Unpacking libdeflate-dev:amd64 (1.23-2ubuntu1) ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:06.7274423Z Selecting previously unselected package libjpeg-turbo8-dev:amd64.
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:06.7379282Z Preparing to unpack .../27-libjpeg-turbo8-dev_2.1.5-4ubuntu4_amd64v3.deb ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:06.7385441Z Unpacking libjpeg-turbo8-dev:amd64 (2.1.5-4ubuntu4) ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:06.7774838Z Selecting previously unselected package libjpeg8-dev:amd64.
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:06.7877926Z Preparing to unpack .../28-libjpeg8-dev_8c-2ubuntu12_amd64v3.deb ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:06.7884400Z Unpacking libjpeg8-dev:amd64 (8c-2ubuntu12) ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:06.8066091Z Selecting previously unselected package libjpeg-dev:amd64.
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:06.8168805Z Preparing to unpack .../29-libjpeg-dev_8c-2ubuntu12_amd64v3.deb ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:06.8176038Z Unpacking libjpeg-dev:amd64 (8c-2ubuntu12) ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:06.8360552Z Selecting previously unselected package liblerc-dev:amd64.
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:06.8462804Z Preparing to unpack .../30-liblerc-dev_4.0.0+ds-5ubuntu2_amd64v3.deb ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:06.8469366Z Unpacking liblerc-dev:amd64 (4.0.0+ds-5ubuntu2) ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:06.8681747Z Selecting previously unselected package libpng-dev:amd64.
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:06.8812547Z Preparing to unpack .../31-libpng-dev_1.6.57-1ubuntu0.1_amd64v3.deb ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:06.8819050Z Unpacking libpng-dev:amd64 (1.6.57-1ubuntu0.1) ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:06.9113594Z Selecting previously unselected package libsharpyuv-dev:amd64.
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:06.9216523Z Preparing to unpack .../32-libsharpyuv-dev_1.5.0-0.1build1_amd64v3.deb ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:06.9223059Z Unpacking libsharpyuv-dev:amd64 (1.5.0-0.1build1) ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:06.9411804Z Selecting previously unselected package libjbig-dev:amd64.
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:06.9513818Z Preparing to unpack .../33-libjbig-dev_2.1-6.1ubuntu3_amd64v3.deb ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:06.9609121Z Unpacking libjbig-dev:amd64 (2.1-6.1ubuntu3) ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:06.9850658Z Selecting previously unselected package libwebpdecoder3:amd64.
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:06.9952566Z Preparing to unpack .../34-libwebpdecoder3_1.5.0-0.1build1_amd64v3.deb ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:06.9959625Z Unpacking libwebpdecoder3:amd64 (1.5.0-0.1build1) ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:07.0153580Z Selecting previously unselected package libwebp-dev:amd64.
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:07.0258032Z Preparing to unpack .../35-libwebp-dev_1.5.0-0.1build1_amd64v3.deb ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:07.0265091Z Unpacking libwebp-dev:amd64 (1.5.0-0.1build1) ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:07.0557650Z Selecting previously unselected package libtiffxx6:amd64.
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:07.0662297Z Preparing to unpack .../36-libtiffxx6_4.7.0-3ubuntu5_amd64v3.deb ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:07.0669470Z Unpacking libtiffxx6:amd64 (4.7.0-3ubuntu5) ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:07.0858123Z Selecting previously unselected package libtiff-dev:amd64.
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:07.0962032Z Preparing to unpack .../37-libtiff-dev_4.7.0-3ubuntu5_amd64v3.deb ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:07.0968912Z Unpacking libtiff-dev:amd64 (4.7.0-3ubuntu5) ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:07.1228591Z Selecting previously unselected package ninja-build.
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:07.1332943Z Preparing to unpack .../38-ninja-build_1.13.2-1_amd64v3.deb ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:07.1339546Z Unpacking ninja-build (1.13.2-1) ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:07.1742633Z Selecting previously unselected package nlohmann-json3-dev.
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:07.1846987Z Preparing to unpack .../39-nlohmann-json3-dev_3.12.0.really.3.12.0.really.3.11.3-3build1_all.deb ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:07.1854262Z Unpacking nlohmann-json3-dev (3.12.0.really.3.12.0.really.3.11.3-3build1) ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:07.2721716Z Setting up libgnutls-openssl27t64:amd64 (3.8.12-2ubuntu1.1) ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:07.2742424Z Setting up libnghttp2-dev:amd64 (1.68.0-2ubuntu0.2) ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:07.2759768Z Setting up libjpeg-turbo8-dev:amd64 (2.1.5-4ubuntu4) ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:07.2777927Z Setting up nettle-dev:amd64 (3.10.2-1) ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:07.2794925Z Setting up libpng-dev:amd64 (1.6.57-1ubuntu0.1) ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:07.2810927Z Setting up libjbig-dev:amd64 (2.1-6.1ubuntu3) ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:07.2826543Z Setting up libwebpdecoder3:amd64 (1.5.0-0.1build1) ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:07.2842020Z Setting up libevent-2.1-7t64:amd64 (2.1.12-stable-10ubuntu0.2) ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:07.2858202Z Setting up ninja-build (1.13.2-1) ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:07.2873820Z Setting up libpsl-dev:amd64 (0.21.2-1.1build2) ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:07.2889493Z Setting up libunbound8:amd64 (1.24.2-1ubuntu2.4) ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:07.2905587Z Setting up libgnutls-dane0t64:amd64 (3.8.12-2ubuntu1.1) ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:07.2922285Z Setting up libgssrpc4t64:amd64 (1.22.1-2ubuntu4.1) ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:07.2959580Z Setting up libldap-dev:amd64 (2.6.10+dfsg-1ubuntu5) ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:07.2980273Z Setting up comerr-dev:amd64 (2.1-1.47.2-3ubuntu4) ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:07.3008264Z Setting up liblerc-dev:amd64 (4.0.0+ds-5ubuntu2) ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:07.3024374Z Setting up libssh2-1-dev:amd64 (1.11.1-1ubuntu0.26.04.4) ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:07.3040308Z Setting up libidn2-dev:amd64 (2.3.8-4build1) ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:07.3057581Z Setting up libblosc1:amd64 (1.21.5+ds-2) ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:07.3074482Z Setting up build-essential (12.12ubuntu2.26.04.2) ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:07.3091404Z Setting up nlohmann-json3-dev (3.12.0.really.3.12.0.really.3.11.3-3build1) ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:07.3108354Z Setting up libjpeg8-dev:amd64 (8c-2ubuntu12) ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:07.3124982Z Setting up libsharpyuv-dev:amd64 (1.5.0-0.1build1) ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:07.3142653Z Setting up libtasn1-6-dev:amd64 (4.21.0-2) ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:07.3163889Z Setting up libtiffxx6:amd64 (4.7.0-3ubuntu5) ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:07.3197392Z Setting up libdeflate-dev:amd64 (1.23-2ubuntu1) ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:07.3216149Z Setting up libbrotli-dev:amd64 (1.2.0-3ubuntu0.1) ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:07.3276764Z Setting up libp11-kit-dev:amd64 (0.26.2-2) ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:07.3363107Z Setting up libkadm5clnt-mit12:amd64 (1.22.1-2ubuntu4.1) ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:07.3388646Z Setting up libgnutls28-dev:amd64 (3.8.12-2ubuntu1.1) ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:07.3416031Z Setting up libkdb5-10t64:amd64 (1.22.1-2ubuntu4.1) ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:07.3668414Z Setting up libblosc-dev:amd64 (1.21.5+ds-2) ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:07.3729463Z Setting up libjpeg-dev:amd64 (8c-2ubuntu12) ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:07.3776988Z Setting up libwebp-dev:amd64 (1.5.0-0.1build1) ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:07.3826071Z Setting up libtiff-dev:amd64 (4.7.0-3ubuntu5) ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:07.3868762Z Setting up librtmp-dev:amd64 (2.4+20151223.gitfa8646d.1-3) ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:07.3908237Z Setting up libkadm5srv-mit12:amd64 (1.22.1-2ubuntu4.1) ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:07.3938007Z Setting up krb5-multidev:amd64 (1.22.1-2ubuntu4.1) ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:07.3955362Z Setting up libkrb5-dev:amd64 (1.22.1-2ubuntu4.1) ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:07.3974122Z Setting up libcurl4-openssl-dev:amd64 (8.18.0-1ubuntu2.8) ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:07.3997049Z Processing triggers for libc-bin (2.43-2ubuntu2.4) ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:07.5714719Z Processing triggers for man-db (2.13.1-1build1) ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:07.5734911Z Not building database; man-db/auto-update is not 'true'.
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:07.5745485Z Processing triggers for install-info (7.2-5ubuntu2) ...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:08.3169531Z 
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:08.3170133Z Running kernel seems to be up-to-date.
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:08.3170725Z 
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:08.3170816Z Restarting services...
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:08.3242750Z 
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:08.3243338Z Service restarts being deferred:
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:08.3245690Z  systemctl restart hosted-compute-agent.service
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:08.3245880Z 
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:08.3246552Z No containers need to be restarted.
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:08.3246762Z 
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:08.3247006Z No user sessions are running outdated binaries.
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:08.3250409Z 
+ubuntu-latest	vc_reader build dependencies (Linux)	2026-11-14T10:47:08.3250594Z No VM guests are running outdated hypervisor (qemu) binaries on this host.
+ubuntu-latest	Python packages	2026-11-14T10:47:08.9685558Z ##[group]Run python -m pip install -q -c checks/spiral-slab-workers/constraints.txt \
+ubuntu-latest	Python packages	2026-11-14T10:47:08.9685939Z python -m pip install -q -c checks/spiral-slab-workers/constraints.txt \
+ubuntu-latest	Python packages	2026-11-14T10:47:08.9686263Z   numpy scipy zarr numcodecs kimimaro connected-components-3d networkx tqdm pytest
+ubuntu-latest	Python packages	2026-11-14T10:47:08.9686525Z python -m pip list
+ubuntu-latest	Python packages	2026-11-14T10:47:08.9730397Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+ubuntu-latest	Python packages	2026-11-14T10:47:08.9730609Z env:
+ubuntu-latest	Python packages	2026-11-14T10:47:08.9730770Z   MAIN_REPO: https://github.com/ScrollPrize/villa.git
+ubuntu-latest	Python packages	2026-11-14T10:47:08.9730974Z   MAIN_SHA: 97fb9336c8898be27e78eff8cd23ce5e7185ec0a
+ubuntu-latest	Python packages	2026-11-14T10:47:08.9731423Z   BRANCH_REPO: https://github.com/Cmssmc-code/villa.git
+ubuntu-latest	Python packages	2026-11-14T10:47:08.9731628Z   BRANCH_SHA: bc2c48d07db54fdb4049e06bd34f35091655b5f3
+ubuntu-latest	Python packages	2026-11-14T10:47:08.9732106Z   PREDICTIONS: https://vesuvius-challenge-open-data.s3.us-east-1.amazonaws.com/PHerc0332/representations/predictions/surfaces/20251211183505-surface-20260413222639-surface-m7-L2-th0.2.zarr
+ubuntu-latest	Python packages	2026-11-14T10:47:08.9732587Z   Z_MIN: 4032
+ubuntu-latest	Python packages	2026-11-14T10:47:08.9732701Z   Z_MAX: 4096
+ubuntu-latest	Python packages	2026-11-14T10:47:08.9732817Z   PYTHONUNBUFFERED: 1
+ubuntu-latest	Python packages	2026-11-14T10:47:08.9732947Z   TQDM_MININTERVAL: 10
+ubuntu-latest	Python packages	2026-11-14T10:47:08.9733081Z   PIP_DISABLE_PIP_VERSION_CHECK: 1
+ubuntu-latest	Python packages	2026-11-14T10:47:08.9733267Z   pythonLocation: /opt/hostedtoolcache/Python/3.14.10/x64
+ubuntu-latest	Python packages	2026-11-14T10:47:08.9733507Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.14.10/x64/lib/pkgconfig
+ubuntu-latest	Python packages	2026-11-14T10:47:08.9733756Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+ubuntu-latest	Python packages	2026-11-14T10:47:08.9733968Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+ubuntu-latest	Python packages	2026-11-14T10:47:08.9734183Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+ubuntu-latest	Python packages	2026-11-14T10:47:08.9734401Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.14.10/x64/lib
+ubuntu-latest	Python packages	2026-11-14T10:47:08.9734585Z ##[endgroup]
+ubuntu-latest	Python packages	2026-11-14T10:47:25.4433386Z Package                 Version
+ubuntu-latest	Python packages	2026-11-14T10:47:25.4433789Z ----------------------- -----------
+ubuntu-latest	Python packages	2026-11-14T10:47:25.4434588Z click                   8.5.1
+ubuntu-latest	Python packages	2026-11-14T10:47:25.4435176Z connected-components-3d 4.1.1
+ubuntu-latest	Python packages	2026-11-14T10:47:25.4435760Z crackle-codec           0.55.1
+ubuntu-latest	Python packages	2026-11-14T10:47:25.4436338Z dijkstra3d              1.15.2
+ubuntu-latest	Python packages	2026-11-14T10:47:25.4436887Z dill                    0.4.1
+ubuntu-latest	Python packages	2026-11-14T10:47:25.4437461Z donfig                  0.8.1.post1
+ubuntu-latest	Python packages	2026-11-14T10:47:25.4437996Z edt                     3.1.2
+ubuntu-latest	Python packages	2026-11-14T10:47:25.4438543Z fastremap               1.21.0
+ubuntu-latest	Python packages	2026-11-14T10:47:25.4439071Z fill_voids              2.1.2
+ubuntu-latest	Python packages	2026-11-14T10:47:25.4439625Z google-crc32c           1.9.0
+ubuntu-latest	Python packages	2026-11-14T10:47:25.4441287Z iniconfig               2.3.1
+ubuntu-latest	Python packages	2026-11-14T10:47:25.4441493Z kimimaro                5.9.0
+ubuntu-latest	Python packages	2026-11-14T10:47:25.4441695Z msgspec                 0.22.0
+ubuntu-latest	Python packages	2026-11-14T10:47:25.4442103Z multiprocess            0.70.19
+ubuntu-latest	Python packages	2026-11-14T10:47:25.4442613Z networkx                3.7
+ubuntu-latest	Python packages	2026-11-14T10:47:25.4443142Z numcodecs               0.17.1
+ubuntu-latest	Python packages	2026-11-14T10:47:25.4443660Z numpy                   2.5.4
+ubuntu-latest	Python packages	2026-11-14T10:47:25.4444192Z osteoid                 0.7.4
+ubuntu-latest	Python packages	2026-11-14T10:47:25.4444711Z packaging               26.3
+ubuntu-latest	Python packages	2026-11-14T10:47:25.4445214Z pathos                  0.3.5
+ubuntu-latest	Python packages	2026-11-14T10:47:25.4445728Z pip                     26.3
+ubuntu-latest	Python packages	2026-11-14T10:47:25.4446251Z pluggy                  1.7.0
+ubuntu-latest	Python packages	2026-11-14T10:47:25.4446752Z posix_ipc               1.3.2
+ubuntu-latest	Python packages	2026-11-14T10:47:25.4447252Z pox                     0.3.7
+ubuntu-latest	Python packages	2026-11-14T10:47:25.4447790Z ppft                    1.7.8
+ubuntu-latest	Python packages	2026-11-14T10:47:25.4448436Z psutil                  7.2.2
+ubuntu-latest	Python packages	2026-11-14T10:47:25.4448912Z pybind11                3.1.0
+ubuntu-latest	Python packages	2026-11-14T10:47:25.4449393Z Pygments                2.21.0
+ubuntu-latest	Python packages	2026-11-14T10:47:25.4449900Z pytest                  9.2.0
+ubuntu-latest	Python packages	2026-11-14T10:47:25.4450414Z PyYAML                  6.0.3
+ubuntu-latest	Python packages	2026-11-14T10:47:25.4450924Z scipy                   1.18.1
+ubuntu-latest	Python packages	2026-11-14T10:47:25.4451620Z tqdm                    4.70.1
+ubuntu-latest	Python packages	2026-11-14T10:47:25.4452137Z typing_extensions       4.16.0
+ubuntu-latest	Python packages	2026-11-14T10:47:25.4452650Z xs3d                    1.14.0
+ubuntu-latest	Python packages	2026-11-14T10:47:25.4453161Z zarr                    3.4.2
+ubuntu-latest	Build and install vc_reader (from main)	2026-11-14T10:47:25.4724848Z ##[group]Run export CMAKE_BUILD_PARALLEL_LEVEL=$(python -c 'import os; print(os.cpu_count())')
+ubuntu-latest	Build and install vc_reader (from main)	2026-11-14T10:47:25.4725262Z export CMAKE_BUILD_PARALLEL_LEVEL=$(python -c 'import os; print(os.cpu_count())')
+ubuntu-latest	Build and install vc_reader (from main)	2026-11-14T10:47:25.4725587Z python -m pip install -v -c checks/spiral-slab-workers/constraints.txt \
+ubuntu-latest	Build and install vc_reader (from main)	2026-11-14T10:47:25.4725932Z   --config-settings=cmake.define.VC_READER_ENABLE_CUDA=OFF ./villa-main/vc_reader \
+ubuntu-latest	Build and install vc_reader (from main)	2026-11-14T10:47:25.4726292Z   > work/logs/build-vc_reader.log 2>&1 || { tail -n 200 work/logs/build-vc_reader.log; exit 1; }
+ubuntu-latest	Build and install vc_reader (from main)	2026-11-14T10:47:25.4726566Z tail -n 5 work/logs/build-vc_reader.log
+ubuntu-latest	Build and install vc_reader (from main)	2026-11-14T10:47:25.4726980Z python -c "import numpy as np; from vc_reader.geometry import label_components; print(label_components(np.eye(4, dtype=np.uint8)[None], connectivity=6)[1], 'components')"
+ubuntu-latest	Build and install vc_reader (from main)	2026-11-14T10:47:25.4770934Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+ubuntu-latest	Build and install vc_reader (from main)	2026-11-14T10:47:25.4771252Z env:
+ubuntu-latest	Build and install vc_reader (from main)	2026-11-14T10:47:25.4771463Z   MAIN_REPO: https://github.com/ScrollPrize/villa.git
+ubuntu-latest	Build and install vc_reader (from main)	2026-11-14T10:47:25.4771673Z   MAIN_SHA: 97fb9336c8898be27e78eff8cd23ce5e7185ec0a
+ubuntu-latest	Build and install vc_reader (from main)	2026-11-14T10:47:25.4771878Z   BRANCH_REPO: https://github.com/Cmssmc-code/villa.git
+ubuntu-latest	Build and install vc_reader (from main)	2026-11-14T10:47:25.4772086Z   BRANCH_SHA: bc2c48d07db54fdb4049e06bd34f35091655b5f3
+ubuntu-latest	Build and install vc_reader (from main)	2026-11-14T10:47:25.4772573Z   PREDICTIONS: https://vesuvius-challenge-open-data.s3.us-east-1.amazonaws.com/PHerc0332/representations/predictions/surfaces/20251211183505-surface-20260413222639-surface-m7-L2-th0.2.zarr
+ubuntu-latest	Build and install vc_reader (from main)	2026-11-14T10:47:25.4773029Z   Z_MIN: 4032
+ubuntu-latest	Build and install vc_reader (from main)	2026-11-14T10:47:25.4773142Z   Z_MAX: 4096
+ubuntu-latest	Build and install vc_reader (from main)	2026-11-14T10:47:25.4773272Z   PYTHONUNBUFFERED: 1
+ubuntu-latest	Build and install vc_reader (from main)	2026-11-14T10:47:25.4773411Z   TQDM_MININTERVAL: 10
+ubuntu-latest	Build and install vc_reader (from main)	2026-11-14T10:47:25.4773549Z   PIP_DISABLE_PIP_VERSION_CHECK: 1
+ubuntu-latest	Build and install vc_reader (from main)	2026-11-14T10:47:25.4773735Z   pythonLocation: /opt/hostedtoolcache/Python/3.14.10/x64
+ubuntu-latest	Build and install vc_reader (from main)	2026-11-14T10:47:25.4773978Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.14.10/x64/lib/pkgconfig
+ubuntu-latest	Build and install vc_reader (from main)	2026-11-14T10:47:25.4774221Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+ubuntu-latest	Build and install vc_reader (from main)	2026-11-14T10:47:25.4774443Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+ubuntu-latest	Build and install vc_reader (from main)	2026-11-14T10:47:25.4774662Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+ubuntu-latest	Build and install vc_reader (from main)	2026-11-14T10:47:25.4774884Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.14.10/x64/lib
+ubuntu-latest	Build and install vc_reader (from main)	2026-11-14T10:47:25.4775072Z ##[endgroup]
+ubuntu-latest	Build and install vc_reader (from main)	2026-11-14T10:51:27.1651718Z   Stored in directory: /tmp/pip-ephem-wheel-cache-8eas12gw/wheels/a7/c6/9b/ad245b1864e243327ba876d57bb17aeff0b2e674b135b11239
+ubuntu-latest	Build and install vc_reader (from main)	2026-11-14T10:51:27.1652364Z Successfully built vc-reader
+ubuntu-latest	Build and install vc_reader (from main)	2026-11-14T10:51:27.1652613Z Installing collected packages: vc-reader
+ubuntu-latest	Build and install vc_reader (from main)	2026-11-14T10:51:27.1652935Z   changing mode of /opt/hostedtoolcache/Python/3.14.10/x64/bin/vc-reader to 777
+ubuntu-latest	Build and install vc_reader (from main)	2026-11-14T10:51:27.1653280Z Successfully installed vc-reader-0.1.0
+ubuntu-latest	Build and install vc_reader (from main)	2026-11-14T10:51:27.2292003Z 4 components
+ubuntu-latest	Download the predictions crop	2026-11-14T10:51:27.2418136Z ##[group]Run python checks/spiral-slab-workers/fetch_predictions.py --json work/predictions.json \
+ubuntu-latest	Download the predictions crop	2026-11-14T10:51:27.2418534Z python checks/spiral-slab-workers/fetch_predictions.py --json work/predictions.json \
+ubuntu-latest	Download the predictions crop	2026-11-14T10:51:27.2418862Z   "$PREDICTIONS" work/predictions.zarr 0 "$Z_MIN" "$Z_MAX" 2>&1 | tee work/logs/fetch.log
+ubuntu-latest	Download the predictions crop	2026-11-14T10:51:27.2458769Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+ubuntu-latest	Download the predictions crop	2026-11-14T10:51:27.2458959Z env:
+ubuntu-latest	Download the predictions crop	2026-11-14T10:51:27.2459109Z   MAIN_REPO: https://github.com/ScrollPrize/villa.git
+ubuntu-latest	Download the predictions crop	2026-11-14T10:51:27.2459424Z   MAIN_SHA: 97fb9336c8898be27e78eff8cd23ce5e7185ec0a
+ubuntu-latest	Download the predictions crop	2026-11-14T10:51:27.2459614Z   BRANCH_REPO: https://github.com/Cmssmc-code/villa.git
+ubuntu-latest	Download the predictions crop	2026-11-14T10:51:27.2459806Z   BRANCH_SHA: bc2c48d07db54fdb4049e06bd34f35091655b5f3
+ubuntu-latest	Download the predictions crop	2026-11-14T10:51:27.2460248Z   PREDICTIONS: https://vesuvius-challenge-open-data.s3.us-east-1.amazonaws.com/PHerc0332/representations/predictions/surfaces/20251211183505-surface-20260413222639-surface-m7-L2-th0.2.zarr
+ubuntu-latest	Download the predictions crop	2026-11-14T10:51:27.2460708Z   Z_MIN: 4032
+ubuntu-latest	Download the predictions crop	2026-11-14T10:51:27.2460814Z   Z_MAX: 4096
+ubuntu-latest	Download the predictions crop	2026-11-14T10:51:27.2460919Z   PYTHONUNBUFFERED: 1
+ubuntu-latest	Download the predictions crop	2026-11-14T10:51:27.2461228Z   TQDM_MININTERVAL: 10
+ubuntu-latest	Download the predictions crop	2026-11-14T10:51:27.2461366Z   PIP_DISABLE_PIP_VERSION_CHECK: 1
+ubuntu-latest	Download the predictions crop	2026-11-14T10:51:27.2461540Z   pythonLocation: /opt/hostedtoolcache/Python/3.14.10/x64
+ubuntu-latest	Download the predictions crop	2026-11-14T10:51:27.2461765Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.14.10/x64/lib/pkgconfig
+ubuntu-latest	Download the predictions crop	2026-11-14T10:51:27.2461994Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+ubuntu-latest	Download the predictions crop	2026-11-14T10:51:27.2462201Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+ubuntu-latest	Download the predictions crop	2026-11-14T10:51:27.2462401Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+ubuntu-latest	Download the predictions crop	2026-11-14T10:51:27.2462604Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.14.10/x64/lib
+ubuntu-latest	Download the predictions crop	2026-11-14T10:51:27.2462780Z ##[endgroup]
+ubuntu-latest	Download the predictions crop	2026-11-14T10:51:35.5369969Z downloaded 195 chunks of rows [21] in 7 s from https://vesuvius-challenge-open-data.s3.us-east-1.amazonaws.com/PHerc0332/representations/predictions/surfaces/20251211183505-surface-20260413222639-surface-m7-L2-th0.2.zarr/0
+ubuntu-latest	Download the predictions crop	2026-11-14T10:51:35.5691535Z level 0, shape [8398, 3941, 3941], chunks [192, 192, 192], z 4032..4096 -> chunk rows [21]: 195 chunk files, 45.2 MB, SHA-256 of .zarray and chunks 0bed6251aefa6eb45ba6646870ee43ae918931cd34f05868322b9697405feb55
+ubuntu-latest	Tests on main	2026-11-14T10:51:35.5844654Z ##[group]Run set +e
+ubuntu-latest	Tests on main	2026-11-14T10:51:35.5844834Z set +e
+ubuntu-latest	Tests on main	2026-11-14T10:51:35.5845089Z python -m pytest -q -rfEs -p no:cacheprovider --junitxml="$GITHUB_WORKSPACE/work/tests-main.xml" \
+ubuntu-latest	Tests on main	2026-11-14T10:51:35.5845564Z   tests/test_cc_labels.py tests/test_extract_surface_tracks.py 2>&1 | tee "$GITHUB_WORKSPACE/work/logs/tests-main.log"
+ubuntu-latest	Tests on main	2026-11-14T10:51:35.5845924Z echo "${PIPESTATUS[0]}" > "$GITHUB_WORKSPACE/work/tests-main.rc"
+ubuntu-latest	Tests on main	2026-11-14T10:51:35.5886378Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+ubuntu-latest	Tests on main	2026-11-14T10:51:35.5886565Z env:
+ubuntu-latest	Tests on main	2026-11-14T10:51:35.5886715Z   MAIN_REPO: https://github.com/ScrollPrize/villa.git
+ubuntu-latest	Tests on main	2026-11-14T10:51:35.5886907Z   MAIN_SHA: 97fb9336c8898be27e78eff8cd23ce5e7185ec0a
+ubuntu-latest	Tests on main	2026-11-14T10:51:35.5887099Z   BRANCH_REPO: https://github.com/Cmssmc-code/villa.git
+ubuntu-latest	Tests on main	2026-11-14T10:51:35.5887303Z   BRANCH_SHA: bc2c48d07db54fdb4049e06bd34f35091655b5f3
+ubuntu-latest	Tests on main	2026-11-14T10:51:35.5887759Z   PREDICTIONS: https://vesuvius-challenge-open-data.s3.us-east-1.amazonaws.com/PHerc0332/representations/predictions/surfaces/20251211183505-surface-20260413222639-surface-m7-L2-th0.2.zarr
+ubuntu-latest	Tests on main	2026-11-14T10:51:35.5888231Z   Z_MIN: 4032
+ubuntu-latest	Tests on main	2026-11-14T10:51:35.5888344Z   Z_MAX: 4096
+ubuntu-latest	Tests on main	2026-11-14T10:51:35.5888457Z   PYTHONUNBUFFERED: 1
+ubuntu-latest	Tests on main	2026-11-14T10:51:35.5888581Z   TQDM_MININTERVAL: 10
+ubuntu-latest	Tests on main	2026-11-14T10:51:35.5888712Z   PIP_DISABLE_PIP_VERSION_CHECK: 1
+ubuntu-latest	Tests on main	2026-11-14T10:51:35.5888891Z   pythonLocation: /opt/hostedtoolcache/Python/3.14.10/x64
+ubuntu-latest	Tests on main	2026-11-14T10:51:35.5889119Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.14.10/x64/lib/pkgconfig
+ubuntu-latest	Tests on main	2026-11-14T10:51:35.5889346Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+ubuntu-latest	Tests on main	2026-11-14T10:51:35.5889557Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+ubuntu-latest	Tests on main	2026-11-14T10:51:35.5889763Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+ubuntu-latest	Tests on main	2026-11-14T10:51:35.5889974Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.14.10/x64/lib
+ubuntu-latest	Tests on main	2026-11-14T10:51:35.5890149Z ##[endgroup]
+ubuntu-latest	Tests on main	2026-11-14T10:52:18.7601812Z .........ssss..ss....s..s..............s                                 [100%]
+ubuntu-latest	Tests on main	2026-11-14T10:52:18.7602320Z =============================== warnings summary ===============================
+ubuntu-latest	Tests on main	2026-11-14T10:52:18.7603921Z tests/test_cc_labels.py: 18 warnings
+ubuntu-latest	Tests on main	2026-11-14T10:52:18.7604411Z   /opt/hostedtoolcache/Python/3.14.10/x64/lib/python3.14/multiprocessing/popen_fork.py:76: DeprecationWarning: This process (pid=3890) is multi-threaded, use of fork() may lead to deadlocks in the child.
+ubuntu-latest	Tests on main	2026-11-14T10:52:18.7604842Z     self.pid = os.fork()
+ubuntu-latest	Tests on main	2026-11-14T10:52:18.7604932Z 
+ubuntu-latest	Tests on main	2026-11-14T10:52:18.7605063Z -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+ubuntu-latest	Tests on main	2026-11-14T10:52:18.7607084Z =========================== short test summary info ============================
+ubuntu-latest	Tests on main	2026-11-14T10:52:18.7607350Z SKIPPED [3] tests/test_cc_labels.py:116: monorepo real-scroll fixture required
+ubuntu-latest	Tests on main	2026-11-14T10:52:18.7607617Z SKIPPED [1] tests/test_extract_surface_tracks.py:204: numba is not installed
+ubuntu-latest	Tests on main	2026-11-14T10:52:18.7607987Z SKIPPED [2] tests/test_extract_surface_tracks.py:215: numba is not installed
+ubuntu-latest	Tests on main	2026-11-14T10:52:18.7608281Z SKIPPED [2] tests/test_extract_surface_tracks.py:238: numba is not installed
+ubuntu-latest	Tests on main	2026-11-14T10:52:18.7608618Z SKIPPED [1] tests/test_extract_surface_tracks.py:521: could not import 'brook': No module named 'brook'
+ubuntu-latest	Tests on main	2026-11-14T10:52:18.7608911Z 31 passed, 9 skipped, 18 warnings in 41.70s
+ubuntu-latest	Tests on the branch	2026-11-14T10:52:18.9582811Z ##[group]Run set +e
+ubuntu-latest	Tests on the branch	2026-11-14T10:52:18.9582998Z set +e
+ubuntu-latest	Tests on the branch	2026-11-14T10:52:18.9583245Z python -m pytest -q -rfEs -p no:cacheprovider --junitxml="$GITHUB_WORKSPACE/work/tests-branch.xml" \
+ubuntu-latest	Tests on the branch	2026-11-14T10:52:18.9583657Z   tests/test_cc_labels.py tests/test_extract_surface_tracks.py 2>&1 | tee "$GITHUB_WORKSPACE/work/logs/tests-branch.log"
+ubuntu-latest	Tests on the branch	2026-11-14T10:52:18.9583994Z echo "${PIPESTATUS[0]}" > "$GITHUB_WORKSPACE/work/tests-branch.rc"
+ubuntu-latest	Tests on the branch	2026-11-14T10:52:18.9624540Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+ubuntu-latest	Tests on the branch	2026-11-14T10:52:18.9624734Z env:
+ubuntu-latest	Tests on the branch	2026-11-14T10:52:18.9624884Z   MAIN_REPO: https://github.com/ScrollPrize/villa.git
+ubuntu-latest	Tests on the branch	2026-11-14T10:52:18.9625076Z   MAIN_SHA: 97fb9336c8898be27e78eff8cd23ce5e7185ec0a
+ubuntu-latest	Tests on the branch	2026-11-14T10:52:18.9625272Z   BRANCH_REPO: https://github.com/Cmssmc-code/villa.git
+ubuntu-latest	Tests on the branch	2026-11-14T10:52:18.9625485Z   BRANCH_SHA: bc2c48d07db54fdb4049e06bd34f35091655b5f3
+ubuntu-latest	Tests on the branch	2026-11-14T10:52:18.9625937Z   PREDICTIONS: https://vesuvius-challenge-open-data.s3.us-east-1.amazonaws.com/PHerc0332/representations/predictions/surfaces/20251211183505-surface-20260413222639-surface-m7-L2-th0.2.zarr
+ubuntu-latest	Tests on the branch	2026-11-14T10:52:18.9626394Z   Z_MIN: 4032
+ubuntu-latest	Tests on the branch	2026-11-14T10:52:18.9626501Z   Z_MAX: 4096
+ubuntu-latest	Tests on the branch	2026-11-14T10:52:18.9626610Z   PYTHONUNBUFFERED: 1
+ubuntu-latest	Tests on the branch	2026-11-14T10:52:18.9626733Z   TQDM_MININTERVAL: 10
+ubuntu-latest	Tests on the branch	2026-11-14T10:52:18.9626861Z   PIP_DISABLE_PIP_VERSION_CHECK: 1
+ubuntu-latest	Tests on the branch	2026-11-14T10:52:18.9627039Z   pythonLocation: /opt/hostedtoolcache/Python/3.14.10/x64
+ubuntu-latest	Tests on the branch	2026-11-14T10:52:18.9627267Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.14.10/x64/lib/pkgconfig
+ubuntu-latest	Tests on the branch	2026-11-14T10:52:18.9627496Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+ubuntu-latest	Tests on the branch	2026-11-14T10:52:18.9627701Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+ubuntu-latest	Tests on the branch	2026-11-14T10:52:18.9627905Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+ubuntu-latest	Tests on the branch	2026-11-14T10:52:18.9628116Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.14.10/x64/lib
+ubuntu-latest	Tests on the branch	2026-11-14T10:52:18.9628293Z ##[endgroup]
+ubuntu-latest	Tests on the branch	2026-11-14T10:53:01.8922163Z ..........ssss..ss....s..s...............s                               [100%]
+ubuntu-latest	Tests on the branch	2026-11-14T10:53:01.8922532Z =============================== warnings summary ===============================
+ubuntu-latest	Tests on the branch	2026-11-14T10:53:01.8924566Z tests/test_cc_labels.py: 18 warnings
+ubuntu-latest	Tests on the branch	2026-11-14T10:53:01.8925328Z   /opt/hostedtoolcache/Python/3.14.10/x64/lib/python3.14/multiprocessing/popen_fork.py:76: DeprecationWarning: This process (pid=7123) is multi-threaded, use of fork() may lead to deadlocks in the child.
+ubuntu-latest	Tests on the branch	2026-11-14T10:53:01.8926082Z     self.pid = os.fork()
+ubuntu-latest	Tests on the branch	2026-11-14T10:53:01.8926221Z 
+ubuntu-latest	Tests on the branch	2026-11-14T10:53:01.8926435Z -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+ubuntu-latest	Tests on the branch	2026-11-14T10:53:01.8928699Z =========================== short test summary info ============================
+ubuntu-latest	Tests on the branch	2026-11-14T10:53:01.8929187Z SKIPPED [3] tests/test_cc_labels.py:131: monorepo real-scroll fixture required
+ubuntu-latest	Tests on the branch	2026-11-14T10:53:01.8929938Z SKIPPED [1] tests/test_extract_surface_tracks.py:204: numba is not installed
+ubuntu-latest	Tests on the branch	2026-11-14T10:53:01.8930363Z SKIPPED [2] tests/test_extract_surface_tracks.py:215: numba is not installed
+ubuntu-latest	Tests on the branch	2026-11-14T10:53:01.8930787Z SKIPPED [2] tests/test_extract_surface_tracks.py:238: numba is not installed
+ubuntu-latest	Tests on the branch	2026-11-14T10:53:01.8931411Z SKIPPED [1] tests/test_extract_surface_tracks.py:537: could not import 'brook': No module named 'brook'
+ubuntu-latest	Tests on the branch	2026-11-14T10:53:01.8931832Z 33 passed, 9 skipped, 18 warnings in 42.63s
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:53:02.0750846Z ##[group]Run python checks/spiral-slab-workers/check_extraction.py villa-main villa-branch \
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:53:02.0751969Z python checks/spiral-slab-workers/check_extraction.py villa-main villa-branch \
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:53:02.0752262Z   "$GITHUB_WORKSPACE/work/predictions.zarr/0" "$Z_MIN" "$Z_MAX" work
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:53:02.0792188Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:53:02.0792400Z env:
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:53:02.0792555Z   MAIN_REPO: https://github.com/ScrollPrize/villa.git
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:53:02.0792751Z   MAIN_SHA: 97fb9336c8898be27e78eff8cd23ce5e7185ec0a
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:53:02.0792946Z   BRANCH_REPO: https://github.com/Cmssmc-code/villa.git
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:53:02.0793139Z   BRANCH_SHA: bc2c48d07db54fdb4049e06bd34f35091655b5f3
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:53:02.0793594Z   PREDICTIONS: https://vesuvius-challenge-open-data.s3.us-east-1.amazonaws.com/PHerc0332/representations/predictions/surfaces/20251211183505-surface-20260413222639-surface-m7-L2-th0.2.zarr
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:53:02.0794054Z   Z_MIN: 4032
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:53:02.0794160Z   Z_MAX: 4096
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:53:02.0794268Z   PYTHONUNBUFFERED: 1
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:53:02.0794393Z   TQDM_MININTERVAL: 10
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:53:02.0794521Z   PIP_DISABLE_PIP_VERSION_CHECK: 1
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:53:02.0794697Z   pythonLocation: /opt/hostedtoolcache/Python/3.14.10/x64
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:53:02.0794923Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.14.10/x64/lib/pkgconfig
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:53:02.0795160Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:53:02.0795363Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:53:02.0795566Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:53:02.0795774Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.14.10/x64/lib
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:53:02.0795946Z ##[endgroup]
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:56:01.2443211Z --- main-default: exit code 0, 179.0 s, children: 8 other, 340 resource tracker, 784 spawned (spawn_main), at most 10
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:56:01.2443923Z vertical x-stride slabs:  81%|████████▏ | 44/54 [01:16<00:17,  1.77s/it]
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:56:01.2446112Z vertical x-stride slabs:  93%|█████████▎| 50/54 [01:27<00:07,  1.78s/it]
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:56:01.2446482Z vertical x-stride slabs: 100%|██████████| 54/54 [01:35<00:00,  1.76s/it]
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:56:01.2446628Z 
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:56:01.2446685Z # exit code 0, 179.0 s
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:56:01.2446989Z # child processes seen (ps every second): 8 other, 340 resource tracker, 784 spawned (spawn_main); at most 10 at once, resource tracker excluded
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:59:07.4928094Z --- branch-default: exit code 0, 186.2 s, children: 12 other, 351 resource tracker, 784 spawned (spawn_main), at most 10
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:59:07.4929084Z vertical x-stride slabs:  89%|████████▉ | 48/54 [01:25<00:10,  1.74s/it]
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:59:07.4929529Z vertical x-stride slabs: 100%|██████████| 54/54 [01:35<00:00,  1.72s/it]
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:59:07.4929952Z vertical x-stride slabs: 100%|██████████| 54/54 [01:35<00:00,  1.76s/it]
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:59:07.4930176Z 
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:59:07.4930270Z # exit code 0, 186.2 s
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:59:07.4930629Z # child processes seen (ps every second): 12 other, 351 resource tracker, 784 spawned (spawn_main); at most 10 at once, resource tracker excluded
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:59:22.0268840Z --- main-1proc: exit code 0, 14.5 s, children: 1 resource tracker, at most 0
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:59:22.0269159Z 
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:59:22.0269259Z vertical x-stride slabs:   0%|          | 0/54 [00:00<?, ?it/s]
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:59:22.0270187Z vertical x-stride slabs: 100%|██████████| 54/54 [00:01<00:00, 32.61it/s]
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:59:22.0270338Z 
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:59:22.0270401Z # exit code 0, 14.5 s
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:59:22.0270644Z # child processes seen (ps every second): 1 resource tracker; at most 0 at once, resource tracker excluded
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:59:36.5655674Z --- branch-1proc: exit code 0, 14.5 s, children: 1 resource tracker, at most 0
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:59:36.5656911Z 
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:59:36.5657144Z vertical x-stride slabs:   0%|          | 0/54 [00:00<?, ?it/s]
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:59:36.5657851Z vertical x-stride slabs: 100%|██████████| 54/54 [00:01<00:00, 31.28it/s]
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:59:36.5658600Z 
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:59:36.5658680Z # exit code 0, 14.5 s
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:59:36.5659045Z # child processes seen (ps every second): 1 resource tracker; at most 0 at once, resource tracker excluded
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:59:49.5835442Z --- branch-sw2: exit code 0, 13.0 s, children: 6 forked (the run's command line), 1 resource tracker, at most 2
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:59:49.5835928Z 
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:59:49.5836033Z vertical x-stride slabs:   0%|          | 0/54 [00:00<?, ?it/s]
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:59:49.5836569Z vertical x-stride slabs: 100%|██████████| 54/54 [00:01<00:00, 35.17it/s]
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:59:49.5836715Z 
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:59:49.5836779Z # exit code 0, 13.0 s
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:59:49.5837077Z # child processes seen (ps every second): 6 forked (the run's command line), 1 resource tracker; at most 2 at once, resource tracker excluded
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:59:49.6996995Z --- main-sw2: exit code 1, 0.1 s, children: none seen, at most 0, NameError: name 'sys' is not defined. Did you forget to import 'sys'?
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:59:49.6997692Z     if args.slab_workers > 1 and not sys.platform.startswith('linux'):
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:59:49.6997998Z                                      ^^^
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:59:49.6998301Z NameError: name 'sys' is not defined. Did you forget to import 'sys'?
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:59:49.6998520Z 
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:59:49.6998603Z # exit code 1, 0.1 s
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:59:49.6998924Z # child processes seen (ps every second): none seen; at most 0 at once, resource tracker excluded
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:59:49.8009778Z === compare main-default vs branch-default
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:59:49.8010194Z main-default.dbm: 100 keys; branch-default.dbm: 100 keys
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:59:49.8010472Z same keys: True
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:59:49.8010668Z keys with identical pickled bytes: 79/100
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:59:49.8010950Z keys with identical track sets: 100/100; differing: []
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:59:49.8011377Z tracks: 1988, vertices: 127737
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:59:49.8011645Z fingerprint of sorted track sets (main-default): a8e2657940508033
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:59:49.9069595Z === compare main-1proc vs branch-1proc
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:59:49.9069995Z main-1proc.dbm: 100 keys; branch-1proc.dbm: 100 keys
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:59:49.9070263Z same keys: True
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:59:49.9070458Z keys with identical pickled bytes: 100/100
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:59:49.9070723Z keys with identical track sets: 100/100; differing: []
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:59:49.9070978Z tracks: 1988, vertices: 127737
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:59:49.9071473Z fingerprint of sorted track sets (main-1proc): a8e2657940508033
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:59:50.0044807Z === compare branch-1proc vs branch-sw2
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:59:50.0045209Z branch-1proc.dbm: 100 keys; branch-sw2.dbm: 100 keys
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:59:50.0045478Z same keys: True
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:59:50.0045691Z keys with identical pickled bytes: 100/100
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:59:50.0045961Z keys with identical track sets: 100/100; differing: []
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:59:50.0046213Z tracks: 1988, vertices: 127737
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:59:50.0046483Z fingerprint of sorted track sets (branch-1proc): a8e2657940508033
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:59:50.0982817Z === compare main-1proc vs branch-sw2
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:59:50.0983215Z main-1proc.dbm: 100 keys; branch-sw2.dbm: 100 keys
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:59:50.0983479Z same keys: True
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:59:50.0983679Z keys with identical pickled bytes: 100/100
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:59:50.0983959Z keys with identical track sets: 100/100; differing: []
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:59:50.0984233Z tracks: 1988, vertices: 127737
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:59:50.0984510Z fingerprint of sorted track sets (main-1proc): a8e2657940508033
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:59:50.2020140Z === compare main-1proc vs main-default
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:59:50.2020568Z main-1proc.dbm: 100 keys; main-default.dbm: 100 keys
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:59:50.2020873Z same keys: True
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:59:50.2021264Z keys with identical pickled bytes: 84/100
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:59:50.2021557Z keys with identical track sets: 100/100; differing: []
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:59:50.2021842Z tracks: 1988, vertices: 127737
+ubuntu-latest	Extraction runs and comparisons	2026-11-14T10:59:50.2022135Z fingerprint of sorted track sets (main-1proc): a8e2657940508033
+ubuntu-latest	Summary	2026-11-14T10:59:50.2197036Z ##[group]Run python checks/spiral-slab-workers/summarize.py villa-main villa-branch work | tee -a "$GITHUB_STEP_SUMMARY"
+ubuntu-latest	Summary	2026-11-14T10:59:50.2197534Z python checks/spiral-slab-workers/summarize.py villa-main villa-branch work | tee -a "$GITHUB_STEP_SUMMARY"
+ubuntu-latest	Summary	2026-11-14T10:59:50.2239083Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+ubuntu-latest	Summary	2026-11-14T10:59:50.2239279Z env:
+ubuntu-latest	Summary	2026-11-14T10:59:50.2239438Z   MAIN_REPO: https://github.com/ScrollPrize/villa.git
+ubuntu-latest	Summary	2026-11-14T10:59:50.2239655Z   MAIN_SHA: 97fb9336c8898be27e78eff8cd23ce5e7185ec0a
+ubuntu-latest	Summary	2026-11-14T10:59:50.2239857Z   BRANCH_REPO: https://github.com/Cmssmc-code/villa.git
+ubuntu-latest	Summary	2026-11-14T10:59:50.2240056Z   BRANCH_SHA: bc2c48d07db54fdb4049e06bd34f35091655b5f3
+ubuntu-latest	Summary	2026-11-14T10:59:50.2240527Z   PREDICTIONS: https://vesuvius-challenge-open-data.s3.us-east-1.amazonaws.com/PHerc0332/representations/predictions/surfaces/20251211183505-surface-20260413222639-surface-m7-L2-th0.2.zarr
+ubuntu-latest	Summary	2026-11-14T10:59:50.2240973Z   Z_MIN: 4032
+ubuntu-latest	Summary	2026-11-14T10:59:50.2241236Z   Z_MAX: 4096
+ubuntu-latest	Summary	2026-11-14T10:59:50.2241400Z   PYTHONUNBUFFERED: 1
+ubuntu-latest	Summary	2026-11-14T10:59:50.2241530Z   TQDM_MININTERVAL: 10
+ubuntu-latest	Summary	2026-11-14T10:59:50.2241662Z   PIP_DISABLE_PIP_VERSION_CHECK: 1
+ubuntu-latest	Summary	2026-11-14T10:59:50.2241848Z   pythonLocation: /opt/hostedtoolcache/Python/3.14.10/x64
+ubuntu-latest	Summary	2026-11-14T10:59:50.2242088Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.14.10/x64/lib/pkgconfig
+ubuntu-latest	Summary	2026-11-14T10:59:50.2242324Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+ubuntu-latest	Summary	2026-11-14T10:59:50.2242547Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+ubuntu-latest	Summary	2026-11-14T10:59:50.2242760Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+ubuntu-latest	Summary	2026-11-14T10:59:50.2242975Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.14.10/x64/lib
+ubuntu-latest	Summary	2026-11-14T10:59:50.2243157Z ##[endgroup]
+ubuntu-latest	Summary	2026-11-14T10:59:50.2834337Z ## spiral-fitting `--slab-workers` on Ubuntu 26.04.1 LTS x86_64: all checks pass
+ubuntu-latest	Summary	2026-11-14T10:59:50.2834699Z 
+ubuntu-latest	Summary	2026-11-14T10:59:50.2835090Z - main: [ScrollPrize/villa@97fb9336c](https://github.com/ScrollPrize/villa/commit/97fb9336c8898be27e78eff8cd23ce5e7185ec0a)
+ubuntu-latest	Summary	2026-11-14T10:59:50.2836067Z - branch: [Cmssmc-code/villa@bc2c48d07](https://github.com/Cmssmc-code/villa/commit/bc2c48d07db54fdb4049e06bd34f35091655b5f3) (spiral-slab-workers-windows)
+ubuntu-latest	Summary	2026-11-14T10:59:50.2837010Z - Python 3.14.10, 4 CPUs; numpy 2.5.4, zarr 3.4.2, numcodecs 0.17.1, kimimaro 5.9.0, connected-components-3d 4.1.1, networkx 3.7, vc-reader 0.1.0, pytest 9.2.0
+ubuntu-latest	Summary	2026-11-14T10:59:50.2838396Z - Data: `https://vesuvius-challenge-open-data.s3.us-east-1.amazonaws.com/PHerc0332/representations/predictions/surfaces/20251211183505-surface-20260413222639-surface-m7-L2-th0.2.zarr/0`, z 4032..4096 (chunk rows [21]: 195 chunk files, 45.2 MB, SHA-256 of .zarray and chunks `0bed6251aefa6eb4`)
+ubuntu-latest	Summary	2026-11-14T10:59:50.2839891Z - Command: `python extract_surface_tracks.py --backend cpu --predictions <array> --out <run>.dbm --z-min Z0 --z-max Z1 --no-packed-store [options]`, run in each tree's spiral-fitting/
+ubuntu-latest	Summary	2026-11-14T10:59:50.2840502Z 
+ubuntu-latest	Summary	2026-11-14T10:59:50.2840582Z ### Checks
+ubuntu-latest	Summary	2026-11-14T10:59:50.2840694Z 
+ubuntu-latest	Summary	2026-11-14T10:59:50.2840770Z | check | result |
+ubuntu-latest	Summary	2026-11-14T10:59:50.2840957Z |---|---|
+ubuntu-latest	Summary	2026-11-14T10:59:50.2841395Z | vc_reader/ is the same in both trees (git tree hash), so one build serves both | PASS |
+ubuntu-latest	Summary	2026-11-14T10:59:50.2841796Z | tests pass on the branch | PASS |
+ubuntu-latest	Summary	2026-11-14T10:59:50.2842066Z | main-default finishes (exit code 0) | PASS |
+ubuntu-latest	Summary	2026-11-14T10:59:50.2842370Z | branch-default finishes (exit code 0) | PASS |
+ubuntu-latest	Summary	2026-11-14T10:59:50.2842841Z | main-1proc finishes (exit code 0) | PASS |
+ubuntu-latest	Summary	2026-11-14T10:59:50.2843122Z | branch-1proc finishes (exit code 0) | PASS |
+ubuntu-latest	Summary	2026-11-14T10:59:50.2843404Z | branch-sw2 finishes (exit code 0) | PASS |
+ubuntu-latest	Summary	2026-11-14T10:59:50.2843772Z | main-default and branch-default: same keys, same tracks for every key | PASS |
+ubuntu-latest	Summary	2026-11-14T10:59:50.2844276Z | main-1proc and branch-1proc: same keys, identical pickled bytes for every key | PASS |
+ubuntu-latest	Summary	2026-11-14T10:59:50.2844795Z | branch-1proc and branch-sw2: same keys, identical pickled bytes for every key | PASS |
+ubuntu-latest	Summary	2026-11-14T10:59:50.2845496Z | main-1proc and branch-sw2: same keys, identical pickled bytes for every key | PASS |
+ubuntu-latest	Summary	2026-11-14T10:59:50.2845929Z | branch-sw2 ran two forked slab workers at once | PASS |
+ubuntu-latest	Summary	2026-11-14T10:59:50.2846298Z | main-sw2 (main with --slab-workers 2) stops with an error | PASS |
+ubuntu-latest	Summary	2026-11-14T10:59:50.2846538Z 
+ubuntu-latest	Summary	2026-11-14T10:59:50.2846617Z ### Extraction runs
+ubuntu-latest	Summary	2026-11-14T10:59:50.2846836Z 
+ubuntu-latest	Summary	2026-11-14T10:59:50.2847085Z | run | tree | options | exit code | time (s) | child processes seen | keys | tracks | vertices | fingerprint |
+ubuntu-latest	Summary	2026-11-14T10:59:50.2847523Z |---|---|---|---|---|---|---|---|---|---|
+ubuntu-latest	Summary	2026-11-14T10:59:50.2848025Z | main-default | main | `(defaults)` | 0 | 179.0 | 8 other, 340 resource tracker, 784 spawned (spawn_main) (at most 10 at once) | 100 | 1988 | 127737 | `a8e2657940508033` |
+ubuntu-latest	Summary	2026-11-14T10:59:50.2848876Z | branch-default | branch | `(defaults)` | 0 | 186.2 | 12 other, 351 resource tracker, 784 spawned (spawn_main) (at most 10 at once) | 100 | 1988 | 127737 | `a8e2657940508033` |
+ubuntu-latest	Summary	2026-11-14T10:59:50.2849706Z | main-1proc | main | `--kimimaro-parallel 1` | 0 | 14.5 | 1 resource tracker (at most 0 at once) | 100 | 1988 | 127737 | `a8e2657940508033` |
+ubuntu-latest	Summary	2026-11-14T10:59:50.2850465Z | branch-1proc | branch | `--kimimaro-parallel 1` | 0 | 14.5 | 1 resource tracker (at most 0 at once) | 100 | 1988 | 127737 | `a8e2657940508033` |
+ubuntu-latest	Summary	2026-11-14T10:59:50.2851498Z | branch-sw2 | branch | `--slab-workers 2 --kimimaro-parallel 1` | 0 | 13.0 | 6 forked (the run's command line), 1 resource tracker (at most 2 at once) | 100 | 1988 | 127737 | `a8e2657940508033` |
+ubuntu-latest	Summary	2026-11-14T10:59:50.2852516Z | main-sw2 | main | `--slab-workers 2 --kimimaro-parallel 1` | 1 | 0.1 | none (at most 0 at once) | `NameError: name 'sys' is not defined. Did you forget to import 'sys'?` | | | |
+ubuntu-latest	Summary	2026-11-14T10:59:50.2853040Z 
+ubuntu-latest	Summary	2026-11-14T10:59:50.2853151Z ### Comparisons (logs/compare-*.txt)
+ubuntu-latest	Summary	2026-11-14T10:59:50.2853327Z 
+ubuntu-latest	Summary	2026-11-14T10:59:50.2853538Z | a | b | same keys | keys with identical pickled bytes | keys with identical track sets |
+ubuntu-latest	Summary	2026-11-14T10:59:50.2853917Z |---|---|---|---|---|
+ubuntu-latest	Summary	2026-11-14T10:59:50.2854173Z | main-default | branch-default | True | 79/100 | 100/100 |
+ubuntu-latest	Summary	2026-11-14T10:59:50.2854510Z | main-1proc | branch-1proc | True | 100/100 | 100/100 |
+ubuntu-latest	Summary	2026-11-14T10:59:50.2854838Z | branch-1proc | branch-sw2 | True | 100/100 | 100/100 |
+ubuntu-latest	Summary	2026-11-14T10:59:50.2855150Z | main-1proc | branch-sw2 | True | 100/100 | 100/100 |
+ubuntu-latest	Summary	2026-11-14T10:59:50.2855477Z | main-1proc | main-default | True | 84/100 | 100/100 |
+ubuntu-latest	Summary	2026-11-14T10:59:50.2855696Z 
+ubuntu-latest	Summary	2026-11-14T10:59:50.2855961Z ### Tests: `pytest tests/test_cc_labels.py tests/test_extract_surface_tracks.py` in spiral-fitting/
+ubuntu-latest	Summary	2026-11-14T10:59:50.2856309Z 
+ubuntu-latest	Summary	2026-11-14T10:59:50.2856499Z | tree | exit code | passed | failed | errors | skipped | time (s) | failing tests |
+ubuntu-latest	Summary	2026-11-14T10:59:50.2856867Z |---|---|---|---|---|---|---|---|
+ubuntu-latest	Summary	2026-11-14T10:59:50.2857103Z | main | 0 | 31 | 0 | 0 | 9 | 41.7 | none |
+ubuntu-latest	Summary	2026-11-14T10:59:50.2857360Z | branch | 0 | 33 | 0 | 0 | 9 | 42.6 | none |
+ubuntu-latest	Summary	2026-11-14T10:59:50.2857539Z 
+ubuntu-latest	Keep the logs	2026-11-14T10:59:50.2982388Z ##[group]Run actions/upload-artifact@v4
+ubuntu-latest	Keep the logs	2026-11-14T10:59:50.2982558Z with:
+ubuntu-latest	Keep the logs	2026-11-14T10:59:50.2982678Z   name: logs-ubuntu-latest
+ubuntu-latest	Keep the logs	2026-11-14T10:59:50.2982833Z   path: work/logs/
+ubuntu-latest	Keep the logs	work/*.json
+ubuntu-latest	Keep the logs	work/*.xml
+ubuntu-latest	Keep the logs	work/*.rc
+ubuntu-latest	Keep the logs	
+ubuntu-latest	Keep the logs	2026-11-14T10:59:50.2983008Z   if-no-files-found: warn
+ubuntu-latest	Keep the logs	2026-11-14T10:59:50.2983141Z   compression-level: 6
+ubuntu-latest	Keep the logs	2026-11-14T10:59:50.2983263Z   overwrite: false
+ubuntu-latest	Keep the logs	2026-11-14T10:59:50.2983387Z   include-hidden-files: false
+ubuntu-latest	Keep the logs	2026-11-14T10:59:50.2983644Z env:
+ubuntu-latest	Keep the logs	2026-11-14T10:59:50.2983786Z   MAIN_REPO: https://github.com/ScrollPrize/villa.git
+ubuntu-latest	Keep the logs	2026-11-14T10:59:50.2983987Z   MAIN_SHA: 97fb9336c8898be27e78eff8cd23ce5e7185ec0a
+ubuntu-latest	Keep the logs	2026-11-14T10:59:50.2984180Z   BRANCH_REPO: https://github.com/Cmssmc-code/villa.git
+ubuntu-latest	Keep the logs	2026-11-14T10:59:50.2984374Z   BRANCH_SHA: bc2c48d07db54fdb4049e06bd34f35091655b5f3
+ubuntu-latest	Keep the logs	2026-11-14T10:59:50.2984835Z   PREDICTIONS: https://vesuvius-challenge-open-data.s3.us-east-1.amazonaws.com/PHerc0332/representations/predictions/surfaces/20251211183505-surface-20260413222639-surface-m7-L2-th0.2.zarr
+ubuntu-latest	Keep the logs	2026-11-14T10:59:50.2985291Z   Z_MIN: 4032
+ubuntu-latest	Keep the logs	2026-11-14T10:59:50.2985399Z   Z_MAX: 4096
+ubuntu-latest	Keep the logs	2026-11-14T10:59:50.2985510Z   PYTHONUNBUFFERED: 1
+ubuntu-latest	Keep the logs	2026-11-14T10:59:50.2985633Z   TQDM_MININTERVAL: 10
+ubuntu-latest	Keep the logs	2026-11-14T10:59:50.2985765Z   PIP_DISABLE_PIP_VERSION_CHECK: 1
+ubuntu-latest	Keep the logs	2026-11-14T10:59:50.2985943Z   pythonLocation: /opt/hostedtoolcache/Python/3.14.10/x64
+ubuntu-latest	Keep the logs	2026-11-14T10:59:50.2986172Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.14.10/x64/lib/pkgconfig
+ubuntu-latest	Keep the logs	2026-11-14T10:59:50.2986410Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+ubuntu-latest	Keep the logs	2026-11-14T10:59:50.2986618Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+ubuntu-latest	Keep the logs	2026-11-14T10:59:50.2986822Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+ubuntu-latest	Keep the logs	2026-11-14T10:59:50.2987034Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.14.10/x64/lib
+ubuntu-latest	Keep the logs	2026-11-14T10:59:50.2987210Z ##[endgroup]
+ubuntu-latest	Keep the logs	2026-11-14T10:59:50.3994530Z (node:34520) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+ubuntu-latest	Keep the logs	2026-11-14T10:59:50.3995090Z (Use `node --trace-deprecation ...` to show where the warning was created)
+ubuntu-latest	Keep the logs	2026-11-14T10:59:50.4065478Z With the provided path, there will be 22 files uploaded
+ubuntu-latest	Keep the logs	2026-11-14T10:59:50.4069012Z Artifact name is valid!
+ubuntu-latest	Keep the logs	2026-11-14T10:59:50.4069271Z Root directory input is valid!
+ubuntu-latest	Keep the logs	2026-11-14T10:59:50.6944210Z Beginning upload of artifact content to blob storage
+ubuntu-latest	Keep the logs	2026-11-14T10:59:50.7276549Z (node:34520) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+ubuntu-latest	Keep the logs	2026-11-14T10:59:50.9345885Z Uploaded bytes 26167
+ubuntu-latest	Keep the logs	2026-11-14T10:59:50.9796381Z Finished uploading artifact content to blob storage!
+ubuntu-latest	Keep the logs	2026-11-14T10:59:50.9797080Z SHA256 digest of uploaded artifact zip is 22e4f2e115239294ac18cae736bc17d1de2a61de2f8d41d6e8b823869969ad45
+ubuntu-latest	Keep the logs	2026-11-14T10:59:50.9798337Z Finalizing artifact upload
+ubuntu-latest	Keep the logs	2026-11-14T10:59:51.3625918Z Artifact logs-ubuntu-latest.zip successfully finalized. Artifact ID 14110956201
+ubuntu-latest	Keep the logs	2026-11-14T10:59:51.3626636Z Artifact logs-ubuntu-latest has been successfully uploaded! Final size is 26167 bytes. Artifact ID is 14110956201
+ubuntu-latest	Keep the logs	2026-11-14T10:59:51.3631505Z Artifact download URL: https://github.com/Cmssmc-code/villa-pr-checks/actions/runs/43586881689/artifacts/14110956201
+ubuntu-latest	Post Set up Python	2026-11-14T10:59:51.3787298Z Post job cleanup.
+ubuntu-latest	Post Set up Python	2026-11-14T10:59:51.4519347Z (node:34533) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+ubuntu-latest	Post Set up Python	2026-11-14T10:59:51.4519849Z (Use `node --trace-deprecation ...` to show where the warning was created)
+ubuntu-latest	Post Check out the check scripts	2026-11-14T10:59:51.4682388Z Post job cleanup.
+ubuntu-latest	Post Check out the check scripts	2026-11-14T10:59:51.5307380Z [command]/usr/bin/git version
+ubuntu-latest	Post Check out the check scripts	2026-11-14T10:59:51.5340997Z git version 2.56.1
+ubuntu-latest	Post Check out the check scripts	2026-11-14T10:59:51.5365828Z Temporarily overriding HOME='/home/runner/work/_temp/b4e31c06-e696-48bb-ba33-798ab8bc68f8' before making global git config changes
+ubuntu-latest	Post Check out the check scripts	2026-11-14T10:59:51.5366776Z Adding repository directory to the temporary git global config as a safe directory
+ubuntu-latest	Post Check out the check scripts	2026-11-14T10:59:51.5368544Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/villa-pr-checks/villa-pr-checks/checks
+ubuntu-latest	Post Check out the check scripts	2026-11-14T10:59:51.5400611Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+ubuntu-latest	Post Check out the check scripts	2026-11-14T10:59:51.5430427Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+ubuntu-latest	Post Check out the check scripts	2026-11-14T10:59:51.5687063Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+ubuntu-latest	Post Check out the check scripts	2026-11-14T10:59:51.5701463Z http.https://github.com/.extraheader
+ubuntu-latest	Post Check out the check scripts	2026-11-14T10:59:51.5709942Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+ubuntu-latest	Post Check out the check scripts	2026-11-14T10:59:51.5739680Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+ubuntu-latest	Post Check out the check scripts	2026-11-14T10:59:51.5991327Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+ubuntu-latest	Post Check out the check scripts	2026-11-14T10:59:51.6022130Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+ubuntu-latest	Complete job	2026-11-14T10:59:51.6358592Z Cleaning up orphan processes
+ubuntu-latest	Complete job	2026-11-14T10:59:51.6608864Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-python@v5, actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

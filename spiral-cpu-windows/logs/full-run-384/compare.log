@@ -1,0 +1,7 @@
+Machine: 12th Gen Intel(R) Core(TM) i5-12450H, 12 logical processors, 15.7 GB RAM, Windows 11 (10.0.26300), no NVIDIA GPU (no nvidia-smi); free memory at the start 5.6 GB.
+main 97fb9336c8898be27e78eff8cd23ce5e7185ec0a; branch bc2c48d07db54fdb4049e06bd34f35091655b5f3; PHerc0332 surface_m7, level 0, z 4032 to 4416.
+a-main-default: exit code 0, wall time 331.5 s, CPU time 1214.0 s, 883 processes started, peak committed memory 6.91 GB
+b-main-kimimaro-parallel-1: exit code 0, wall time 63.2 s, CPU time 136.2 s, 3 processes started, peak committed memory 1.32 GB
+c-branch-default: exit code 0, wall time 62.7 s, CPU time 135.2 s, 3 processes started, peak committed memory 1.32 GB
+main-default.dbm against main-k1.dbm: 120 and 120 keys; same keys: True; identical pickled bytes: 22/120; identical track sets: 120/120; tracks: 15752
+branch-default.dbm against main-k1.dbm: 120 and 120 keys; same keys: True; identical pickled bytes: 120/120; identical track sets: 120/120; tracks: 15752

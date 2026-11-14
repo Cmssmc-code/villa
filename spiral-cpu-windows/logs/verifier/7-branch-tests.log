@@ -1,0 +1,11 @@
+$ cd C:\Users\me\Dev\vesuvius\preuves-spirale-cpu\verif-tmp\branch\spiral-fitting
+$ python -m pytest -q -rs -p no:cacheprovider --basetemp=C:\Users\me\Dev\vesuvius\preuves-spirale-cpu\verif-tmp\pytest tests/test_cc_labels.py tests/test_extract_surface_tracks.py
+.............s..ss....s..s...............s                               [100%]
+=========================== short test summary info ===========================
+SKIPPED [1] tests\test_extract_surface_tracks.py:204: numba is not installed
+SKIPPED [2] tests\test_extract_surface_tracks.py:215: numba is not installed
+SKIPPED [2] tests\test_extract_surface_tracks.py:238: numba is not installed
+SKIPPED [1] tests\test_extract_surface_tracks.py:537: could not import 'brook': No module named 'brook'
+36 passed, 6 skipped in 19.32s
+
+--- exit code 0; wall time 23.3 s; CPU time of all its processes 22.8 s; processes started 25; peak committed memory of all its processes 3.10 GB

@@ -1,0 +1,691 @@
+macos-latest	Set up job	2026-11-14T10:46:54.2983810Z Current runner version: '2.338.2'
+macos-latest	Set up job	2026-11-14T10:46:54.3013020Z ##[group]Runner Image Provisioner
+macos-latest	Set up job	2026-11-14T10:46:54.3013820Z Hosted Compute Agent
+macos-latest	Set up job	2026-11-14T10:46:54.3014260Z Version: 20261028.624
+macos-latest	Set up job	2026-11-14T10:46:54.3014800Z Commit: 54898b74c23fde5556c9b3c3a2290865feef0dfe
+macos-latest	Set up job	2026-11-14T10:46:54.3015370Z Build Date: 2026-10-28T21:51:42Z
+macos-latest	Set up job	2026-11-14T10:46:54.3015830Z Worker ID: {517234b5-bd74-4fcc-a001-2b324fe694ae}
+macos-latest	Set up job	2026-11-14T10:46:54.3016390Z Region: westus
+macos-latest	Set up job	2026-11-14T10:46:54.3016830Z Cloud: MacCloud
+macos-latest	Set up job	2026-11-14T10:46:54.3017200Z ##[endgroup]
+macos-latest	Set up job	2026-11-14T10:46:54.3018360Z ##[group]Operating System
+macos-latest	Set up job	2026-11-14T10:46:54.3018790Z macOS
+macos-latest	Set up job	2026-11-14T10:46:54.3019220Z 26.7.2
+macos-latest	Set up job	2026-11-14T10:46:54.3019560Z 25G332
+macos-latest	Set up job	2026-11-14T10:46:54.3019930Z ##[endgroup]
+macos-latest	Set up job	2026-11-14T10:46:54.3020400Z ##[group]Runner Image
+macos-latest	Set up job	2026-11-14T10:46:54.3020870Z Image: macos-26-arm64
+macos-latest	Set up job	2026-11-14T10:46:54.3021450Z Version: 20261102.0473.1
+macos-latest	Set up job	2026-11-14T10:46:54.3022290Z Included Software: https://github.com/actions/runner-images/blob/macos-26-arm64/20261102.0473/images/macos/macos-26-arm64-Readme.md
+macos-latest	Set up job	2026-11-14T10:46:54.3023780Z Image Release: https://github.com/actions/runner-images/releases/tag/macos-26-arm64%2F20261102.0473
+macos-latest	Set up job	2026-11-14T10:46:54.3024570Z ##[endgroup]
+macos-latest	Set up job	2026-11-14T10:46:54.3025390Z ##[group]GITHUB_TOKEN Permissions
+macos-latest	Set up job	2026-11-14T10:46:54.3027580Z Contents: read
+macos-latest	Set up job	2026-11-14T10:46:54.3028030Z Metadata: read
+macos-latest	Set up job	2026-11-14T10:46:54.3028490Z ##[endgroup]
+macos-latest	Set up job	2026-11-14T10:46:54.3030190Z Secret source: Actions
+macos-latest	Set up job	2026-11-14T10:46:54.3030840Z Cache mode: write
+macos-latest	Set up job	2026-11-14T10:46:54.3031370Z Prepare workflow directory
+macos-latest	Set up job	2026-11-14T10:46:54.3442510Z Prepare all required actions
+macos-latest	Set up job	2026-11-14T10:46:54.3476230Z Getting action download info
+macos-latest	Set up job	2026-11-14T10:46:54.7292480Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+macos-latest	Set up job	2026-11-14T10:46:54.9701990Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+macos-latest	Set up job	2026-11-14T10:46:55.0638990Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+macos-latest	Set up job	2026-11-14T10:46:55.2359250Z Complete job name: macos-latest
+macos-latest	Check out the check scripts	2026-11-14T10:46:55.2894540Z ##[group]Run actions/checkout@v4
+macos-latest	Check out the check scripts	2026-11-14T10:46:55.2895170Z with:
+macos-latest	Check out the check scripts	2026-11-14T10:46:55.2895480Z   path: checks
+macos-latest	Check out the check scripts	2026-11-14T10:46:55.2895820Z   repository: Cmssmc-code/villa-pr-checks
+macos-latest	Check out the check scripts	2026-11-14T10:46:55.2898480Z   token: ***
+macos-latest	Check out the check scripts	2026-11-14T10:46:55.2898790Z   ssh-strict: true
+macos-latest	Check out the check scripts	2026-11-14T10:46:55.2899100Z   ssh-user: git
+macos-latest	Check out the check scripts	2026-11-14T10:46:55.2899420Z   persist-credentials: true
+macos-latest	Check out the check scripts	2026-11-14T10:46:55.2899780Z   clean: true
+macos-latest	Check out the check scripts	2026-11-14T10:46:55.2900100Z   sparse-checkout-cone-mode: true
+macos-latest	Check out the check scripts	2026-11-14T10:46:55.2900470Z   fetch-depth: 1
+macos-latest	Check out the check scripts	2026-11-14T10:46:55.2900790Z   fetch-tags: false
+macos-latest	Check out the check scripts	2026-11-14T10:46:55.2901110Z   show-progress: true
+macos-latest	Check out the check scripts	2026-11-14T10:46:55.2901430Z   lfs: false
+macos-latest	Check out the check scripts	2026-11-14T10:46:55.2901740Z   submodules: false
+macos-latest	Check out the check scripts	2026-11-14T10:46:55.2902070Z   set-safe-directory: true
+macos-latest	Check out the check scripts	2026-11-14T10:46:55.2902430Z   allow-unsafe-pr-checkout: false
+macos-latest	Check out the check scripts	2026-11-14T10:46:55.2902990Z env:
+macos-latest	Check out the check scripts	2026-11-14T10:46:55.2903370Z   MAIN_REPO: https://github.com/ScrollPrize/villa.git
+macos-latest	Check out the check scripts	2026-11-14T10:46:55.2903860Z   MAIN_SHA: 97fb9336c8898be27e78eff8cd23ce5e7185ec0a
+macos-latest	Check out the check scripts	2026-11-14T10:46:55.2904380Z   BRANCH_REPO: https://github.com/Cmssmc-code/villa.git
+macos-latest	Check out the check scripts	2026-11-14T10:46:55.2905030Z   BRANCH_SHA: bc2c48d07db54fdb4049e06bd34f35091655b5f3
+macos-latest	Check out the check scripts	2026-11-14T10:46:55.2906620Z   PREDICTIONS: https://vesuvius-challenge-open-data.s3.us-east-1.amazonaws.com/PHerc0332/representations/predictions/surfaces/20251211183505-surface-20260413222639-surface-m7-L2-th0.2.zarr
+macos-latest	Check out the check scripts	2026-11-14T10:46:55.2907720Z   Z_MIN: 4032
+macos-latest	Check out the check scripts	2026-11-14T10:46:55.2908570Z   Z_MAX: 4096
+macos-latest	Check out the check scripts	2026-11-14T10:46:55.2908940Z   PYTHONUNBUFFERED: 1
+macos-latest	Check out the check scripts	2026-11-14T10:46:55.2909280Z   TQDM_MININTERVAL: 10
+macos-latest	Check out the check scripts	2026-11-14T10:46:55.2909660Z   PIP_DISABLE_PIP_VERSION_CHECK: 1
+macos-latest	Check out the check scripts	2026-11-14T10:46:55.2910280Z ##[endgroup]
+macos-latest	Check out the check scripts	2026-11-14T10:46:55.8277900Z Syncing repository: Cmssmc-code/villa-pr-checks
+macos-latest	Check out the check scripts	2026-11-14T10:46:55.8286640Z ##[group]Getting Git version info
+macos-latest	Check out the check scripts	2026-11-14T10:46:55.8288050Z Working directory is '/Users/runner/work/villa-pr-checks/villa-pr-checks/checks'
+macos-latest	Check out the check scripts	2026-11-14T10:46:55.8290310Z [command]/opt/homebrew/bin/git version
+macos-latest	Check out the check scripts	2026-11-14T10:46:55.8824120Z git version 2.56.0
+macos-latest	Check out the check scripts	2026-11-14T10:46:55.8841870Z ##[endgroup]
+macos-latest	Check out the check scripts	2026-11-14T10:46:55.8855140Z Copying '/Users/runner/.gitconfig' to '/Users/runner/work/_temp/947f3b9e-9bac-4855-ab85-5d43346fa296/.gitconfig'
+macos-latest	Check out the check scripts	2026-11-14T10:46:55.8862750Z Temporarily overriding HOME='/Users/runner/work/_temp/947f3b9e-9bac-4855-ab85-5d43346fa296' before making global git config changes
+macos-latest	Check out the check scripts	2026-11-14T10:46:55.8864260Z Adding repository directory to the temporary git global config as a safe directory
+macos-latest	Check out the check scripts	2026-11-14T10:46:55.8867300Z [command]/opt/homebrew/bin/git config --global --add safe.directory /Users/runner/work/villa-pr-checks/villa-pr-checks/checks
+macos-latest	Check out the check scripts	2026-11-14T10:46:55.9086360Z ##[group]Initializing the repository
+macos-latest	Check out the check scripts	2026-11-14T10:46:55.9088220Z [command]/opt/homebrew/bin/git init /Users/runner/work/villa-pr-checks/villa-pr-checks/checks
+macos-latest	Check out the check scripts	2026-11-14T10:46:55.9266090Z hint: Using 'master' as the name for the initial branch. This default branch name
+macos-latest	Check out the check scripts	2026-11-14T10:46:55.9267490Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+macos-latest	Check out the check scripts	2026-11-14T10:46:55.9268750Z hint: to use in all of your new repositories, which will suppress this warning,
+macos-latest	Check out the check scripts	2026-11-14T10:46:55.9269410Z hint: call:
+macos-latest	Check out the check scripts	2026-11-14T10:46:55.9269970Z hint:
+macos-latest	Check out the check scripts	2026-11-14T10:46:55.9270380Z hint: 	git config --global init.defaultBranch <name>
+macos-latest	Check out the check scripts	2026-11-14T10:46:55.9270860Z hint:
+macos-latest	Check out the check scripts	2026-11-14T10:46:55.9271310Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+macos-latest	Check out the check scripts	2026-11-14T10:46:55.9272440Z hint: 'development'. The just-created branch can be renamed via this command:
+macos-latest	Check out the check scripts	2026-11-14T10:46:55.9273460Z hint:
+macos-latest	Check out the check scripts	2026-11-14T10:46:55.9273940Z hint: 	git branch -m <name>
+macos-latest	Check out the check scripts	2026-11-14T10:46:55.9274590Z hint:
+macos-latest	Check out the check scripts	2026-11-14T10:46:55.9275170Z hint: Disable this message with "git config set advice.defaultBranchName false"
+macos-latest	Check out the check scripts	2026-11-14T10:46:55.9276550Z Initialized empty Git repository in /Users/runner/work/villa-pr-checks/villa-pr-checks/checks/.git/
+macos-latest	Check out the check scripts	2026-11-14T10:46:55.9289970Z [command]/opt/homebrew/bin/git remote add origin https://github.com/Cmssmc-code/villa-pr-checks
+macos-latest	Check out the check scripts	2026-11-14T10:46:55.9379710Z ##[endgroup]
+macos-latest	Check out the check scripts	2026-11-14T10:46:55.9380510Z ##[group]Disabling automatic garbage collection
+macos-latest	Check out the check scripts	2026-11-14T10:46:55.9383530Z [command]/opt/homebrew/bin/git config --local gc.auto 0
+macos-latest	Check out the check scripts	2026-11-14T10:46:55.9459200Z ##[endgroup]
+macos-latest	Check out the check scripts	2026-11-14T10:46:55.9460100Z ##[group]Setting up auth
+macos-latest	Check out the check scripts	2026-11-14T10:46:55.9464920Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp core\.sshCommand
+macos-latest	Check out the check scripts	2026-11-14T10:46:55.9571490Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+macos-latest	Check out the check scripts	2026-11-14T10:46:56.0925640Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+macos-latest	Check out the check scripts	2026-11-14T10:46:56.0994400Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+macos-latest	Check out the check scripts	2026-11-14T10:46:56.1842600Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+macos-latest	Check out the check scripts	2026-11-14T10:46:56.1907440Z [command]/opt/homebrew/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+macos-latest	Check out the check scripts	2026-11-14T10:46:56.2725700Z [command]/opt/homebrew/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+macos-latest	Check out the check scripts	2026-11-14T10:46:56.2808680Z ##[endgroup]
+macos-latest	Check out the check scripts	2026-11-14T10:46:56.2810760Z ##[group]Fetching the repository
+macos-latest	Check out the check scripts	2026-11-14T10:46:56.2815460Z [command]/opt/homebrew/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +abec80483575b007eef7b43eecc30c0eca2b02b0:refs/remotes/origin/main
+macos-latest	Check out the check scripts	2026-11-14T10:46:56.7492150Z From https://github.com/Cmssmc-code/villa-pr-checks
+macos-latest	Check out the check scripts	2026-11-14T10:46:56.7493770Z  * [new ref]         abec80483575b007eef7b43eecc30c0eca2b02b0 -> origin/main
+macos-latest	Check out the check scripts	2026-11-14T10:46:56.7496780Z ##[endgroup]
+macos-latest	Check out the check scripts	2026-11-14T10:46:56.7497590Z ##[group]Determining the checkout info
+macos-latest	Check out the check scripts	2026-11-14T10:46:56.7498490Z ##[endgroup]
+macos-latest	Check out the check scripts	2026-11-14T10:46:56.7499400Z [command]/opt/homebrew/bin/git sparse-checkout disable
+macos-latest	Check out the check scripts	2026-11-14T10:46:56.7626800Z [command]/opt/homebrew/bin/git config --local --unset-all extensions.worktreeConfig
+macos-latest	Check out the check scripts	2026-11-14T10:46:56.7661590Z ##[group]Checking out the ref
+macos-latest	Check out the check scripts	2026-11-14T10:46:56.7664410Z [command]/opt/homebrew/bin/git checkout --progress --force -B main refs/remotes/origin/main
+macos-latest	Check out the check scripts	2026-11-14T10:46:56.7792920Z Switched to a new branch 'main'
+macos-latest	Check out the check scripts	2026-11-14T10:46:56.7798240Z branch 'main' set up to track 'origin/main'.
+macos-latest	Check out the check scripts	2026-11-14T10:46:56.7801980Z ##[endgroup]
+macos-latest	Check out the check scripts	2026-11-14T10:46:56.7894850Z [command]/opt/homebrew/bin/git log -1 --format=%H
+macos-latest	Check out the check scripts	2026-11-14T10:46:56.7961480Z abec80483575b007eef7b43eecc30c0eca2b02b0
+macos-latest	Fetch spiral-fitting/ and vc_reader/ of main and of the branch (partial clones)	2026-11-14T10:46:56.8171260Z ##[group]Run mkdir -p work/logs
+macos-latest	Fetch spiral-fitting/ and vc_reader/ of main and of the branch (partial clones)	2026-11-14T10:46:56.8172260Z mkdir -p work/logs
+macos-latest	Fetch spiral-fitting/ and vc_reader/ of main and of the branch (partial clones)	2026-11-14T10:46:56.8173290Z fetch() {  # <directory> <repository> <commit>
+macos-latest	Fetch spiral-fitting/ and vc_reader/ of main and of the branch (partial clones)	2026-11-14T10:46:56.8174480Z   git init -q "$1"
+macos-latest	Fetch spiral-fitting/ and vc_reader/ of main and of the branch (partial clones)	2026-11-14T10:46:56.8175280Z   git -C "$1" remote add origin "$2"
+macos-latest	Fetch spiral-fitting/ and vc_reader/ of main and of the branch (partial clones)	2026-11-14T10:46:56.8176360Z   git -C "$1" sparse-checkout set spiral-fitting vc_reader
+macos-latest	Fetch spiral-fitting/ and vc_reader/ of main and of the branch (partial clones)	2026-11-14T10:46:56.8177620Z   git -C "$1" fetch -q --depth 1 --filter=blob:none origin "$3"
+macos-latest	Fetch spiral-fitting/ and vc_reader/ of main and of the branch (partial clones)	2026-11-14T10:46:56.8178740Z   git -C "$1" checkout -q FETCH_HEAD
+macos-latest	Fetch spiral-fitting/ and vc_reader/ of main and of the branch (partial clones)	2026-11-14T10:46:56.8179860Z   test "$(git -C "$1" rev-parse HEAD)" = "$3"
+macos-latest	Fetch spiral-fitting/ and vc_reader/ of main and of the branch (partial clones)	2026-11-14T10:46:56.8181200Z   git -C "$1" log -1 --format="$1: %H %s"
+macos-latest	Fetch spiral-fitting/ and vc_reader/ of main and of the branch (partial clones)	2026-11-14T10:46:56.8182120Z }
+macos-latest	Fetch spiral-fitting/ and vc_reader/ of main and of the branch (partial clones)	2026-11-14T10:46:56.8182800Z fetch villa-main "$MAIN_REPO" "$MAIN_SHA"
+macos-latest	Fetch spiral-fitting/ and vc_reader/ of main and of the branch (partial clones)	2026-11-14T10:46:56.8183890Z fetch villa-branch "$BRANCH_REPO" "$BRANCH_SHA"
+macos-latest	Fetch spiral-fitting/ and vc_reader/ of main and of the branch (partial clones)	2026-11-14T10:46:56.8185500Z echo "Files the branch changes:"
+macos-latest	Fetch spiral-fitting/ and vc_reader/ of main and of the branch (partial clones)	2026-11-14T10:46:56.8186880Z git -C villa-branch fetch -q --depth 1 --filter=blob:none origin "$MAIN_SHA"
+macos-latest	Fetch spiral-fitting/ and vc_reader/ of main and of the branch (partial clones)	2026-11-14T10:46:56.8188550Z git -C villa-branch diff --stat "$MAIN_SHA" "$BRANCH_SHA"
+macos-latest	Fetch spiral-fitting/ and vc_reader/ of main and of the branch (partial clones)	2026-11-14T10:46:56.8190070Z echo "vc_reader/ tree: main $(git -C villa-main rev-parse HEAD:vc_reader)," \
+macos-latest	Fetch spiral-fitting/ and vc_reader/ of main and of the branch (partial clones)	2026-11-14T10:46:56.8191530Z   "branch $(git -C villa-branch rev-parse HEAD:vc_reader)"
+macos-latest	Fetch spiral-fitting/ and vc_reader/ of main and of the branch (partial clones)	2026-11-14T10:46:56.8237240Z shell: /bin/bash --noprofile --norc -e -o pipefail {0}
+macos-latest	Fetch spiral-fitting/ and vc_reader/ of main and of the branch (partial clones)	2026-11-14T10:46:56.8238270Z env:
+macos-latest	Fetch spiral-fitting/ and vc_reader/ of main and of the branch (partial clones)	2026-11-14T10:46:56.8239030Z   MAIN_REPO: https://github.com/ScrollPrize/villa.git
+macos-latest	Fetch spiral-fitting/ and vc_reader/ of main and of the branch (partial clones)	2026-11-14T10:46:56.8240090Z   MAIN_SHA: 97fb9336c8898be27e78eff8cd23ce5e7185ec0a
+macos-latest	Fetch spiral-fitting/ and vc_reader/ of main and of the branch (partial clones)	2026-11-14T10:46:56.8241150Z   BRANCH_REPO: https://github.com/Cmssmc-code/villa.git
+macos-latest	Fetch spiral-fitting/ and vc_reader/ of main and of the branch (partial clones)	2026-11-14T10:46:56.8242230Z   BRANCH_SHA: bc2c48d07db54fdb4049e06bd34f35091655b5f3
+macos-latest	Fetch spiral-fitting/ and vc_reader/ of main and of the branch (partial clones)	2026-11-14T10:46:56.8244990Z   PREDICTIONS: https://vesuvius-challenge-open-data.s3.us-east-1.amazonaws.com/PHerc0332/representations/predictions/surfaces/20251211183505-surface-20260413222639-surface-m7-L2-th0.2.zarr
+macos-latest	Fetch spiral-fitting/ and vc_reader/ of main and of the branch (partial clones)	2026-11-14T10:46:56.8247540Z   Z_MIN: 4032
+macos-latest	Fetch spiral-fitting/ and vc_reader/ of main and of the branch (partial clones)	2026-11-14T10:46:56.8248130Z   Z_MAX: 4096
+macos-latest	Fetch spiral-fitting/ and vc_reader/ of main and of the branch (partial clones)	2026-11-14T10:46:56.8248730Z   PYTHONUNBUFFERED: 1
+macos-latest	Fetch spiral-fitting/ and vc_reader/ of main and of the branch (partial clones)	2026-11-14T10:46:56.8249400Z   TQDM_MININTERVAL: 10
+macos-latest	Fetch spiral-fitting/ and vc_reader/ of main and of the branch (partial clones)	2026-11-14T10:46:56.8250100Z   PIP_DISABLE_PIP_VERSION_CHECK: 1
+macos-latest	Fetch spiral-fitting/ and vc_reader/ of main and of the branch (partial clones)	2026-11-14T10:46:56.8250880Z ##[endgroup]
+macos-latest	Fetch spiral-fitting/ and vc_reader/ of main and of the branch (partial clones)	2026-11-14T10:46:59.0385920Z villa-main: 97fb9336c8898be27e78eff8cd23ce5e7185ec0a Update VC3D reader dependency to Delta3D 0.3.2 (#2531)
+macos-latest	Fetch spiral-fitting/ and vc_reader/ of main and of the branch (partial clones)	2026-11-14T10:47:01.3701430Z villa-branch: bc2c48d07db54fdb4049e06bd34f35091655b5f3 spiral-fitting: test the spawned slab workers and the CPU defaults on every OS
+macos-latest	Fetch spiral-fitting/ and vc_reader/ of main and of the branch (partial clones)	2026-11-14T10:47:01.3811170Z Files the branch changes:
+macos-latest	Fetch spiral-fitting/ and vc_reader/ of main and of the branch (partial clones)	2026-11-14T10:47:02.1371370Z  spiral-fitting/README.md                           |  5 +--
+macos-latest	Fetch spiral-fitting/ and vc_reader/ of main and of the branch (partial clones)	2026-11-14T10:47:02.1372010Z  spiral-fitting/extract_surface_tracks.py           | 38 +++++++++++++++++-----
+macos-latest	Fetch spiral-fitting/ and vc_reader/ of main and of the branch (partial clones)	2026-11-14T10:47:02.1372600Z  spiral-fitting/tests/test_cc_labels.py             | 15 +++++++++
+macos-latest	Fetch spiral-fitting/ and vc_reader/ of main and of the branch (partial clones)	2026-11-14T10:47:02.1373370Z  .../tests/test_extract_surface_tracks.py           | 16 +++++++++
+macos-latest	Fetch spiral-fitting/ and vc_reader/ of main and of the branch (partial clones)	2026-11-14T10:47:02.1374840Z  4 files changed, 63 insertions(+), 11 deletions(-)
+macos-latest	Fetch spiral-fitting/ and vc_reader/ of main and of the branch (partial clones)	2026-11-14T10:47:02.1517670Z vc_reader/ tree: main b5918913fbed9fd2d860c8242b6f7f573e4c53c8, branch b5918913fbed9fd2d860c8242b6f7f573e4c53c8
+macos-latest	Python version (lower bound of requires-python in spiral-fitting/pyproject.toml)	2026-11-14T10:47:02.1574550Z ##[group]Run lower() { sed -n 's/^requires-python *= *">=\([0-9][0-9.]*\)".*/\1/p' "$1/spiral-fitting/pyproject.toml"; }
+macos-latest	Python version (lower bound of requires-python in spiral-fitting/pyproject.toml)	2026-11-14T10:47:02.1575250Z lower() { sed -n 's/^requires-python *= *">=\([0-9][0-9.]*\)".*/\1/p' "$1/spiral-fitting/pyproject.toml"; }
+macos-latest	Python version (lower bound of requires-python in spiral-fitting/pyproject.toml)	2026-11-14T10:47:02.1575820Z main=$(lower villa-main)
+macos-latest	Python version (lower bound of requires-python in spiral-fitting/pyproject.toml)	2026-11-14T10:47:02.1576190Z branch=$(lower villa-branch)
+macos-latest	Python version (lower bound of requires-python in spiral-fitting/pyproject.toml)	2026-11-14T10:47:02.1576610Z echo "requires-python: >=$main on main, >=$branch on the branch"
+macos-latest	Python version (lower bound of requires-python in spiral-fitting/pyproject.toml)	2026-11-14T10:47:02.1577060Z test -n "$main" && test "$main" = "$branch"
+macos-latest	Python version (lower bound of requires-python in spiral-fitting/pyproject.toml)	2026-11-14T10:47:02.1577470Z echo "version=$main" >> "$GITHUB_OUTPUT"
+macos-latest	Python version (lower bound of requires-python in spiral-fitting/pyproject.toml)	2026-11-14T10:47:02.1618660Z shell: /bin/bash --noprofile --norc -e -o pipefail {0}
+macos-latest	Python version (lower bound of requires-python in spiral-fitting/pyproject.toml)	2026-11-14T10:47:02.1619010Z env:
+macos-latest	Python version (lower bound of requires-python in spiral-fitting/pyproject.toml)	2026-11-14T10:47:02.1619680Z   MAIN_REPO: https://github.com/ScrollPrize/villa.git
+macos-latest	Python version (lower bound of requires-python in spiral-fitting/pyproject.toml)	2026-11-14T10:47:02.1620160Z   MAIN_SHA: 97fb9336c8898be27e78eff8cd23ce5e7185ec0a
+macos-latest	Python version (lower bound of requires-python in spiral-fitting/pyproject.toml)	2026-11-14T10:47:02.1620640Z   BRANCH_REPO: https://github.com/Cmssmc-code/villa.git
+macos-latest	Python version (lower bound of requires-python in spiral-fitting/pyproject.toml)	2026-11-14T10:47:02.1621030Z   BRANCH_SHA: bc2c48d07db54fdb4049e06bd34f35091655b5f3
+macos-latest	Python version (lower bound of requires-python in spiral-fitting/pyproject.toml)	2026-11-14T10:47:02.1621800Z   PREDICTIONS: https://vesuvius-challenge-open-data.s3.us-east-1.amazonaws.com/PHerc0332/representations/predictions/surfaces/20251211183505-surface-20260413222639-surface-m7-L2-th0.2.zarr
+macos-latest	Python version (lower bound of requires-python in spiral-fitting/pyproject.toml)	2026-11-14T10:47:02.1622700Z   Z_MIN: 4032
+macos-latest	Python version (lower bound of requires-python in spiral-fitting/pyproject.toml)	2026-11-14T10:47:02.1622890Z   Z_MAX: 4096
+macos-latest	Python version (lower bound of requires-python in spiral-fitting/pyproject.toml)	2026-11-14T10:47:02.1623080Z   PYTHONUNBUFFERED: 1
+macos-latest	Python version (lower bound of requires-python in spiral-fitting/pyproject.toml)	2026-11-14T10:47:02.1623300Z   TQDM_MININTERVAL: 10
+macos-latest	Python version (lower bound of requires-python in spiral-fitting/pyproject.toml)	2026-11-14T10:47:02.1623520Z   PIP_DISABLE_PIP_VERSION_CHECK: 1
+macos-latest	Python version (lower bound of requires-python in spiral-fitting/pyproject.toml)	2026-11-14T10:47:02.1623850Z ##[endgroup]
+macos-latest	Python version (lower bound of requires-python in spiral-fitting/pyproject.toml)	2026-11-14T10:47:02.2370920Z requires-python: >=3.14 on main, >=3.14 on the branch
+macos-latest	Set up Python	2026-11-14T10:47:02.2632690Z ##[group]Run actions/setup-python@v5
+macos-latest	Set up Python	2026-11-14T10:47:02.2633020Z with:
+macos-latest	Set up Python	2026-11-14T10:47:02.2633220Z   python-version: 3.14
+macos-latest	Set up Python	2026-11-14T10:47:02.2633420Z   check-latest: false
+macos-latest	Set up Python	2026-11-14T10:47:02.2635470Z   token: ***
+macos-latest	Set up Python	2026-11-14T10:47:02.2635650Z   update-environment: true
+macos-latest	Set up Python	2026-11-14T10:47:02.2635980Z   allow-prereleases: false
+macos-latest	Set up Python	2026-11-14T10:47:02.2636280Z   freethreaded: false
+macos-latest	Set up Python	2026-11-14T10:47:02.2636480Z env:
+macos-latest	Set up Python	2026-11-14T10:47:02.2636750Z   MAIN_REPO: https://github.com/ScrollPrize/villa.git
+macos-latest	Set up Python	2026-11-14T10:47:02.2637120Z   MAIN_SHA: 97fb9336c8898be27e78eff8cd23ce5e7185ec0a
+macos-latest	Set up Python	2026-11-14T10:47:02.2637460Z   BRANCH_REPO: https://github.com/Cmssmc-code/villa.git
+macos-latest	Set up Python	2026-11-14T10:47:02.2637860Z   BRANCH_SHA: bc2c48d07db54fdb4049e06bd34f35091655b5f3
+macos-latest	Set up Python	2026-11-14T10:47:02.2638680Z   PREDICTIONS: https://vesuvius-challenge-open-data.s3.us-east-1.amazonaws.com/PHerc0332/representations/predictions/surfaces/20251211183505-surface-20260413222639-surface-m7-L2-th0.2.zarr
+macos-latest	Set up Python	2026-11-14T10:47:02.2639470Z   Z_MIN: 4032
+macos-latest	Set up Python	2026-11-14T10:47:02.2639710Z   Z_MAX: 4096
+macos-latest	Set up Python	2026-11-14T10:47:02.2639900Z   PYTHONUNBUFFERED: 1
+macos-latest	Set up Python	2026-11-14T10:47:02.2640100Z   TQDM_MININTERVAL: 10
+macos-latest	Set up Python	2026-11-14T10:47:02.2640310Z   PIP_DISABLE_PIP_VERSION_CHECK: 1
+macos-latest	Set up Python	2026-11-14T10:47:02.2640530Z ##[endgroup]
+macos-latest	Set up Python	2026-11-14T10:47:02.4380670Z (node:2133) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+macos-latest	Set up Python	2026-11-14T10:47:02.4382010Z ##[group]Installed versions
+macos-latest	Set up Python	2026-11-14T10:47:02.4586170Z (Use `node --trace-deprecation ...` to show where the warning was created)
+macos-latest	Set up Python	2026-11-14T10:47:02.5976830Z Successfully set up CPython (3.14.10)
+macos-latest	Set up Python	2026-11-14T10:47:02.5986940Z ##[endgroup]
+macos-latest	vc_reader build dependencies (macOS)	2026-11-14T10:47:02.6122650Z ##[group]Run packages="c-blosc jpeg-turbo libpng libtiff lz4 ninja nlohmann-json zstd"
+macos-latest	vc_reader build dependencies (macOS)	2026-11-14T10:47:02.6123280Z packages="c-blosc jpeg-turbo libpng libtiff lz4 ninja nlohmann-json zstd"
+macos-latest	vc_reader build dependencies (macOS)	2026-11-14T10:47:02.6123780Z command -v pkg-config >/dev/null || packages="$packages pkgconf"
+macos-latest	vc_reader build dependencies (macOS)	2026-11-14T10:47:02.6124130Z brew install $packages
+macos-latest	vc_reader build dependencies (macOS)	2026-11-14T10:47:02.6128020Z # Build for the runner's macOS release, whose C++ library has every feature vc_reader uses.
+macos-latest	vc_reader build dependencies (macOS)	2026-11-14T10:47:02.6128600Z echo "MACOSX_DEPLOYMENT_TARGET=$(sw_vers -productVersion | cut -d. -f1).0" >> "$GITHUB_ENV"
+macos-latest	vc_reader build dependencies (macOS)	2026-11-14T10:47:02.6130050Z echo "CMAKE_PREFIX_PATH=$(brew --prefix)" >> "$GITHUB_ENV"
+macos-latest	vc_reader build dependencies (macOS)	2026-11-14T10:47:02.6184120Z shell: /bin/bash --noprofile --norc -e -o pipefail {0}
+macos-latest	vc_reader build dependencies (macOS)	2026-11-14T10:47:02.6184460Z env:
+macos-latest	vc_reader build dependencies (macOS)	2026-11-14T10:47:02.6184730Z   MAIN_REPO: https://github.com/ScrollPrize/villa.git
+macos-latest	vc_reader build dependencies (macOS)	2026-11-14T10:47:02.6185060Z   MAIN_SHA: 97fb9336c8898be27e78eff8cd23ce5e7185ec0a
+macos-latest	vc_reader build dependencies (macOS)	2026-11-14T10:47:02.6185440Z   BRANCH_REPO: https://github.com/Cmssmc-code/villa.git
+macos-latest	vc_reader build dependencies (macOS)	2026-11-14T10:47:02.6185790Z   BRANCH_SHA: bc2c48d07db54fdb4049e06bd34f35091655b5f3
+macos-latest	vc_reader build dependencies (macOS)	2026-11-14T10:47:02.6186530Z   PREDICTIONS: https://vesuvius-challenge-open-data.s3.us-east-1.amazonaws.com/PHerc0332/representations/predictions/surfaces/20251211183505-surface-20260413222639-surface-m7-L2-th0.2.zarr
+macos-latest	vc_reader build dependencies (macOS)	2026-11-14T10:47:02.6187240Z   Z_MIN: 4032
+macos-latest	vc_reader build dependencies (macOS)	2026-11-14T10:47:02.6187420Z   Z_MAX: 4096
+macos-latest	vc_reader build dependencies (macOS)	2026-11-14T10:47:02.6187630Z   PYTHONUNBUFFERED: 1
+macos-latest	vc_reader build dependencies (macOS)	2026-11-14T10:47:02.6187820Z   TQDM_MININTERVAL: 10
+macos-latest	vc_reader build dependencies (macOS)	2026-11-14T10:47:02.6188040Z   PIP_DISABLE_PIP_VERSION_CHECK: 1
+macos-latest	vc_reader build dependencies (macOS)	2026-11-14T10:47:02.6188370Z   pythonLocation: /Users/runner/hostedtoolcache/Python/3.14.10/arm64
+macos-latest	vc_reader build dependencies (macOS)	2026-11-14T10:47:02.6188830Z   PKG_CONFIG_PATH: /Users/runner/hostedtoolcache/Python/3.14.10/arm64/lib/pkgconfig
+macos-latest	vc_reader build dependencies (macOS)	2026-11-14T10:47:02.6190520Z   Python_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.14.10/arm64
+macos-latest	vc_reader build dependencies (macOS)	2026-11-14T10:47:02.6190980Z   Python2_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.14.10/arm64
+macos-latest	vc_reader build dependencies (macOS)	2026-11-14T10:47:02.6191420Z   Python3_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.14.10/arm64
+macos-latest	vc_reader build dependencies (macOS)	2026-11-14T10:47:02.6191780Z ##[endgroup]
+macos-latest	vc_reader build dependencies (macOS)	2026-11-14T10:47:08.4352030Z Warning: jpeg-turbo 3.2.1 is already installed and up-to-date.
+macos-latest	vc_reader build dependencies (macOS)	2026-11-14T10:47:08.4354710Z To reinstall 3.2.1, run:
+macos-latest	vc_reader build dependencies (macOS)	2026-11-14T10:47:08.4404200Z   brew reinstall jpeg-turbo
+macos-latest	vc_reader build dependencies (macOS)	2026-11-14T10:47:08.4424770Z Warning: libpng 1.6.59 is already installed and up-to-date.
+macos-latest	vc_reader build dependencies (macOS)	2026-11-14T10:47:08.4425410Z To reinstall 1.6.59, run:
+macos-latest	vc_reader build dependencies (macOS)	2026-11-14T10:47:08.4425840Z   brew reinstall libpng
+macos-latest	vc_reader build dependencies (macOS)	2026-11-14T10:47:08.4441780Z Warning: libtiff 4.7.2 is already installed and up-to-date.
+macos-latest	vc_reader build dependencies (macOS)	2026-11-14T10:47:08.4446790Z To reinstall 4.7.2, run:
+macos-latest	vc_reader build dependencies (macOS)	2026-11-14T10:47:08.4447140Z   brew reinstall libtiff
+macos-latest	vc_reader build dependencies (macOS)	2026-11-14T10:47:08.4468400Z Warning: lz4 1.10.0 is already installed and up-to-date.
+macos-latest	vc_reader build dependencies (macOS)	2026-11-14T10:47:08.4469010Z To reinstall 1.10.0, run:
+macos-latest	vc_reader build dependencies (macOS)	2026-11-14T10:47:08.4469360Z   brew reinstall lz4
+macos-latest	vc_reader build dependencies (macOS)	2026-11-14T10:47:08.4494210Z Warning: ninja 1.13.2 is already installed and up-to-date.
+macos-latest	vc_reader build dependencies (macOS)	2026-11-14T10:47:08.4499900Z To reinstall 1.13.2, run:
+macos-latest	vc_reader build dependencies (macOS)	2026-11-14T10:47:08.4500410Z   brew reinstall ninja
+macos-latest	vc_reader build dependencies (macOS)	2026-11-14T10:47:08.4509560Z Warning: zstd 1.5.7_1 is already installed and up-to-date.
+macos-latest	vc_reader build dependencies (macOS)	2026-11-14T10:47:08.4510130Z To reinstall 1.5.7_1, run:
+macos-latest	vc_reader build dependencies (macOS)	2026-11-14T10:47:08.4510360Z   brew reinstall zstd
+macos-latest	vc_reader build dependencies (macOS)	2026-11-14T10:47:09.4292330Z ==> Downloading bottle manifests
+macos-latest	vc_reader build dependencies (macOS)	2026-11-14T10:47:09.4394430Z ✔︎ Bottle Manifest c-blosc (1.21.7)
+macos-latest	vc_reader build dependencies (macOS)	2026-11-14T10:47:09.4495320Z ✔︎ Bottle Manifest nlohmann-json (3.12.0)
+macos-latest	vc_reader build dependencies (macOS)	2026-11-14T10:47:09.4740190Z ==> Fetching downloads for: c-blosc and nlohmann-json
+macos-latest	vc_reader build dependencies (macOS)	2026-11-14T10:47:11.1051140Z ✔︎ Bottle c-blosc (1.21.7)
+macos-latest	vc_reader build dependencies (macOS)	2026-11-14T10:47:11.1127350Z ✔︎ Bottle nlohmann-json (3.12.0)
+macos-latest	vc_reader build dependencies (macOS)	2026-11-14T10:47:11.1128590Z ==> Pouring c-blosc--1.21.7.arm64_tahoe.bottle.tar.gz
+macos-latest	vc_reader build dependencies (macOS)	2026-11-14T10:47:12.8631280Z 🍺  /opt/homebrew/Cellar/c-blosc/1.21.7: 12 files, 1.5MB
+macos-latest	vc_reader build dependencies (macOS)	2026-11-14T10:47:12.8730870Z ==> Pouring nlohmann-json--3.12.0.all.bottle.1.tar.gz
+macos-latest	vc_reader build dependencies (macOS)	2026-11-14T10:47:14.3079700Z 🍺  /opt/homebrew/Cellar/nlohmann-json/3.12.0: 56 files, 1.4MB
+macos-latest	Python packages	2026-11-14T10:47:14.3731320Z ##[group]Run python -m pip install -q -c checks/spiral-slab-workers/constraints.txt \
+macos-latest	Python packages	2026-11-14T10:47:14.3732120Z python -m pip install -q -c checks/spiral-slab-workers/constraints.txt \
+macos-latest	Python packages	2026-11-14T10:47:14.3733290Z   numpy scipy zarr numcodecs kimimaro connected-components-3d networkx tqdm pytest
+macos-latest	Python packages	2026-11-14T10:47:14.3733780Z python -m pip list
+macos-latest	Python packages	2026-11-14T10:47:14.3786660Z shell: /bin/bash --noprofile --norc -e -o pipefail {0}
+macos-latest	Python packages	2026-11-14T10:47:14.3787120Z env:
+macos-latest	Python packages	2026-11-14T10:47:14.3787540Z   MAIN_REPO: https://github.com/ScrollPrize/villa.git
+macos-latest	Python packages	2026-11-14T10:47:14.3788050Z   MAIN_SHA: 97fb9336c8898be27e78eff8cd23ce5e7185ec0a
+macos-latest	Python packages	2026-11-14T10:47:14.3788440Z   BRANCH_REPO: https://github.com/Cmssmc-code/villa.git
+macos-latest	Python packages	2026-11-14T10:47:14.3788920Z   BRANCH_SHA: bc2c48d07db54fdb4049e06bd34f35091655b5f3
+macos-latest	Python packages	2026-11-14T10:47:14.3789920Z   PREDICTIONS: https://vesuvius-challenge-open-data.s3.us-east-1.amazonaws.com/PHerc0332/representations/predictions/surfaces/20251211183505-surface-20260413222639-surface-m7-L2-th0.2.zarr
+macos-latest	Python packages	2026-11-14T10:47:14.3790870Z   Z_MIN: 4032
+macos-latest	Python packages	2026-11-14T10:47:14.3791140Z   Z_MAX: 4096
+macos-latest	Python packages	2026-11-14T10:47:14.3791330Z   PYTHONUNBUFFERED: 1
+macos-latest	Python packages	2026-11-14T10:47:14.3791630Z   TQDM_MININTERVAL: 10
+macos-latest	Python packages	2026-11-14T10:47:14.3791880Z   PIP_DISABLE_PIP_VERSION_CHECK: 1
+macos-latest	Python packages	2026-11-14T10:47:14.3792270Z   pythonLocation: /Users/runner/hostedtoolcache/Python/3.14.10/arm64
+macos-latest	Python packages	2026-11-14T10:47:14.3792800Z   PKG_CONFIG_PATH: /Users/runner/hostedtoolcache/Python/3.14.10/arm64/lib/pkgconfig
+macos-latest	Python packages	2026-11-14T10:47:14.3793260Z   Python_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.14.10/arm64
+macos-latest	Python packages	2026-11-14T10:47:14.3793720Z   Python2_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.14.10/arm64
+macos-latest	Python packages	2026-11-14T10:47:14.3794170Z   Python3_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.14.10/arm64
+macos-latest	Python packages	2026-11-14T10:47:14.3794570Z   MACOSX_DEPLOYMENT_TARGET: 26.0
+macos-latest	Python packages	2026-11-14T10:47:14.3794860Z   CMAKE_PREFIX_PATH: /opt/homebrew
+macos-latest	Python packages	2026-11-14T10:47:14.3795270Z ##[endgroup]
+macos-latest	Python packages	2026-11-14T10:47:31.9572700Z Package                 Version
+macos-latest	Python packages	2026-11-14T10:47:31.9577920Z ----------------------- -----------
+macos-latest	Python packages	2026-11-14T10:47:31.9579770Z certifi                 2026.10.23
+macos-latest	Python packages	2026-11-14T10:47:31.9581410Z click                   8.5.1
+macos-latest	Python packages	2026-11-14T10:47:31.9582410Z connected-components-3d 4.1.1
+macos-latest	Python packages	2026-11-14T10:47:31.9583620Z crackle-codec           0.55.1
+macos-latest	Python packages	2026-11-14T10:47:31.9584680Z dijkstra3d              1.15.2
+macos-latest	Python packages	2026-11-14T10:47:31.9585740Z dill                    0.4.1
+macos-latest	Python packages	2026-11-14T10:47:31.9586990Z donfig                  0.8.1.post1
+macos-latest	Python packages	2026-11-14T10:47:31.9588130Z edt                     3.1.2
+macos-latest	Python packages	2026-11-14T10:47:31.9589940Z fastremap               1.21.0
+macos-latest	Python packages	2026-11-14T10:47:31.9591060Z fill_voids              2.1.2
+macos-latest	Python packages	2026-11-14T10:47:31.9592320Z google-crc32c           1.9.0
+macos-latest	Python packages	2026-11-14T10:47:31.9593420Z iniconfig               2.3.1
+macos-latest	Python packages	2026-11-14T10:47:31.9594380Z kimimaro                5.9.0
+macos-latest	Python packages	2026-11-14T10:47:31.9595640Z msgspec                 0.22.0
+macos-latest	Python packages	2026-11-14T10:47:31.9596830Z multiprocess            0.70.19
+macos-latest	Python packages	2026-11-14T10:47:31.9598040Z networkx                3.7
+macos-latest	Python packages	2026-11-14T10:47:31.9604160Z numcodecs               0.17.1
+macos-latest	Python packages	2026-11-14T10:47:31.9616870Z numpy                   2.5.4
+macos-latest	Python packages	2026-11-14T10:47:31.9617500Z osteoid                 0.7.4
+macos-latest	Python packages	2026-11-14T10:47:31.9618880Z packaging               26.3
+macos-latest	Python packages	2026-11-14T10:47:31.9619600Z pathos                  0.3.5
+macos-latest	Python packages	2026-11-14T10:47:31.9620050Z pip                     26.2.2
+macos-latest	Python packages	2026-11-14T10:47:31.9620510Z pluggy                  1.7.0
+macos-latest	Python packages	2026-11-14T10:47:31.9620880Z posix_ipc               1.3.2
+macos-latest	Python packages	2026-11-14T10:47:31.9621320Z pox                     0.3.7
+macos-latest	Python packages	2026-11-14T10:47:31.9621750Z ppft                    1.7.8
+macos-latest	Python packages	2026-11-14T10:47:31.9622110Z psutil                  7.2.2
+macos-latest	Python packages	2026-11-14T10:47:31.9622630Z pybind11                3.1.0
+macos-latest	Python packages	2026-11-14T10:47:31.9623010Z Pygments                2.21.0
+macos-latest	Python packages	2026-11-14T10:47:31.9652370Z pytest                  9.2.0
+macos-latest	Python packages	2026-11-14T10:47:31.9652860Z PyYAML                  6.0.3
+macos-latest	Python packages	2026-11-14T10:47:31.9653430Z scipy                   1.18.1
+macos-latest	Python packages	2026-11-14T10:47:31.9653780Z tqdm                    4.70.1
+macos-latest	Python packages	2026-11-14T10:47:31.9654880Z typing_extensions       4.16.0
+macos-latest	Python packages	2026-11-14T10:47:31.9655300Z xs3d                    1.14.0
+macos-latest	Python packages	2026-11-14T10:47:31.9655690Z zarr                    3.4.2
+macos-latest	Build and install vc_reader (from main)	2026-11-14T10:47:31.9913620Z ##[group]Run export CMAKE_BUILD_PARALLEL_LEVEL=$(python -c 'import os; print(os.cpu_count())')
+macos-latest	Build and install vc_reader (from main)	2026-11-14T10:47:31.9914380Z export CMAKE_BUILD_PARALLEL_LEVEL=$(python -c 'import os; print(os.cpu_count())')
+macos-latest	Build and install vc_reader (from main)	2026-11-14T10:47:31.9914830Z python -m pip install -v -c checks/spiral-slab-workers/constraints.txt \
+macos-latest	Build and install vc_reader (from main)	2026-11-14T10:47:31.9915360Z   --config-settings=cmake.define.VC_READER_ENABLE_CUDA=OFF ./villa-main/vc_reader \
+macos-latest	Build and install vc_reader (from main)	2026-11-14T10:47:31.9915850Z   > work/logs/build-vc_reader.log 2>&1 || { tail -n 200 work/logs/build-vc_reader.log; exit 1; }
+macos-latest	Build and install vc_reader (from main)	2026-11-14T10:47:31.9916230Z tail -n 5 work/logs/build-vc_reader.log
+macos-latest	Build and install vc_reader (from main)	2026-11-14T10:47:31.9916810Z python -c "import numpy as np; from vc_reader.geometry import label_components; print(label_components(np.eye(4, dtype=np.uint8)[None], connectivity=6)[1], 'components')"
+macos-latest	Build and install vc_reader (from main)	2026-11-14T10:47:31.9954860Z shell: /bin/bash --noprofile --norc -e -o pipefail {0}
+macos-latest	Build and install vc_reader (from main)	2026-11-14T10:47:31.9955320Z env:
+macos-latest	Build and install vc_reader (from main)	2026-11-14T10:47:31.9955710Z   MAIN_REPO: https://github.com/ScrollPrize/villa.git
+macos-latest	Build and install vc_reader (from main)	2026-11-14T10:47:31.9956050Z   MAIN_SHA: 97fb9336c8898be27e78eff8cd23ce5e7185ec0a
+macos-latest	Build and install vc_reader (from main)	2026-11-14T10:47:31.9956390Z   BRANCH_REPO: https://github.com/Cmssmc-code/villa.git
+macos-latest	Build and install vc_reader (from main)	2026-11-14T10:47:31.9956830Z   BRANCH_SHA: bc2c48d07db54fdb4049e06bd34f35091655b5f3
+macos-latest	Build and install vc_reader (from main)	2026-11-14T10:47:31.9957660Z   PREDICTIONS: https://vesuvius-challenge-open-data.s3.us-east-1.amazonaws.com/PHerc0332/representations/predictions/surfaces/20251211183505-surface-20260413222639-surface-m7-L2-th0.2.zarr
+macos-latest	Build and install vc_reader (from main)	2026-11-14T10:47:31.9958480Z   Z_MIN: 4032
+macos-latest	Build and install vc_reader (from main)	2026-11-14T10:47:31.9958790Z   Z_MAX: 4096
+macos-latest	Build and install vc_reader (from main)	2026-11-14T10:47:31.9958990Z   PYTHONUNBUFFERED: 1
+macos-latest	Build and install vc_reader (from main)	2026-11-14T10:47:31.9959220Z   TQDM_MININTERVAL: 10
+macos-latest	Build and install vc_reader (from main)	2026-11-14T10:47:31.9959480Z   PIP_DISABLE_PIP_VERSION_CHECK: 1
+macos-latest	Build and install vc_reader (from main)	2026-11-14T10:47:31.9959870Z   pythonLocation: /Users/runner/hostedtoolcache/Python/3.14.10/arm64
+macos-latest	Build and install vc_reader (from main)	2026-11-14T10:47:31.9960700Z   PKG_CONFIG_PATH: /Users/runner/hostedtoolcache/Python/3.14.10/arm64/lib/pkgconfig
+macos-latest	Build and install vc_reader (from main)	2026-11-14T10:47:31.9962860Z   Python_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.14.10/arm64
+macos-latest	Build and install vc_reader (from main)	2026-11-14T10:47:31.9964200Z   Python2_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.14.10/arm64
+macos-latest	Build and install vc_reader (from main)	2026-11-14T10:47:31.9964690Z   Python3_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.14.10/arm64
+macos-latest	Build and install vc_reader (from main)	2026-11-14T10:47:31.9965140Z   MACOSX_DEPLOYMENT_TARGET: 26.0
+macos-latest	Build and install vc_reader (from main)	2026-11-14T10:47:31.9965440Z   CMAKE_PREFIX_PATH: /opt/homebrew
+macos-latest	Build and install vc_reader (from main)	2026-11-14T10:47:31.9965750Z ##[endgroup]
+macos-latest	Build and install vc_reader (from main)	2026-11-14T10:51:19.0834770Z   Stored in directory: /private/var/folders/h5/t85nd63d71x27_8gl5gw3l_w0000gn/T/pip-ephem-wheel-cache-g0sjd742/wheels/ad/04/7b/02b20f10bdf99a0c31b6f28ad9002658a7f1abf48745a03a70
+macos-latest	Build and install vc_reader (from main)	2026-11-14T10:51:19.0836670Z Successfully built vc-reader
+macos-latest	Build and install vc_reader (from main)	2026-11-14T10:51:19.0837140Z Installing collected packages: vc-reader
+macos-latest	Build and install vc_reader (from main)	2026-11-14T10:51:19.0837680Z   changing mode of /Library/Frameworks/Python.framework/Versions/3.14/bin/vc-reader to 755
+macos-latest	Build and install vc_reader (from main)	2026-11-14T10:51:19.0838150Z Successfully installed vc-reader-0.1.0
+macos-latest	Build and install vc_reader (from main)	2026-11-14T10:51:19.3639130Z 4 components
+macos-latest	Download the predictions crop	2026-11-14T10:51:19.4401180Z ##[group]Run python checks/spiral-slab-workers/fetch_predictions.py --json work/predictions.json \
+macos-latest	Download the predictions crop	2026-11-14T10:51:19.4401910Z python checks/spiral-slab-workers/fetch_predictions.py --json work/predictions.json \
+macos-latest	Download the predictions crop	2026-11-14T10:51:19.4402490Z   "$PREDICTIONS" work/predictions.zarr 0 "$Z_MIN" "$Z_MAX" 2>&1 | tee work/logs/fetch.log
+macos-latest	Download the predictions crop	2026-11-14T10:51:19.5755360Z shell: /bin/bash --noprofile --norc -e -o pipefail {0}
+macos-latest	Download the predictions crop	2026-11-14T10:51:19.5755840Z env:
+macos-latest	Download the predictions crop	2026-11-14T10:51:19.5756130Z   MAIN_REPO: https://github.com/ScrollPrize/villa.git
+macos-latest	Download the predictions crop	2026-11-14T10:51:19.5756590Z   MAIN_SHA: 97fb9336c8898be27e78eff8cd23ce5e7185ec0a
+macos-latest	Download the predictions crop	2026-11-14T10:51:19.5756950Z   BRANCH_REPO: https://github.com/Cmssmc-code/villa.git
+macos-latest	Download the predictions crop	2026-11-14T10:51:19.5757390Z   BRANCH_SHA: bc2c48d07db54fdb4049e06bd34f35091655b5f3
+macos-latest	Download the predictions crop	2026-11-14T10:51:19.5758260Z   PREDICTIONS: https://vesuvius-challenge-open-data.s3.us-east-1.amazonaws.com/PHerc0332/representations/predictions/surfaces/20251211183505-surface-20260413222639-surface-m7-L2-th0.2.zarr
+macos-latest	Download the predictions crop	2026-11-14T10:51:19.5763080Z   Z_MIN: 4032
+macos-latest	Download the predictions crop	2026-11-14T10:51:19.5763360Z   Z_MAX: 4096
+macos-latest	Download the predictions crop	2026-11-14T10:51:19.5763570Z   PYTHONUNBUFFERED: 1
+macos-latest	Download the predictions crop	2026-11-14T10:51:19.5763850Z   TQDM_MININTERVAL: 10
+macos-latest	Download the predictions crop	2026-11-14T10:51:19.5764080Z   PIP_DISABLE_PIP_VERSION_CHECK: 1
+macos-latest	Download the predictions crop	2026-11-14T10:51:19.5764470Z   pythonLocation: /Users/runner/hostedtoolcache/Python/3.14.10/arm64
+macos-latest	Download the predictions crop	2026-11-14T10:51:19.5764910Z   PKG_CONFIG_PATH: /Users/runner/hostedtoolcache/Python/3.14.10/arm64/lib/pkgconfig
+macos-latest	Download the predictions crop	2026-11-14T10:51:19.5765460Z   Python_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.14.10/arm64
+macos-latest	Download the predictions crop	2026-11-14T10:51:19.5765920Z   Python2_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.14.10/arm64
+macos-latest	Download the predictions crop	2026-11-14T10:51:19.5766340Z   Python3_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.14.10/arm64
+macos-latest	Download the predictions crop	2026-11-14T10:51:19.5766730Z   MACOSX_DEPLOYMENT_TARGET: 26.0
+macos-latest	Download the predictions crop	2026-11-14T10:51:19.5766980Z   CMAKE_PREFIX_PATH: /opt/homebrew
+macos-latest	Download the predictions crop	2026-11-14T10:51:19.5767280Z ##[endgroup]
+macos-latest	Download the predictions crop	2026-11-14T10:51:35.7051230Z downloaded 195 chunks of rows [21] in 15 s from https://vesuvius-challenge-open-data.s3.us-east-1.amazonaws.com/PHerc0332/representations/predictions/surfaces/20251211183505-surface-20260413222639-surface-m7-L2-th0.2.zarr/0
+macos-latest	Download the predictions crop	2026-11-14T10:51:35.8815790Z level 0, shape [8398, 3941, 3941], chunks [192, 192, 192], z 4032..4096 -> chunk rows [21]: 195 chunk files, 45.2 MB, SHA-256 of .zarray and chunks 0bed6251aefa6eb45ba6646870ee43ae918931cd34f05868322b9697405feb55
+macos-latest	Tests on main	2026-11-14T10:51:35.9318670Z ##[group]Run set +e
+macos-latest	Tests on main	2026-11-14T10:51:35.9319240Z set +e
+macos-latest	Tests on main	2026-11-14T10:51:35.9319710Z python -m pytest -q -rfEs -p no:cacheprovider --junitxml="$GITHUB_WORKSPACE/work/tests-main.xml" \
+macos-latest	Tests on main	2026-11-14T10:51:35.9320640Z   tests/test_cc_labels.py tests/test_extract_surface_tracks.py 2>&1 | tee "$GITHUB_WORKSPACE/work/logs/tests-main.log"
+macos-latest	Tests on main	2026-11-14T10:51:35.9321310Z echo "${PIPESTATUS[0]}" > "$GITHUB_WORKSPACE/work/tests-main.rc"
+macos-latest	Tests on main	2026-11-14T10:51:35.9648540Z shell: /bin/bash --noprofile --norc -e -o pipefail {0}
+macos-latest	Tests on main	2026-11-14T10:51:35.9649100Z env:
+macos-latest	Tests on main	2026-11-14T10:51:35.9649430Z   MAIN_REPO: https://github.com/ScrollPrize/villa.git
+macos-latest	Tests on main	2026-11-14T10:51:35.9649860Z   MAIN_SHA: 97fb9336c8898be27e78eff8cd23ce5e7185ec0a
+macos-latest	Tests on main	2026-11-14T10:51:35.9650190Z   BRANCH_REPO: https://github.com/Cmssmc-code/villa.git
+macos-latest	Tests on main	2026-11-14T10:51:35.9650730Z   BRANCH_SHA: bc2c48d07db54fdb4049e06bd34f35091655b5f3
+macos-latest	Tests on main	2026-11-14T10:51:35.9651450Z   PREDICTIONS: https://vesuvius-challenge-open-data.s3.us-east-1.amazonaws.com/PHerc0332/representations/predictions/surfaces/20251211183505-surface-20260413222639-surface-m7-L2-th0.2.zarr
+macos-latest	Tests on main	2026-11-14T10:51:35.9652890Z   Z_MIN: 4032
+macos-latest	Tests on main	2026-11-14T10:51:35.9653120Z   Z_MAX: 4096
+macos-latest	Tests on main	2026-11-14T10:51:35.9653340Z   PYTHONUNBUFFERED: 1
+macos-latest	Tests on main	2026-11-14T10:51:35.9653670Z   TQDM_MININTERVAL: 10
+macos-latest	Tests on main	2026-11-14T10:51:35.9653900Z   PIP_DISABLE_PIP_VERSION_CHECK: 1
+macos-latest	Tests on main	2026-11-14T10:51:35.9654280Z   pythonLocation: /Users/runner/hostedtoolcache/Python/3.14.10/arm64
+macos-latest	Tests on main	2026-11-14T10:51:35.9654760Z   PKG_CONFIG_PATH: /Users/runner/hostedtoolcache/Python/3.14.10/arm64/lib/pkgconfig
+macos-latest	Tests on main	2026-11-14T10:51:35.9655390Z   Python_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.14.10/arm64
+macos-latest	Tests on main	2026-11-14T10:51:35.9655980Z   Python2_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.14.10/arm64
+macos-latest	Tests on main	2026-11-14T10:51:35.9656380Z   Python3_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.14.10/arm64
+macos-latest	Tests on main	2026-11-14T10:51:35.9656790Z   MACOSX_DEPLOYMENT_TARGET: 26.0
+macos-latest	Tests on main	2026-11-14T10:51:35.9657050Z   CMAKE_PREFIX_PATH: /opt/homebrew
+macos-latest	Tests on main	2026-11-14T10:51:35.9657340Z ##[endgroup]
+macos-latest	Tests on main	2026-11-14T10:52:47.9259450Z .........ssss..ss....s..s..............s                                 [100%]
+macos-latest	Tests on main	2026-11-14T10:52:47.9260890Z =============================== warnings summary ===============================
+macos-latest	Tests on main	2026-11-14T10:52:47.9261500Z tests/test_cc_labels.py: 18 warnings
+macos-latest	Tests on main	2026-11-14T10:52:47.9263170Z   /Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/multiprocessing/popen_fork.py:76: DeprecationWarning: This process (pid=8912) is multi-threaded, use of fork() may lead to deadlocks in the child.
+macos-latest	Tests on main	2026-11-14T10:52:47.9269860Z     self.pid = os.fork()
+macos-latest	Tests on main	2026-11-14T10:52:47.9270000Z 
+macos-latest	Tests on main	2026-11-14T10:52:47.9270440Z -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+macos-latest	Tests on main	2026-11-14T10:52:47.9271120Z =========================== short test summary info ============================
+macos-latest	Tests on main	2026-11-14T10:52:47.9271610Z SKIPPED [3] tests/test_cc_labels.py:116: monorepo real-scroll fixture required
+macos-latest	Tests on main	2026-11-14T10:52:47.9272210Z SKIPPED [1] tests/test_extract_surface_tracks.py:204: numba is not installed
+macos-latest	Tests on main	2026-11-14T10:52:47.9273080Z SKIPPED [2] tests/test_extract_surface_tracks.py:215: numba is not installed
+macos-latest	Tests on main	2026-11-14T10:52:47.9273720Z SKIPPED [2] tests/test_extract_surface_tracks.py:238: numba is not installed
+macos-latest	Tests on main	2026-11-14T10:52:47.9274320Z SKIPPED [1] tests/test_extract_surface_tracks.py:521: could not import 'brook': No module named 'brook'
+macos-latest	Tests on main	2026-11-14T10:52:47.9274960Z 31 passed, 9 skipped, 18 warnings in 70.54s (0:01:10)
+macos-latest	Tests on the branch	2026-11-14T10:52:48.2316620Z ##[group]Run set +e
+macos-latest	Tests on the branch	2026-11-14T10:52:48.2317160Z set +e
+macos-latest	Tests on the branch	2026-11-14T10:52:48.2317800Z python -m pytest -q -rfEs -p no:cacheprovider --junitxml="$GITHUB_WORKSPACE/work/tests-branch.xml" \
+macos-latest	Tests on the branch	2026-11-14T10:52:48.2318810Z   tests/test_cc_labels.py tests/test_extract_surface_tracks.py 2>&1 | tee "$GITHUB_WORKSPACE/work/logs/tests-branch.log"
+macos-latest	Tests on the branch	2026-11-14T10:52:48.2319530Z echo "${PIPESTATUS[0]}" > "$GITHUB_WORKSPACE/work/tests-branch.rc"
+macos-latest	Tests on the branch	2026-11-14T10:52:48.2563910Z shell: /bin/bash --noprofile --norc -e -o pipefail {0}
+macos-latest	Tests on the branch	2026-11-14T10:52:48.2564410Z env:
+macos-latest	Tests on the branch	2026-11-14T10:52:48.2564810Z   MAIN_REPO: https://github.com/ScrollPrize/villa.git
+macos-latest	Tests on the branch	2026-11-14T10:52:48.2565200Z   MAIN_SHA: 97fb9336c8898be27e78eff8cd23ce5e7185ec0a
+macos-latest	Tests on the branch	2026-11-14T10:52:48.2565610Z   BRANCH_REPO: https://github.com/Cmssmc-code/villa.git
+macos-latest	Tests on the branch	2026-11-14T10:52:48.2565950Z   BRANCH_SHA: bc2c48d07db54fdb4049e06bd34f35091655b5f3
+macos-latest	Tests on the branch	2026-11-14T10:52:48.2566880Z   PREDICTIONS: https://vesuvius-challenge-open-data.s3.us-east-1.amazonaws.com/PHerc0332/representations/predictions/surfaces/20251211183505-surface-20260413222639-surface-m7-L2-th0.2.zarr
+macos-latest	Tests on the branch	2026-11-14T10:52:48.2567900Z   Z_MIN: 4032
+macos-latest	Tests on the branch	2026-11-14T10:52:48.2568110Z   Z_MAX: 4096
+macos-latest	Tests on the branch	2026-11-14T10:52:48.2568410Z   PYTHONUNBUFFERED: 1
+macos-latest	Tests on the branch	2026-11-14T10:52:48.2568620Z   TQDM_MININTERVAL: 10
+macos-latest	Tests on the branch	2026-11-14T10:52:48.2568910Z   PIP_DISABLE_PIP_VERSION_CHECK: 1
+macos-latest	Tests on the branch	2026-11-14T10:52:48.2569260Z   pythonLocation: /Users/runner/hostedtoolcache/Python/3.14.10/arm64
+macos-latest	Tests on the branch	2026-11-14T10:52:48.2569760Z   PKG_CONFIG_PATH: /Users/runner/hostedtoolcache/Python/3.14.10/arm64/lib/pkgconfig
+macos-latest	Tests on the branch	2026-11-14T10:52:48.2570280Z   Python_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.14.10/arm64
+macos-latest	Tests on the branch	2026-11-14T10:52:48.2570830Z   Python2_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.14.10/arm64
+macos-latest	Tests on the branch	2026-11-14T10:52:48.2571320Z   Python3_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.14.10/arm64
+macos-latest	Tests on the branch	2026-11-14T10:52:48.2571700Z   MACOSX_DEPLOYMENT_TARGET: 26.0
+macos-latest	Tests on the branch	2026-11-14T10:52:48.2572070Z   CMAKE_PREFIX_PATH: /opt/homebrew
+macos-latest	Tests on the branch	2026-11-14T10:52:48.2572320Z ##[endgroup]
+macos-latest	Tests on the branch	2026-11-14T10:53:54.7214630Z ..........ssss..ss....s..s...............s                               [100%]
+macos-latest	Tests on the branch	2026-11-14T10:53:54.7275190Z =========================== short test summary info ============================
+macos-latest	Tests on the branch	2026-11-14T10:53:54.7296630Z SKIPPED [3] tests/test_cc_labels.py:131: monorepo real-scroll fixture required
+macos-latest	Tests on the branch	2026-11-14T10:53:54.7346710Z SKIPPED [1] tests/test_extract_surface_tracks.py:204: numba is not installed
+macos-latest	Tests on the branch	2026-11-14T10:53:54.7349720Z SKIPPED [2] tests/test_extract_surface_tracks.py:215: numba is not installed
+macos-latest	Tests on the branch	2026-11-14T10:53:54.7353250Z SKIPPED [2] tests/test_extract_surface_tracks.py:238: numba is not installed
+macos-latest	Tests on the branch	2026-11-14T10:53:54.7355850Z SKIPPED [1] tests/test_extract_surface_tracks.py:537: could not import 'brook': No module named 'brook'
+macos-latest	Tests on the branch	2026-11-14T10:53:54.7358350Z 33 passed, 9 skipped in 65.70s (0:01:05)
+macos-latest	Extraction runs and comparisons	2026-11-14T10:53:55.2072740Z ##[group]Run python checks/spiral-slab-workers/check_extraction.py villa-main villa-branch \
+macos-latest	Extraction runs and comparisons	2026-11-14T10:53:55.2073720Z python checks/spiral-slab-workers/check_extraction.py villa-main villa-branch \
+macos-latest	Extraction runs and comparisons	2026-11-14T10:53:55.2075530Z   "$GITHUB_WORKSPACE/work/predictions.zarr/0" "$Z_MIN" "$Z_MAX" work
+macos-latest	Extraction runs and comparisons	2026-11-14T10:53:55.2206570Z shell: /bin/bash --noprofile --norc -e -o pipefail {0}
+macos-latest	Extraction runs and comparisons	2026-11-14T10:53:55.2206970Z env:
+macos-latest	Extraction runs and comparisons	2026-11-14T10:53:55.2207470Z   MAIN_REPO: https://github.com/ScrollPrize/villa.git
+macos-latest	Extraction runs and comparisons	2026-11-14T10:53:55.2207830Z   MAIN_SHA: 97fb9336c8898be27e78eff8cd23ce5e7185ec0a
+macos-latest	Extraction runs and comparisons	2026-11-14T10:53:55.2208390Z   BRANCH_REPO: https://github.com/Cmssmc-code/villa.git
+macos-latest	Extraction runs and comparisons	2026-11-14T10:53:55.2209280Z   BRANCH_SHA: bc2c48d07db54fdb4049e06bd34f35091655b5f3
+macos-latest	Extraction runs and comparisons	2026-11-14T10:53:55.2210150Z   PREDICTIONS: https://vesuvius-challenge-open-data.s3.us-east-1.amazonaws.com/PHerc0332/representations/predictions/surfaces/20251211183505-surface-20260413222639-surface-m7-L2-th0.2.zarr
+macos-latest	Extraction runs and comparisons	2026-11-14T10:53:55.2210990Z   Z_MIN: 4032
+macos-latest	Extraction runs and comparisons	2026-11-14T10:53:55.2211340Z   Z_MAX: 4096
+macos-latest	Extraction runs and comparisons	2026-11-14T10:53:55.2211610Z   PYTHONUNBUFFERED: 1
+macos-latest	Extraction runs and comparisons	2026-11-14T10:53:55.2211850Z   TQDM_MININTERVAL: 10
+macos-latest	Extraction runs and comparisons	2026-11-14T10:53:55.2212160Z   PIP_DISABLE_PIP_VERSION_CHECK: 1
+macos-latest	Extraction runs and comparisons	2026-11-14T10:53:55.2212500Z   pythonLocation: /Users/runner/hostedtoolcache/Python/3.14.10/arm64
+macos-latest	Extraction runs and comparisons	2026-11-14T10:53:55.2213260Z   PKG_CONFIG_PATH: /Users/runner/hostedtoolcache/Python/3.14.10/arm64/lib/pkgconfig
+macos-latest	Extraction runs and comparisons	2026-11-14T10:53:55.2213850Z   Python_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.14.10/arm64
+macos-latest	Extraction runs and comparisons	2026-11-14T10:53:55.2214560Z   Python2_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.14.10/arm64
+macos-latest	Extraction runs and comparisons	2026-11-14T10:53:55.2215140Z   Python3_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.14.10/arm64
+macos-latest	Extraction runs and comparisons	2026-11-14T10:53:55.2215500Z   MACOSX_DEPLOYMENT_TARGET: 26.0
+macos-latest	Extraction runs and comparisons	2026-11-14T10:53:55.2215850Z   CMAKE_PREFIX_PATH: /opt/homebrew
+macos-latest	Extraction runs and comparisons	2026-11-14T10:53:55.2216110Z ##[endgroup]
+macos-latest	Extraction runs and comparisons	2026-11-14T10:57:38.5958540Z --- main-default: exit code 0, 223.0 s, children: 32 other, 233 resource tracker, 784 spawned (spawn_main), at most 12
+macos-latest	Extraction runs and comparisons	2026-11-14T10:57:38.5968000Z vertical x-stride slabs:  81%|████████▏ | 44/54 [01:31<00:20,  2.10s/it]
+macos-latest	Extraction runs and comparisons	2026-11-14T10:57:38.5968920Z vertical x-stride slabs:  93%|█████████▎| 50/54 [01:42<00:08,  2.02s/it]
+macos-latest	Extraction runs and comparisons	2026-11-14T10:57:38.5969740Z vertical x-stride slabs: 100%|██████████| 54/54 [01:50<00:00,  2.04s/it]
+macos-latest	Extraction runs and comparisons	2026-11-14T10:57:38.5970080Z 
+macos-latest	Extraction runs and comparisons	2026-11-14T10:57:38.5970280Z # exit code 0, 223.0 s
+macos-latest	Extraction runs and comparisons	2026-11-14T10:57:38.5971090Z # child processes seen (ps every second): 32 other, 233 resource tracker, 784 spawned (spawn_main); at most 12 at once, resource tracker excluded
+macos-latest	Extraction runs and comparisons	2026-11-14T11:01:10.8795580Z --- branch-default: exit code 0, 212.1 s, children: 26 other, 357 resource tracker, 784 spawned (spawn_main), at most 13
+macos-latest	Extraction runs and comparisons	2026-11-14T11:01:10.8801150Z vertical x-stride slabs:  87%|████████▋ | 47/54 [01:35<00:14,  2.10s/it]
+macos-latest	Extraction runs and comparisons	2026-11-14T11:01:10.8801780Z vertical x-stride slabs:  98%|█████████▊| 53/54 [01:47<00:02,  2.02s/it]
+macos-latest	Extraction runs and comparisons	2026-11-14T11:01:10.8802290Z vertical x-stride slabs: 100%|██████████| 54/54 [01:49<00:00,  2.02s/it]
+macos-latest	Extraction runs and comparisons	2026-11-14T11:01:10.8802850Z 
+macos-latest	Extraction runs and comparisons	2026-11-14T11:01:10.8802970Z # exit code 0, 212.1 s
+macos-latest	Extraction runs and comparisons	2026-11-14T11:01:10.8803620Z # child processes seen (ps every second): 26 other, 357 resource tracker, 784 spawned (spawn_main); at most 13 at once, resource tracker excluded
+macos-latest	Extraction runs and comparisons	2026-11-14T11:01:29.0690790Z --- main-1proc: exit code 0, 18.1 s, children: 1 resource tracker, at most 0
+macos-latest	Extraction runs and comparisons	2026-11-14T11:01:29.0691680Z 
+macos-latest	Extraction runs and comparisons	2026-11-14T11:01:29.0691930Z vertical x-stride slabs:   0%|          | 0/54 [00:00<?, ?it/s]
+macos-latest	Extraction runs and comparisons	2026-11-14T11:01:29.0693880Z vertical x-stride slabs: 100%|██████████| 54/54 [00:01<00:00, 31.25it/s]
+macos-latest	Extraction runs and comparisons	2026-11-14T11:01:29.0694210Z 
+macos-latest	Extraction runs and comparisons	2026-11-14T11:01:29.0694340Z # exit code 0, 18.1 s
+macos-latest	Extraction runs and comparisons	2026-11-14T11:01:29.0695270Z # child processes seen (ps every second): 1 resource tracker; at most 0 at once, resource tracker excluded
+macos-latest	Extraction runs and comparisons	2026-11-14T11:01:49.2295440Z --- branch-1proc: exit code 0, 20.1 s, children: 1 resource tracker, at most 0
+macos-latest	Extraction runs and comparisons	2026-11-14T11:01:49.2298460Z 
+macos-latest	Extraction runs and comparisons	2026-11-14T11:01:49.2299000Z vertical x-stride slabs:   0%|          | 0/54 [00:00<?, ?it/s]
+macos-latest	Extraction runs and comparisons	2026-11-14T11:01:49.2331150Z vertical x-stride slabs: 100%|██████████| 54/54 [00:02<00:00, 26.23it/s]
+macos-latest	Extraction runs and comparisons	2026-11-14T11:01:49.2332210Z 
+macos-latest	Extraction runs and comparisons	2026-11-14T11:01:49.2349950Z # exit code 0, 20.1 s
+macos-latest	Extraction runs and comparisons	2026-11-14T11:01:49.2352210Z # child processes seen (ps every second): 1 resource tracker; at most 0 at once, resource tracker excluded
+macos-latest	Extraction runs and comparisons	2026-11-14T11:02:12.5908390Z --- branch-sw2: exit code 0, 23.3 s, children: 1 resource tracker, 6 spawned (spawn_main), at most 2
+macos-latest	Extraction runs and comparisons	2026-11-14T11:02:12.5910310Z 
+macos-latest	Extraction runs and comparisons	2026-11-14T11:02:12.5910600Z vertical x-stride slabs:   0%|          | 0/54 [00:00<?, ?it/s]
+macos-latest	Extraction runs and comparisons	2026-11-14T11:02:12.5914120Z vertical x-stride slabs: 100%|██████████| 54/54 [00:02<00:00, 20.58it/s]
+macos-latest	Extraction runs and comparisons	2026-11-14T11:02:12.5914510Z 
+macos-latest	Extraction runs and comparisons	2026-11-14T11:02:12.5914630Z # exit code 0, 23.3 s
+macos-latest	Extraction runs and comparisons	2026-11-14T11:02:12.5915130Z # child processes seen (ps every second): 1 resource tracker, 6 spawned (spawn_main); at most 2 at once, resource tracker excluded
+macos-latest	Extraction runs and comparisons	2026-11-14T11:02:12.8839720Z --- main-sw2: exit code 1, 0.3 s, children: none seen, at most 0, NameError: name 'sys' is not defined. Did you forget to import 'sys'?
+macos-latest	Extraction runs and comparisons	2026-11-14T11:02:12.8841190Z     if args.slab_workers > 1 and not sys.platform.startswith('linux'):
+macos-latest	Extraction runs and comparisons	2026-11-14T11:02:12.8841700Z                                      ^^^
+macos-latest	Extraction runs and comparisons	2026-11-14T11:02:12.8842350Z NameError: name 'sys' is not defined. Did you forget to import 'sys'?
+macos-latest	Extraction runs and comparisons	2026-11-14T11:02:12.8842660Z 
+macos-latest	Extraction runs and comparisons	2026-11-14T11:02:12.8842720Z # exit code 1, 0.3 s
+macos-latest	Extraction runs and comparisons	2026-11-14T11:02:12.8843130Z # child processes seen (ps every second): none seen; at most 0 at once, resource tracker excluded
+macos-latest	Extraction runs and comparisons	2026-11-14T11:02:13.0079160Z === compare main-default vs branch-default
+macos-latest	Extraction runs and comparisons	2026-11-14T11:02:13.0079760Z main-default.dbm: 100 keys; branch-default.dbm: 100 keys
+macos-latest	Extraction runs and comparisons	2026-11-14T11:02:13.0080060Z same keys: True
+macos-latest	Extraction runs and comparisons	2026-11-14T11:02:13.0080840Z keys with identical pickled bytes: 74/100
+macos-latest	Extraction runs and comparisons	2026-11-14T11:02:13.0082090Z keys with identical track sets: 100/100; differing: []
+macos-latest	Extraction runs and comparisons	2026-11-14T11:02:13.0083300Z tracks: 1981, vertices: 127546
+macos-latest	Extraction runs and comparisons	2026-11-14T11:02:13.0084120Z fingerprint of sorted track sets (main-default): 4d78009cdfa3b38c
+macos-latest	Extraction runs and comparisons	2026-11-14T11:02:13.1328290Z === compare main-1proc vs branch-1proc
+macos-latest	Extraction runs and comparisons	2026-11-14T11:02:13.1328990Z main-1proc.dbm: 100 keys; branch-1proc.dbm: 100 keys
+macos-latest	Extraction runs and comparisons	2026-11-14T11:02:13.1329660Z same keys: True
+macos-latest	Extraction runs and comparisons	2026-11-14T11:02:13.1330070Z keys with identical pickled bytes: 100/100
+macos-latest	Extraction runs and comparisons	2026-11-14T11:02:13.1330440Z keys with identical track sets: 100/100; differing: []
+macos-latest	Extraction runs and comparisons	2026-11-14T11:02:13.1330880Z tracks: 1981, vertices: 127546
+macos-latest	Extraction runs and comparisons	2026-11-14T11:02:13.1331350Z fingerprint of sorted track sets (main-1proc): 4d78009cdfa3b38c
+macos-latest	Extraction runs and comparisons	2026-11-14T11:02:13.2481930Z === compare branch-1proc vs branch-sw2
+macos-latest	Extraction runs and comparisons	2026-11-14T11:02:13.2483050Z branch-1proc.dbm: 100 keys; branch-sw2.dbm: 100 keys
+macos-latest	Extraction runs and comparisons	2026-11-14T11:02:13.2483950Z same keys: True
+macos-latest	Extraction runs and comparisons	2026-11-14T11:02:13.2484690Z keys with identical pickled bytes: 100/100
+macos-latest	Extraction runs and comparisons	2026-11-14T11:02:13.2485460Z keys with identical track sets: 100/100; differing: []
+macos-latest	Extraction runs and comparisons	2026-11-14T11:02:13.2486400Z tracks: 1981, vertices: 127546
+macos-latest	Extraction runs and comparisons	2026-11-14T11:02:13.2487180Z fingerprint of sorted track sets (branch-1proc): 4d78009cdfa3b38c
+macos-latest	Extraction runs and comparisons	2026-11-14T11:02:13.3673070Z === compare main-1proc vs branch-sw2
+macos-latest	Extraction runs and comparisons	2026-11-14T11:02:13.3673940Z main-1proc.dbm: 100 keys; branch-sw2.dbm: 100 keys
+macos-latest	Extraction runs and comparisons	2026-11-14T11:02:13.3674480Z same keys: True
+macos-latest	Extraction runs and comparisons	2026-11-14T11:02:13.3674900Z keys with identical pickled bytes: 100/100
+macos-latest	Extraction runs and comparisons	2026-11-14T11:02:13.3675300Z keys with identical track sets: 100/100; differing: []
+macos-latest	Extraction runs and comparisons	2026-11-14T11:02:13.3675750Z tracks: 1981, vertices: 127546
+macos-latest	Extraction runs and comparisons	2026-11-14T11:02:13.3676530Z fingerprint of sorted track sets (main-1proc): 4d78009cdfa3b38c
+macos-latest	Extraction runs and comparisons	2026-11-14T11:02:13.4809860Z === compare main-1proc vs main-default
+macos-latest	Extraction runs and comparisons	2026-11-14T11:02:13.4810590Z main-1proc.dbm: 100 keys; main-default.dbm: 100 keys
+macos-latest	Extraction runs and comparisons	2026-11-14T11:02:13.4811030Z same keys: True
+macos-latest	Extraction runs and comparisons	2026-11-14T11:02:13.4811470Z keys with identical pickled bytes: 67/100
+macos-latest	Extraction runs and comparisons	2026-11-14T11:02:13.4811980Z keys with identical track sets: 100/100; differing: []
+macos-latest	Extraction runs and comparisons	2026-11-14T11:02:13.4812420Z tracks: 1981, vertices: 127546
+macos-latest	Extraction runs and comparisons	2026-11-14T11:02:13.4812790Z fingerprint of sorted track sets (main-1proc): 4d78009cdfa3b38c
+macos-latest	Summary	2026-11-14T11:02:13.5324500Z ##[group]Run python checks/spiral-slab-workers/summarize.py villa-main villa-branch work | tee -a "$GITHUB_STEP_SUMMARY"
+macos-latest	Summary	2026-11-14T11:02:13.5334800Z python checks/spiral-slab-workers/summarize.py villa-main villa-branch work | tee -a "$GITHUB_STEP_SUMMARY"
+macos-latest	Summary	2026-11-14T11:02:13.5709330Z shell: /bin/bash --noprofile --norc -e -o pipefail {0}
+macos-latest	Summary	2026-11-14T11:02:13.5709790Z env:
+macos-latest	Summary	2026-11-14T11:02:13.5710050Z   MAIN_REPO: https://github.com/ScrollPrize/villa.git
+macos-latest	Summary	2026-11-14T11:02:13.5710490Z   MAIN_SHA: 97fb9336c8898be27e78eff8cd23ce5e7185ec0a
+macos-latest	Summary	2026-11-14T11:02:13.5710890Z   BRANCH_REPO: https://github.com/Cmssmc-code/villa.git
+macos-latest	Summary	2026-11-14T11:02:13.5711300Z   BRANCH_SHA: bc2c48d07db54fdb4049e06bd34f35091655b5f3
+macos-latest	Summary	2026-11-14T11:02:13.5712140Z   PREDICTIONS: https://vesuvius-challenge-open-data.s3.us-east-1.amazonaws.com/PHerc0332/representations/predictions/surfaces/20251211183505-surface-20260413222639-surface-m7-L2-th0.2.zarr
+macos-latest	Summary	2026-11-14T11:02:13.5712930Z   Z_MIN: 4032
+macos-latest	Summary	2026-11-14T11:02:13.5713170Z   Z_MAX: 4096
+macos-latest	Summary	2026-11-14T11:02:13.5713460Z   PYTHONUNBUFFERED: 1
+macos-latest	Summary	2026-11-14T11:02:13.5713720Z   TQDM_MININTERVAL: 10
+macos-latest	Summary	2026-11-14T11:02:13.5713970Z   PIP_DISABLE_PIP_VERSION_CHECK: 1
+macos-latest	Summary	2026-11-14T11:02:13.5714340Z   pythonLocation: /Users/runner/hostedtoolcache/Python/3.14.10/arm64
+macos-latest	Summary	2026-11-14T11:02:13.5714800Z   PKG_CONFIG_PATH: /Users/runner/hostedtoolcache/Python/3.14.10/arm64/lib/pkgconfig
+macos-latest	Summary	2026-11-14T11:02:13.5715300Z   Python_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.14.10/arm64
+macos-latest	Summary	2026-11-14T11:02:13.5715700Z   Python2_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.14.10/arm64
+macos-latest	Summary	2026-11-14T11:02:13.5716240Z   Python3_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.14.10/arm64
+macos-latest	Summary	2026-11-14T11:02:13.5716640Z   MACOSX_DEPLOYMENT_TARGET: 26.0
+macos-latest	Summary	2026-11-14T11:02:13.5716890Z   CMAKE_PREFIX_PATH: /opt/homebrew
+macos-latest	Summary	2026-11-14T11:02:13.5717180Z ##[endgroup]
+macos-latest	Summary	2026-11-14T11:02:13.8808410Z ## spiral-fitting `--slab-workers` on macOS 26.7.2 arm64: all checks pass
+macos-latest	Summary	2026-11-14T11:02:13.8809030Z 
+macos-latest	Summary	2026-11-14T11:02:13.8809470Z - main: [ScrollPrize/villa@97fb9336c](https://github.com/ScrollPrize/villa/commit/97fb9336c8898be27e78eff8cd23ce5e7185ec0a)
+macos-latest	Summary	2026-11-14T11:02:13.8810460Z - branch: [Cmssmc-code/villa@bc2c48d07](https://github.com/Cmssmc-code/villa/commit/bc2c48d07db54fdb4049e06bd34f35091655b5f3) (spiral-slab-workers-windows)
+macos-latest	Summary	2026-11-14T11:02:13.8811970Z - Python 3.14.10, 3 CPUs; numpy 2.5.4, zarr 3.4.2, numcodecs 0.17.1, kimimaro 5.9.0, connected-components-3d 4.1.1, networkx 3.7, vc-reader 0.1.0, pytest 9.2.0
+macos-latest	Summary	2026-11-14T11:02:13.8813340Z - Data: `https://vesuvius-challenge-open-data.s3.us-east-1.amazonaws.com/PHerc0332/representations/predictions/surfaces/20251211183505-surface-20260413222639-surface-m7-L2-th0.2.zarr/0`, z 4032..4096 (chunk rows [21]: 195 chunk files, 45.2 MB, SHA-256 of .zarray and chunks `0bed6251aefa6eb4`)
+macos-latest	Summary	2026-11-14T11:02:13.8815040Z - Command: `python extract_surface_tracks.py --backend cpu --predictions <array> --out <run>.dbm --z-min Z0 --z-max Z1 --no-packed-store [options]`, run in each tree's spiral-fitting/
+macos-latest	Summary	2026-11-14T11:02:13.8815710Z 
+macos-latest	Summary	2026-11-14T11:02:13.8815840Z ### Checks
+macos-latest	Summary	2026-11-14T11:02:13.8815920Z 
+macos-latest	Summary	2026-11-14T11:02:13.8816040Z | check | result |
+macos-latest	Summary	2026-11-14T11:02:13.8816340Z |---|---|
+macos-latest	Summary	2026-11-14T11:02:13.8816740Z | vc_reader/ is the same in both trees (git tree hash), so one build serves both | PASS |
+macos-latest	Summary	2026-11-14T11:02:13.8817220Z | tests pass on the branch | PASS |
+macos-latest	Summary	2026-11-14T11:02:13.8817500Z | main-default finishes (exit code 0) | PASS |
+macos-latest	Summary	2026-11-14T11:02:13.8817940Z | branch-default finishes (exit code 0) | PASS |
+macos-latest	Summary	2026-11-14T11:02:13.8818250Z | main-1proc finishes (exit code 0) | PASS |
+macos-latest	Summary	2026-11-14T11:02:13.8818640Z | branch-1proc finishes (exit code 0) | PASS |
+macos-latest	Summary	2026-11-14T11:02:13.8819020Z | branch-sw2 finishes (exit code 0) | PASS |
+macos-latest	Summary	2026-11-14T11:02:13.8819390Z | main-default and branch-default: same keys, same tracks for every key | PASS |
+macos-latest	Summary	2026-11-14T11:02:13.8819980Z | main-1proc and branch-1proc: same keys, identical pickled bytes for every key | PASS |
+macos-latest	Summary	2026-11-14T11:02:13.8820520Z | branch-1proc and branch-sw2: same keys, identical pickled bytes for every key | PASS |
+macos-latest	Summary	2026-11-14T11:02:13.8821770Z | main-1proc and branch-sw2: same keys, identical pickled bytes for every key | PASS |
+macos-latest	Summary	2026-11-14T11:02:13.8822440Z | branch-sw2 ran two spawned slab workers at once | PASS |
+macos-latest	Summary	2026-11-14T11:02:13.8822900Z | main-sw2 (main with --slab-workers 2) stops with an error | PASS |
+macos-latest	Summary	2026-11-14T11:02:13.8823380Z 
+macos-latest	Summary	2026-11-14T11:02:13.8823640Z ### Extraction runs
+macos-latest	Summary	2026-11-14T11:02:13.8823860Z 
+macos-latest	Summary	2026-11-14T11:02:13.8824180Z | run | tree | options | exit code | time (s) | child processes seen | keys | tracks | vertices | fingerprint |
+macos-latest	Summary	2026-11-14T11:02:13.8824740Z |---|---|---|---|---|---|---|---|---|---|
+macos-latest	Summary	2026-11-14T11:02:13.8825350Z | main-default | main | `(defaults)` | 0 | 223.0 | 32 other, 233 resource tracker, 784 spawned (spawn_main) (at most 12 at once) | 100 | 1981 | 127546 | `4d78009cdfa3b38c` |
+macos-latest	Summary	2026-11-14T11:02:13.8826290Z | branch-default | branch | `(defaults)` | 0 | 212.1 | 26 other, 357 resource tracker, 784 spawned (spawn_main) (at most 13 at once) | 100 | 1981 | 127546 | `4d78009cdfa3b38c` |
+macos-latest	Summary	2026-11-14T11:02:13.8827250Z | main-1proc | main | `--kimimaro-parallel 1` | 0 | 18.1 | 1 resource tracker (at most 0 at once) | 100 | 1981 | 127546 | `4d78009cdfa3b38c` |
+macos-latest	Summary	2026-11-14T11:02:13.8827980Z | branch-1proc | branch | `--kimimaro-parallel 1` | 0 | 20.1 | 1 resource tracker (at most 0 at once) | 100 | 1981 | 127546 | `4d78009cdfa3b38c` |
+macos-latest	Summary	2026-11-14T11:02:13.8828890Z | branch-sw2 | branch | `--slab-workers 2 --kimimaro-parallel 1` | 0 | 23.3 | 1 resource tracker, 6 spawned (spawn_main) (at most 2 at once) | 100 | 1981 | 127546 | `4d78009cdfa3b38c` |
+macos-latest	Summary	2026-11-14T11:02:13.8848590Z | main-sw2 | main | `--slab-workers 2 --kimimaro-parallel 1` | 1 | 0.3 | none (at most 0 at once) | `NameError: name 'sys' is not defined. Did you forget to import 'sys'?` | | | |
+macos-latest	Summary	2026-11-14T11:02:13.8849350Z 
+macos-latest	Summary	2026-11-14T11:02:13.8849590Z ### Comparisons (logs/compare-*.txt)
+macos-latest	Summary	2026-11-14T11:02:13.8849770Z 
+macos-latest	Summary	2026-11-14T11:02:13.8850030Z | a | b | same keys | keys with identical pickled bytes | keys with identical track sets |
+macos-latest	Summary	2026-11-14T11:02:13.8850540Z |---|---|---|---|---|
+macos-latest	Summary	2026-11-14T11:02:13.8850820Z | main-default | branch-default | True | 74/100 | 100/100 |
+macos-latest	Summary	2026-11-14T11:02:13.8851170Z | main-1proc | branch-1proc | True | 100/100 | 100/100 |
+macos-latest	Summary	2026-11-14T11:02:13.8851560Z | branch-1proc | branch-sw2 | True | 100/100 | 100/100 |
+macos-latest	Summary	2026-11-14T11:02:13.8851970Z | main-1proc | branch-sw2 | True | 100/100 | 100/100 |
+macos-latest	Summary	2026-11-14T11:02:13.8852430Z | main-1proc | main-default | True | 67/100 | 100/100 |
+macos-latest	Summary	2026-11-14T11:02:13.8852620Z 
+macos-latest	Summary	2026-11-14T11:02:13.8852930Z ### Tests: `pytest tests/test_cc_labels.py tests/test_extract_surface_tracks.py` in spiral-fitting/
+macos-latest	Summary	2026-11-14T11:02:13.8853360Z 
+macos-latest	Summary	2026-11-14T11:02:13.8853590Z | tree | exit code | passed | failed | errors | skipped | time (s) | failing tests |
+macos-latest	Summary	2026-11-14T11:02:13.8853990Z |---|---|---|---|---|---|---|---|
+macos-latest	Summary	2026-11-14T11:02:13.8854300Z | main | 0 | 31 | 0 | 0 | 9 | 70.5 | none |
+macos-latest	Summary	2026-11-14T11:02:13.8854580Z | branch | 0 | 33 | 0 | 0 | 9 | 65.7 | none |
+macos-latest	Summary	2026-11-14T11:02:13.8854800Z 
+macos-latest	Keep the logs	2026-11-14T11:02:13.9274660Z ##[group]Run actions/upload-artifact@v4
+macos-latest	Keep the logs	2026-11-14T11:02:13.9275220Z with:
+macos-latest	Keep the logs	2026-11-14T11:02:13.9275810Z   name: logs-macos-latest
+macos-latest	Keep the logs	2026-11-14T11:02:13.9276060Z   path: work/logs/
+macos-latest	Keep the logs	work/*.json
+macos-latest	Keep the logs	work/*.xml
+macos-latest	Keep the logs	work/*.rc
+macos-latest	Keep the logs	
+macos-latest	Keep the logs	2026-11-14T11:02:13.9276330Z   if-no-files-found: warn
+macos-latest	Keep the logs	2026-11-14T11:02:13.9276520Z   compression-level: 6
+macos-latest	Keep the logs	2026-11-14T11:02:13.9276740Z   overwrite: false
+macos-latest	Keep the logs	2026-11-14T11:02:13.9276940Z   include-hidden-files: false
+macos-latest	Keep the logs	2026-11-14T11:02:13.9277160Z env:
+macos-latest	Keep the logs	2026-11-14T11:02:13.9277350Z   MAIN_REPO: https://github.com/ScrollPrize/villa.git
+macos-latest	Keep the logs	2026-11-14T11:02:13.9277650Z   MAIN_SHA: 97fb9336c8898be27e78eff8cd23ce5e7185ec0a
+macos-latest	Keep the logs	2026-11-14T11:02:13.9277940Z   BRANCH_REPO: https://github.com/Cmssmc-code/villa.git
+macos-latest	Keep the logs	2026-11-14T11:02:13.9278270Z   BRANCH_SHA: bc2c48d07db54fdb4049e06bd34f35091655b5f3
+macos-latest	Keep the logs	2026-11-14T11:02:13.9279090Z   PREDICTIONS: https://vesuvius-challenge-open-data.s3.us-east-1.amazonaws.com/PHerc0332/representations/predictions/surfaces/20251211183505-surface-20260413222639-surface-m7-L2-th0.2.zarr
+macos-latest	Keep the logs	2026-11-14T11:02:13.9279900Z   Z_MIN: 4032
+macos-latest	Keep the logs	2026-11-14T11:02:13.9280550Z   Z_MAX: 4096
+macos-latest	Keep the logs	2026-11-14T11:02:13.9280710Z   PYTHONUNBUFFERED: 1
+macos-latest	Keep the logs	2026-11-14T11:02:13.9280880Z   TQDM_MININTERVAL: 10
+macos-latest	Keep the logs	2026-11-14T11:02:13.9281100Z   PIP_DISABLE_PIP_VERSION_CHECK: 1
+macos-latest	Keep the logs	2026-11-14T11:02:13.9281790Z   pythonLocation: /Users/runner/hostedtoolcache/Python/3.14.10/arm64
+macos-latest	Keep the logs	2026-11-14T11:02:13.9282260Z   PKG_CONFIG_PATH: /Users/runner/hostedtoolcache/Python/3.14.10/arm64/lib/pkgconfig
+macos-latest	Keep the logs	2026-11-14T11:02:13.9282700Z   Python_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.14.10/arm64
+macos-latest	Keep the logs	2026-11-14T11:02:13.9283080Z   Python2_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.14.10/arm64
+macos-latest	Keep the logs	2026-11-14T11:02:13.9283510Z   Python3_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.14.10/arm64
+macos-latest	Keep the logs	2026-11-14T11:02:13.9283800Z   MACOSX_DEPLOYMENT_TARGET: 26.0
+macos-latest	Keep the logs	2026-11-14T11:02:13.9284020Z   CMAKE_PREFIX_PATH: /opt/homebrew
+macos-latest	Keep the logs	2026-11-14T11:02:13.9284240Z ##[endgroup]
+macos-latest	Keep the logs	2026-11-14T11:02:14.6584440Z (node:31716) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+macos-latest	Keep the logs	2026-11-14T11:02:14.6585540Z (Use `node --trace-deprecation ...` to show where the warning was created)
+macos-latest	Keep the logs	2026-11-14T11:02:14.6695440Z With the provided path, there will be 22 files uploaded
+macos-latest	Keep the logs	2026-11-14T11:02:14.6697860Z Artifact name is valid!
+macos-latest	Keep the logs	2026-11-14T11:02:14.6699040Z Root directory input is valid!
+macos-latest	Keep the logs	2026-11-14T11:02:15.0588410Z Beginning upload of artifact content to blob storage
+macos-latest	Keep the logs	2026-11-14T11:02:15.1056080Z (node:31716) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+macos-latest	Keep the logs	2026-11-14T11:02:15.4537320Z Uploaded bytes 20228
+macos-latest	Keep the logs	2026-11-14T11:02:15.5401620Z Finished uploading artifact content to blob storage!
+macos-latest	Keep the logs	2026-11-14T11:02:15.5402280Z SHA256 digest of uploaded artifact zip is 0a3d2f4466e17c6da6f9b1b5519b42d9d335ae321fef72e869809c7f8474ab61
+macos-latest	Keep the logs	2026-11-14T11:02:15.5402950Z Finalizing artifact upload
+macos-latest	Keep the logs	2026-11-14T11:02:15.9205060Z Artifact logs-macos-latest.zip successfully finalized. Artifact ID 14111310734
+macos-latest	Keep the logs	2026-11-14T11:02:15.9206590Z Artifact logs-macos-latest has been successfully uploaded! Final size is 20228 bytes. Artifact ID is 14111310734
+macos-latest	Keep the logs	2026-11-14T11:02:15.9220680Z Artifact download URL: https://github.com/Cmssmc-code/villa-pr-checks/actions/runs/43586881689/artifacts/14111310734
+macos-latest	Post Set up Python	2026-11-14T11:02:15.9450060Z Post job cleanup.
+macos-latest	Post Set up Python	2026-11-14T11:02:16.1212960Z (node:31731) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+macos-latest	Post Set up Python	2026-11-14T11:02:16.1213810Z (Use `node --trace-deprecation ...` to show where the warning was created)
+macos-latest	Post Check out the check scripts	2026-11-14T11:02:16.1327820Z Post job cleanup.
+macos-latest	Post Check out the check scripts	2026-11-14T11:02:16.2802160Z [command]/opt/homebrew/bin/git version
+macos-latest	Post Check out the check scripts	2026-11-14T11:02:16.2881210Z git version 2.56.0
+macos-latest	Post Check out the check scripts	2026-11-14T11:02:16.2900520Z Copying '/Users/runner/.gitconfig' to '/Users/runner/work/_temp/3d00136f-a067-48c7-bfc5-efbd1268f550/.gitconfig'
+macos-latest	Post Check out the check scripts	2026-11-14T11:02:16.2908550Z Temporarily overriding HOME='/Users/runner/work/_temp/3d00136f-a067-48c7-bfc5-efbd1268f550' before making global git config changes
+macos-latest	Post Check out the check scripts	2026-11-14T11:02:16.2909450Z Adding repository directory to the temporary git global config as a safe directory
+macos-latest	Post Check out the check scripts	2026-11-14T11:02:16.2912220Z [command]/opt/homebrew/bin/git config --global --add safe.directory /Users/runner/work/villa-pr-checks/villa-pr-checks/checks
+macos-latest	Post Check out the check scripts	2026-11-14T11:02:16.3056390Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp core\.sshCommand
+macos-latest	Post Check out the check scripts	2026-11-14T11:02:16.3127340Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+macos-latest	Post Check out the check scripts	2026-11-14T11:02:16.4257130Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+macos-latest	Post Check out the check scripts	2026-11-14T11:02:16.4322650Z http.https://github.com/.extraheader
+macos-latest	Post Check out the check scripts	2026-11-14T11:02:16.4333130Z [command]/opt/homebrew/bin/git config --local --unset-all http.https://github.com/.extraheader
+macos-latest	Post Check out the check scripts	2026-11-14T11:02:16.4412590Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+macos-latest	Post Check out the check scripts	2026-11-14T11:02:16.5397710Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+macos-latest	Post Check out the check scripts	2026-11-14T11:02:16.5474500Z [command]/opt/homebrew/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+macos-latest	Complete job	2026-11-14T11:02:16.6565000Z Cleaning up orphan processes
+macos-latest	Complete job	2026-11-14T11:02:25.1817910Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-python@v5, actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

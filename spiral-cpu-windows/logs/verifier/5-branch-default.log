@@ -1,0 +1,77 @@
+$ cd C:\Users\me\Dev\vesuvius\preuves-spirale-cpu\verif-tmp\branch\spiral-fitting
+$ python extract_surface_tracks.py --backend cpu --predictions C:\Users\me\Dev\vesuvius\donnees-spirale-cpu\PHerc0332-20251211183505-surface-m7-L2-th0.2.zarr\0 --out C:\Users\me\Dev\vesuvius\preuves-spirale-cpu\verif-tmp\out\branch-default.dbm --z-min 4032 --z-max 4096 --no-packed-store
+backend: cpu (Kimimaro), as requested
+opening C:\Users\me\Dev\vesuvius\donnees-spirale-cpu\PHerc0332-20251211183505-surface-m7-L2-th0.2.zarr\0
+extracting horizontal ribbons
+
+horizontal ribbons:   0%|          | 0/4 [00:00<?, ?it/s]
+horizontal ribbons:  25%|██▌       | 1/4 [00:02<00:08,  2.93s/it]
+horizontal ribbons:  50%|█████     | 2/4 [00:04<00:04,  2.06s/it]
+horizontal ribbons:  75%|███████▌  | 3/4 [00:05<00:01,  1.77s/it]
+horizontal ribbons: 100%|██████████| 4/4 [00:07<00:00,  1.56s/it]
+horizontal ribbons: 100%|██████████| 4/4 [00:07<00:00,  1.76s/it]
+finding yx range for vertical passes
+
+finding yx range:   0%|          | 0/22 [00:00<?, ?it/s]
+finding yx range:   5%|▍         | 1/22 [00:00<00:08,  2.44it/s]
+finding yx range:   9%|▉         | 2/22 [00:00<00:08,  2.45it/s]
+finding yx range:  14%|█▎        | 3/22 [00:01<00:07,  2.46it/s]
+finding yx range:  18%|█▊        | 4/22 [00:01<00:07,  2.46it/s]
+finding yx range:  23%|██▎       | 5/22 [00:02<00:06,  2.43it/s]
+finding yx range:  27%|██▋       | 6/22 [00:02<00:06,  2.42it/s]
+finding yx range:  32%|███▏      | 7/22 [00:02<00:06,  2.39it/s]
+finding yx range:  36%|███▋      | 8/22 [00:03<00:05,  2.37it/s]
+finding yx range:  41%|████      | 9/22 [00:03<00:05,  2.40it/s]
+finding yx range:  45%|████▌     | 10/22 [00:04<00:05,  2.39it/s]
+finding yx range:  50%|█████     | 11/22 [00:04<00:04,  2.34it/s]
+finding yx range:  55%|█████▍    | 12/22 [00:05<00:04,  2.37it/s]
+finding yx range:  59%|█████▉    | 13/22 [00:05<00:03,  2.38it/s]
+finding yx range:  64%|██████▎   | 14/22 [00:05<00:03,  2.39it/s]
+finding yx range:  68%|██████▊   | 15/22 [00:06<00:03,  2.32it/s]
+finding yx range:  73%|███████▎  | 16/22 [00:06<00:02,  2.35it/s]
+finding yx range:  77%|███████▋  | 17/22 [00:07<00:02,  2.35it/s]
+finding yx range:  82%|████████▏ | 18/22 [00:07<00:01,  2.40it/s]
+finding yx range:  86%|████████▋ | 19/22 [00:07<00:01,  2.39it/s]
+finding yx range:  91%|█████████ | 20/22 [00:08<00:00,  2.39it/s]
+finding yx range:  95%|█████████▌| 21/22 [00:08<00:00,  2.41it/s]
+finding yx range: 100%|██████████| 22/22 [00:09<00:00,  2.41it/s]
+finding yx range: 100%|██████████| 22/22 [00:09<00:00,  2.39it/s]
+  yx range (full-res): [768 384] .. [3455 3839]
+extracting vertical zx-plane tracks
+
+vertical y-stride slabs:   0%|          | 0/42 [00:00<?, ?it/s]
+vertical y-stride slabs:  12%|█▏        | 5/42 [00:00<00:00, 41.02it/s]
+vertical y-stride slabs:  24%|██▍       | 10/42 [00:00<00:01, 29.56it/s]
+vertical y-stride slabs:  33%|███▎      | 14/42 [00:00<00:01, 25.54it/s]
+vertical y-stride slabs:  40%|████      | 17/42 [00:00<00:01, 24.14it/s]
+vertical y-stride slabs:  48%|████▊     | 20/42 [00:00<00:00, 23.51it/s]
+vertical y-stride slabs:  55%|█████▍    | 23/42 [00:00<00:00, 22.23it/s]
+vertical y-stride slabs:  62%|██████▏   | 26/42 [00:01<00:00, 22.52it/s]
+vertical y-stride slabs:  69%|██████▉   | 29/42 [00:01<00:00, 22.65it/s]
+vertical y-stride slabs:  76%|███████▌  | 32/42 [00:01<00:00, 23.45it/s]
+vertical y-stride slabs:  83%|████████▎ | 35/42 [00:01<00:00, 24.44it/s]
+vertical y-stride slabs:  93%|█████████▎| 39/42 [00:01<00:00, 26.62it/s]
+vertical y-stride slabs: 100%|██████████| 42/42 [00:01<00:00, 25.80it/s]
+extracting vertical zy-plane tracks
+
+vertical x-stride slabs:   0%|          | 0/54 [00:00<?, ?it/s]
+vertical x-stride slabs:   6%|▌         | 3/54 [00:00<00:02, 21.72it/s]
+vertical x-stride slabs:  11%|█         | 6/54 [00:00<00:01, 25.50it/s]
+vertical x-stride slabs:  17%|█▋        | 9/54 [00:00<00:01, 26.58it/s]
+vertical x-stride slabs:  22%|██▏       | 12/54 [00:00<00:01, 26.45it/s]
+vertical x-stride slabs:  28%|██▊       | 15/54 [00:00<00:01, 25.48it/s]
+vertical x-stride slabs:  33%|███▎      | 18/54 [00:00<00:01, 24.79it/s]
+vertical x-stride slabs:  39%|███▉      | 21/54 [00:00<00:01, 23.97it/s]
+vertical x-stride slabs:  44%|████▍     | 24/54 [00:00<00:01, 23.60it/s]
+vertical x-stride slabs:  50%|█████     | 27/54 [00:01<00:01, 23.46it/s]
+vertical x-stride slabs:  56%|█████▌    | 30/54 [00:01<00:01, 22.97it/s]
+vertical x-stride slabs:  61%|██████    | 33/54 [00:01<00:00, 23.28it/s]
+vertical x-stride slabs:  67%|██████▋   | 36/54 [00:01<00:00, 22.24it/s]
+vertical x-stride slabs:  72%|███████▏  | 39/54 [00:01<00:00, 20.71it/s]
+vertical x-stride slabs:  78%|███████▊  | 42/54 [00:01<00:00, 21.22it/s]
+vertical x-stride slabs:  83%|████████▎ | 45/54 [00:01<00:00, 22.44it/s]
+vertical x-stride slabs:  89%|████████▉ | 48/54 [00:02<00:00, 23.94it/s]
+vertical x-stride slabs:  96%|█████████▋| 52/54 [00:02<00:00, 26.89it/s]
+vertical x-stride slabs: 100%|██████████| 54/54 [00:02<00:00, 24.20it/s]
+
+--- exit code 0; wall time 20.9 s; CPU time of all its processes 59.0 s; processes started 3; peak committed memory of all its processes 1.31 GB

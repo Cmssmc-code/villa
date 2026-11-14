@@ -1,0 +1,14 @@
+$ cd C:\Users\me\Dev\vesuvius\preuves-spirale-cpu\verif-tmp\main\spiral-fitting
+$ python extract_surface_tracks.py --backend cpu --predictions C:\Users\me\Dev\vesuvius\donnees-spirale-cpu\PHerc0332-20251211183505-surface-m7-L2-th0.2.zarr\0 --out C:\Users\me\Dev\vesuvius\preuves-spirale-cpu\verif-tmp\out\main-readme.dbm --z-min 4032 --z-max 4096 --no-packed-store --slab-workers 4 --kimimaro-parallel 1
+Traceback (most recent call last):
+  File "C:\Users\me\Dev\vesuvius\preuves-spirale-cpu\verif-tmp\main\spiral-fitting\extract_surface_tracks.py", line 524, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\me\Dev\vesuvius\preuves-spirale-cpu\verif-tmp\main\spiral-fitting\extract_surface_tracks.py", line 504, in main
+    args = parse_args(argv)
+  File "C:\Users\me\Dev\vesuvius\preuves-spirale-cpu\verif-tmp\main\spiral-fitting\extract_surface_tracks.py", line 494, in parse_args
+    if args.slab_workers > 1 and not sys.platform.startswith('linux'):
+                                     ^^^
+NameError: name 'sys' is not defined. Did you forget to import 'sys'?
+
+--- exit code 1; wall time 3.8 s; CPU time of all its processes 0.4 s; processes started 3; peak committed memory of all its processes 0.37 GB

@@ -1,0 +1,32 @@
+branch head bc2c48d07db54fdb4049e06bd34f35091655b5f3; main 97fb9336c8898be27e78eff8cd23ce5e7185ec0a
+#2384 (extract_surface_tracks.py, tests/test_extract_surface_tracks.py)
+    on main:   applies cleanly
+    on branch: applies cleanly
+#2402 (README.md, descriptions.json, fit_session.py, fit_spiral.py, tests/test_dense_spacing_inactive_reason.py)
+    on main:   DOES NOT APPLY: error: patch failed: spiral-fitting/descriptions.json:164 | error: spiral-fitting/descriptions.json: patch does not apply | error: patch failed: spiral-fitting/fit_spiral.py:52 | error: spiral-fitting/fit_spiral.py: patch does not apply
+    on branch: DOES NOT APPLY: error: patch failed: spiral-fitting/descriptions.json:164 | error: spiral-fitting/descriptions.json: patch does not apply | error: patch failed: spiral-fitting/fit_spiral.py:52 | error: spiral-fitting/fit_spiral.py: patch does not apply
+#2406 (extract_surface_tracks.py, surface_tracks_gpu.py, tests/test_extract_surface_tracks.py)
+    on main:   applies cleanly
+    on branch: applies cleanly
+#2439 (extract_surface_tracks.py, surface_tracks_gpu.py)
+    on main:   applies cleanly
+    on branch: applies cleanly
+#2454 (README.md)
+    on main:   applies cleanly
+    on branch: applies cleanly
+#2490 (README.md, cpp/CMakeLists.txt, tests/test_macos_openmp_runtimes.py)
+    on main:   applies cleanly
+    on branch: applies cleanly
+#2520 (extract_surface_tracks.py, tests/test_extract_surface_tracks.py)
+    on main:   applies cleanly
+    on branch: DOES NOT APPLY: error: patch failed: spiral-fitting/extract_surface_tracks.py:47 | error: spiral-fitting/extract_surface_tracks.py: patch does not apply
+    git merge-tree bc2c48d07 b4e62efca: exit 0, no conflict
+        merged extract_surface_tracks.py identical to the branch head: True
+        E       Failed: DID NOT RAISE SystemExit
+        FAILED tests/test_extract_surface_tracks.py::test_slab_workers_need_linux - F...
+        1 failed, 1 passed, 28 deselected in 0.31s
+#2539 (README.md, tests/test_mps_track_sampling.py, tests/test_service_commits.py, tests/test_service_object_store.py)
+    on main:   applies cleanly
+    on branch: applies cleanly
+    git merge-tree bc2c48d07 0a9dde96b: exit 0, no conflict
+FIN

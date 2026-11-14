@@ -1,0 +1,32 @@
+=== compare fin-main-k1-a vs fin-br-sw4-a
+C:/Users/me/Dev/vesuvius/donnees-spirale-cpu/tracks/fin-main-k1-a.dbm: 120 keys; C:/Users/me/Dev/vesuvius/donnees-spirale-cpu/tracks/fin-br-sw4-a.dbm: 120 keys
+same keys: True
+keys with identical pickled bytes: 120/120
+keys with identical track sets: 120/120; differing: []
+tracks: 15752, vertices: 865751
+fingerprint of sorted track sets (a): 507361094cff2c02
+rc=0
+=== compare fin-main-k1-a vs fin-br-sw4-b
+C:/Users/me/Dev/vesuvius/donnees-spirale-cpu/tracks/fin-main-k1-a.dbm: 120 keys; C:/Users/me/Dev/vesuvius/donnees-spirale-cpu/tracks/fin-br-sw4-b.dbm: 120 keys
+same keys: True
+keys with identical pickled bytes: 120/120
+keys with identical track sets: 120/120; differing: []
+tracks: 15752, vertices: 865751
+fingerprint of sorted track sets (a): 507361094cff2c02
+rc=0
+=== compare fin-main-k1-a vs fin-br-sw2-a
+C:/Users/me/Dev/vesuvius/donnees-spirale-cpu/tracks/fin-main-k1-a.dbm: 120 keys; C:/Users/me/Dev/vesuvius/donnees-spirale-cpu/tracks/fin-br-sw2-a.dbm: 120 keys
+same keys: True
+keys with identical pickled bytes: 120/120
+keys with identical track sets: 120/120; differing: []
+tracks: 15752, vertices: 865751
+fingerprint of sorted track sets (a): 507361094cff2c02
+rc=0
+=== compare fin-main-k1-a vs fin-main-k1-b
+C:/Users/me/Dev/vesuvius/donnees-spirale-cpu/tracks/fin-main-k1-a.dbm: 120 keys; C:/Users/me/Dev/vesuvius/donnees-spirale-cpu/tracks/fin-main-k1-b.dbm: 120 keys
+same keys: True
+keys with identical pickled bytes: 120/120
+keys with identical track sets: 120/120; differing: []
+tracks: 15752, vertices: 865751
+fingerprint of sorted track sets (a): 507361094cff2c02
+rc=0

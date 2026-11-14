@@ -1,0 +1,11 @@
+$ cd C:\Users\me\Dev\vesuvius\preuves-spirale-cpu\verif-tmp\main-2520\spiral-fitting
+$ python extract_surface_tracks.py --backend cpu --predictions C:\Users\me\Dev\vesuvius\donnees-spirale-cpu\PHerc0332-20251211183505-surface-m7-L2-th0.2.zarr\0 --out C:\Users\me\Dev\vesuvius\preuves-spirale-cpu\verif-tmp\out\main-2520-readme.dbm --z-min 4032 --z-max 4096 --no-packed-store --slab-workers 4 --kimimaro-parallel 1
+usage: extract_surface_tracks.py [-h] [--predictions URL_OR_PATH] [--out DBM]
+                                 [--z-min Z] [--z-max Z]
+                                 [--backend {auto,gpu,cpu}]
+                                 [--gpus DEVICE[,DEVICE...]]
+                                 [--slab-workers N] [--kimimaro-parallel N]
+                                 [--packed-store | --no-packed-store]
+extract_surface_tracks.py: error: --slab-workers > 1 needs Linux (forked workers)
+
+--- exit code 2; wall time 0.5 s; CPU time of all its processes 0.2 s; processes started 3; peak committed memory of all its processes 0.37 GB
