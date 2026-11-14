@@ -1,0 +1,22 @@
+check_inputs.py  2026-11-14 11:36:13
+main    97fb9336c8898be27e78eff8cd23ce5e7185ec0a
+this PR 1841ee228af18d105606256fcb351fccb106f833
+before-extend-edge.txt, first line: phase=before exe=vc_extend_edge_orig sha256=3CA2ABC7E08C14C383B4CCFE82D93AC1AE5CE2D7F490B07123F2F7A62B296F6D
+after-extend-edge.txt, first line: phase=after exe=vc_extend_edge sha256=81B5B95D6849811F5F4124899731227837AB4AFFDA848CDAEB81CEC5EAA55330
+VC3D-97fb933-2026-11-13-win64.zip sha256 4b06ee91f60d6d29c8fc73a92fcd139103b9f6a288bb2ca7a55a5ee6e533abb4
+mt.exe of Windows SDK 10.0.26100.0
+released VC3D-97fb933-2026-11-13-win64\bin\vc_extend_edge.exe: 1162878 bytes, sha256 3ca2abc7e08c14c383b4ccfe82d93ac1ae5ce2d7f490b07123f2f7a62b296f6d
+         the same as the sha256 printed for the 'before' run; embedded manifest: longPathAware no, the same as utf8.manifest of main (canonical XML)
+copy     vc_extend_edge-longpath.exe: 717312 bytes, sha256 81b5b95d6849811f5f4124899731227837ab4affda848cdaeb81cec5eaa55330
+         the same as the sha256 printed for the 'after' run; embedded manifest: longPathAware yes, the same as utf8.manifest of this PR (canonical XML)
+sections: 19; with different contents: .rsrc
+bytes after the last section: 444030 in the released program, 0 in the copy (the COFF symbol table and its string table: debugging information, which Windows does not load to run the program; mt.exe does not keep them)
+resources: released [('RT_MANIFEST', '#1', 1665)], copy [('RT_MANIFEST', '#1', 1254)]
+segment https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0800/segments/20251029010146-auto_grown_20251029010146642/mesh/intermediate/tifxyz_original/
+  meta.json here:   1213 bytes, MD5 2005fc869dc09fe74c630ab7f5a969b1; bucket:   1213 bytes, ETag 2005fc869dc09fe74c630ab7f5a969b1
+  x.tif     here:  18812 bytes, MD5 d4bab412558ff5ef15233e6dc3618dd7; bucket:  18812 bytes, ETag d4bab412558ff5ef15233e6dc3618dd7
+  y.tif     here:  18430 bytes, MD5 cb1f9a70698b3a9a5b019d0cb984d32c; bucket:  18430 bytes, ETag cb1f9a70698b3a9a5b019d0cb984d32c
+  z.tif     here:  18004 bytes, MD5 b250e1ac3a0f1f597db23c7d939266b0; bucket:  18004 bytes, ETag b250e1ac3a0f1f597db23c7d939266b0
+work folder removed: yes
+RESULT: as expected
+FIN

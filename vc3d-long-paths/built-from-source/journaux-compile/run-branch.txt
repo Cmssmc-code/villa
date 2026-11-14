@@ -1,0 +1,15 @@
+phase=branch  2026-11-14 04:42:36  subst: K:\: => C:\Users\me\Dev\vesuvius\donnees-longpath-compile
+LongPathsEnabled=1
+vc_grow_seg_from_seed.exe : 1917185 bytes, written 04:42:22, sha256=FC90146A635238D2
+embedded manifest: longPathAware lines = 1
+=== a-p4-defaut33 rc=0 duree_s=4.5
+    saving K:\sorties-branch\a\auto_grown_20261114044240882
+=== b-p4-defaut23 rc=0 duree_s=4.1
+    saving K:\sorties-branch\b\auto_grown_20261114044245027
+=== c-p139-defaut33 rc=0 duree_s=4.2
+    saving K:\sorties-branch\c\auto_grown_20261114044249134
+=== d-p139-defaut23 rc=0 duree_s=3.9
+    saving K:\sorties-branch\d\auto_grown_20261114044253165
+--- cache files with a path of 250 characters or more (as seen through K:) ---
+subst after: 
+FIN script

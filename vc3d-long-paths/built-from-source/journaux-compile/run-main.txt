@@ -1,0 +1,15 @@
+phase=main  2026-11-14 04:39:17  subst: K:\: => C:\Users\me\Dev\vesuvius\donnees-longpath-compile
+LongPathsEnabled=1
+vc_grow_seg_from_seed.exe : 1916673 bytes, written 04:37:57, sha256=7CAE3407BBC5FCEA
+embedded manifest: longPathAware lines = 0
+=== a-p4-defaut33 rc=1 duree_s=11.5
+    Error: create K:\Users\<name>\.VC3D\remote_cache\https\vesuvius-challenge-open-data.s3.amazonaws.com\PHercParis4\representations\predictions\surfaces\20260411134726-surface-20260413141734-surface-recto-2um-ps256-L0-th0.45.zarr\0\.zattrs.tmp.15670905918339268586.15729502191765196471: No such file or d
+=== b-p4-defaut23 rc=0 duree_s=4.1
+    saving K:\sorties-main\b\auto_grown_20261114043933195
+=== c-p139-defaut33 rc=1 duree_s=4
+    Error: create K:\Users\<name>\.VC3D\remote_cache\https\vesuvius-challenge-open-data.s3.amazonaws.com\PHerc0139\representations\predictions\surfaces\20260102150214-surface-20260203205514-surface-recto-2um-ps192-L0-th0.5.zarr\0\.zattrs.tmp.15445846311497469291.15729502191765196471: No such file or dire
+=== d-p139-defaut23 rc=0 duree_s=4.9
+    saving K:\sorties-main\d\auto_grown_20261114043941976
+--- cache files with a path of 250 characters or more (as seen through K:) ---
+subst after: 
+FIN script

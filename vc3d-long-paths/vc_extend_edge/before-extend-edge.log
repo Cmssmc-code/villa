@@ -1,0 +1,8 @@
+CMD: vc_extend_edge_orig "-i" "L:\seg0800\tifxyz_original" "-o" "L:\sorties-ee-before\0800 etendu" "-n" "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0800/representations/predictions/surfaces/20250521135224-surface-20260413222639-surface-m7-L0-th0.2.zarr" "--sides" "right" "--cells" "5" "--rounds" "1" "--threads" "2" "--normal-step" "2" "--walk-mode" "streamline" "--integrator" "rk4" "--report" "L:\sorties-ee-before\rapport.json" "--overwrite"
+USERPROFILE=L:\Users\jean-christophe.dupont  default root=L:\Users\jean-christophe.dupont\.VC3D\remote_cache (len 50)
+--- stdout ---
+
+--- stderr ---
+error: create L:\Users\jean-christophe.dupont\.VC3D\remote_cache\https\vesuvius-challenge-open-data.s3.amazonaws.com\PHerc0800\representations\predictions\surfaces\20250521135224-surface-20260413222639-surface-m7-L0-th0.2.zarr\0\.zattrs.tmp.8650962090004024632.15729502191765196471: No such file or directory
+
+FIN rc=1 duree_s=7.9 pic_Mo=40

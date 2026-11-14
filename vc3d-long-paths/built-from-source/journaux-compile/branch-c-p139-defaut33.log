@@ -1,0 +1,24 @@
+CMD: vc_grow_seg_from_seed "-v" "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0139/representations/predictions/surfaces/20260102150214-surface-20260203205514-surface-recto-2um-ps192-L0-th0.5.zarr" "-t" "K:\sorties-branch\c" "-p" "K:\params.json" "--seed" "13255" "13255" "38476"
+USERPROFILE=K:\Users\<name>  default root=K:\Users\<name>\.VC3D\remote_cache (len 33)  exe=C:\Users\me\Dev\vesuvius\wt-vc3d\volume-cartographer\build\ci-windows-mingw\bin\vc_grow_seg_from_seed.exe
+--- stdout ---
+[2026-11-14 04:42:47.714] [WARN ] volume 'https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0139/representations/predictions/surfaces/20260102150214-surface-20260203205514-surface-recto-2um-ps192-L0-th0.5.zarr': no voxel size in its store metadata, so physical measurements are unavailable for it
+zarr dataset size for scale group 0 [76953, 26511, 26511]
+chunk shape shape [192, 192, 192]
+mode: seed
+step size: 20
+min_area_cm: 0
+voxelsize: 0
+tgt_overlap_count: 20
+seed location [13255, 13255, 38476] value is 0
+GrowPatch loss weights:
+  DIST: 1 STRAIGHT: 0.2 SNAP: 0.1 NORMAL: 10 REFERENCE_RAY: 0 SDIR: 1
+empty space tracing
+seed val [13255, 13255, 38476] 0
+search & optimization ...lets go! 
+lets start fringe: 4
+generated surface 401.094077 vx^2 (cm^2 unknown: volume has no voxel size)
+saving K:\sorties-branch\c\auto_grown_20261114044249134
+
+--- stderr ---
+
+FIN rc=0 duree_s=4.2

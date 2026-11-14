@@ -1,0 +1,29 @@
+$ cd <work>/before/dinovol
+$ python -m dinovol_2.cache_metadata_meshes --config dinovol_2/configs/pretrain_8_9um.json
+Downloading https://vesuvius-challenge-open-data.s3.amazonaws.com/metadata.json -> ..\mesh_cache_8_9um\metadata.json ...
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "<work>\before\dinovol\dinovol_2\cache_metadata_meshes.py", line 104, in <module>
+    main()
+    ~~~~^^
+  File "<work>\before\dinovol\dinovol_2\cache_metadata_meshes.py", line 76, in main
+    meshes = load_or_build_volume_meshes(
+        vol_path,
+    ...<5 lines>...
+        s3_storage_options=s3_opts,
+    )
+  File "<work>\before\dinovol\dinovol_2\dataset\object_labels.py", line 683, in load_or_build_volume_meshes
+    metadata = _load_metadata_json(metadata_path)
+  File "<work>\before\dinovol\dinovol_2\dataset\object_labels.py", line 626, in _load_metadata_json
+    text = Path(key).read_text(encoding="utf-8")
+  File "C:\Users\me\AppData\Roaming\uv\python\cpython-3.14-windows-x86_64-none\Lib\pathlib\__init__.py", line 788, in read_text
+    return f.read()
+           ~~~~~~^^
+  File "<frozen codecs>", line 325, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x8b in position 1: invalid start byte
+[exit code 1, 3.8 s]
+
+files in <work>/before/mesh_cache_8_9um:
+  metadata.json  1,414,829 bytes  (gzip)
+

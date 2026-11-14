@@ -1,0 +1,13 @@
+<work>/after/cache-old/metadata.json: copy of the gzip file that step 4 saved in <work>/before/cache, sha256 9628e0a4bd58c3853f17eda5049470e7138542dbf317648139e9cdc82fd72a15
+
+$ cd <work>/after/dinovol
+$ python -m dinovol_2.cache_metadata_meshes --config ../../cfg-PHerc0172.json --cache-dir ../cache-old
+[1/1] PHerc0172: 53 meshes (0 with ink-labels)
+Done: cached 53 meshes (0 with ink-labels) across 1/1 volumes in <work>\after\cache-old
+[exit code 0, 37.4 s]
+
+files in <work>/after/cache-old:
+  metadata.json  1,414,829 bytes  (gzip)
+  PHerc0172_20241024131839_scale0.npz  296,840,268 bytes  (mesh cache)
+
+metadata.json left as it was (gzip, same sha256): True; catalog downloaded again: False

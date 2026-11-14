@@ -1,0 +1,44 @@
+AFTER, WITH PROGRAMS BUILT FROM SOURCE ON THIS PC - VC3D Windows, paths longer than 260 characters
+14 Nov 2026, 04:39 to 04:43. Windows 11 build 26300, LongPathsEnabled = 1.
+
+Build
+  Source tree: villa at origin/main 97fb933 (worktree wt-vc3d).
+  Toolchain: MSYS2 UCRT64 with the packages of the Windows CI, cmake --preset ci-windows-mingw, ninja.
+  Full build of VC3D from origin/main: 641 build steps, exit code 0 (outils-vc3d\build-vc3d.log), 20 programs
+  in build\ci-windows-mingw\bin (VC3D.exe, vc_grow_seg_from_seed.exe, vc_extend_edge.exe, ...).
+
+Phase "main" (journaux-compile\run-main.txt, main-*.log)
+  vc_grow_seg_from_seed.exe as built from origin/main (1916673 bytes, sha256 7CAE3407BBC5FCEA...).
+  Embedded manifest (mt.exe -inputresource:<exe>;#1): no longPathAware.
+    a  PHercParis4 recto 2um, default cache root of 33 characters   rc=1  11.5 s
+       Error: create K:\Users\<name>\.VC3D\remote_cache\https\vesuvius-challenge-open-data.s3.amazonaws.com\PHercParis4\
+       representations\predictions\surfaces\20260411134726-surface-20260413141734-surface-recto-2um-ps256-L0-th0.45.zarr\0\
+       .zattrs.tmp.15670905918339268586.15729502191765196471: No such file or directory
+    b  same prediction, cache root of 23 characters (control)       rc=0   4.1 s   saving ...\auto_grown_20261114043933195
+    c  PHerc0139 recto 2um, default cache root of 33 characters     rc=1   4.0 s   same error
+    d  same prediction, cache root of 23 characters (control)       rc=0   4.9 s   saving ...\auto_grown_20261114043941976
+
+Rebuild with the manifest of the branch (journaux-compile\ninja-branch.log)
+  git checkout vc3d-windows-long-paths -- volume-cartographer/cmake/windows/utf8.manifest   (the branch's only change)
+  ninja -C build/ci-windows-mingw vc_grow_seg_from_seed
+  CMake re-ran by itself, vc_utf8_manifest.rc.obj was recompiled, vc_grow_seg_from_seed.exe relinked. Exit code 0.
+
+Phase "branch" (journaux-compile\run-branch.txt, branch-*.log, cache-branch.txt)
+  vc_grow_seg_from_seed.exe rebuilt (1917185 bytes, sha256 FC90146A635238D2...).
+  Embedded manifest: longPathAware present.
+    a  PHercParis4 recto 2um, default cache root of 33 characters   rc=0   4.5 s   saving ...\auto_grown_20261114044240882
+    b  control, cache root of 23 characters                         rc=0   4.1 s
+    c  PHerc0139 recto 2um, default cache root of 33 characters     rc=0   4.2 s   saving ...\auto_grown_20261114044249134
+    d  control, cache root of 23 characters                         rc=0   3.9 s
+  The cache of cases a and c holds 15 files, among them a 16 MB chunk of PHercParis4 and a 7 MB chunk of PHerc0139.
+  The final file names are up to 236 characters long; the temporary names used while writing them add about
+  45 characters (".tmp.<number>.<number>"), which is what passes the 260-character limit.
+
+Commands: see journaux-compile\essai-compile.ps1. K: is a subst drive standing in
+for C:, so that the default cache root <USERPROFILE>\.VC3D\remote_cache has the stated length. HOME and
+VC3D_CONFIG_DIR unset.
+
+Afterwards the source tree was put back to origin/main (git status clean) and the target rebuilt from it
+(journaux-compile\ninja-retour-main.log, exit code 0). The test folder and the subst drive were removed.
+
+Not done: the other programs (VC3D.exe, vc_extend_edge.exe, ...) were not rebuilt with the manifest of the branch.

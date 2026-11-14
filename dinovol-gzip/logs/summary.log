@@ -1,0 +1,13 @@
+dinovol_gzip.py, 2026-11-14 11:14 +0100, 94 s
+environment: Windows-11-10.0.26300-SP0 | Python 3.14.10 | numpy 2.5.4, scipy 1.18.1, vc_reader 0.1.0
+sample: PHerc0172
+ok       bucket-gzip: urllib asked for 'Accept-Encoding: identity'=True; the bucket answered 'Content-Encoding: gzip' with 1,414,829 bytes starting with 1f 8b
+ok       export: before 97fb9336c, after 6ef70e322
+ok       before-docs: exit code 1; UnicodeDecodeError (byte 0x8b): True; metadata.json saved gzip-compressed: True; no mesh cached
+ok       before: exit code 1; UnicodeDecodeError (byte 0x8b): True; metadata.json saved gzip-compressed: True; no mesh cached
+ok       after: exit code 0; 'Done: cached 53 meshes'; 1 mesh cache file; metadata.json is plain JSON: True
+ok       after-old-cache: exit code 0; 'Done: cached 53 meshes'; no new download: True
+ok       readback: 53 and 53 segments read back, identical: True
+ok       tests: before: 2 errors, UnicodeDecodeError; after: 2 tests OK
+work folder deleted: True
+RESULT: OK

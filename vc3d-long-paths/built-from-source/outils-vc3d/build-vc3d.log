@@ -1,0 +1,762 @@
+=== DEBUT ninja -j2 2026-11-14 03:21:13
+ninja: Entering directory `build/ci-windows-mingw'
+[0/2] Re-checking globbed directories...
+[1/641] Building CXX object reader/CMakeFiles/vc_reader_sftp.dir/src/cpp/sftp/ssh_process.cpp.obj
+C:/Users/me/Dev/vesuvius/wt-vc3d/vc_reader/src/cpp/sftp/ssh_process.cpp:12:9: warning: 'NOMINMAX' redefined
+   12 | #define NOMINMAX
+      |         ^~~~~~~~
+In file included from C:/Users/me/Dev/vesuvius/outils-vc3d/msys64/ucrt64/include/c++/16.1.0/x86_64-w64-mingw32/bits/c++config.h:733,
+                 from C:/Users/me/Dev/vesuvius/outils-vc3d/msys64/ucrt64/include/c++/16.1.0/bits/version.h:51,
+                 from C:/Users/me/Dev/vesuvius/outils-vc3d/msys64/ucrt64/include/c++/16.1.0/chrono:49,
+                 from C:/Users/me/Dev/vesuvius/wt-vc3d/vc_reader/include/vc_reader/sftp.hpp:10,
+                 from C:/Users/me/Dev/vesuvius/wt-vc3d/vc_reader/src/cpp/sftp/ssh_process.hpp:2,
+                 from C:/Users/me/Dev/vesuvius/wt-vc3d/vc_reader/src/cpp/sftp/ssh_process.cpp:1:
+C:/Users/me/Dev/vesuvius/outils-vc3d/msys64/ucrt64/include/c++/16.1.0/x86_64-w64-mingw32/bits/os_defines.h:45:9: note: this is the location of the previous definition
+   45 | #define NOMINMAX 1
+      |         ^~~~~~~~
+[2/641] Building CXX object reader/CMakeFiles/vc_reader_sftp.dir/src/cpp/sftp/sftp.cpp.obj
+[3/641] Building CXX object reader/CMakeFiles/vc_reader_sftp.dir/src/cpp/sftp/fetch.cpp.obj
+[4/641] Linking CXX shared library bin\libvc_reader_sftp.dll
+[5/641] Building CXX object reader/CMakeFiles/vc_reader_catalog.dir/src/cpp/catalog.cpp.obj
+[6/641] Building CXX object reader/CMakeFiles/vc_reader_catalog.dir/src/cpp/registrations.cpp.obj
+[7/641] Building CXX object reader/CMakeFiles/vc_reader_catalog.dir/src/cpp/platform_io.cpp.obj
+[8/641] Building CXX object reader/CMakeFiles/vc_reader_catalog.dir/src/cpp/catalog_io.cpp.obj
+[9/641] Building CXX object reader/CMakeFiles/vc_reader_catalog.dir/src/cpp/publication.cpp.obj
+[10/641] Building CXX object reader/CMakeFiles/vc_reader_catalog.dir/src/cpp/s3_listing.cpp.obj
+[11/641] Building CXX object reader/CMakeFiles/vc_reader_catalog.dir/src/cpp/disk_budget.cpp.obj
+[12/641] Building CXX object reader/CMakeFiles/vc_reader_catalog.dir/src/cpp/sources.cpp.obj
+[13/641] Building CXX object reader/CMakeFiles/vc_reader_catalog.dir/src/cpp/http_session.cpp.obj
+[14/641] Building CXX object reader/CMakeFiles/vc_reader_catalog.dir/src/cpp/browsing.cpp.obj
+[15/641] Automatic MOC and UIC for target vc_reader_thinning
+[16/641] Linking CXX static library reader\libvc_reader_catalog.a
+[17/641] Automatic MOC and UIC for target vc_reader_volcomp
+[18/641] Building CXX object reader/CMakeFiles/vc_reader_thinning.dir/vc_reader_thinning_autogen/mocs_compilation.cpp.obj
+[19/641] Automatic MOC and UIC for target vc_geometry
+[20/641] Building CXX object reader/CMakeFiles/vc_reader_thinning.dir/src/cpp/thinning/trace.cpp.obj
+[21/641] Building CXX object reader/CMakeFiles/vc_reader_thinning.dir/src/cpp/thinning/history.cpp.obj
+[22/641] Building CXX object reader/CMakeFiles/vc_reader_thinning.dir/src/cpp/thinning/distance.cpp.obj
+[23/641] Building CXX object reader/CMakeFiles/vc_reader_thinning.dir/src/cpp/thinning/skeleton.cpp.obj
+[24/641] Building CXX object reader/CMakeFiles/vc_reader_thinning.dir/src/cpp/distance/manhattan.cpp.obj
+[25/641] Building CXX object reader/third_party/volcomp/CMakeFiles/vc_reader_volcomp.dir/vc_reader_volcomp_autogen/mocs_compilation.cpp.obj
+[26/641] Building CXX object reader/CMakeFiles/vc_reader_thinning.dir/src/cpp/components/label.cpp.obj
+[27/641] Building C object _deps/vc_delta3d-build/CMakeFiles/vc_delta3d.dir/src/indexed_encode.c.obj
+[28/641] Building C object _deps/vc_delta3d-build/CMakeFiles/vc_delta3d.dir/src/indexed_decode.c.obj
+[29/641] Building C object _deps/vc_delta3d-build/CMakeFiles/vc_delta3d.dir/src/ng/ng_native_common.c.obj
+[30/641] Building C object reader/third_party/volcomp/CMakeFiles/vc_reader_volcomp.dir/volcomp_lib.c.obj
+[31/641] Building C object _deps/vc_delta3d-build/CMakeFiles/vc_delta3d.dir/src/ng/ng_native_encode.c.obj
+[32/641] Building C object _deps/vc_delta3d-build/CMakeFiles/vc_delta3d.dir/src/ng/ng_presets.c.obj
+[33/641] Building C object _deps/vc_delta3d-build/CMakeFiles/vc_delta3d.dir/src/ng/ng_frame_encode.c.obj
+[34/641] Building C object _deps/vc_delta3d-build/CMakeFiles/vc_delta3d.dir/src/ng/ng_frame_decode.c.obj
+[35/641] Building C object _deps/vc_delta3d-build/CMakeFiles/vc_delta3d.dir/src/ng/ng_thresholds.c.obj
+[36/641] Building C object _deps/vc_delta3d-build/CMakeFiles/vc_delta3d.dir/src/ng/ng_native_decode.c.obj
+[37/641] Building C object _deps/vc_delta3d-build/CMakeFiles/vc_delta3d.dir/src/ng/ng_screen.c.obj
+[38/641] Building C object _deps/vc_delta3d-build/CMakeFiles/vc_delta3d.dir/src/ng/ng_fit.c.obj
+[39/641] Building C object _deps/vc_delta3d-build/CMakeFiles/vc_delta3d.dir/src/ng/ng_fast.c.obj
+[40/641] Building C object _deps/vc_delta3d-build/CMakeFiles/vc_delta3d.dir/src/ng/ng_search.c.obj
+[41/641] Building C object _deps/vc_delta3d-build/CMakeFiles/vc_delta3d.dir/src/ng/ng_medium.c.obj
+[42/641] Building C object _deps/vc_delta3d-build/CMakeFiles/vc_delta3d.dir/src/ng/ng_stream.c.obj
+[43/641] Building C object _deps/vc_delta3d-build/CMakeFiles/vc_delta3d.dir/src/ng/ng_predict.c.obj
+[44/641] Building C object _deps/vc_delta3d-build/CMakeFiles/vc_delta3d.dir/src/ng/ng_select.c.obj
+[45/641] Building C object _deps/vc_delta3d-build/CMakeFiles/vc_delta3d.dir/src/ng/ng_split.c.obj
+[46/641] Building C object _deps/vc_delta3d-build/CMakeFiles/vc_delta3d.dir/src/ng/ng_slow.c.obj
+[47/641] Building C object _deps/vc_delta3d-build/CMakeFiles/vc_delta3d.dir/src/ng/selector.c.obj
+[48/641] Building C object _deps/vc_delta3d-build/CMakeFiles/vc_delta3d.dir/src/ng/header.c.obj
+[49/641] Building C object _deps/vc_delta3d-build/CMakeFiles/vc_delta3d.dir/src/rans.c.obj
+[50/641] Building C object _deps/vc_delta3d-build/CMakeFiles/vc_delta3d.dir/src/delta_filter.c.obj
+[51/641] Building C object _deps/vc_delta3d-build/CMakeFiles/vc_delta3d.dir/src/api.c.obj
+[52/641] Building C object _deps/vc_delta3d-build/CMakeFiles/vc_delta3d.dir/src/legacy.c.obj
+[53/641] Building C object _deps/vc_delta3d-build/CMakeFiles/vc_ng_fixed32.dir/src/ng/ng_fixed.c.obj
+[54/641] Building C object _deps/vc_delta3d-build/CMakeFiles/vc_ng_fixed64.dir/src/ng/ng_fixed.c.obj
+[55/641] Building C object _deps/vc_delta3d-build/CMakeFiles/vc_ng_fixed128.dir/src/ng/ng_fixed.c.obj
+[56/641] Building CXX object object_store/src/CMakeFiles/vc_geometry.dir/vc_geometry_autogen/mocs_compilation.cpp.obj
+[57/641] Building C object _deps/vc_delta3d-build/CMakeFiles/vc_ng_fixed256.dir/src/ng/ng_fixed.c.obj
+[58/641] Building CXX object object_store/src/CMakeFiles/vc_geometry.dir/geometry/PointMap.cpp.obj
+[59/641] Linking CXX static library reader\libvc_reader_thinning.a
+[60/641] Building CXX object object_store/src/CMakeFiles/vc_geometry.dir/geometry/TypedGeometry.cpp.obj
+[61/641] Linking CXX static library reader\third_party\volcomp\libvc_reader_volcomp.a
+[62/641] Linking C static library _deps\vc_delta3d-build\libvc_delta3d.a
+[63/641] Linking CXX shared library bin\libvc_geometry.dll
+[64/641] Automatic MOC and UIC for target vc_reader_native
+[65/641] Automatic MOC and UIC for target vc_objects
+[66/641] Automatic MOC and UIC for target vc_resident_geometry
+[67/641] Building CXX object reader/CMakeFiles/vc_reader_native.dir/vc_reader_native_autogen/mocs_compilation.cpp.obj
+[68/641] Automatic MOC and UIC for target vc_object_formats
+[69/641] Building CXX object reader/CMakeFiles/vc_reader_native.dir/src/cpp/projection/mask.cpp.obj
+[70/641] Building CXX object reader/CMakeFiles/vc_reader_native.dir/src/cpp/projection/transfer.cpp.obj
+[71/641] Building CXX object reader/CMakeFiles/vc_reader_native.dir/src/cpp/sampling/resident.cpp.obj
+[72/641] Building CXX object reader/CMakeFiles/vc_reader_native.dir/src/cpp/display/display.cpp.obj
+[73/641] Building CXX object reader/CMakeFiles/vc_reader_native.dir/src/cpp/display/slab.cpp.obj
+[74/641] Building CXX object reader/CMakeFiles/vc_reader_native.dir/src/cpp/cache.cpp.obj
+[75/641] Building CXX object reader/CMakeFiles/vc_reader_native.dir/src/cpp/pathfinding/pathfinding.cpp.obj
+[76/641] Building CXX object reader/CMakeFiles/vc_reader_native.dir/src/cpp/composite/reduce.cpp.obj
+[77/641] Building CXX object reader/CMakeFiles/vc_reader_native.dir/src/cpp/native_reader.cpp.obj
+[78/641] Building CXX object reader/CMakeFiles/vc_reader_native.dir/src/cpp/computed.cpp.obj
+[79/641] Building CXX object reader/CMakeFiles/vc_reader_native.dir/src/cpp/grid/view.cpp.obj
+[80/641] Building CXX object reader/CMakeFiles/vc_reader_native.dir/src/cpp/grid/grid.cpp.obj
+[81/641] Building CXX object reader/CMakeFiles/vc_reader_native.dir/src/cpp/sources/caches.cpp.obj
+[82/641] Building CXX object reader/CMakeFiles/vc_reader_native.dir/src/cpp/sources/aligned_reader.cpp.obj
+[83/641] Building CXX object reader/CMakeFiles/vc_reader_native.dir/src/cpp/sources/image_file.cpp.obj
+[84/641] Building CXX object reader/CMakeFiles/vc_reader_native.dir/src/cpp/sources/image_write.cpp.obj
+[85/641] Building CXX object reader/CMakeFiles/vc_reader_native.dir/src/cpp/sources/image_encode.cpp.obj
+[86/641] Building CXX object reader/CMakeFiles/vc_reader_native.dir/src/cpp/sources/resolution.cpp.obj
+[87/641] Building CXX object reader/CMakeFiles/vc_reader_native.dir/src/cpp/sources/source_reader.cpp.obj
+[88/641] Building CXX object reader/CMakeFiles/vc_reader_native.dir/src/cpp/tifxyz/tifxyz.cpp.obj
+[89/641] Building CXX object reader/CMakeFiles/vc_reader_native.dir/src/cpp/sources/surface_reader.cpp.obj
+[90/641] Building CXX object reader/CMakeFiles/vc_reader_native.dir/src/cpp/zarr/meta.cpp.obj
+[91/641] Building CXX object reader/CMakeFiles/vc_reader_native.dir/src/cpp/zarr/access.cpp.obj
+[92/641] Building CXX object reader/CMakeFiles/vc_reader_native.dir/src/cpp/zarr/layers.cpp.obj
+[93/641] Building CXX object reader/CMakeFiles/vc_reader_native.dir/src/cpp/zarr/open.cpp.obj
+[94/641] Building CXX object reader/CMakeFiles/vc_reader_native.dir/src/cpp/zarr/pyramid.cpp.obj
+[95/641] Building CXX object reader/CMakeFiles/vc_reader_native.dir/src/cpp/zarr/store.cpp.obj
+[96/641] Building CXX object reader/CMakeFiles/vc_reader_native.dir/src/cpp/zarr/store_metadata.cpp.obj
+[97/641] Building CXX object object_store/src/CMakeFiles/vc_objects.dir/vc_objects_autogen/mocs_compilation.cpp.obj
+[98/641] Building CXX object object_store/src/CMakeFiles/vc_objects.dir/internal/Anchors.cpp.obj
+[99/641] Building CXX object object_store/src/CMakeFiles/vc_objects.dir/internal/Ownership.cpp.obj
+[100/641] Building CXX object object_store/src/CMakeFiles/vc_objects.dir/Versions.cpp.obj
+[101/641] Building CXX object reader/CMakeFiles/vc_reader_native.dir/src/cpp/zarr/writer.cpp.obj
+[102/641] Building CXX object object_store/src/CMakeFiles/vc_objects.dir/Selections.cpp.obj
+[103/641] Building CXX object object_store/src/CMakeFiles/vc_objects.dir/Artifacts.cpp.obj
+[104/641] Building CXX object object_store/src/CMakeFiles/vc_objects.dir/Wire.cpp.obj
+[105/641] Building CXX object object_store/src/CMakeFiles/vc_objects.dir/Commands.cpp.obj
+[106/641] Building CXX object object_store/src/CMakeFiles/vc_objects.dir/internal/Sqlite.cpp.obj
+[107/641] Building CXX object object_store/src/CMakeFiles/vc_objects.dir/internal/Schema.cpp.obj
+[108/641] Building CXX object object_store/src/CMakeFiles/vc_objects.dir/client/HostedStore.cpp.obj
+[109/641] Building CXX object object_store/src/CMakeFiles/vc_objects.dir/internal/RecordOverrides.cpp.obj
+[110/641] Building CXX object object_store/src/CMakeFiles/vc_objects.dir/internal/RecordSql.cpp.obj
+[111/641] Building CXX object object_store/src/CMakeFiles/vc_objects.dir/internal/InitialEdges.cpp.obj
+[112/641] Building CXX object object_store/src/CMakeFiles/vc_objects.dir/internal/EdgeSql.cpp.obj
+[113/641] Building CXX object object_store/src/CMakeFiles/vc_objects.dir/internal/InitialObjects.cpp.obj
+[114/641] Building CXX object object_store/src/CMakeFiles/vc_objects.dir/internal/RecordJson.cpp.obj
+[115/641] Building CXX object object_store/src/CMakeFiles/vc_objects.dir/Uuid.cpp.obj
+[116/641] Building CXX object object_store/src/CMakeFiles/vc_objects.dir/geometry/GeometryReference.cpp.obj
+[117/641] Building CXX object object_store/src/CMakeFiles/vc_objects.dir/internal/JsonFields.cpp.obj
+[118/641] Building CXX object object_store/src/CMakeFiles/vc_objects.dir/Database.cpp.obj
+[119/641] Building CXX object object_store/src/CMakeFiles/vc_objects.dir/Provisioning.cpp.obj
+[120/641] Building CXX object object_store/src/CMakeFiles/vc_objects.dir/formats/FiberJson.cpp.obj
+[121/641] Building CXX object object_store/src/CMakeFiles/vc_objects.dir/Extensions.cpp.obj
+[122/641] Building CXX object object_store/src/CMakeFiles/vc_objects.dir/ExtensionHistory.cpp.obj
+[123/641] Building CXX object object_store/src/CMakeFiles/vc_objects.dir/InitialImport.cpp.obj
+[124/641] Building CXX object object_store/src/CMakeFiles/vc_objects.dir/ObjectCollection.cpp.obj
+[125/641] Building CXX object object_store/src/CMakeFiles/vc_objects.dir/PackedCollection.cpp.obj
+[126/641] Building CXX object object_store/src/CMakeFiles/vc_objects.dir/PackedStore.cpp.obj
+[127/641] Building CXX object object_store/src/CMakeFiles/vc_objects.dir/StoreConversion.cpp.obj
+[128/641] Building CXX object object_store/src/CMakeFiles/vc_objects.dir/imports/AfvSource.cpp.obj
+[129/641] Building CXX object object_store/src/CMakeFiles/vc_objects.dir/imports/FiberGraphSolveExtension.cpp.obj
+[130/641] Building CXX object object_store/src/CMakeFiles/vc_objects.dir/imports/FiberImportExtension.cpp.obj
+[131/641] Building CXX object object_store/src/CMakeFiles/vc_objects.dir/VolumeTransforms.cpp.obj
+[132/641] Building CXX object object_store/src/CMakeFiles/vc_objects.dir/ObjectStoreSession.cpp.obj
+[133/641] Building CXX object object_store/src/CMakeFiles/vc_objects.dir/HostedSession.cpp.obj
+[134/641] Building CXX object object_store/src/CMakeFiles/vc_objects.dir/StoreReader.cpp.obj
+[135/641] Building CXX object object_store/src/CMakeFiles/vc_objects.dir/DraftCheckpoints.cpp.obj
+[136/641] Building CXX object object_store/src/CMakeFiles/vc_objects.dir/Project.cpp.obj
+[137/641] Building CXX object object_store/src/CMakeFiles/vc_objects.dir/FetchQueue.cpp.obj
+[138/641] Building CXX object object_store/src/CMakeFiles/vc_objects.dir/Transactions.cpp.obj
+[139/641] Building CXX object object_store/src/CMakeFiles/vc_objects.dir/Lifecycle.cpp.obj
+[140/641] Building CXX object object_store/src/CMakeFiles/vc_objects.dir/Records.cpp.obj
+[141/641] Building CXX object object_store/src/CMakeFiles/vc_objects.dir/History.cpp.obj
+[142/641] Building CXX object object_store/src/CMakeFiles/vc_objects.dir/Metadata.cpp.obj
+[143/641] Building CXX object object_store/src/CMakeFiles/vc_objects.dir/SourcePaths.cpp.obj
+[144/641] Building CXX object object_store/src/CMakeFiles/vc_objects.dir/Snapshots.cpp.obj
+[145/641] Building CXX object object_store/src/CMakeFiles/vc_objects.dir/Queries.cpp.obj
+[146/641] Building CXX object object_store/src/CMakeFiles/vc_objects.dir/Spatial.cpp.obj
+[147/641] Building CXX object object_store/src/CMakeFiles/vc_objects.dir/GeometryRegion.cpp.obj
+[148/641] Building CXX object object_store/src/CMakeFiles/vc_objects.dir/SurfaceProximity.cpp.obj
+[149/641] Building CXX object object_store/src/CMakeFiles/vc_objects.dir/SurfaceTileCache.cpp.obj
+[150/641] Building CXX object object_store/src/CMakeFiles/vc_objects.dir/SurfaceDrafts.cpp.obj
+[151/641] Building CXX object object_store/src/CMakeFiles/vc_objects.dir/spatial/SurfaceTiles.cpp.obj
+[152/641] Building CXX object object_store/src/CMakeFiles/vc_objects.dir/ObjectCopy.cpp.obj
+[153/641] Building CXX object object_store/src/CMakeFiles/vc_objects.dir/VolumeUmbilicus.cpp.obj
+[154/641] Building CXX object object_store/src/CMakeFiles/vc_objects.dir/UmbilicusFile.cpp.obj
+[155/641] Building CXX object object_store/src/CMakeFiles/vc_objects.dir/ToolObjects.cpp.obj
+[156/641] Building CXX object object_store/src/CMakeFiles/vc_objects.dir/SurfaceCreate.cpp.obj
+[157/641] Building CXX object object_store/src/CMakeFiles/vc_objects.dir/AttachedDocument.cpp.obj
+[158/641] Building CXX object object_store/src/CMakeFiles/vc_objects.dir/SurfaceGrid.cpp.obj
+[159/641] Building CXX object object_store/src/CMakeFiles/vc_objects.dir/geometry/GeometryViews.cpp.obj
+[160/641] Building CXX object object_store/src/CMakeFiles/vc_objects.dir/imports/SourceRelationships.cpp.obj
+[161/641] Building CXX object object_store/src/CMakeFiles/vc_objects.dir/geometry/GeometryIngestBatch.cpp.obj
+[162/641] Building CXX object object_store/src/CMakeFiles/vc_objects.dir/geometry/DependencyIndex.cpp.obj
+[163/641] Building CXX object object_store/src/CMakeFiles/vc_objects.dir/imports/SourceIdentityIndex.cpp.obj
+[164/641] Building CXX object object_store/src/CMakeFiles/vc_objects.dir/geometry/SharedGeometry.cpp.obj
+[165/641] Building CXX object object_store/src/CMakeFiles/vc_objects.dir/geometry/SequenceMetadata.cpp.obj
+[166/641] Building CXX object object_store/src/CMakeFiles/vc_objects.dir/geometry/GeometryEdits.cpp.obj
+[167/641] Building CXX object object_store/src/CMakeFiles/vc_objects.dir/geometry/StructuralGeometry.cpp.obj
+[168/641] Building CXX object object_store/src/CMakeFiles/vc_objects.dir/geometry/GeometryDelta.cpp.obj
+[169/641] Building CXX object object_store/src/CMakeFiles/vc_objects.dir/geometry/Geometry.cpp.obj
+[170/641] Building CXX object object_store/src/CMakeFiles/vc_objects.dir/geometry/GeometryReader.cpp.obj
+[171/641] Building CXX object object_store/src/CMakeFiles/vc_objects.dir/relationships/Edges.cpp.obj
+[172/641] Building CXX object object_store/src/CMakeFiles/vc_objects.dir/relationships/RelationshipInputs.cpp.obj
+[173/641] Building CXX object object_store/src/CMakeFiles/vc_objects.dir/relationships/EdgeGeometry.cpp.obj
+[174/641] Building CXX object object_store/src/CMakeFiles/vc_objects.dir/relationships/Traversal.cpp.obj
+[175/641] Building CXX object object_store/src/CMakeFiles/vc_resident_geometry.dir/vc_resident_geometry_autogen/mocs_compilation.cpp.obj
+[176/641] Building CXX object object_store/src/CMakeFiles/vc_resident_geometry.dir/spatial/VertexIndex.cpp.obj
+[177/641] Building CXX object object_store/src/CMakeFiles/vc_object_formats.dir/vc_object_formats_autogen/mocs_compilation.cpp.obj
+[178/641] Building CXX object object_store/src/CMakeFiles/vc_resident_geometry.dir/spatial/SurfaceIndex.cpp.obj
+[179/641] Building CXX object object_store/src/CMakeFiles/vc_object_formats.dir/Tiff.cpp.obj
+[180/641] Building CXX object object_store/src/CMakeFiles/vc_object_formats.dir/MemMap.cpp.obj
+[181/641] Building CXX object object_store/src/CMakeFiles/vc_object_formats.dir/PackedTrackStore.cpp.obj
+[182/641] Building CXX object object_store/src/CMakeFiles/vc_object_formats.dir/spatial/SurfaceGrid.cpp.obj
+[183/641] Linking CXX shared library bin\libvc_reader_native.dll
+[184/641] Linking CXX shared library bin\libvc_objects.dll
+[185/641] Linking CXX shared library bin\libvc_resident_geometry.dll
+[186/641] Linking CXX shared library bin\libvc_object_formats.dll
+[187/641] Automatic MOC and UIC for target vc_core
+[188/641] Automatic MOC and UIC for target vc_object_geometry
+[189/641] Automatic MOC and UIC for target vc_fiber_view
+[190/641] Automatic MOC and UIC for target vc_object_migration
+[191/641] Building CXX object object_store/src/CMakeFiles/vc_object_geometry.dir/vc_object_geometry_autogen/mocs_compilation.cpp.obj
+[192/641] Building CXX object core/CMakeFiles/vc_common_pch.dir/cmake_pch.hxx.gch
+[193/641] Building CXX object core/CMakeFiles/vc_common_pch.dir/vc_common_pch.cpp.obj
+[194/641] Building CXX object core/CMakeFiles/vc_core.dir/vc_core_autogen/mocs_compilation.cpp.obj
+[195/641] Building CXX object core/CMakeFiles/vc_core.dir/src/SheetSeed.cpp.obj
+[196/641] Building CXX object core/CMakeFiles/vc_core.dir/src/SheetWalk.cpp.obj
+[197/641] Building CXX object core/CMakeFiles/vc_core.dir/src/SheetFront.cpp.obj
+[198/641] Building CXX object object_store/src/CMakeFiles/vc_object_geometry.dir/geometry/GeometryIngest.cpp.obj
+[199/641] Building CXX object core/CMakeFiles/vc_core.dir/src/PolylineObj.cpp.obj
+[200/641] Building CXX object core/CMakeFiles/vc_core.dir/src/OutputDirectory.cpp.obj
+[201/641] Building CXX object core/CMakeFiles/vc_core.dir/src/TexturedMesh.cpp.obj
+[202/641] Building CXX object core/CMakeFiles/vc_core.dir/src/GridStore.cpp.obj
+[203/641] Building CXX object core/CMakeFiles/vc_core.dir/src/SheetNormalField.cpp.obj
+[204/641] Building CXX object core/CMakeFiles/vc_core.dir/src/normalgridtools.cpp.obj
+[205/641] Building CXX object core/CMakeFiles/vc_core.dir/src/NormalGridVolume.cpp.obj
+[206/641] Building CXX object core/CMakeFiles/vc_core.dir/src/Volume.cpp.obj
+[207/641] Building CXX object core/CMakeFiles/vc_core.dir/src/VolumePkg.cpp.obj
+[208/641] Building CXX object core/CMakeFiles/vc_core.dir/src/ProjectDocument.cpp.obj
+[209/641] Building CXX object core/CMakeFiles/vc_core.dir/src/ProjectCreation.cpp.obj
+[210/641] Building CXX object core/CMakeFiles/vc_core.dir/src/SurfaceQuerySet.cpp.obj
+[211/641] Building CXX object core/CMakeFiles/vc_core.dir/src/CrashHandler.cpp.obj
+[212/641] Building CXX object core/CMakeFiles/vc_core.dir/src/Logging.cpp.obj
+[213/641] Building CXX object core/CMakeFiles/vc_core.dir/src/AnonymousPages.cpp.obj
+[214/641] Building CXX object core/CMakeFiles/vc_core.dir/src/UnixSocket.cpp.obj
+[215/641] Building CXX object core/CMakeFiles/vc_core.dir/src/PlaneSurface.cpp.obj
+[216/641] Building CXX object core/CMakeFiles/vc_core.dir/src/SparseChunkSpool.cpp.obj
+[217/641] Building CXX object core/CMakeFiles/vc_core.dir/src/Surface.cpp.obj
+[218/641] Building CXX object core/CMakeFiles/vc_core.dir/src/ImageMat.cpp.obj
+[219/641] Building CXX object core/CMakeFiles/vc_core.dir/src/QuadSurface.cpp.obj
+[220/641] Building CXX object core/CMakeFiles/vc_core.dir/src/QuadSurfaceStore.cpp.obj
+[221/641] Building CXX object core/CMakeFiles/vc_core.dir/src/StoreSurfaces.cpp.obj
+[222/641] Building CXX object core/CMakeFiles/vc_core.dir/src/SurfaceMeshing.cpp.obj
+[223/641] Building CXX object core/CMakeFiles/vc_core.dir/src/LoadJson.cpp.obj
+[224/641] Building CXX object core/CMakeFiles/vc_core.dir/src/RemoteUrl.cpp.obj
+[225/641] Building CXX object core/CMakeFiles/vc_core.dir/src/RemoteCacheSettings.cpp.obj
+[226/641] Building CXX object core/CMakeFiles/vc_core.dir/src/Geometry.cpp.obj
+[227/641] Building CXX object core/CMakeFiles/vc_core.dir/src/PointCollections.cpp.obj
+[228/641] Building CXX object core/CMakeFiles/vc_core.dir/src/StoredCollection.cpp.obj
+[229/641] Building CXX object core/CMakeFiles/vc_core.dir/src/Umbilicus.cpp.obj
+[230/641] Building CXX object core/CMakeFiles/vc_core.dir/Version.cpp.obj
+[231/641] Linking CXX static library core\libvc_common_pch.a
+[232/641] Building CXX object object_store/src/CMakeFiles/vc_object_geometry.dir/geometry/GeometryExport.cpp.obj
+[233/641] Building CXX object object_store/src/CMakeFiles/vc_object_geometry.dir/geometry/SourceMetadata.cpp.obj
+[234/641] Building CXX object object_store/src/CMakeFiles/vc_object_geometry.dir/formats/GeometryInput.cpp.obj
+[235/641] Building CXX object object_store/src/CMakeFiles/vc_object_geometry.dir/formats/FiberInput.cpp.obj
+[236/641] Building CXX object object_store/src/CMakeFiles/vc_object_geometry.dir/formats/SurfaceInput.cpp.obj
+[237/641] Building CXX object core/CMakeFiles/vc_core.dir/src/CudaSampling.cpp.obj
+[238/641] Linking CXX shared library bin\libvc_core.dll
+[239/641] Automatic MOC and UIC for target vc_lasagna
+[240/641] Building CXX object object_store/src/CMakeFiles/vc_object_geometry.dir/formats/PointCollectionInput.cpp.obj
+[241/641] Building CXX object core/CMakeFiles/vc_lasagna.dir/vc_lasagna_autogen/mocs_compilation.cpp.obj
+[242/641] Building CXX object core/CMakeFiles/vc_lasagna.dir/src/lasagna/Catalog.cpp.obj
+[243/641] Building CXX object core/CMakeFiles/vc_lasagna.dir/src/lasagna/Dataset.cpp.obj
+[244/641] Building CXX object core/CMakeFiles/vc_lasagna.dir/src/lasagna/LaplaceAmgx.cpp.obj
+[245/641] Building CXX object core/CMakeFiles/vc_lasagna.dir/src/lasagna/LaplaceRank.cpp.obj
+[246/641] Building CXX object core/CMakeFiles/vc_lasagna.dir/src/lasagna/LasagnaNormalSampler.cpp.obj
+[247/641] Building CXX object core/CMakeFiles/vc_lasagna.dir/src/lasagna/LineViewBuilder.cpp.obj
+[248/641] Building CXX object core/CMakeFiles/vc_lasagna.dir/src/lasagna/ChannelSampler.cpp.obj
+[249/641] Building CXX object core/CMakeFiles/vc_lasagna.dir/src/lasagna/LineSpline.cpp.obj
+[250/641] Building CXX object core/CMakeFiles/vc_lasagna.dir/src/lasagna/Manifest.cpp.obj
+[251/641] Building CXX object core/CMakeFiles/vc_lasagna.dir/src/lasagna/LineOptimizer.cpp.obj
+[252/641] Building CXX object core/CMakeFiles/vc_lasagna.dir/src/lasagna/ProjectVolumes.cpp.obj
+[253/641] Automatic MOC and UIC for target vc_tracer
+[254/641] Building CXX object object_store/src/CMakeFiles/vc_object_geometry.dir/formats/UmbilicusInput.cpp.obj
+[255/641] Building CXX object object_store/src/CMakeFiles/vc_object_geometry.dir/formats/TrackInput.cpp.obj
+[256/641] Building CXX object core/CMakeFiles/vc_lasagna.dir/src/lasagna/MaxflowGraph.cpp.obj
+[257/641] Linking CXX shared library bin\libvc_lasagna.dll
+[258/641] Building CXX object object_store/src/CMakeFiles/vc_object_geometry.dir/formats/GeometryOutput.cpp.obj
+[259/641] Automatic MOC and UIC for target vc_fiber_tracer
+[260/641] Building CXX object object_store/src/CMakeFiles/vc_object_geometry.dir/formats/RemoteSource.cpp.obj
+[261/641] Building CXX object core/CMakeFiles/vc_fiber_view.dir/vc_fiber_view_autogen/mocs_compilation.cpp.obj
+[262/641] Building CXX object core/CMakeFiles/vc_fiber_view.dir/src/FiberView.cpp.obj
+[263/641] Building CXX object core/CMakeFiles/vc_fiber_tracer.dir/vc_fiber_tracer_autogen/mocs_compilation.cpp.obj
+[264/641] Building CXX object object_store/src/CMakeFiles/vc_object_geometry.dir/catalog/CatalogStore.cpp.obj
+[265/641] Building CXX object core/CMakeFiles/vc_fiber_tracer.dir/src/fiber_tracer/BinaryBeliefPropagation.cpp.obj
+[266/641] Building CXX object core/CMakeFiles/vc_fiber_tracer.dir/src/fiber_tracer/FiberReferenceReplayBenchmark.cpp.obj
+[267/641] Building CXX object core/CMakeFiles/vc_fiber_tracer.dir/src/fiber_tracer/FiberTraceSeed.cpp.obj
+[268/641] Building CXX object core/CMakeFiles/vc_fiber_tracer.dir/src/fiber_tracer/FiberTraceBeliefPropagation.cpp.obj
+=== ARRET orchestre (fenetre reservee 03:50) 2026-11-14T03:49:54
+=== DEBUT ninja -j2 2026-11-14 04:03:56
+ninja: Entering directory `build/ci-windows-mingw'
+[0/2] Re-checking globbed directories...
+[1/373] Building CXX object core/CMakeFiles/vc_fiber_tracer.dir/src/fiber_tracer/FiberTraceWindingBeliefPropagation.cpp.obj
+[2/373] Building CXX object core/CMakeFiles/vc_fiber_tracer.dir/src/fiber_tracer/FiberTraceWindingLeastSquares.cpp.obj
+[3/373] Building CXX object core/CMakeFiles/vc_fiber_tracer.dir/src/fiber_tracer/FiberTraceConstraints.cpp.obj
+[4/373] Building CXX object core/CMakeFiles/vc_fiber_tracer.dir/src/fiber_tracer/FiberTraceWindingOrderedCuts.cpp.obj
+[5/373] Building CXX object core/CMakeFiles/vc_fiber_tracer.dir/src/fiber_tracer/LasagnaNormalAlignment.cpp.obj
+[6/373] Building CXX object core/CMakeFiles/vc_fiber_tracer.dir/src/fiber_tracer/FiberAnchorObjectives.cpp.obj
+[7/373] Building CXX object core/CMakeFiles/vc_fiber_tracer.dir/src/fiber_tracer/FiberAnchors.cpp.obj
+[8/373] Building CXX object core/CMakeFiles/vc_fiber_tracer.dir/src/fiber_tracer/FiberAxisTensor.cpp.obj
+[9/373] Building CXX object core/CMakeFiles/vc_fiber_tracer.dir/src/fiber_tracer/FiberAnchorFinalEvaluation.cpp.obj
+[10/373] Building CXX object core/CMakeFiles/vc_fiber_tracer.dir/src/fiber_tracer/FiberletChunkGraph.cpp.obj
+[11/373] Building CXX object core/CMakeFiles/vc_fiber_tracer.dir/src/fiber_tracer/FiberGraph.cpp.obj
+[12/373] Building CXX object core/CMakeFiles/vc_fiber_tracer.dir/src/fiber_tracer/FiberLocalScoring.cpp.obj
+[13/373] Building CXX object core/CMakeFiles/vc_fiber_tracer.dir/src/fiber_tracer/FiberletCropTrace.cpp.obj
+[14/373] Building CXX object core/CMakeFiles/vc_fiber_tracer.dir/src/fiber_tracer/FiberReplayMetric.cpp.obj
+[15/373] Building CXX object core/CMakeFiles/vc_fiber_tracer.dir/src/fiber_tracer/FiberReverseConsistency.cpp.obj
+[16/373] Building CXX object core/CMakeFiles/vc_fiber_tracer.dir/src/fiber_tracer/FiberPaths.cpp.obj
+[17/373] Building CXX object core/CMakeFiles/vc_fiber_tracer.dir/src/fiber_tracer/FiberReferenceReplayCore.cpp.obj
+[18/373] Building CXX object core/CMakeFiles/vc_fiber_tracer.dir/src/fiber_tracer/FiberChunkTrace.cpp.obj
+[19/373] Building CXX object core/CMakeFiles/vc_fiber_tracer.dir/src/fiber_tracer/FiberChunkFilter.cpp.obj
+[20/373] Building CXX object core/CMakeFiles/vc_fiber_tracer.dir/src/fiber_tracer/FiberChunkGpuBridge.cpp.obj
+[21/373] Building CXX object core/CMakeFiles/vc_fiber_tracer.dir/src/fiber_tracer/FiberChunkTensor.cpp.obj
+[22/373] Building CXX object core/CMakeFiles/vc_fiber_tracer.dir/src/fiber_tracer/FiberLiveBridge.cpp.obj
+[23/373] Building CXX object core/CMakeFiles/vc_fiber_tracer.dir/src/fiber_tracer/FiberChunkRoute.cpp.obj
+[24/373] Building CXX object core/CMakeFiles/vc_fiber_tracer.dir/src/fiber_tracer/FiberReplayVisualization.cpp.obj
+[25/373] Building CXX object core/CMakeFiles/vc_fiber_tracer.dir/src/fiber_tracer/FiberEvaluation.cpp.obj
+[26/373] Building CXX object core/CMakeFiles/vc_fiber_tracer.dir/src/fiber_tracer/FiberCaseQueue.cpp.obj
+[27/373] Building CXX object core/CMakeFiles/vc_fiber_tracer.dir/src/fiber_tracer/PolylineGeometry.cpp.obj
+[28/373] Building CXX object core/CMakeFiles/vc_fiber_tracer.dir/src/fiber_tracer/FiberletCropVisualization.cpp.obj
+[29/373] Building CXX object core/CMakeFiles/vc_fiber_tracer.dir/src/fiber_tracer/FiberletStorage.cpp.obj
+[30/373] Building CXX object core/CMakeFiles/vc_fiber_tracer.dir/src/fiber_tracer/FiberletDataset.cpp.obj
+[31/373] Building CXX object core/CMakeFiles/vc_fiber_tracer.dir/src/fiber_tracer/FiberletQuantization.cpp.obj
+[32/373] Building CXX object core/CMakeFiles/vc_fiber_tracer.dir/src/fiber_tracer/FiberletOnDemand.cpp.obj
+[33/373] Building CXX object core/CMakeFiles/vc_fiber_tracer.dir/src/fiber_tracer/FiberletPipeline.cpp.obj
+[34/373] Building CXX object core/CMakeFiles/vc_fiber_tracer.dir/src/fiber_tracer/FiberVolumeCoverage.cpp.obj
+[35/373] Building CXX object core/CMakeFiles/vc_fiber_tracer.dir/src/fiber_tracer/FiberStreamVolume.cpp.obj
+[36/373] Building CXX object core/CMakeFiles/vc_fiber_tracer.dir/src/fiber_tracer/FiberTrace.cpp.obj
+[37/373] Building CXX object core/CMakeFiles/vc_tracer.dir/vc_tracer_autogen/mocs_compilation.cpp.obj
+[38/373] Building CXX object core/CMakeFiles/vc_fiber_tracer.dir/src/fiber_tracer/FiberSideStripIntersections.cpp.obj
+[39/373] Building CXX object core/CMakeFiles/vc_tracer.dir/src/SheetGrowth.cpp.obj
+[40/373] Building CXX object core/CMakeFiles/vc_tracer.dir/src/GrowPatch.cpp.obj
+[41/373] Building CXX object core/CMakeFiles/vc_tracer.dir/src/GrowSurface.cpp.obj
+[42/373] Building CXX object core/CMakeFiles/vc_tracer.dir/src/SurfTrackerData.cpp.obj
+[43/373] Building CXX object core/CMakeFiles/vc_tracer.dir/src/growth_strategies/CandidateOrdering.cpp.obj
+[44/373] Building CXX object core/CMakeFiles/vc_tracer.dir/src/growth_strategies/GrowthConfig.cpp.obj
+[45/373] Building CXX object object_store/src/CMakeFiles/vc_object_migration.dir/vc_object_migration_autogen/mocs_compilation.cpp.obj
+[46/373] Building CXX object core/CMakeFiles/vc_tracer.dir/src/NeuralTracerConnection.cpp.obj
+[47/373] Linking CXX shared library bin\libvc_object_geometry.dll
+[48/373] Linking CXX static library core\libvc_fiber_view.a
+[49/373] Linking CXX shared library bin\libvc_fiber_tracer.dll
+[50/373] Linking CXX shared library bin\libvc_tracer.dll
+[51/373] Building CXX object object_store/src/CMakeFiles/vc_object_migration.dir/migration/ConvertStore.cpp.obj
+[52/373] Linking CXX static library object_store\src\libvc_object_migration.a
+[53/373] Automatic MOC and UIC for target vc_object_convert
+[54/373] Automatic MOC and UIC for target vc_object_server
+[55/373] Automatic MOC and UIC for target vc_inpaint
+[56/373] Building CXX object object_store/CMakeFiles/vc_object_convert.dir/vc_object_convert_autogen/mocs_compilation.cpp.obj
+[57/373] Building CXX object object_store/CMakeFiles/vc_object_convert.dir/apps/vc_object_convert.cpp.obj
+[58/373] Building RC object object_store/CMakeFiles/vc_object_convert.dir/__/vc_utf8_manifest.rc.obj
+[59/373] Building CXX object object_store/src/CMakeFiles/vc_object_server.dir/vc_object_server_autogen/mocs_compilation.cpp.obj
+[60/373] Automatic MOC and UIC for target vc3d_app
+[61/373] Generating __/__/core/include/vc/ui/moc_VCCollection.cpp
+[62/373] Automatic RCC for resources.qrc
+[63/373] Building CXX object core/CMakeFiles/vc_inpaint.dir/vc_inpaint_autogen/mocs_compilation.cpp.obj
+[64/373] Building CXX object core/CMakeFiles/vc_inpaint.dir/src/InpaintSurface.cpp.obj
+[65/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/cmake_pch.hxx.gch
+[66/373] Linking CXX executable bin\vc_object_convert.exe
+[67/373] Linking CXX shared library bin\libvc_inpaint.dll
+[68/373] Building CXX object object_store/src/CMakeFiles/vc_object_server.dir/server/Server.cpp.obj
+[69/373] Linking CXX static library object_store\src\libvc_object_server.a
+[70/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/DisplayPalette.cpp.obj
+[71/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/Colormaps.cpp.obj
+[72/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/__/__/core/src/VCCollection.cpp.obj
+[73/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/__/__/core/include/vc/ui/moc_VCCollection.cpp.obj
+[74/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/vc3d_app_autogen/mocs_compilation.cpp.obj
+In file included from C:/Users/me/Dev/vesuvius/wt-vc3d/volume-cartographer/apps/VC3D/volume_viewers/CChunkedVolumeViewer.hpp:30,
+                 from C:/Users/me/Dev/vesuvius/wt-vc3d/volume-cartographer/apps/VC3D/LineAnnotationController.hpp:49,
+                 from C:/Users/me/Dev/vesuvius/wt-vc3d/volume-cartographer/build/ci-windows-mingw/apps/VC3D/vc3d_app_autogen/EWIEGA46WW/moc_LineAnnotationController.cpp:9,
+                 from C:/Users/me/Dev/vesuvius/wt-vc3d/volume-cartographer/build/ci-windows-mingw/apps/VC3D/vc3d_app_autogen/mocs_compilation.cpp:15:
+C:/Users/me/Dev/vesuvius/wt-vc3d/volume-cartographer/apps/VC3D/volume_viewers/VolumeViewerBase.hpp:35:7: warning: defining 'VolumeViewerBase', which previously failed to be complete in a SFINAE context [-Wsfinae-incomplete=]
+   35 | class VolumeViewerBase
+      |       ^~~~~~~~~~~~~~~~
+In file included from C:/Users/me/Dev/vesuvius/outils-vc3d/msys64/ucrt64/include/qt6/QtCore/qobject.h:19,
+                 from C:/Users/me/Dev/vesuvius/outils-vc3d/msys64/ucrt64/include/qt6/QtCore/qabstractanimation.h:8,
+                 from C:/Users/me/Dev/vesuvius/outils-vc3d/msys64/ucrt64/include/qt6/QtCore/QtCore:20,
+                 from C:/Users/me/Dev/vesuvius/wt-vc3d/volume-cartographer/build/ci-windows-mingw/apps/VC3D/CMakeFiles/vc3d_app.dir/cmake_pch.hxx:37,
+                 from <command-line>:
+C:/Users/me/Dev/vesuvius/outils-vc3d/msys64/ucrt64/include/qt6/QtCore/qmetatype.h:344:64: note: here.  Use '-Wsfinae-incomplete=2' for a diagnostic at that point
+  344 |         static auto check(U *) -> std::integral_constant<bool, sizeof(U) != 0>;
+      |                                                                ^~~~~~~~~
+C:/Users/me/Dev/vesuvius/wt-vc3d/volume-cartographer/apps/VC3D/volume_viewers/CChunkedVolumeViewer.hpp:55:7: warning: defining 'CChunkedVolumeViewer', which previously failed to be complete in a SFINAE context [-Wsfinae-incomplete=]
+   55 | class CChunkedVolumeViewer : public QWidget, public VolumeViewerBase
+      |       ^~~~~~~~~~~~~~~~~~~~
+C:/Users/me/Dev/vesuvius/outils-vc3d/msys64/ucrt64/include/qt6/QtCore/qmetatype.h:344:64: note: here.  Use '-Wsfinae-incomplete=2' for a diagnostic at that point
+  344 |         static auto check(U *) -> std::integral_constant<bool, sizeof(U) != 0>;
+      |                                                                ^~~~~~~~~
+In file included from C:/Users/me/Dev/vesuvius/wt-vc3d/volume-cartographer/build/ci-windows-mingw/apps/VC3D/vc3d_app_autogen/EWIEGA46WW/moc_LineAnnotationDialog.cpp:9,
+                 from C:/Users/me/Dev/vesuvius/wt-vc3d/volume-cartographer/build/ci-windows-mingw/apps/VC3D/vc3d_app_autogen/mocs_compilation.cpp:16:
+C:/Users/me/Dev/vesuvius/wt-vc3d/volume-cartographer/apps/VC3D/LineAnnotationDialog.hpp:58:7: warning: defining 'LineAnnotationDialog', which previously failed to be complete in a SFINAE context [-Wsfinae-incomplete=]
+   58 | class LineAnnotationDialog : public QMainWindow
+      |       ^~~~~~~~~~~~~~~~~~~~
+C:/Users/me/Dev/vesuvius/outils-vc3d/msys64/ucrt64/include/qt6/QtCore/qmetatype.h:344:64: note: here.  Use '-Wsfinae-incomplete=2' for a diagnostic at that point
+  344 |         static auto check(U *) -> std::integral_constant<bool, sizeof(U) != 0>;
+      |                                                                ^~~~~~~~~
+[75/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/CState.cpp.obj
+[76/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/Keybinds.cpp.obj
+[77/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/OpenedVolumes.cpp.obj
+[78/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/FiberCollectionGenerator.cpp.obj
+[79/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/FiberCollectionGeneratorDialog.cpp.obj
+[80/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/CWindow.cpp.obj
+[81/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/SurfaceCatalog.cpp.obj
+[82/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/FiberCollectionController.cpp.obj
+[83/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/fibers3d/Fiber3DCanvas.cpp.obj
+[84/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/scene3d/Scene3DCanvas.cpp.obj
+[85/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/fibers3d/Fiber3DData.cpp.obj
+[86/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/scene3d/VolumePreview.cpp.obj
+[87/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/scene3d/Scene3DPanel.cpp.obj
+[88/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/fibers3d/Fiber3DRibbon.cpp.obj
+[89/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/fibers3d/Fiber3DPanel.cpp.obj
+[90/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/fibers3d/Fiber3DRibbonControls.cpp.obj
+[91/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/fibers3d/Fiber3DSlices.cpp.obj
+[92/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/fibers3d/Fiber3DVolumeRenderer.cpp.obj
+[93/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/fibers3d/Fiber3DCT.cpp.obj
+[94/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/fibers3d/Fiber3DSurfaceTexture.cpp.obj
+[95/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/fibers3d/Fiber3DSliceControls.cpp.obj
+[96/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/fibers3d/Fiber3DSurfaceMesh.cpp.obj
+[97/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/fibers3d/Fiber3DSurfaceProximity.cpp.obj
+[98/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/fibers3d/Fiber3DSurfaceRenderer.cpp.obj
+[99/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/fibers3d/Fiber3DSurfaceControls.cpp.obj
+[100/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/CWindowContextMenu.cpp.obj
+[101/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/StatusDockPanelHost.cpp.obj
+[102/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/AxisAlignedSliceController.cpp.obj
+[103/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/FiberNameDisplay.cpp.obj
+[104/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/ProjectWorkspace.cpp.obj
+[105/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/FiberMapRuler.cpp.obj
+[106/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/FiberMapWorkspace.cpp.obj
+[107/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/FiberMapGapField.cpp.obj
+[108/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/FiberMapKollesis.cpp.obj
+[109/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/FiberMapAutoLink.cpp.obj
+[110/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/FiberNetworkLayout.cpp.obj
+[111/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/FiberLineGeometry.cpp.obj
+[112/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/FiberWindingSolver.cpp.obj
+[113/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/LineAnnotationFiberSegments.cpp.obj
+[114/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/LineAnnotationStructuralEdits.cpp.obj
+[115/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/LineAnnotationDialog.cpp.obj
+[116/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/LineAnnotationController.cpp.obj
+[117/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/LineAnnotationGeneratedViews.cpp.obj
+[118/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/OpenDataResourceSelection.cpp.obj
+[119/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/OpenDataCatalogWindow.cpp.obj
+[120/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/OpenDataLasagna.cpp.obj
+[121/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/OpenDataVolumeOrientation.cpp.obj
+[122/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/OpenDataSampleProject.cpp.obj
+[123/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/OpenDataNormalGrids.cpp.obj
+[124/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/GrowPatchSeedDialog.cpp.obj
+[125/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/VolumeRegistrations.cpp.obj
+[126/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/volume_viewers/annotation_tools/SameWrapAnnotationTool.cpp.obj
+[127/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/SegmentationCommandHandler.cpp.obj
+[128/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/volume_viewers/CVolumeViewerView.cpp.obj
+[129/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/WindowRangeWidget.cpp.obj
+[130/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/elements/CollapsibleSettingsGroup.cpp.obj
+[131/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/WrapAnnotationWidget.cpp.obj
+[132/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/elements/DropdownChecklistButton.cpp.obj
+[133/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/elements/JsonProfileEditor.cpp.obj
+[134/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/elements/LabeledControlRow.cpp.obj
+[135/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/elements/SpiralConfigProfileEditor.cpp.obj
+[136/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/elements/VolumeSelector.cpp.obj
+[137/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/elements/RangeSlider.cpp.obj
+[138/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/elements/ViewerStatsBar.cpp.obj
+[139/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/elements/ViewerSplitGrid.cpp.obj
+[140/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/SettingsDialog.cpp.obj
+[141/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/SurfaceTreeWidget.cpp.obj
+[142/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/SeedingBatchTracker.cpp.obj
+[143/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/segmentation/SegmentationWidget.cpp.obj
+[144/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/segmentation/panels/SegmentationHeaderRow.cpp.obj
+[145/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/segmentation/panels/SegmentationEditingPanel.cpp.obj
+[146/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/segmentation/panels/SegmentationGrowthPanel.cpp.obj
+[147/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/segmentation/panels/SegmentationCorrectionsPanel.cpp.obj
+[148/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/segmentation/panels/SegmentationCustomParamsPanel.cpp.obj
+[149/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/segmentation/panels/SegmentationNeuralTracerPanel.cpp.obj
+[150/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/segmentation/panels/SegmentationManualAddPanel.cpp.obj
+[151/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/SeedingWidget.cpp.obj
+[152/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/segmentation/growth/SegmentationGrower.cpp.obj
+[153/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/segmentation/tools/SegmentationEditManager.cpp.obj
+[154/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/segmentation/growth/SegmentationGrowth.cpp.obj
+[155/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/segmentation/tools/SurfaceMaskBrushTool.cpp.obj
+[156/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/segmentation/tools/ThinPlateSpline3d.cpp.obj
+[157/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/segmentation/tools/ManualAddTool.cpp.obj
+[158/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/segmentation/SurfaceGridEdit.cpp.obj
+[159/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/segmentation/tools/SegmentationPushPullTool.cpp.obj
+[160/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/segmentation/SegmentationModule_Falloff.cpp.obj
+[161/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/segmentation/SegmentationModule_Input.cpp.obj
+[162/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/segmentation/SegmentationModule_Session.cpp.obj
+[163/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/overlays/SegmentationOverlayController.cpp.obj
+[164/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/overlays/PointsOverlayController.cpp.obj
+[165/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/overlays/StoreSurfaceOverlayController.cpp.obj
+[166/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/overlays/RawPointsOverlayController.cpp.obj
+[167/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/overlays/BBoxOverlayController.cpp.obj
+[168/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/overlays/PathsOverlayController.cpp.obj
+[169/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/overlays/VectorOverlayController.cpp.obj
+[170/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/overlays/PlaneSlicingOverlayController.cpp.obj
+[171/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/overlays/OverlayBatchItem.cpp.obj
+[172/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/overlays/SurfaceRotationOverlayController.cpp.obj
+[173/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/overlays/InkDetectionOverlayController.cpp.obj
+C:/Users/me/Dev/vesuvius/wt-vc3d/volume-cartographer/apps/VC3D/overlays/InkDetectionOverlayController.cpp: In member function 'QImage InkDetectionOverlayController::applyImageFlips(const QImage&) const':
+C:/Users/me/Dev/vesuvius/wt-vc3d/volume-cartographer/apps/VC3D/overlays/InkDetectionOverlayController.cpp:441:26: warning: 'QImage QImage::mirrored(bool, bool) const &' is deprecated: Use flipped(Qt::Orientations) instead [-Wdeprecated-declarations]
+  441 |     return image.mirrored(_horizontalFlip, _verticalFlip);
+      |            ~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from C:/Users/me/Dev/vesuvius/outils-vc3d/msys64/ucrt64/include/qt6/QtGui/qpixmap.h:13,
+                 from C:/Users/me/Dev/vesuvius/outils-vc3d/msys64/ucrt64/include/qt6/QtGui/qicon.h:10,
+                 from C:/Users/me/Dev/vesuvius/outils-vc3d/msys64/ucrt64/include/qt6/QtGui/qabstractfileiconprovider.h:10,
+                 from C:/Users/me/Dev/vesuvius/outils-vc3d/msys64/ucrt64/include/qt6/QtGui/QtGui:5,
+                 from C:/Users/me/Dev/vesuvius/outils-vc3d/msys64/ucrt64/include/qt6/QtWidgets/QtWidgetsDepends:4,
+                 from C:/Users/me/Dev/vesuvius/outils-vc3d/msys64/ucrt64/include/qt6/QtWidgets/QtWidgets:3,
+                 from C:/Users/me/Dev/vesuvius/wt-vc3d/volume-cartographer/build/ci-windows-mingw/apps/VC3D/CMakeFiles/vc3d_app.dir/cmake_pch.hxx:38,
+                 from <command-line>:
+C:/Users/me/Dev/vesuvius/outils-vc3d/msys64/ucrt64/include/qt6/QtGui/qimage.h:220:26: note: declared here
+  220 |     [[nodiscard]] QImage mirrored(bool horizontally = false, bool vertically = true) const &
+      |                          ^~~~~~~~
+[174/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/overlays/VolumeOverlayController.cpp.obj
+[175/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/overlays/SpiralOverlayController.cpp.obj
+[176/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/overlays/ViewerOverlayControllerBase.cpp.obj
+[177/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/overlays/SpiralFiberOverlayController.cpp.obj
+[178/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/SurfacePanelController.cpp.obj
+[179/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/SshPrompts.cpp.obj
+[180/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/ProjectResources.cpp.obj
+[181/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/MenuActionController.cpp.obj
+[182/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/VolumeAttachmentController.cpp.obj
+[183/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/UnifiedBrowserDialog.cpp.obj
+[184/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/StoreImportController.cpp.obj
+[185/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/segmentation/SegmentationModule.cpp.obj
+[186/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/segmentation/SurfaceStoreEdit.cpp.obj
+[187/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/segmentation/growth/SegmentationCorrections.cpp.obj
+[188/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/segmentation/SurfaceCorrections.cpp.obj
+[189/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/NeuralTraceServiceManager.cpp.obj
+[190/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/PythonExecutable.cpp.obj
+[191/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/SocketRequest.cpp.obj
+[192/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/FiberFollowService.cpp.obj
+[193/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/LasagnaServiceManager.cpp.obj
+[194/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/SpiralArtifactCache.cpp.obj
+[195/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/SpiralBrushCursorWidget.cpp.obj
+[196/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/SpiralPointCollectionEdit.cpp.obj
+[197/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/SpiralPointChain.cpp.obj
+[198/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/SpiralBrushController.cpp.obj
+[199/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/SpiralServiceManagerInputs.cpp.obj
+[200/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/SpiralServiceManager.cpp.obj
+[201/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/SpiralProjectInputs.cpp.obj
+[202/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/SpiralPreviewWindings.cpp.obj
+[203/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/SpiralStoreInputs.cpp.obj
+[204/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/SpiralStoredFits.cpp.obj
+[205/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/SpiralSshTunnel.cpp.obj
+[206/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/SpiralDescriptions.cpp.obj
+[207/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/SpiralStoreEdits.cpp.obj
+[208/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/SpiralMinimap.cpp.obj
+[209/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/SpiralPanel.cpp.obj
+[210/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/LasagnaBatchWindow.cpp.obj
+[211/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/segmentation/panels/SegmentationLasagnaPanel.cpp.obj
+[212/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/ViewerManager.cpp.obj
+[213/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/viewer_controls/ViewerControlsPanel.cpp.obj
+[214/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/viewer_controls/panels/ViewerCompositePanel.cpp.obj
+[215/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/SpiralWorkspace.cpp.obj
+[216/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/viewer_controls/panels/ViewerInkDetectionPanel.cpp.obj
+[217/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/viewer_controls/panels/ViewerNavigationPanel.cpp.obj
+[218/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/viewer_controls/panels/ViewerNormalVisualizationPanel.cpp.obj
+[219/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/viewer_controls/panels/ViewerViewExtrasPanel.cpp.obj
+[220/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/viewer_controls/panels/VolumeRegistrationsPanel.cpp.obj
+[221/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/elements/ProgressUtil.cpp.obj
+[222/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/ToolExecutable.cpp.obj
+[223/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/CommandLineToolRunner.cpp.obj
+[224/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/ToolProcess.cpp.obj
+[225/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/SessionDrafts.cpp.obj
+[226/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/PointCollectionSync.cpp.obj
+[227/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/ConsoleOutputWidget.cpp.obj
+[228/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/ToolDialogs.cpp.obj
+[229/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/CPointCollectionWidget.cpp.obj
+C:/Users/me/Dev/vesuvius/wt-vc3d/volume-cartographer/apps/VC3D/CPointCollectionWidget.cpp: In member function 'void CPointCollectionWidget::setupUi()':
+C:/Users/me/Dev/vesuvius/wt-vc3d/volume-cartographer/apps/VC3D/CPointCollectionWidget.cpp:9:35: warning: 'void QCheckBox::stateChanged(int)' is deprecated: Use checkStateChanged() instead [-Wdeprecated-declarations]
+    9 |     connect(checkbox, &QCheckBox::stateChanged, receiver, \
+      |                                   ^~~~~~~~~~~~
+C:/Users/me/Dev/vesuvius/wt-vc3d/volume-cartographer/apps/VC3D/CPointCollectionWidget.cpp:199:5: note: in expansion of macro 'CONNECT_CHECK_STATE'
+  199 |     CONNECT_CHECK_STATE(_absolute_winding_checkbox, this, onAbsoluteWindingChanged);
+      |     ^~~~~~~~~~~~~~~~~~~
+In file included from C:/Users/me/Dev/vesuvius/outils-vc3d/msys64/ucrt64/include/qt6/QtWidgets/QtWidgets:33,
+                 from C:/Users/me/Dev/vesuvius/wt-vc3d/volume-cartographer/build/ci-windows-mingw/apps/VC3D/CMakeFiles/vc3d_app.dir/cmake_pch.hxx:38,
+                 from <command-line>:
+C:/Users/me/Dev/vesuvius/outils-vc3d/msys64/ucrt64/include/qt6/QtWidgets/qcheckbox.h:42:10: note: declared here
+   42 |     void stateChanged(int);
+      |          ^~~~~~~~~~~~
+C:/Users/me/Dev/vesuvius/wt-vc3d/volume-cartographer/apps/VC3D/CPointCollectionWidget.cpp:9:35: warning: 'void QCheckBox::stateChanged(int)' is deprecated: Use checkStateChanged() instead [-Wdeprecated-declarations]
+    9 |     connect(checkbox, &QCheckBox::stateChanged, receiver, \
+      |                                   ^~~~~~~~~~~~
+C:/Users/me/Dev/vesuvius/wt-vc3d/volume-cartographer/apps/VC3D/CPointCollectionWidget.cpp:231:5: note: in expansion of macro 'CONNECT_CHECK_STATE'
+  231 |     CONNECT_CHECK_STATE(_winding_enabled_checkbox, this, onWindingEnabledChanged);
+      |     ^~~~~~~~~~~~~~~~~~~
+C:/Users/me/Dev/vesuvius/outils-vc3d/msys64/ucrt64/include/qt6/QtWidgets/qcheckbox.h:42:10: note: declared here
+   42 |     void stateChanged(int);
+      |          ^~~~~~~~~~~~
+[230/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/elements/COutlinedTextItem.cpp.obj
+[231/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/volume_viewers/CChunkedVolumeViewer.cpp.obj
+[232/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/CFiberWidget.cpp.obj
+[233/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/volume_viewers/CameraGizmoWidget.cpp.obj
+[234/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/volume_viewers/ViewerSampling.cpp.obj
+[235/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/volume_viewers/VolumetricCompositor.cpp.obj
+[236/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/agent_bridge/AgentBridgeMethod.cpp.obj
+[237/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/agent_bridge/AgentBridgeMethods_canvas.cpp.obj
+[238/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/agent_bridge/AgentBridgeMethods_editing.cpp.obj
+[239/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/agent_bridge/AgentBridgeMethods_fiber.cpp.obj
+[240/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/agent_bridge/AgentBridgeMethods_flatten.cpp.obj
+[241/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/agent_bridge/AgentBridgeServer.cpp.obj
+[242/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/agent_bridge/AgentBridgeMethods_jobs.cpp.obj
+[243/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/agent_bridge/AgentBridgeMethods_lasagna.cpp.obj
+[244/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/agent_bridge/AgentBridgeMethods_points.cpp.obj
+[245/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/agent_bridge/AgentBridgeMethods_seeding.cpp.obj
+[246/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/agent_bridge/AgentBridgeMethods_session.cpp.obj
+[247/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/agent_bridge/AgentBridgeMethods_stores.cpp.obj
+[248/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/agent_bridge/AgentBridgeMethods_surfaceops.cpp.obj
+[249/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/agent_bridge/AgentBridgeMethods_viewer.cpp.obj
+[250/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/agent_bridge/AgentBridgeMethods_wrap.cpp.obj
+[251/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/agent_bridge/AgentBridgeHandlers_catalog.cpp.obj
+[252/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/agent_bridge/AgentBridgeHandlers_session.cpp.obj
+[253/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/agent_bridge/AgentBridgeJobs.cpp.obj
+[254/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/agent_bridge/AgentBridgeHandlers_stores.cpp.obj
+[255/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/agent_bridge/AgentBridgeHandlers_editing.cpp.obj
+[256/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/agent_bridge/AgentBridgeHandlers_wrap.cpp.obj
+[257/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/agent_bridge/AgentBridgeHandlers_fiber.cpp.obj
+[258/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/agent_bridge/AgentBridgeHandlers_seeding.cpp.obj
+[259/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/agent_bridge/AgentBridgeHandlers_lasagna.cpp.obj
+[260/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/agent_bridge/AgentBridgeHandlers_points.cpp.obj
+[261/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/agent_bridge/AgentBridgeHandlers_review.cpp.obj
+[262/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/agent_bridge/AgentBridgeHandlers_viewer.cpp.obj
+[263/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/agent_bridge/AgentBridgeHandlers_flatten.cpp.obj
+[264/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/vc3d_app_autogen/EWIEGA46WW/qrc_resources.cpp.obj
+[265/373] Building CXX object apps/VC3D/CMakeFiles/vc3d_app.dir/agent_bridge/AgentBridgeHandlers_surfaceops.cpp.obj
+[266/373] Automatic MOC and UIC for target vc_object_server_app
+[267/373] Automatic MOC and UIC for target vc_reader_c
+[268/373] Automatic MOC and UIC for target vc_fiber_trace_metric
+[269/373] Automatic MOC and UIC for target vc_cache_root
+[270/373] Automatic MOC and UIC for target vc_fiber_bake_annotations
+[271/373] Automatic MOC and UIC for target vc_fiber_constraints
+[272/373] Automatic MOC and UIC for target vc_fiberlets
+[273/373] Automatic MOC and UIC for target vc_render_tifxyz
+[274/373] Automatic MOC and UIC for target vc_objrefine
+[275/373] Automatic MOC and UIC for target vc_grow_seg_from_seed
+[276/373] Automatic MOC and UIC for target vc_grow_seg_from_segments
+[277/373] Automatic MOC and UIC for target vc_tifxyz2obj
+[278/373] Automatic MOC and UIC for target vc_obj2tifxyz
+[279/373] Automatic MOC and UIC for target vc_gen_normalgrids
+[280/373] Automatic MOC and UIC for target vc_obj2tifxyz_legacy
+[281/373] Automatic MOC and UIC for target vc_gen_umbilicus
+[282/373] Automatic MOC and UIC for target vc_ngrids
+[283/373] Automatic MOC and UIC for target vc_thinning
+[284/373] Automatic MOC and UIC for target vc_extend_edge
+[285/373] Automatic MOC and UIC for target VC3D
+[286/373] Building CXX object reader/CMakeFiles/vc_reader_c.dir/vc_reader_c_autogen/mocs_compilation.cpp.obj
+[287/373] Building CXX object object_store/CMakeFiles/vc_object_server_app.dir/vc_object_server_app_autogen/mocs_compilation.cpp.obj
+[288/373] Building CXX object object_store/CMakeFiles/vc_object_server_app.dir/apps/vc_object_server.cpp.obj
+[289/373] Building RC object object_store/CMakeFiles/vc_object_server_app.dir/__/vc_utf8_manifest.rc.obj
+[290/373] Building CXX object apps/CMakeFiles/vc_cache_root.dir/vc_cache_root_autogen/mocs_compilation.cpp.obj
+[291/373] Building CXX object apps/CMakeFiles/vc_cache_root.dir/src/vc_cache_root.cpp.obj
+[292/373] Building RC object apps/CMakeFiles/vc_cache_root.dir/__/vc_utf8_manifest.rc.obj
+[293/373] Building CXX object apps/CMakeFiles/vc_fiber_trace_metric.dir/vc_fiber_trace_metric_autogen/mocs_compilation.cpp.obj
+[294/373] Building CXX object reader/CMakeFiles/vc_reader_c.dir/src/cpp/c_api/c_api.cpp.obj
+[295/373] Building CXX object apps/CMakeFiles/vc_fiber_trace_metric.dir/src/vc_fiber_trace_metric.cpp.obj
+[296/373] Building RC object apps/CMakeFiles/vc_fiber_trace_metric.dir/__/vc_utf8_manifest.rc.obj
+[297/373] Building CXX object apps/CMakeFiles/vc_fiber_bake_annotations.dir/vc_fiber_bake_annotations_autogen/mocs_compilation.cpp.obj
+[298/373] Building CXX object apps/CMakeFiles/vc_fiber_bake_annotations.dir/src/vc_fiber_bake_annotations.cpp.obj
+[299/373] Building RC object apps/CMakeFiles/vc_fiber_bake_annotations.dir/__/vc_utf8_manifest.rc.obj
+[300/373] Building CXX object apps/CMakeFiles/vc_fiber_constraints.dir/vc_fiber_constraints_autogen/mocs_compilation.cpp.obj
+[301/373] Building CXX object apps/CMakeFiles/vc_fiber_constraints.dir/src/vc_fiber_constraints.cpp.obj
+[302/373] Building CXX object apps/CMakeFiles/vc_fiber_trace_metric.dir/src/FiberTraceEvaluationCli.cpp.obj
+[303/373] Building CXX object apps/CMakeFiles/vc_fiber_constraints.dir/src/FiberConstraintExtraction.cpp.obj
+[304/373] Building CXX object apps/CMakeFiles/vc_fiber_constraints.dir/src/FiberConstraintDatabase.cpp.obj
+C:/Users/me/Dev/vesuvius/wt-vc3d/volume-cartographer/apps/src/FiberConstraintDatabase.cpp:35:9: warning: 'OPTIONAL' redefined
+   35 | #define OPTIONAL(x) j[#x]=c.x ? Json(*c.x) : Json(nullptr)
+      |         ^~~~~~~~
+In file included from C:/Users/me/Dev/vesuvius/outils-vc3d/msys64/ucrt64/include/windef.h:9,
+                 from C:/Users/me/Dev/vesuvius/outils-vc3d/msys64/ucrt64/include/windows.h:69,
+                 from C:/Users/me/Dev/vesuvius/outils-vc3d/msys64/ucrt64/include/winsock2.h:23,
+                 from C:/Users/me/Dev/vesuvius/outils-vc3d/msys64/ucrt64/include/curl/curl.h:82,
+                 from C:/Users/me/Dev/vesuvius/wt-vc3d/vc_reader/src/cpp/http.hpp:10,
+                 from C:/Users/me/Dev/vesuvius/wt-vc3d/vc_reader/src/cpp/disk_cache.hpp:7,
+                 from C:/Users/me/Dev/vesuvius/wt-vc3d/vc_reader/src/cpp/array.hpp:11,
+                 from C:/Users/me/Dev/vesuvius/wt-vc3d/vc_reader/include/vc_reader/array.hpp:2,
+                 from C:/Users/me/Dev/vesuvius/wt-vc3d/volume-cartographer/core/include/vc/lasagna/ChannelSampler.hpp:6,
+                 from C:/Users/me/Dev/vesuvius/wt-vc3d/volume-cartographer/core/include/vc/lasagna/LasagnaNormalSampler.hpp:4,
+                 from C:/Users/me/Dev/vesuvius/wt-vc3d/volume-cartographer/core/include/vc/fiber_tracer/FiberTrace.hpp:4,
+                 from C:/Users/me/Dev/vesuvius/wt-vc3d/volume-cartographer/core/include/vc/fiber_tracer/FiberAnchors.hpp:3,
+                 from C:/Users/me/Dev/vesuvius/wt-vc3d/volume-cartographer/core/include/vc/fiber_tracer/FiberPaths.hpp:3,
+                 from C:/Users/me/Dev/vesuvius/wt-vc3d/volume-cartographer/core/include/vc/fiber_tracer/FiberGraph.hpp:3,
+                 from C:/Users/me/Dev/vesuvius/wt-vc3d/volume-cartographer/core/include/vc/fiber_tracer/FiberletCropTrace.hpp:3,
+                 from C:/Users/me/Dev/vesuvius/wt-vc3d/volume-cartographer/core/include/vc/fiber_tracer/FiberTraceConstraints.hpp:4,
+                 from C:/Users/me/Dev/vesuvius/wt-vc3d/volume-cartographer/apps/src/FiberConstraintDatabase.hpp:2,
+                 from C:/Users/me/Dev/vesuvius/wt-vc3d/volume-cartographer/apps/src/FiberConstraintDatabase.cpp:1:
+C:/Users/me/Dev/vesuvius/outils-vc3d/msys64/ucrt64/include/minwindef.h:65:9: note: this is the location of the previous definition
+   65 | #define OPTIONAL
+      |         ^~~~~~~~
+[305/373] Building CXX object apps/CMakeFiles/vc_fiberlets.dir/vc_fiberlets_autogen/mocs_compilation.cpp.obj
+[306/373] Building RC object apps/CMakeFiles/vc_fiber_constraints.dir/__/vc_utf8_manifest.rc.obj
+[307/373] Building RC object apps/CMakeFiles/vc_fiberlets.dir/__/vc_utf8_manifest.rc.obj
+[308/373] Building CXX object apps/CMakeFiles/vc_render_tifxyz.dir/vc_render_tifxyz_autogen/mocs_compilation.cpp.obj
+[309/373] Building CXX object apps/CMakeFiles/vc_fiberlets.dir/src/vc_fiberlets.cpp.obj
+[310/373] Building RC object apps/CMakeFiles/vc_render_tifxyz.dir/__/vc_utf8_manifest.rc.obj
+[311/373] Building CXX object apps/CMakeFiles/vc_objrefine.dir/vc_objrefine_autogen/mocs_compilation.cpp.obj
+[312/373] Building CXX object apps/CMakeFiles/vc_render_tifxyz.dir/src/vc_render_tifxyz.cpp.obj
+C:/Users/me/Dev/vesuvius/wt-vc3d/volume-cartographer/apps/src/vc_render_tifxyz.cpp: In function 'RenderSurface renderSurface(const QuadSurface&, vcr::grid::Interpolation, float, bool, const Affine&, const LevelMap&)':
+C:/Users/me/Dev/vesuvius/wt-vc3d/volume-cartographer/apps/src/vc_render_tifxyz.cpp:198:22: warning: ignoring return value of 'vcr::grid::Vertices QuadSurface::gridVertices(std::vector<unsigned char>&, const cv::Mat_<cv::Vec<float, 3> >*) const', declared with attribute 'nodiscard' [-Wunused-result]
+  198 |     surf.gridVertices(valid);
+      |     ~~~~~~~~~~~~~~~~~^~~~~~~
+In file included from C:/Users/me/Dev/vesuvius/wt-vc3d/volume-cartographer/apps/src/vc_render_tifxyz.cpp:4:
+C:/Users/me/Dev/vesuvius/wt-vc3d/volume-cartographer/core/include/vc/core/util/QuadSurface.hpp:326:39: note: declared here
+  326 |     [[nodiscard]] vcr::grid::Vertices gridVertices(std::vector<std::uint8_t>& valid, const cv::Mat_<cv::Vec3f>* points = nullptr) const;
+      |                                       ^~~~~~~~~~~~
+[313/373] Building RC object apps/CMakeFiles/vc_objrefine.dir/__/vc_utf8_manifest.rc.obj
+[314/373] Building CXX object apps/CMakeFiles/vc_grow_seg_from_seed.dir/vc_grow_seg_from_seed_autogen/mocs_compilation.cpp.obj
+[315/373] Building CXX object apps/CMakeFiles/vc_objrefine.dir/src/ObjAlphaCompRefinement.cpp.obj
+[316/373] Building RC object apps/CMakeFiles/vc_grow_seg_from_seed.dir/__/vc_utf8_manifest.rc.obj
+[317/373] Building CXX object apps/CMakeFiles/vc_grow_seg_from_segments.dir/vc_grow_seg_from_segments_autogen/mocs_compilation.cpp.obj
+[318/373] Building CXX object apps/CMakeFiles/vc_grow_seg_from_segments.dir/src/vc_grow_seg_from_segments.cpp.obj
+[319/373] Building RC object apps/CMakeFiles/vc_grow_seg_from_segments.dir/__/vc_utf8_manifest.rc.obj
+[320/373] Building CXX object apps/CMakeFiles/vc_tifxyz2obj.dir/vc_tifxyz2obj_autogen/mocs_compilation.cpp.obj
+[321/373] Building CXX object apps/CMakeFiles/vc_grow_seg_from_seed.dir/src/vc_grow_seg_from_seed.cpp.obj
+[322/373] Building RC object apps/CMakeFiles/vc_tifxyz2obj.dir/__/vc_utf8_manifest.rc.obj
+[323/373] Building CXX object apps/CMakeFiles/vc_obj2tifxyz.dir/vc_obj2tifxyz_autogen/mocs_compilation.cpp.obj
+[324/373] Building CXX object apps/CMakeFiles/vc_tifxyz2obj.dir/src/vc_tifxyz2obj.cpp.obj
+[325/373] Building RC object apps/CMakeFiles/vc_obj2tifxyz.dir/__/vc_utf8_manifest.rc.obj
+[326/373] Building CXX object apps/CMakeFiles/vc_obj2tifxyz_legacy.dir/vc_obj2tifxyz_legacy_autogen/mocs_compilation.cpp.obj
+[327/373] Building CXX object apps/CMakeFiles/vc_obj2tifxyz.dir/src/vc_obj2tifxyz.cpp.obj
+[328/373] Building RC object apps/CMakeFiles/vc_obj2tifxyz_legacy.dir/__/vc_utf8_manifest.rc.obj
+[329/373] Building CXX object apps/CMakeFiles/vc_gen_normalgrids.dir/vc_gen_normalgrids_autogen/mocs_compilation.cpp.obj
+[330/373] Building CXX object apps/CMakeFiles/vc_obj2tifxyz_legacy.dir/src/vc_obj2tifxyz_legacy.cpp.obj
+[331/373] Building RC object apps/CMakeFiles/vc_gen_normalgrids.dir/__/vc_utf8_manifest.rc.obj
+[332/373] Building CXX object apps/CMakeFiles/vc_gen_umbilicus.dir/vc_gen_umbilicus_autogen/mocs_compilation.cpp.obj
+[333/373] Building CXX object apps/CMakeFiles/vc_gen_umbilicus.dir/src/vc_gen_umbilicus.cpp.obj
+[334/373] Building RC object apps/CMakeFiles/vc_gen_umbilicus.dir/__/vc_utf8_manifest.rc.obj
+[335/373] Building CXX object apps/CMakeFiles/vc_ngrids.dir/vc_ngrids_autogen/mocs_compilation.cpp.obj
+=== ARRET orchestre (memoire < 1,2 Go) 2026-11-14T04:34:49
+=== DEBUT ninja -j1 2026-11-14 04:35:21
+ninja: Entering directory `build/ci-windows-mingw'
+[0/2] Re-checking globbed directories...
+[1/38] Building CXX object apps/CMakeFiles/vc_gen_normalgrids.dir/src/vc_gen_normalgrids.cpp.obj
+[2/38] Building CXX object apps/CMakeFiles/vc_ngrids.dir/src/vc_ngrids.cpp.obj
+[3/38] Building RC object apps/CMakeFiles/vc_ngrids.dir/__/vc_utf8_manifest.rc.obj
+[4/38] Building CXX object apps/CMakeFiles/vc_thinning.dir/vc_thinning_autogen/mocs_compilation.cpp.obj
+[5/38] Building CXX object apps/CMakeFiles/vc_thinning.dir/src/vc_thinning.cpp.obj
+[6/38] Building RC object apps/CMakeFiles/vc_thinning.dir/__/vc_utf8_manifest.rc.obj
+[7/38] Building CXX object apps/VC3D/CMakeFiles/VC3D.dir/VC3D_autogen/mocs_compilation.cpp.obj
+[8/38] Building CXX object apps/VC3D/CMakeFiles/VC3D.dir/VCAppMain.cpp.obj
+[9/38] Building RC object apps/VC3D/CMakeFiles/VC3D.dir/VC3D.rc.obj
+[10/38] Building RC object apps/VC3D/CMakeFiles/VC3D.dir/__/__/vc_utf8_manifest.rc.obj
+[11/38] Building CXX object apps/VC3D/CMakeFiles/vc_extend_edge.dir/vc_extend_edge_autogen/mocs_compilation.cpp.obj
+[12/38] Building CXX object apps/VC3D/CMakeFiles/vc_extend_edge.dir/cli/vc_extend_edge.cpp.obj
+[13/38] Building CXX object apps/VC3D/CMakeFiles/vc_extend_edge.dir/segmentation/SurfaceGridEdit.cpp.obj
+[14/38] Building CXX object apps/VC3D/CMakeFiles/vc_extend_edge.dir/segmentation/tools/AutoExtend.cpp.obj
+[15/38] Building CXX object apps/VC3D/CMakeFiles/vc_extend_edge.dir/segmentation/tools/ManualAddTool.cpp.obj
+[16/38] Building CXX object apps/VC3D/CMakeFiles/vc_extend_edge.dir/segmentation/tools/ThinPlateSpline3d.cpp.obj
+[17/38] Building RC object apps/VC3D/CMakeFiles/vc_extend_edge.dir/__/__/vc_utf8_manifest.rc.obj
+[18/38] Linking CXX shared library bin\libvc_reader_c.dll
+[19/38] Linking CXX executable bin\vc_object_server.exe
+[20/38] Linking CXX executable bin\vc_cache_root.exe
+[21/38] Linking CXX executable bin\vc_fiber_trace_metric.exe
+[22/38] Linking CXX executable bin\vc_fiber_bake_annotations.exe
+[23/38] Linking CXX executable bin\vc_fiber_constraints.exe
+[24/38] Linking CXX executable bin\vc_fiberlets.exe
+[25/38] Linking CXX executable bin\vc_render_tifxyz.exe
+[26/38] Linking CXX executable bin\vc_objrefine.exe
+[27/38] Linking CXX executable bin\vc_grow_seg_from_seed.exe
+[28/38] Linking CXX executable bin\vc_grow_seg_from_segments.exe
+[29/38] Linking CXX executable bin\vc_tifxyz2obj.exe
+[30/38] Linking CXX executable bin\vc_obj2tifxyz.exe
+[31/38] Linking CXX executable bin\vc_obj2tifxyz_legacy.exe
+[32/38] Linking CXX executable bin\vc_gen_normalgrids.exe
+[33/38] Linking CXX executable bin\vc_gen_umbilicus.exe
+[34/38] Linking CXX executable bin\vc_ngrids.exe
+[35/38] Linking CXX executable bin\vc_thinning.exe
+[36/38] Linking CXX executable bin\VC3D.exe
+[37/38] Linking CXX executable bin\vc_extend_edge.exe
+FIN rc=0 2026-11-14 04:38:06

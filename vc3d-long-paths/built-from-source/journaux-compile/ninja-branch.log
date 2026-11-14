@@ -1,0 +1,363 @@
+=== DEBUT ninja vc_grow_seg_from_seed 2026-11-14 04:41:04
+ninja: Entering directory `build/ci-windows-mingw'
+[0/2] Re-checking globbed directories...
+[1/2] Re-running CMake...
+-- Found AMD headers in: C:/Users/me/Dev/vesuvius/outils-vc3d/msys64/ucrt64/include/suitesparse
+-- Found AMD library: C:/Users/me/Dev/vesuvius/outils-vc3d/msys64/ucrt64/lib/libamd.dll.a
+-- Found CAMD headers in: C:/Users/me/Dev/vesuvius/outils-vc3d/msys64/ucrt64/include/suitesparse
+-- Found CAMD library: C:/Users/me/Dev/vesuvius/outils-vc3d/msys64/ucrt64/lib/libcamd.dll.a
+-- Found CCOLAMD headers in: C:/Users/me/Dev/vesuvius/outils-vc3d/msys64/ucrt64/include/suitesparse
+-- Found CCOLAMD library: C:/Users/me/Dev/vesuvius/outils-vc3d/msys64/ucrt64/lib/libccolamd.dll.a
+-- Found CHOLMOD headers in: C:/Users/me/Dev/vesuvius/outils-vc3d/msys64/ucrt64/include/suitesparse
+-- Found CHOLMOD library: C:/Users/me/Dev/vesuvius/outils-vc3d/msys64/ucrt64/lib/libcholmod.dll.a
+-- Found COLAMD headers in: C:/Users/me/Dev/vesuvius/outils-vc3d/msys64/ucrt64/include/suitesparse
+-- Found COLAMD library: C:/Users/me/Dev/vesuvius/outils-vc3d/msys64/ucrt64/lib/libcolamd.dll.a
+-- Found SPQR headers in: C:/Users/me/Dev/vesuvius/outils-vc3d/msys64/ucrt64/include/suitesparse
+-- Found SPQR library: C:/Users/me/Dev/vesuvius/outils-vc3d/msys64/ucrt64/lib/libspqr.dll.a
+-- Found Config headers in: C:/Users/me/Dev/vesuvius/outils-vc3d/msys64/ucrt64/include/suitesparse
+-- Found Config library: C:/Users/me/Dev/vesuvius/outils-vc3d/msys64/ucrt64/lib/libsuitesparseconfig.dll.a
+-- Found Intel Thread Building Blocks (TBB) library (2023.0 / ) include location: . Assuming SuiteSparseQR was compiled with TBB.
+-- Could not find librt, but found SuiteSparse_config, assuming that SuiteSparse was compiled without timing.
+-- Could NOT find METIS (missing: METIS_INCLUDE_DIR METIS_LIBRARY) 
+-- Found required Ceres dependency: Eigen version 5.0.1 in C:/Users/me/Dev/vesuvius/outils-vc3d/msys64/ucrt64/share/eigen3/cmake
+-- Found required Ceres dependency: glog
+-- Found required Ceres dependency: gflags
+-- Found Ceres version: 2.2.0 installed in: C:/Users/me/Dev/vesuvius/outils-vc3d/msys64/ucrt64 with components: [EigenSparse, SparseLinearAlgebraLibrary, LAPACK, SuiteSparse, SchurSpecializations]
+-- Found OpenCV: C:/Users/me/Dev/vesuvius/outils-vc3d/msys64/ucrt64 (found version "4.13.0")
+-- Found Brotli (via pkg-config): C:/Users/me/Dev/vesuvius/outils-vc3d/msys64/ucrt64/include (found version "1.2.0")
+-- Found Libidn2 (via pkg-config): C:/Users/me/Dev/vesuvius/outils-vc3d/msys64/ucrt64/include (found version "2.3.8")
+-- Found Libpsl (via pkg-config): C:/Users/me/Dev/vesuvius/outils-vc3d/msys64/ucrt64/include (found version "0.21.5")
+-- Found Libssh2 (via pkg-config): C:/Users/me/Dev/vesuvius/outils-vc3d/msys64/ucrt64/include (found version "1.11.1")
+-- Found NGHTTP2 (via pkg-config): C:/Users/me/Dev/vesuvius/outils-vc3d/msys64/ucrt64/include (found version "1.69.0")
+-- Found NGHTTP3 (via pkg-config): C:/Users/me/Dev/vesuvius/outils-vc3d/msys64/ucrt64/include (found version "1.17.0")
+-- Found NGTCP2 (via pkg-config): C:/Users/me/Dev/vesuvius/outils-vc3d/msys64/ucrt64/include (found version "1.24.0")
+-- Found Zstd (via pkg-config): C:/Users/me/Dev/vesuvius/outils-vc3d/msys64/ucrt64/include (found version "1.5.7")
+-- Found SQLite3: C:/Users/me/Dev/vesuvius/outils-vc3d/msys64/ucrt64/lib/libsqlite3.dll.a (found suitable version "3.53.3", minimum required is "3.24")
+-- Found SQLite3: C:/Users/me/Dev/vesuvius/outils-vc3d/msys64/ucrt64/lib/libsqlite3.dll.a (found suitable version "3.53.3", minimum required is "3.37")
+-- Found OpenCV: C:/Users/me/Dev/vesuvius/outils-vc3d/msys64/ucrt64 (found version "4.13.0") found components: core
+-- Found Brotli (via pkg-config): C:/Users/me/Dev/vesuvius/outils-vc3d/msys64/ucrt64/include (found version "1.2.0")
+-- Found Libidn2 (via pkg-config): C:/Users/me/Dev/vesuvius/outils-vc3d/msys64/ucrt64/include (found version "2.3.8")
+-- Found Libpsl (via pkg-config): C:/Users/me/Dev/vesuvius/outils-vc3d/msys64/ucrt64/include (found version "0.21.5")
+-- Found Libssh2 (via pkg-config): C:/Users/me/Dev/vesuvius/outils-vc3d/msys64/ucrt64/include (found version "1.11.1")
+-- Found NGHTTP2 (via pkg-config): C:/Users/me/Dev/vesuvius/outils-vc3d/msys64/ucrt64/include (found version "1.69.0")
+-- Found NGHTTP3 (via pkg-config): C:/Users/me/Dev/vesuvius/outils-vc3d/msys64/ucrt64/include (found version "1.17.0")
+-- Found NGTCP2 (via pkg-config): C:/Users/me/Dev/vesuvius/outils-vc3d/msys64/ucrt64/include (found version "1.24.0")
+-- Found Zstd (via pkg-config): C:/Users/me/Dev/vesuvius/outils-vc3d/msys64/ucrt64/include (found version "1.5.7")
+-- Configuring done (42.9s)
+CMake Warning (author) at C:/Users/me/Dev/vesuvius/wt-vc3d/vc_reader/CMakeLists.txt:64 (target_link_libraries):
+  The library that is being linked to, SQLite::SQLite3, is marked as being
+  deprecated by the owner.  The message provided by the developer is:
+
+  The target name SQLite::SQLite3 is deprecated.  Please use SQLite3::SQLite3
+  instead.
+
+This warning is for project developers.  Use -Wno-author to suppress it.
+
+CMake Warning (author) at C:/Users/me/Dev/vesuvius/wt-vc3d/vc_reader/CMakeLists.txt:64 (target_link_libraries):
+  The library that is being linked to, SQLite::SQLite3, is marked as being
+  deprecated by the owner.  The message provided by the developer is:
+
+  The target name SQLite::SQLite3 is deprecated.  Please use SQLite3::SQLite3
+  instead.
+
+This warning is for project developers.  Use -Wno-author to suppress it.
+
+CMake Warning (author) at C:/Users/me/Dev/vesuvius/wt-vc3d/vc_reader/CMakeLists.txt:64 (target_link_libraries):
+  The library that is being linked to, SQLite::SQLite3, is marked as being
+  deprecated by the owner.  The message provided by the developer is:
+
+  The target name SQLite::SQLite3 is deprecated.  Please use SQLite3::SQLite3
+  instead.
+
+This warning is for project developers.  Use -Wno-author to suppress it.
+
+CMake Warning (author) at C:/Users/me/Dev/vesuvius/wt-vc3d/vc_reader/cmake/NativeReader.cmake:85 (target_link_libraries):
+  The library that is being linked to, SQLite::SQLite3, is marked as being
+  deprecated by the owner.  The message provided by the developer is:
+
+  The target name SQLite::SQLite3 is deprecated.  Please use SQLite3::SQLite3
+  instead.
+
+Call Stack (most recent call first):
+  C:/Users/me/Dev/vesuvius/wt-vc3d/vc_reader/CMakeLists.txt:67 (include)
+This warning is for project developers.  Use -Wno-author to suppress it.
+
+CMake Warning (author) at C:/Users/me/Dev/vesuvius/wt-vc3d/vc_reader/cmake/NativeReader.cmake:85 (target_link_libraries):
+  The library that is being linked to, SQLite::SQLite3, is marked as being
+  deprecated by the owner.  The message provided by the developer is:
+
+  The target name SQLite::SQLite3 is deprecated.  Please use SQLite3::SQLite3
+  instead.
+
+Call Stack (most recent call first):
+  C:/Users/me/Dev/vesuvius/wt-vc3d/vc_reader/CMakeLists.txt:67 (include)
+This warning is for project developers.  Use -Wno-author to suppress it.
+
+CMake Warning (author) at C:/Users/me/Dev/vesuvius/wt-vc3d/vc_reader/CMakeLists.txt:64 (target_link_libraries):
+  The library that is being linked to, SQLite::SQLite3, is marked as being
+  deprecated by the owner.  The message provided by the developer is:
+
+  The target name SQLite::SQLite3 is deprecated.  Please use SQLite3::SQLite3
+  instead.
+
+This warning is for project developers.  Use -Wno-author to suppress it.
+
+CMake Warning (author) at C:/Users/me/Dev/vesuvius/wt-vc3d/vc_reader/cmake/NativeReader.cmake:85 (target_link_libraries):
+  The library that is being linked to, SQLite::SQLite3, is marked as being
+  deprecated by the owner.  The message provided by the developer is:
+
+  The target name SQLite::SQLite3 is deprecated.  Please use SQLite3::SQLite3
+  instead.
+
+Call Stack (most recent call first):
+  C:/Users/me/Dev/vesuvius/wt-vc3d/vc_reader/CMakeLists.txt:67 (include)
+This warning is for project developers.  Use -Wno-author to suppress it.
+
+CMake Warning (author) at C:/Users/me/Dev/vesuvius/wt-vc3d/vc_reader/cmake/NativeReader.cmake:85 (target_link_libraries):
+  The library that is being linked to, SQLite::SQLite3, is marked as being
+  deprecated by the owner.  The message provided by the developer is:
+
+  The target name SQLite::SQLite3 is deprecated.  Please use SQLite3::SQLite3
+  instead.
+
+Call Stack (most recent call first):
+  C:/Users/me/Dev/vesuvius/wt-vc3d/vc_reader/CMakeLists.txt:67 (include)
+This warning is for project developers.  Use -Wno-author to suppress it.
+
+CMake Warning (author) at C:/Users/me/Dev/vesuvius/wt-vc3d/vc_reader/cmake/NativeReader.cmake:85 (target_link_libraries):
+  The library that is being linked to, SQLite::SQLite3, is marked as being
+  deprecated by the owner.  The message provided by the developer is:
+
+  The target name SQLite::SQLite3 is deprecated.  Please use SQLite3::SQLite3
+  instead.
+
+Call Stack (most recent call first):
+  C:/Users/me/Dev/vesuvius/wt-vc3d/vc_reader/CMakeLists.txt:67 (include)
+This warning is for project developers.  Use -Wno-author to suppress it.
+
+CMake Warning (author) at C:/Users/me/Dev/vesuvius/wt-vc3d/vc_reader/cmake/NativeReader.cmake:85 (target_link_libraries):
+  The library that is being linked to, SQLite::SQLite3, is marked as being
+  deprecated by the owner.  The message provided by the developer is:
+
+  The target name SQLite::SQLite3 is deprecated.  Please use SQLite3::SQLite3
+  instead.
+
+Call Stack (most recent call first):
+  C:/Users/me/Dev/vesuvius/wt-vc3d/vc_reader/CMakeLists.txt:67 (include)
+This warning is for project developers.  Use -Wno-author to suppress it.
+
+CMake Warning (author) at C:/Users/me/Dev/vesuvius/wt-vc3d/vc_reader/CMakeLists.txt:64 (target_link_libraries):
+  The library that is being linked to, SQLite::SQLite3, is marked as being
+  deprecated by the owner.  The message provided by the developer is:
+
+  The target name SQLite::SQLite3 is deprecated.  Please use SQLite3::SQLite3
+  instead.
+
+This warning is for project developers.  Use -Wno-author to suppress it.
+
+CMake Warning (author) at C:/Users/me/Dev/vesuvius/wt-vc3d/vc_reader/CMakeLists.txt:64 (target_link_libraries):
+  The library that is being linked to, SQLite::SQLite3, is marked as being
+  deprecated by the owner.  The message provided by the developer is:
+
+  The target name SQLite::SQLite3 is deprecated.  Please use SQLite3::SQLite3
+  instead.
+
+This warning is for project developers.  Use -Wno-author to suppress it.
+
+CMake Warning (author) at C:/Users/me/Dev/vesuvius/wt-vc3d/vc_reader/cmake/NativeReader.cmake:85 (target_link_libraries):
+  The library that is being linked to, SQLite::SQLite3, is marked as being
+  deprecated by the owner.  The message provided by the developer is:
+
+  The target name SQLite::SQLite3 is deprecated.  Please use SQLite3::SQLite3
+  instead.
+
+Call Stack (most recent call first):
+  C:/Users/me/Dev/vesuvius/wt-vc3d/vc_reader/CMakeLists.txt:67 (include)
+This warning is for project developers.  Use -Wno-author to suppress it.
+
+CMake Warning (author) at C:/Users/me/Dev/vesuvius/wt-vc3d/vc_reader/cmake/NativeReader.cmake:85 (target_link_libraries):
+  The library that is being linked to, SQLite::SQLite3, is marked as being
+  deprecated by the owner.  The message provided by the developer is:
+
+  The target name SQLite::SQLite3 is deprecated.  Please use SQLite3::SQLite3
+  instead.
+
+Call Stack (most recent call first):
+  C:/Users/me/Dev/vesuvius/wt-vc3d/vc_reader/CMakeLists.txt:67 (include)
+This warning is for project developers.  Use -Wno-author to suppress it.
+
+CMake Warning (author) at C:/Users/me/Dev/vesuvius/wt-vc3d/vc_reader/CMakeLists.txt:64 (target_link_libraries):
+  The library that is being linked to, SQLite::SQLite3, is marked as being
+  deprecated by the owner.  The message provided by the developer is:
+
+  The target name SQLite::SQLite3 is deprecated.  Please use SQLite3::SQLite3
+  instead.
+
+This warning is for project developers.  Use -Wno-author to suppress it.
+
+CMake Warning (author) at C:/Users/me/Dev/vesuvius/wt-vc3d/vc_reader/CMakeLists.txt:64 (target_link_libraries):
+  The library that is being linked to, SQLite::SQLite3, is marked as being
+  deprecated by the owner.  The message provided by the developer is:
+
+  The target name SQLite::SQLite3 is deprecated.  Please use SQLite3::SQLite3
+  instead.
+
+This warning is for project developers.  Use -Wno-author to suppress it.
+
+CMake Warning (author) at C:/Users/me/Dev/vesuvius/wt-vc3d/vc_reader/cmake/NativeReader.cmake:85 (target_link_libraries):
+  The library that is being linked to, SQLite::SQLite3, is marked as being
+  deprecated by the owner.  The message provided by the developer is:
+
+  The target name SQLite::SQLite3 is deprecated.  Please use SQLite3::SQLite3
+  instead.
+
+Call Stack (most recent call first):
+  C:/Users/me/Dev/vesuvius/wt-vc3d/vc_reader/CMakeLists.txt:67 (include)
+This warning is for project developers.  Use -Wno-author to suppress it.
+
+CMake Warning (author) at C:/Users/me/Dev/vesuvius/wt-vc3d/vc_reader/cmake/NativeReader.cmake:85 (target_link_libraries):
+  The library that is being linked to, SQLite::SQLite3, is marked as being
+  deprecated by the owner.  The message provided by the developer is:
+
+  The target name SQLite::SQLite3 is deprecated.  Please use SQLite3::SQLite3
+  instead.
+
+Call Stack (most recent call first):
+  C:/Users/me/Dev/vesuvius/wt-vc3d/vc_reader/CMakeLists.txt:67 (include)
+This warning is for project developers.  Use -Wno-author to suppress it.
+
+CMake Warning (author) at C:/Users/me/Dev/vesuvius/wt-vc3d/vc_reader/cmake/NativeReader.cmake:85 (target_link_libraries):
+  The library that is being linked to, SQLite::SQLite3, is marked as being
+  deprecated by the owner.  The message provided by the developer is:
+
+  The target name SQLite::SQLite3 is deprecated.  Please use SQLite3::SQLite3
+  instead.
+
+Call Stack (most recent call first):
+  C:/Users/me/Dev/vesuvius/wt-vc3d/vc_reader/CMakeLists.txt:67 (include)
+This warning is for project developers.  Use -Wno-author to suppress it.
+
+CMake Warning (author) at C:/Users/me/Dev/vesuvius/wt-vc3d/vc_reader/CMakeLists.txt:64 (target_link_libraries):
+  The library that is being linked to, SQLite::SQLite3, is marked as being
+  deprecated by the owner.  The message provided by the developer is:
+
+  The target name SQLite::SQLite3 is deprecated.  Please use SQLite3::SQLite3
+  instead.
+
+This warning is for project developers.  Use -Wno-author to suppress it.
+
+CMake Warning (author) at C:/Users/me/Dev/vesuvius/wt-vc3d/vc_reader/cmake/NativeReader.cmake:85 (target_link_libraries):
+  The library that is being linked to, SQLite::SQLite3, is marked as being
+  deprecated by the owner.  The message provided by the developer is:
+
+  The target name SQLite::SQLite3 is deprecated.  Please use SQLite3::SQLite3
+  instead.
+
+Call Stack (most recent call first):
+  C:/Users/me/Dev/vesuvius/wt-vc3d/vc_reader/CMakeLists.txt:67 (include)
+This warning is for project developers.  Use -Wno-author to suppress it.
+
+CMake Warning (author) at C:/Users/me/Dev/vesuvius/wt-vc3d/vc_reader/CMakeLists.txt:64 (target_link_libraries):
+  The library that is being linked to, SQLite::SQLite3, is marked as being
+  deprecated by the owner.  The message provided by the developer is:
+
+  The target name SQLite::SQLite3 is deprecated.  Please use SQLite3::SQLite3
+  instead.
+
+This warning is for project developers.  Use -Wno-author to suppress it.
+
+CMake Warning (author) at C:/Users/me/Dev/vesuvius/wt-vc3d/vc_reader/CMakeLists.txt:64 (target_link_libraries):
+  The library that is being linked to, SQLite::SQLite3, is marked as being
+  deprecated by the owner.  The message provided by the developer is:
+
+  The target name SQLite::SQLite3 is deprecated.  Please use SQLite3::SQLite3
+  instead.
+
+This warning is for project developers.  Use -Wno-author to suppress it.
+
+CMake Warning (author) at C:/Users/me/Dev/vesuvius/wt-vc3d/vc_reader/cmake/NativeReader.cmake:85 (target_link_libraries):
+  The library that is being linked to, SQLite::SQLite3, is marked as being
+  deprecated by the owner.  The message provided by the developer is:
+
+  The target name SQLite::SQLite3 is deprecated.  Please use SQLite3::SQLite3
+  instead.
+
+Call Stack (most recent call first):
+  C:/Users/me/Dev/vesuvius/wt-vc3d/vc_reader/CMakeLists.txt:67 (include)
+This warning is for project developers.  Use -Wno-author to suppress it.
+
+CMake Warning (author) at C:/Users/me/Dev/vesuvius/wt-vc3d/vc_reader/cmake/NativeReader.cmake:85 (target_link_libraries):
+  The library that is being linked to, SQLite::SQLite3, is marked as being
+  deprecated by the owner.  The message provided by the developer is:
+
+  The target name SQLite::SQLite3 is deprecated.  Please use SQLite3::SQLite3
+  instead.
+
+Call Stack (most recent call first):
+  C:/Users/me/Dev/vesuvius/wt-vc3d/vc_reader/CMakeLists.txt:67 (include)
+This warning is for project developers.  Use -Wno-author to suppress it.
+
+CMake Warning (author) at C:/Users/me/Dev/vesuvius/wt-vc3d/vc_reader/CMakeLists.txt:64 (target_link_libraries):
+  The library that is being linked to, SQLite::SQLite3, is marked as being
+  deprecated by the owner.  The message provided by the developer is:
+
+  The target name SQLite::SQLite3 is deprecated.  Please use SQLite3::SQLite3
+  instead.
+
+This warning is for project developers.  Use -Wno-author to suppress it.
+
+CMake Warning (author) at C:/Users/me/Dev/vesuvius/wt-vc3d/vc_reader/cmake/NativeReader.cmake:85 (target_link_libraries):
+  The library that is being linked to, SQLite::SQLite3, is marked as being
+  deprecated by the owner.  The message provided by the developer is:
+
+  The target name SQLite::SQLite3 is deprecated.  Please use SQLite3::SQLite3
+  instead.
+
+Call Stack (most recent call first):
+  C:/Users/me/Dev/vesuvius/wt-vc3d/vc_reader/CMakeLists.txt:67 (include)
+This warning is for project developers.  Use -Wno-author to suppress it.
+
+CMake Warning (author) at C:/Users/me/Dev/vesuvius/wt-vc3d/vc_reader/cmake/NativeReader.cmake:85 (target_link_libraries):
+  The library that is being linked to, SQLite::SQLite3, is marked as being
+  deprecated by the owner.  The message provided by the developer is:
+
+  The target name SQLite::SQLite3 is deprecated.  Please use SQLite3::SQLite3
+  instead.
+
+Call Stack (most recent call first):
+  C:/Users/me/Dev/vesuvius/wt-vc3d/vc_reader/CMakeLists.txt:67 (include)
+This warning is for project developers.  Use -Wno-author to suppress it.
+
+CMake Warning (author) at C:/Users/me/Dev/vesuvius/wt-vc3d/vc_reader/cmake/NativeReader.cmake:85 (target_link_libraries):
+  The library that is being linked to, SQLite::SQLite3, is marked as being
+  deprecated by the owner.  The message provided by the developer is:
+
+  The target name SQLite::SQLite3 is deprecated.  Please use SQLite3::SQLite3
+  instead.
+
+Call Stack (most recent call first):
+  C:/Users/me/Dev/vesuvius/wt-vc3d/vc_reader/CMakeLists.txt:67 (include)
+This warning is for project developers.  Use -Wno-author to suppress it.
+
+CMake Warning (author) at C:/Users/me/Dev/vesuvius/wt-vc3d/vc_reader/cmake/NativeReader.cmake:85 (target_link_libraries):
+  The library that is being linked to, SQLite::SQLite3, is marked as being
+  deprecated by the owner.  The message provided by the developer is:
+
+  The target name SQLite::SQLite3 is deprecated.  Please use SQLite3::SQLite3
+  instead.
+
+Call Stack (most recent call first):
+  C:/Users/me/Dev/vesuvius/wt-vc3d/vc_reader/CMakeLists.txt:67 (include)
+This warning is for project developers.  Use -Wno-author to suppress it.
+
+-- Generating done (8.8s)
+-- Build files have been written to: C:/Users/me/Dev/vesuvius/wt-vc3d/volume-cartographer/build/ci-windows-mingw
+[0/4] Re-checking globbed directories...
+[1/10] Building CXX object core/CMakeFiles/vc_common_pch.dir/vc_common_pch.cpp.obj
+[2/10] Linking CXX shared library bin\libvc_objects.dll
+[3/10] Linking CXX static library core\libvc_common_pch.a
+[4/10] Linking CXX shared library bin\libvc_core.dll
+[5/10] Linking CXX shared library bin\libvc_tracer.dll
+[6/10] Building RC object apps/CMakeFiles/vc_grow_seg_from_seed.dir/__/vc_utf8_manifest.rc.obj
+[7/10] Linking CXX executable bin\vc_grow_seg_from_seed.exe
+FIN rc=0 2026-11-14 04:42:22

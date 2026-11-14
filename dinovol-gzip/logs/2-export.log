@@ -1,0 +1,10 @@
+before: 97fb9336c8898be27e78eff8cd23ce5e7185ec0a Update VC3D reader dependency to Delta3D 0.3.2 (#2531)
+after:  6ef70e3227f119c55dcf79e5babc8674e2bc01cc dinovol: read metadata.json when the bucket serves it gzip-compressed
+parent of after: 97fb9336c8898be27e78eff8cd23ce5e7185ec0a
+files changed by after (git diff --stat before after):
+ dinovol/dinovol_2/cache_metadata_meshes.py |  8 ++++++-
+ dinovol/dinovol_2/dataset/object_labels.py |  8 ++++++-
+ dinovol/tests/test_metadata_gzip.py        | 38 ++++++++++++++++++++++++++++++
+ 3 files changed, 52 insertions(+), 2 deletions(-)
+git archive 97fb9336c dinovol -> <work>/before/dinovol (1,187,840 bytes)
+git archive 6ef70e322 dinovol -> <work>/after/dinovol (1,198,080 bytes)

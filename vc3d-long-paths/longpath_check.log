@@ -1,0 +1,245 @@
+longpath_check.py  2026-11-14 11:47:19
+Windows 10.0.26300, Python 3.12.10
+LongPathsEnabled = 1
+main    97fb9336c8898be27e78eff8cd23ce5e7185ec0a
+this PR 1841ee228af18d105606256fcb351fccb106f833; files changed from main: volume-cartographer/cmake/windows/utf8.manifest
+volume-cartographer/cmake/windows/utf8.manifest at main: longPathAware no, canonical XML sha256 d485c691b415f538
+volume-cartographer/cmake/windows/utf8.manifest at this PR: longPathAware yes, canonical XML sha256 7bdef55fe2afd706
+VC3D-97fb933-2026-11-13-win64.zip sha256 4b06ee91f60d6d29c8fc73a92fcd139103b9f6a288bb2ca7a55a5ee6e533abb4
+mt.exe of Windows SDK 10.0.26100.0
+released VC3D-97fb933-2026-11-13-win64\bin\vc_grow_seg_from_seed.exe: 1916673 bytes, sha256 d7e1b4a080a84b97; embedded manifest: longPathAware no, the same as main's (canonical XML)
+this-pr  VC3D-97fb933-with-this-PR\bin\vc_grow_seg_from_seed.exe: 1198592 bytes, sha256 3334ede69ffc0829; embedded manifest: longPathAware yes, the same as this PR's (canonical XML)
+sections: 19; with different contents: .rsrc
+bytes after the last section: 716545 in the released program, 0 in the copy (the COFF symbol table and its string table: debugging information, which Windows does not load to run the program; mt.exe does not keep them)
+resources: released [('RT_MANIFEST', '#1', 1665)], copy [('RT_MANIFEST', '#1', 1230)]
+params.json {"mode":"seed","cache_size":500000000,"generations":2,"thread_limit":2,"min_area_cm":0}
+L: is a subst drive on the work folder, standing in for C:
+
+--- released-root33-PHercParis4
+USERPROFILE=L:\Users\alice   default cache root L:\Users\alice\.VC3D\remote_cache (33 characters)
+> L:\VC3D-97fb933-2026-11-13-win64\bin\vc_grow_seg_from_seed.exe -v https://vesuvius-challenge-open-data.s3.amazonaws.com/PHercParis4/representations/predictions/surfaces/20260411134726-surface-20260413141734-surface-recto-2um-ps256-L0-th0.45.zarr -t L:\out\released-root33-PHercParis4 -p L:\params.json --seed 16256 16256 38016
+    Error: create L:\Users\alice\.VC3D\remote_cache\https\vesuvius-challenge-open-data.s3.amazonaws.com\PHercParis4\representations\predictions\surfaces\20260411134726-surface-20260413141734-surface-recto-2um-ps256-L0-th0.45.zarr\0\.zattrs.tmp.17827192963261278960.15729502191765196471: No such file or directory
+exit code 1   9.0 s
+the temporary file's path has 267 characters; its folder (213 characters) exists
+cache: 1 files, 45056 bytes, longest path 58 characters
+   58 characters     45056 bytes  .vc_reader_cache.sqlite3
+
+--- released-root33-PHerc0139
+USERPROFILE=L:\Users\alice   default cache root L:\Users\alice\.VC3D\remote_cache (33 characters)
+> L:\VC3D-97fb933-2026-11-13-win64\bin\vc_grow_seg_from_seed.exe -v https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0139/representations/predictions/surfaces/20260102150214-surface-20260203205514-surface-recto-2um-ps192-L0-th0.5.zarr -t L:\out\released-root33-PHerc0139 -p L:\params.json --seed 13410 13410 38563
+    [2026-11-14 11:47:33.748] [WARN ] volume 'https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0139/representations/predictions/surfaces/20260102150214-surface-20260203205514-surface-recto-2um-ps192-L0-th0.5.zarr': no voxel size in its store metadata, so physical measurements are unavailable for it
+    Error: create L:\Users\alice\.VC3D\remote_cache\https\vesuvius-challenge-open-data.s3.amazonaws.com\PHerc0139\representations\predictions\surfaces\20260102150214-surface-20260203205514-surface-recto-2um-ps192-L0-th0.5.zarr\0\.zattrs.tmp.8286548211563869666.15729502191765196471: No such file or directory
+exit code 1   3.5 s
+the temporary file's path has 263 characters; its folder (210 characters) exists
+cache: 1 files, 45056 bytes, longest path 58 characters
+   58 characters     45056 bytes  .vc_reader_cache.sqlite3
+
+--- released-root23-PHercParis4
+USERPROFILE=L:\U   default cache root L:\U\.VC3D\remote_cache (23 characters)
+> L:\VC3D-97fb933-2026-11-13-win64\bin\vc_grow_seg_from_seed.exe -v https://vesuvius-challenge-open-data.s3.amazonaws.com/PHercParis4/representations/predictions/surfaces/20260411134726-surface-20260413141734-surface-recto-2um-ps256-L0-th0.45.zarr -t L:\out\released-root23-PHercParis4 -p L:\params.json --seed 16256 16256 38016
+    zarr dataset size for scale group 0 [75784, 32693, 32693]
+    chunk shape shape [256, 256, 256]
+    mode: seed
+    step size: 20
+    min_area_cm: 0
+    voxelsize: 2.4
+    tgt_overlap_count: 20
+    seed location [16256, 16256, 38016] value is 255
+    GrowPatch loss weights:
+      DIST: 1 STRAIGHT: 0.2 SNAP: 0.1 NORMAL: 10 REFERENCE_RAY: 0 SDIR: 1
+    empty space tracing
+    seed val [16256, 16256, 38016] 255
+    search & optimization ...lets go!
+    lets start fringe: 4
+    generated surface 401.094077 vx^2 (0.000023 cm^2)
+    saving L:\out\released-root23-PHercParis4\auto_grown_20261114114738894
+exit code 0   4.2 s
+cache: 8 files, 16920965 bytes, longest path 213 characters
+  <store> = https\vesuvius-challenge-open-data.s3.amazonaws.com\PHercParis4\representations\predictions\surfaces\20260411134726-surface-20260413141734-surface-recto-2um-ps256-L0-th0.45.zarr
+   48 characters      4096 bytes  .vc_reader_cache.sqlite3
+   52 characters     32768 bytes  .vc_reader_cache.sqlite3-shm
+   52 characters    103032 bytes  .vc_reader_cache.sqlite3-wal
+  209 characters      3018 bytes  <store>\.zattrs
+  209 characters        24 bytes  <store>\.zgroup
+  211 characters       218 bytes  <store>\0\.zarray
+  211 characters       593 bytes  <store>\0\.zattrs
+  213 characters  16777216 bytes  <store>\0\148\63\63
+
+--- released-root23-PHerc0139
+USERPROFILE=L:\U   default cache root L:\U\.VC3D\remote_cache (23 characters)
+> L:\VC3D-97fb933-2026-11-13-win64\bin\vc_grow_seg_from_seed.exe -v https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0139/representations/predictions/surfaces/20260102150214-surface-20260203205514-surface-recto-2um-ps192-L0-th0.5.zarr -t L:\out\released-root23-PHerc0139 -p L:\params.json --seed 13410 13410 38563
+    [2026-11-14 11:47:41.306] [WARN ] volume 'https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0139/representations/predictions/surfaces/20260102150214-surface-20260203205514-surface-recto-2um-ps192-L0-th0.5.zarr': no voxel size in its store metadata, so physical measurements are unavailable for it
+    zarr dataset size for scale group 0 [76953, 26511, 26511]
+    chunk shape shape [192, 192, 192]
+    mode: seed
+    step size: 20
+    min_area_cm: 0
+    voxelsize: 0
+    tgt_overlap_count: 20
+    seed location [13410, 13410, 38563] value is 255
+    GrowPatch loss weights:
+      DIST: 1 STRAIGHT: 0.2 SNAP: 0.1 NORMAL: 10 REFERENCE_RAY: 0 SDIR: 1
+    empty space tracing
+    seed val [13410, 13410, 38563] 255
+    search & optimization ...lets go!
+    lets start fringe: 4
+    generated surface 401.094077 vx^2 (cm^2 unknown: volume has no voxel size)
+    saving L:\out\released-root23-PHerc0139\auto_grown_20261114114742763
+exit code 0   3.9 s
+cache: 8 files, 7222481 bytes, longest path 210 characters
+  <store> = https\vesuvius-challenge-open-data.s3.amazonaws.com\PHerc0139\representations\predictions\surfaces\20260102150214-surface-20260203205514-surface-recto-2um-ps192-L0-th0.5.zarr
+   48 characters      4096 bytes  .vc_reader_cache.sqlite3
+   52 characters     32768 bytes  .vc_reader_cache.sqlite3-shm
+   52 characters    103032 bytes  .vc_reader_cache.sqlite3-wal
+  206 characters      3865 bytes  <store>\.zattrs
+  206 characters        24 bytes  <store>\.zgroup
+  208 characters       218 bytes  <store>\0\.zarray
+  208 characters       590 bytes  <store>\0\.zattrs
+  210 characters   7077888 bytes  <store>\0\200\69\69
+
+--- this-pr-root33-PHercParis4
+USERPROFILE=L:\Users\alice   default cache root L:\Users\alice\.VC3D\remote_cache (33 characters)
+> L:\VC3D-97fb933-with-this-PR\bin\vc_grow_seg_from_seed.exe -v https://vesuvius-challenge-open-data.s3.amazonaws.com/PHercParis4/representations/predictions/surfaces/20260411134726-surface-20260413141734-surface-recto-2um-ps256-L0-th0.45.zarr -t L:\out\this-pr-root33-PHercParis4 -p L:\params.json --seed 16256 16256 38016
+    zarr dataset size for scale group 0 [75784, 32693, 32693]
+    chunk shape shape [256, 256, 256]
+    mode: seed
+    step size: 20
+    min_area_cm: 0
+    voxelsize: 2.4
+    tgt_overlap_count: 20
+    seed location [16256, 16256, 38016] value is 255
+    GrowPatch loss weights:
+      DIST: 1 STRAIGHT: 0.2 SNAP: 0.1 NORMAL: 10 REFERENCE_RAY: 0 SDIR: 1
+    empty space tracing
+    seed val [16256, 16256, 38016] 255
+    search & optimization ...lets go!
+    lets start fringe: 4
+    generated surface 401.094077 vx^2 (0.000023 cm^2)
+    saving L:\out\this-pr-root33-PHercParis4\auto_grown_20261114114747115
+exit code 0   4.3 s
+cache: 9 files, 16928901 bytes, longest path 236 characters
+  <store> = https\vesuvius-challenge-open-data.s3.amazonaws.com\PHercParis4\representations\predictions\surfaces\20260411134726-surface-20260413141734-surface-recto-2um-ps256-L0-th0.45.zarr
+   58 characters      4096 bytes  .vc_reader_cache.sqlite3
+   62 characters     32768 bytes  .vc_reader_cache.sqlite3-shm
+   62 characters    103032 bytes  .vc_reader_cache.sqlite3-wal
+  236 characters      7936 bytes  <store>\.vc_reader_metadata.json
+  219 characters      3018 bytes  <store>\.zattrs
+  219 characters        24 bytes  <store>\.zgroup
+  221 characters       218 bytes  <store>\0\.zarray
+  221 characters       593 bytes  <store>\0\.zattrs
+  223 characters  16777216 bytes  <store>\0\148\63\63
+
+--- this-pr-root33-PHerc0139
+USERPROFILE=L:\Users\alice   default cache root L:\Users\alice\.VC3D\remote_cache (33 characters)
+> L:\VC3D-97fb933-with-this-PR\bin\vc_grow_seg_from_seed.exe -v https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0139/representations/predictions/surfaces/20260102150214-surface-20260203205514-surface-recto-2um-ps192-L0-th0.5.zarr -t L:\out\this-pr-root33-PHerc0139 -p L:\params.json --seed 13410 13410 38563
+    [2026-11-14 11:47:49.695] [WARN ] volume 'https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0139/representations/predictions/surfaces/20260102150214-surface-20260203205514-surface-recto-2um-ps192-L0-th0.5.zarr': no voxel size in its store metadata, so physical measurements are unavailable for it
+    zarr dataset size for scale group 0 [76953, 26511, 26511]
+    chunk shape shape [192, 192, 192]
+    mode: seed
+    step size: 20
+    min_area_cm: 0
+    voxelsize: 0
+    tgt_overlap_count: 20
+    seed location [13410, 13410, 38563] value is 255
+    GrowPatch loss weights:
+      DIST: 1 STRAIGHT: 0.2 SNAP: 0.1 NORMAL: 10 REFERENCE_RAY: 0 SDIR: 1
+    empty space tracing
+    seed val [13410, 13410, 38563] 255
+    search & optimization ...lets go!
+    lets start fringe: 4
+    generated surface 401.094077 vx^2 (cm^2 unknown: volume has no voxel size)
+    saving L:\out\this-pr-root33-PHerc0139\auto_grown_20261114114751164
+exit code 0   4.1 s
+cache: 9 files, 7223568 bytes, longest path 233 characters
+  <store> = https\vesuvius-challenge-open-data.s3.amazonaws.com\PHerc0139\representations\predictions\surfaces\20260102150214-surface-20260203205514-surface-recto-2um-ps192-L0-th0.5.zarr
+   58 characters      4096 bytes  .vc_reader_cache.sqlite3
+   62 characters     32768 bytes  .vc_reader_cache.sqlite3-shm
+   62 characters    103032 bytes  .vc_reader_cache.sqlite3-wal
+  233 characters      1087 bytes  <store>\.vc_reader_metadata.json
+  216 characters      3865 bytes  <store>\.zattrs
+  216 characters        24 bytes  <store>\.zgroup
+  218 characters       218 bytes  <store>\0\.zarray
+  218 characters       590 bytes  <store>\0\.zattrs
+  220 characters   7077888 bytes  <store>\0\200\69\69
+
+--- this-pr-root23-PHercParis4
+USERPROFILE=L:\U   default cache root L:\U\.VC3D\remote_cache (23 characters)
+> L:\VC3D-97fb933-with-this-PR\bin\vc_grow_seg_from_seed.exe -v https://vesuvius-challenge-open-data.s3.amazonaws.com/PHercParis4/representations/predictions/surfaces/20260411134726-surface-20260413141734-surface-recto-2um-ps256-L0-th0.45.zarr -t L:\out\this-pr-root23-PHercParis4 -p L:\params.json --seed 16256 16256 38016
+    zarr dataset size for scale group 0 [75784, 32693, 32693]
+    chunk shape shape [256, 256, 256]
+    mode: seed
+    step size: 20
+    min_area_cm: 0
+    voxelsize: 2.4
+    tgt_overlap_count: 20
+    seed location [16256, 16256, 38016] value is 255
+    GrowPatch loss weights:
+      DIST: 1 STRAIGHT: 0.2 SNAP: 0.1 NORMAL: 10 REFERENCE_RAY: 0 SDIR: 1
+    empty space tracing
+    seed val [16256, 16256, 38016] 255
+    search & optimization ...lets go!
+    lets start fringe: 4
+    generated surface 401.094077 vx^2 (0.000023 cm^2)
+    saving L:\out\this-pr-root23-PHercParis4\auto_grown_20261114114755394
+exit code 0   4.2 s
+cache: 9 files, 16928901 bytes, longest path 226 characters
+  <store> = https\vesuvius-challenge-open-data.s3.amazonaws.com\PHercParis4\representations\predictions\surfaces\20260411134726-surface-20260413141734-surface-recto-2um-ps256-L0-th0.45.zarr
+   48 characters      4096 bytes  .vc_reader_cache.sqlite3
+   52 characters     32768 bytes  .vc_reader_cache.sqlite3-shm
+   52 characters    103032 bytes  .vc_reader_cache.sqlite3-wal
+  226 characters      7936 bytes  <store>\.vc_reader_metadata.json
+  209 characters      3018 bytes  <store>\.zattrs
+  209 characters        24 bytes  <store>\.zgroup
+  211 characters       218 bytes  <store>\0\.zarray
+  211 characters       593 bytes  <store>\0\.zattrs
+  213 characters  16777216 bytes  <store>\0\148\63\63
+
+--- this-pr-root23-PHerc0139
+USERPROFILE=L:\U   default cache root L:\U\.VC3D\remote_cache (23 characters)
+> L:\VC3D-97fb933-with-this-PR\bin\vc_grow_seg_from_seed.exe -v https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0139/representations/predictions/surfaces/20260102150214-surface-20260203205514-surface-recto-2um-ps192-L0-th0.5.zarr -t L:\out\this-pr-root23-PHerc0139 -p L:\params.json --seed 13410 13410 38563
+    [2026-11-14 11:47:57.808] [WARN ] volume 'https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0139/representations/predictions/surfaces/20260102150214-surface-20260203205514-surface-recto-2um-ps192-L0-th0.5.zarr': no voxel size in its store metadata, so physical measurements are unavailable for it
+    zarr dataset size for scale group 0 [76953, 26511, 26511]
+    chunk shape shape [192, 192, 192]
+    mode: seed
+    step size: 20
+    min_area_cm: 0
+    voxelsize: 0
+    tgt_overlap_count: 20
+    seed location [13410, 13410, 38563] value is 255
+    GrowPatch loss weights:
+      DIST: 1 STRAIGHT: 0.2 SNAP: 0.1 NORMAL: 10 REFERENCE_RAY: 0 SDIR: 1
+    empty space tracing
+    seed val [13410, 13410, 38563] 255
+    search & optimization ...lets go!
+    lets start fringe: 4
+    generated surface 401.094077 vx^2 (cm^2 unknown: volume has no voxel size)
+    saving L:\out\this-pr-root23-PHerc0139\auto_grown_20261114114759261
+exit code 0   3.9 s
+cache: 9 files, 7223568 bytes, longest path 223 characters
+  <store> = https\vesuvius-challenge-open-data.s3.amazonaws.com\PHerc0139\representations\predictions\surfaces\20260102150214-surface-20260203205514-surface-recto-2um-ps192-L0-th0.5.zarr
+   48 characters      4096 bytes  .vc_reader_cache.sqlite3
+   52 characters     32768 bytes  .vc_reader_cache.sqlite3-shm
+   52 characters    103032 bytes  .vc_reader_cache.sqlite3-wal
+  223 characters      1087 bytes  <store>\.vc_reader_metadata.json
+  206 characters      3865 bytes  <store>\.zattrs
+  206 characters        24 bytes  <store>\.zgroup
+  208 characters       218 bytes  <store>\0\.zarray
+  208 characters       590 bytes  <store>\0\.zattrs
+  210 characters   7077888 bytes  <store>\0\200\69\69
+
+Cache files written by only one of the two programs, with root 23:
+  PHercParis4: only this-pr: <store>\.vc_reader_metadata.json; only released: none
+  PHerc0139: only this-pr: <store>\.vc_reader_metadata.json; only released: none
+
+SUMMARY
+  ok   released, PHercParis4, root 33: stops with 'create ...\.zattrs.tmp...: No such file or directory'  [exit code 1: create L:\Users\alice\.VC3D\remote_cache\https\vesuvius-challenge-open-data.s3.amazonaws.com\PHercParis4\representations\predictions\surfaces\20260411134726-surface-20260413141734-surface-recto-2um-ps256-L0-th0.45.zarr\0\.zattrs.tmp.17827192963261278960.15729502191765196471: No such file or directory]
+  ok   released, PHerc0139, root 33: stops with 'create ...\.zattrs.tmp...: No such file or directory'  [exit code 1: create L:\Users\alice\.VC3D\remote_cache\https\vesuvius-challenge-open-data.s3.amazonaws.com\PHerc0139\representations\predictions\surfaces\20260102150214-surface-20260203205514-surface-recto-2um-ps192-L0-th0.5.zarr\0\.zattrs.tmp.8286548211563869666.15729502191765196471: No such file or directory]
+  ok   released, PHercParis4, root 23: reads the seed point (value 255), caches its chunk, saves a surface  [exit code 0: saved a surface]
+  ok   released, PHerc0139, root 23: reads the seed point (value 255), caches its chunk, saves a surface  [exit code 0: saved a surface]
+  ok   this-pr, PHercParis4, root 33: reads the seed point (value 255), caches its chunk, saves a surface  [exit code 0: saved a surface]
+  ok   this-pr, PHerc0139, root 33: reads the seed point (value 255), caches its chunk, saves a surface  [exit code 0: saved a surface]
+  ok   this-pr, PHercParis4, root 23: reads the seed point (value 255), caches its chunk, saves a surface  [exit code 0: saved a surface]
+  ok   this-pr, PHerc0139, root 23: reads the seed point (value 255), caches its chunk, saves a surface  [exit code 0: saved a surface]
+cleanup: subst drive removed: yes, work folder removed: yes
+RESULT: as expected
+FIN

@@ -1,0 +1,8 @@
+phase=after exe=vc_extend_edge sha256=81B5B95D6849811F5F4124899731227837AB4AFFDA848CDAEB81CEC5EAA55330
+root=L:\Users\jean-christophe.dupont\.VC3D\remote_cache (len 50)
+=== extend-edge rc=0 duree_s=59.8 pic_Mo=737
+    round 1 right: 190 vertices on 38 lines, 0 normal queries without a usable normal
+    grid 42x42 -> 42x45, 190 vertices added in 59.2449 s
+--- fichiers du cache, 5 plus longs (via L:) ---
+subst apres: 
+FIN script

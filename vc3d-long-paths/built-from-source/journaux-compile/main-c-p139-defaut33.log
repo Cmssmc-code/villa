@@ -1,0 +1,10 @@
+CMD: vc_grow_seg_from_seed "-v" "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0139/representations/predictions/surfaces/20260102150214-surface-20260203205514-surface-recto-2um-ps192-L0-th0.5.zarr" "-t" "K:\sorties-main\c" "-p" "K:\params.json" "--seed" "13255" "13255" "38476"
+USERPROFILE=K:\Users\<name>  default root=K:\Users\<name>\.VC3D\remote_cache (len 33)  exe=C:\Users\me\Dev\vesuvius\wt-vc3d\volume-cartographer\build\ci-windows-mingw\bin\vc_grow_seg_from_seed.exe
+--- stdout ---
+[2026-11-14 04:39:36.263] [WARN ] volume 'https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0139/representations/predictions/surfaces/20260102150214-surface-20260203205514-surface-recto-2um-ps192-L0-th0.5.zarr': no voxel size in its store metadata, so physical measurements are unavailable for it
+
+--- stderr ---
+
+Error: create K:\Users\<name>\.VC3D\remote_cache\https\vesuvius-challenge-open-data.s3.amazonaws.com\PHerc0139\representations\predictions\surfaces\20260102150214-surface-20260203205514-surface-recto-2um-ps192-L0-th0.5.zarr\0\.zattrs.tmp.15445846311497469291.15729502191765196471: No such file or directory
+
+FIN rc=1 duree_s=4

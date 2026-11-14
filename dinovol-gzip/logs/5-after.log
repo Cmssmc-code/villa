@@ -1,0 +1,16 @@
+<work>/cfg-PHerc0172.json is dinovol_2/configs/pretrain_8_9um.json with dataset.datasets reduced to its PHerc0172 entry (39 entries in the file):
+  {"sample_id": "PHerc0172", "pixel_size_um": 7.91, "scan_location": "DLS (Diamond Light Source)", "volume_path": "s3://vesuvius-challenge-open-data/PHerc0172/volumes/20241024131839-7.910um-53keV-masked.zarr/", "volume_scale": 0}
+dataset.s3_storage_options (unchanged): {"anon": true}
+
+$ cd <work>/after/dinovol
+$ python -m dinovol_2.cache_metadata_meshes --config ../../cfg-PHerc0172.json --cache-dir ../cache
+Downloading https://vesuvius-challenge-open-data.s3.amazonaws.com/metadata.json -> ..\cache\metadata.json ...
+[1/1] PHerc0172: 53 meshes (0 with ink-labels)
+Done: cached 53 meshes (0 with ink-labels) across 1/1 volumes in <work>\after\cache
+[exit code 0, 38.6 s]
+
+files in <work>/after/cache:
+  metadata.json  17,667,383 bytes  (plain JSON text)
+  PHerc0172_20241024131839_scale0.npz  296,840,268 bytes  (mesh cache)
+
+metadata.json is plain JSON: True; it is the gunzipped body served by the bucket, byte for byte: True

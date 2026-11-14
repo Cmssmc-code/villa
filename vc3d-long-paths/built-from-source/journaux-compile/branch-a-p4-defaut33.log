@@ -1,0 +1,23 @@
+CMD: vc_grow_seg_from_seed "-v" "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHercParis4/representations/predictions/surfaces/20260411134726-surface-20260413141734-surface-recto-2um-ps256-L0-th0.45.zarr" "-t" "K:\sorties-branch\a" "-p" "K:\params.json" "--seed" "16346" "16346" "37892"
+USERPROFILE=K:\Users\<name>  default root=K:\Users\<name>\.VC3D\remote_cache (len 33)  exe=C:\Users\me\Dev\vesuvius\wt-vc3d\volume-cartographer\build\ci-windows-mingw\bin\vc_grow_seg_from_seed.exe
+--- stdout ---
+zarr dataset size for scale group 0 [75784, 32693, 32693]
+chunk shape shape [256, 256, 256]
+mode: seed
+step size: 20
+min_area_cm: 0
+voxelsize: 2.4
+tgt_overlap_count: 20
+seed location [16346, 16346, 37892] value is 0
+GrowPatch loss weights:
+  DIST: 1 STRAIGHT: 0.2 SNAP: 0.1 NORMAL: 10 REFERENCE_RAY: 0 SDIR: 1
+empty space tracing
+seed val [16346, 16346, 37892] 0
+search & optimization ...lets go! 
+lets start fringe: 4
+generated surface 401.094077 vx^2 (0.000023 cm^2)
+saving K:\sorties-branch\a\auto_grown_20261114044240882
+
+--- stderr ---
+
+FIN rc=0 duree_s=4.5

@@ -1,0 +1,9 @@
+CMD: vc_grow_seg_from_seed "-v" "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHercParis4/representations/predictions/surfaces/20260411134726-surface-20260413141734-surface-recto-2um-ps256-L0-th0.45.zarr" "-t" "K:\sorties-main\a" "-p" "K:\params.json" "--seed" "16346" "16346" "37892"
+USERPROFILE=K:\Users\<name>  default root=K:\Users\<name>\.VC3D\remote_cache (len 33)  exe=C:\Users\me\Dev\vesuvius\wt-vc3d\volume-cartographer\build\ci-windows-mingw\bin\vc_grow_seg_from_seed.exe
+--- stdout ---
+
+--- stderr ---
+
+Error: create K:\Users\<name>\.VC3D\remote_cache\https\vesuvius-challenge-open-data.s3.amazonaws.com\PHercParis4\representations\predictions\surfaces\20260411134726-surface-20260413141734-surface-recto-2um-ps256-L0-th0.45.zarr\0\.zattrs.tmp.15670905918339268586.15729502191765196471: No such file or directory
+
+FIN rc=1 duree_s=11.5
