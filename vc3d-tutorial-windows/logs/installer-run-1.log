@@ -1,0 +1,25 @@
+== essai de l'installateur VC3D, 14/11/2026 04:03:50
+04:03:50 compte : <pc>\me ; administrateur : True
+04:03:52 installateur : C:\Users\me\Dev\vesuvius\outils-vc3d\installateur\VC3D-97fb933-2026-11-13-win64.exe ; taille 71687165 ; signature : NotSigned ; SHA256 88A15DF38F8C485D2DA9764CC5A33869CB659A5B1354435AAAA67FD314BDCBF7
+04:03:53 avant : raccourcis VC3D = 0 ; .VC3D du profil existe = True
+04:04:36 installation : code 0 ; durée 43 s
+04:04:47 registre : HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\VC3D | nom=VC3D | version=1.0.0 | editeur=Vesuvius Challenge | dossier= | desinst="C:\Program Files\VC3D\Uninstall.exe"
+04:04:47 dossier d'installation : C:\Program Files\VC3D
+04:04:48   bin\  (175 fichiers)
+04:04:49   Uninstall.exe  261211 o
+04:04:52   total : 176 fichiers, 346.6 Mo
+04:04:52   bin : 18 exécutables ; VC3D.exe présent = True
+04:04:52   bin installé contre bin du ZIP (C:\Users\me\Dev\vesuvius\outils-vc3d\Programmes VC3D\VC3D-97fb933-2026-11-13-win64\bin) : 175 et 177 fichiers ; même nom et même taille 175 ; taille différente 0 ; seulement installés 0 ; seulement dans le ZIP 2
+04:05:01   SHA-256 de VC3D.exe : installé 762B3B57434013EB ; ZIP 762B3B57434013EB
+04:05:01     écart : \vc_object_server.exe
+04:05:01     écart : \vc_object_convert.exe
+04:05:32   vc_tifxyz2obj.exe sans argument : pas de fin en 30 s, tué
+04:05:33 raccourci : C:\ProgramData\Microsoft\Windows\Start Menu\Programs\VC3D\Uninstall.lnk -> C:\Program Files\VC3D\Uninstall.exe 
+04:05:33 raccourci : C:\ProgramData\Microsoft\Windows\Start Menu\Programs\VC3D\VC3D.lnk -> C:\Program Files\VC3D\bin\VC3D.exe 
+04:05:33 raccourcis VC3D après installation : 2
+04:05:35 PATH (machine et utilisateurs) modifié par l'installation : False ; contient VC3D : False
+04:05:38 désinstallation : code 0 ; durée 3 s
+04:05:38 fichiers restés dans C:\Program Files\VC3D : 1
+04:05:38   reste : C:\Program Files\VC3D\Uninstall.exe
+04:05:40 après désinstallation : dossier présent = False ; raccourcis = 0 ; entrées de registre = 0
+04:05:43 FIN rc=0

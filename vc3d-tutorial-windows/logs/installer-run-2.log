@@ -1,0 +1,20 @@
+== second passage : outil lancé depuis le dossier installé, 14/11/2026 04:06:36
+04:06:36 administrateur : True
+04:07:32 installation : code 0 ; durée 56 s
+04:07:48   vc_tifxyz2obj.exe  : code 1 en 15.2 s
+04:07:48     | usage: C:\Program Files\VC3D\bin\vc_tifxyz2obj.exe <tiffxyz> <obj> [--normalize-uv] [--align-grid] [--keep=<p>] [--clean [K]] [--no-inpaint]
+04:07:48     |        C:\Program Files\VC3D\bin\vc_tifxyz2obj.exe --store <store> --surface <uuid> --name <obj-name> [--volume-uuid <id>] [options]
+04:07:48     |   store mode writes the OBJ into the surface's artifact directory and prints obj: <path>
+04:07:48     |   --volume-uuid <id> : store mode: export in that volume's voxels, through the store's view of the surface
+04:07:48     |   --normalize-uv : Normalize UVs to [0,1] range
+04:07:48   vc_tifxyz2obj.exe  : code 1 en 0.1 s
+04:07:48     | usage: C:\Program Files\VC3D\bin\vc_tifxyz2obj.exe <tiffxyz> <obj> [--normalize-uv] [--align-grid] [--keep=<p>] [--clean [K]] [--no-inpaint]
+04:07:48     |        C:\Program Files\VC3D\bin\vc_tifxyz2obj.exe --store <store> --surface <uuid> --name <obj-name> [--volume-uuid <id>] [options]
+04:07:48     |   store mode writes the OBJ into the surface's artifact directory and prints obj: <path>
+04:07:48     |   --volume-uuid <id> : store mode: export in that volume's voxels, through the store's view of the surface
+04:07:48     |   --normalize-uv : Normalize UVs to [0,1] range
+04:07:48   vc_cache_root.exe --help : code 1 en 0.2 s
+04:07:48     | usage: vc_cache_root [--set /absolute/cache/root]
+04:07:50 désinstallation : code 0
+04:07:51 après désinstallation : dossier présent = False ; dossier du menu Démarrer présent = False ; entrées de registre = 0
+04:07:51 FIN rc=0

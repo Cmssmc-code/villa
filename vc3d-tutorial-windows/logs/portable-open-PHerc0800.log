@@ -1,0 +1,51 @@
+HOME=[] APPDATA VC avant=True ; .VC3D LastWrite avant=11/14/2026 03:05:47
+bin avant: .cache, generic, iconengines, imageformats, networkinformation, platforms, styles, tls
+03:13:06 VC3D pid=2616 bureau=vc3d_cache_24712 pont=vc3d-nuit-24712
+03:13:52 pont ouvert apres 50.1 s
+03:13:58 ping (5.6 s): {"id": 1, "jsonrpc": "2.0", "result": {"pid": 2616, "pong": true, "protocolVersion": 2, "version": "97fb933-2026-11-13"}}
+03:13:58   notification: {"jsonrpc": "2.0", "method": "job.progress", "params": {"jobId": "job-1", "kind": "catalog.open_sample", "message": "open sample PHerc0800", "phase": "started", "seq": 1, "source": "catalog"}}
+03:13:58 catalog.open_sample (0.4 s): {"id": 2, "jsonrpc": "2.0", "result": {"jobId": "job-1", "kind": "catalog.open_sample", "sampleId": "PHerc0800", "source": "catalog"}}
+03:14:23   notification: {"jsonrpc": "2.0", "method": "job.progress", "params": {"jobId": "job-1", "kind": "catalog.open_sample", "message": "Opening remote volumes in parallel...", "phase": "output", "seq": 2, "source": "catalog"}}
+03:14:23   notification: {"jsonrpc": "2.0", "method": "job.progress", "params": {"jobId": "job-1", "kind": "catalog.open_sample", "message": "Open-data project is ready.", "phase": "output", "seq": 3, "source": "catalog"}}
+03:14:23   notification: {"jsonrpc": "2.0", "method": "job.progress", "params": {"jobId": "job-1", "kind": "catalog.open_sample", "message": "Opened sample PHerc0800", "outputPath": "C:\\Users\\me\\AppData\\Roaming\\Vesuvius Challenge\\VC3D\\projects\\open_data", "phase": "finished", "result": {"attached": {"lasagnaDatas
+03:14:25 screenshot.capture (1.8 s): {"id": 4, "jsonrpc": "2.0", "result": {"base64": null, "filePath": "C:\\Users\\me\\Dev\\vesuvius\\donnees-vc3d\\sorties\\gui2\\shot-4.png", "format": "png", "height": 1171, "width": 1920}}
+03:14:45 screenshot.capture (0.3 s): {"id": 6, "jsonrpc": "2.0", "result": {"base64": null, "filePath": "C:\\Users\\me\\Dev\\vesuvius\\donnees-vc3d\\sorties\\gui2\\shot-6.png", "format": "png", "height": 1171, "width": 1920}}
+03:14:45 pic memoire VC3D ~ 1200 Mo ; duree 103.2 s
+03:14:49 FIN rc=0
+python rc=0
+bin apres: .cache, generic, iconengines, imageformats, networkinformation, platforms, styles, tls
+
+FullName                                                                                                                                            Length
+--------                                                                                                                                            ------
+C:\Users\me\Dev\vesuvius\outils-vc3d\Programmes VC3D\VC3D-97fb933-2026-11-13-win64\bin\.cache\vc_reader                                          
+C:\Users\me\Dev\vesuvius\outils-vc3d\Programmes VC3D\VC3D-97fb933-2026-11-13-win64\bin\.cache\vc_reader\metadata-cff196b7c8a57b2d.json           17667383
+C:\Users\me\Dev\vesuvius\outils-vc3d\Programmes VC3D\VC3D-97fb933-2026-11-13-win64\bin\.cache\vc_reader\metadata-cff196b7c8a57b2d.json.info.json 168
+
+
+TEMP nouveaux: C:\Users\me\AppData\Local\Temp\VC3D-vJEymk
+APPDATA VC apres=True
+
+FullName                                                                                        Length
+--------                                                                                        ------
+C:\Users\me\AppData\Roaming\Vesuvius Challenge\VC3D                                          
+C:\Users\me\AppData\Roaming\Vesuvius Challenge\VC3D\drafts                                   
+C:\Users\me\AppData\Roaming\Vesuvius Challenge\VC3D\projects                                 
+C:\Users\me\AppData\Roaming\Vesuvius Challenge\VC3D\drafts\checkpoint.json                   63
+C:\Users\me\AppData\Roaming\Vesuvius Challenge\VC3D\drafts\checkpoint.json-owner             0
+C:\Users\me\AppData\Roaming\Vesuvius Challenge\VC3D\projects\open_data                       
+C:\Users\me\AppData\Roaming\Vesuvius Challenge\VC3D\projects\open_data\PHerc0800.vcobj       495616
+C:\Users\me\AppData\Roaming\Vesuvius Challenge\VC3D\projects\open_data\PHerc0800.vcobj-owner 0
+C:\Users\me\AppData\Roaming\Vesuvius Challenge\VC3D\projects\open_data\PHerc0800.vcobj-shm   32768
+C:\Users\me\AppData\Roaming\Vesuvius Challenge\VC3D\projects\open_data\PHerc0800.vcobj-wal   2150672
+C:\Users\me\AppData\Roaming\Vesuvius Challenge\VC3D\projects\open_data\PHerc0800.vcproj      4250
+
+
+
+Name       Length LastWriteTime
+----       ------ -------------
+cache.json     98 14/11/2026 02:38:05
+VC3D.ini     4057 14/11/2026 03:14:18
+
+
+.VC3D LastWrite apres=11/14/2026 03:32:03
+FIN rc=0

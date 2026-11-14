@@ -1,0 +1,35 @@
+> python vc3d_windows_tab.py before --commit 97fb9336c --repo <villa> --build 97fb933 
+== [tab] Windows tab of scrollprize.org/docs/06_tutorial_VC3D.md at 97fb9336c
+  | - Download the windows installer .zip file from the [releases
+  | page](https://github.com/ScrollPrize/villa/releases) of the villa repository.
+  | - Extract the contents of the .zip file to a folder of your choice.
+  | - Double click the install file, click "show more details" and then "run anyway"
+  | - Follow the prompts, clicking yes or next where necessary
+  Launching the GUI: - **Windows:** Open the application from the Start menu
+== [release] Windows downloads of the "latest" and "stable" releases of ScrollPrize/villa
+  latest (published 2026-11-13): VC3D-97fb933-2026-11-13-win64.exe, VC3D-97fb933-2026-11-13-win64.zip
+  stable (published 2026-11-04): VC3D-f7756c7-2026-11-03-win64.exe, VC3D-f7756c7-2026-11-03-win64.zip
+== [sha] Local copies of the "latest" Windows downloads
+  VC3D-97fb933-2026-11-13-win64.zip: 108,824,295 bytes, SHA-256 4b06ee91f60d6d29... = the published digest
+== [zip] Inside VC3D-97fb933-2026-11-13-win64.zip
+  628 files (389.5 MB once extracted), all in one folder VC3D-97fb933-2026-11-13-win64\
+  bin\ 177 files, include\ 305 files, lib\ 23 files, share\ 123 files
+  programs: 20, all in bin\: VC3D.exe and 19 vc_*.exe tools
+  the vc_*.exe tools in bin\:
+    vc_cache_root.exe, vc_extend_edge.exe, vc_fiber_bake_annotations.exe, vc_fiber_constraints.exe,
+    vc_fiber_trace_metric.exe, vc_fiberlets.exe, vc_gen_normalgrids.exe, vc_gen_umbilicus.exe,
+    vc_grow_seg_from_seed.exe, vc_grow_seg_from_segments.exe, vc_ngrids.exe, vc_obj2tifxyz.exe,
+    vc_obj2tifxyz_legacy.exe, vc_object_convert.exe, vc_object_server.exe, vc_objrefine.exe,
+    vc_render_tifxyz.exe, vc_thinning.exe, vc_tifxyz2obj.exe
+  file named like an installer (install, setup, .msi): none
+== [check] What the old tab says, against these files
+  NO   "Download the windows installer .zip file"
+        The .zip is not an installer: it holds no install program (see above). The installer is the other
+        Windows download, VC3D-97fb933-2026-11-13-win64.exe; the tab never mentions an .exe.
+  NO   "Double click the install file"
+        After extracting the .zip there is no install file to double click: its only programs are VC3D.exe and
+        19 vc_*.exe tools, in bin\.
+  NO   "Open the application from the Start menu"
+        Extracting the .zip installs nothing, so nothing is added to the Start menu; the tab never names
+        bin\VC3D.exe, the program to start.
+RESULT: the Windows tab at 97fb9336c does not match the downloads: 3 of 3 sentences are wrong (1 s)

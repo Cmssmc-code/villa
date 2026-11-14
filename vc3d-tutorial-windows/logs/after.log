@@ -1,0 +1,75 @@
+> python vc3d_windows_tab.py after --commit 823df0788 --repo <villa> --build 97fb933 --capture after.png
+== [tab] Windows tab of scrollprize.org/docs/06_tutorial_VC3D.md at 823df0788
+  | Each VC3D release on the [releases page](https://github.com/ScrollPrize/villa/releases) of the villa
+  | repository has two Windows downloads:
+  | - **Installer (`VC3D-*-win64.exe`, needs administrator rights):** download it and double click it. Follow
+  | the prompts, clicking yes or next where necessary. VC3D is then in the Start menu.
+  | - **Portable (`VC3D-*-win64.zip`):** download it, extract its contents to a folder of your choice, and
+  | double click `VC3D.exe` in the `bin` folder. There is nothing to install.
+  | Both contain VC3D together with the `vc_*` command-line tools, in the `bin` folder (by default `C:\Program
+  | Files\VC3D\bin` with the installer). That folder is not added to `PATH`.
+  | If Windows shows a warning when you double click the installer or `VC3D.exe`, click "show more details" and
+  | then "run anyway".
+  Launching the GUI: - **Windows:** Open the application from the Start menu. With the portable .zip, double click `VC3D.exe` in the `bin` folder instead
+== [release] Windows downloads of the "latest" and "stable" releases of ScrollPrize/villa
+  latest (published 2026-11-13): VC3D-97fb933-2026-11-13-win64.exe, VC3D-97fb933-2026-11-13-win64.zip
+  stable (published 2026-11-04): VC3D-f7756c7-2026-11-03-win64.exe, VC3D-f7756c7-2026-11-03-win64.zip
+== [sha] Local copies of the "latest" Windows downloads
+  VC3D-97fb933-2026-11-13-win64.zip: 108,824,295 bytes, SHA-256 4b06ee91f60d6d29... = the published digest
+  VC3D-97fb933-2026-11-13-win64.exe: 71,687,165 bytes, SHA-256 88a15df38f8c485d... = the published digest
+== [zip] Inside VC3D-97fb933-2026-11-13-win64.zip
+  628 files (389.5 MB once extracted), all in one folder VC3D-97fb933-2026-11-13-win64\
+  bin\ 177 files, include\ 305 files, lib\ 23 files, share\ 123 files
+  programs: 20, all in bin\: VC3D.exe and 19 vc_*.exe tools
+  the vc_*.exe tools in bin\:
+    vc_cache_root.exe, vc_extend_edge.exe, vc_fiber_bake_annotations.exe, vc_fiber_constraints.exe,
+    vc_fiber_trace_metric.exe, vc_fiberlets.exe, vc_gen_normalgrids.exe, vc_gen_umbilicus.exe,
+    vc_grow_seg_from_seed.exe, vc_grow_seg_from_segments.exe, vc_ngrids.exe, vc_obj2tifxyz.exe,
+    vc_obj2tifxyz_legacy.exe, vc_object_convert.exe, vc_object_server.exe, vc_objrefine.exe,
+    vc_render_tifxyz.exe, vc_thinning.exe, vc_tifxyz2obj.exe
+  file named like an installer (install, setup, .msi): none
+== [installer] VC3D-97fb933-2026-11-13-win64.exe, read without running it
+  NSIS installer, 64-bit, not signed, asks Windows for: requireAdministrator
+  InstallDir: $PROGRAMFILES\VC3D = C:\Program Files\VC3D on this PC
+  files it writes under $INSTDIR\bin: 175; programs in $INSTDIR\bin: VC3D.exe and 17 vc_*.exe tools; files it writes elsewhere go to: $PLUGINSDIR
+  vc_*.exe tools of the .zip that the installer does not have: vc_object_convert.exe, vc_object_server.exe
+  shortcut: $SMPROGRAMS\$var33\VC3D.lnk -> $INSTDIR\bin\VC3D.exe
+  shortcut: $DESKTOP\VC3D.lnk -> $INSTDIR\bin\VC3D.exe
+  shortcut: $SMPROGRAMS\$var33\Uninstall.lnk -> $INSTDIR\Uninstall.exe
+  PATH is written by the function at entry 8 (entries 64, 66); 1 call(s) to it:
+    call at entry 791: always skipped by StrCmp "OFF" "ON", a test fixed when the installer was built
+== [check] What the new tab says, against these files
+  OK   "Each VC3D release ... has two Windows downloads: `VC3D-*-win64.exe`, `VC3D-*-win64.zip`"
+        26 of the 30 releases of ScrollPrize/villa are VC3D releases (named VC3D Latest or VC3D Stable); each
+        publishes one VC3D-*-win64.exe and one VC3D-*-win64.zip.
+  OK   "needs administrator rights"
+        The installer asks Windows for requireAdministrator (see above), so Windows starts it only with
+        administrator rights.
+  OK   "VC3D is then in the Start menu"
+        The installer creates the shortcut $SMPROGRAMS\$var33\VC3D.lnk to $INSTDIR\bin\VC3D.exe.
+  OK   "by default `C:\Program Files\VC3D\bin` with the installer"
+        InstallDir is $PROGRAMFILES\VC3D, C:\Program Files\VC3D here, and the programs go to $INSTDIR\bin.
+  OK   "That folder is not added to `PATH`"
+        The only code of the installer that writes PATH is one function, and its only call is always skipped
+        (StrCmp "OFF" "ON").
+  OK   "Both contain VC3D together with the `vc_*` command-line tools, in the `bin` folder"
+        bin\ of the .zip: VC3D.exe and 19 vc_*.exe; $INSTDIR\bin of the installer: VC3D.exe and 17 vc_*.exe.
+  OK   "There is nothing to install"
+        The .zip holds no install program.
+== [start] Extract VC3D-97fb933-2026-11-13-win64.zip and double click bin\VC3D.exe
+  on Windows-11-10.0.26300-SP0
+  extracted 628 files into <work>\extracted in 1.7 s
+  VC3D_CONFIG_DIR=<work>\config, VC_READER_CACHE_DIR=<work>\vc_reader_cache, HOME not set
+  starting VC3D-97fb933-2026-11-13-win64\bin\VC3D.exe, working directory VC3D-97fb933-2026-11-13-win64\bin, on a hidden desktop
+  after  14 s: window "Open Data Catalog" (1918x997)
+  after  14 s: window "Volume Cartographer 3D 97fb933" (1938x1218)
+  after  16 s: catalog downloaded into the cache: metadata-cff196b7c8a57b2d.json, 17.7 MB, 45 samples
+  VC3D closed by itself after WM_CLOSE (exit code 0); remote cache in <work>: True
+  %USERPROFILE%\.VC3D, %USERPROFILE%\.cache\vc_reader, %APPDATA% and %LOCALAPPDATA%\Vesuvius Challenge, HKCU\Software\Vesuvius Challenge: unchanged
+  picture of the Open Data Catalog window: after.png (1918x997)
+  OK   "double click `VC3D.exe` in the `bin` folder"
+        VC3D opened "Volume Cartographer 3D 97fb933" and "Open Data Catalog"; the catalog lists 45 samples.
+  OK   "With the portable .zip, double click `VC3D.exe` in the `bin` folder instead"
+        Same start as above.
+== [clean] work folder deleted: True
+RESULT: the Windows tab at 823df0788 matches the downloads: 9 of 9 sentences checked (26 s)
