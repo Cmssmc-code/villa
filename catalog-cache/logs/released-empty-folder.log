@@ -1,0 +1,9 @@
+VC3D: P:\VC3D-97fb933-2026-11-13-win64\bin\VC3D.exe
+working folder: P:\runs\released-empty-folder\cwd (writable for this user)
+HOME: not set ; USERPROFILE: P:\runs\released-empty-folder\profile
+VC3D version: 97fb933-2026-11-13
+catalog.list_samples: 45 samples (PHerc0009B, PHerc0125, PHerc0139, PHerc0172, ...)
+window "Open Data Catalog": picture in runs\released-empty-folder\open-data-catalog.png
+catalog cache in the working folder: .cache\vc_reader\metadata-cff196b7c8a57b2d.json (17667383 bytes)
+catalog cache in the working folder: .cache\vc_reader\metadata-cff196b7c8a57b2d.json.info.json (168 bytes)
+catalog cache in the %USERPROFILE%: none

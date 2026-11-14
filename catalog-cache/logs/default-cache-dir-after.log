@@ -1,0 +1,10 @@
+USERPROFILE                                             -> <tmp>\profile\.cache\vc_reader
+USERPROFILE, HOME                                       -> <tmp>\profile\.cache\vc_reader
+HOMEDRIVE, HOMEPATH                                     -> <tmp>\profile\.cache\vc_reader
+HOMEDRIVE, HOMEPATH, HOME                               -> <tmp>\profile\.cache\vc_reader
+HOME                                                    -> <tmp>\home\.cache\vc_reader
+none                                                    -> <cwd>/.cache/vc_reader
+XDG_CACHE_HOME, USERPROFILE, HOME                       -> <tmp>\xdg\vc_reader
+VC_READER_CACHE_DIR, XDG_CACHE_HOME, USERPROFILE, HOME  -> <tmp>\cache
+USERPROFILE (a folder named Jérôme)                     -> <tmp>\Jérôme\.cache\vc_reader
+USERPROFILE (a folder named ユーザー)                       -> <tmp>\ユーザー\.cache\vc_reader

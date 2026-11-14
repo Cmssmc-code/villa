@@ -1,0 +1,8 @@
+VC3D: C:\Program Files\VC3D\bin\VC3D.exe
+working folder: C:\Program Files\VC3D (not writable for this user)
+HOME: not set ; USERPROFILE: P:\runs\installed-released\profile
+VC3D version: 97fb933-2026-11-13
+catalog.list_samples: error -32005 "Manifest fetch failed": filesystem error: cannot create directories: Permission denied [.cache\vc_reader]
+window "Open Data Catalog": picture in runs\installed-released\open-data-catalog.png
+catalog cache in the working folder: none
+catalog cache in the %USERPROFILE%: none

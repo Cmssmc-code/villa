@@ -1,0 +1,44 @@
+$ vc_cache_root.exe --set C:\Users\me\Dev\vesuvius\preuves-vcreader-port\runs\branch\cache
+    C:\Users\me\Dev\vesuvius\preuves-vcreader-port\runs\branch\cache
+    exit code 0
+
+$ vc_render_tifxyz.exe -v C:\Users\me\Dev\vesuvius\preuves-vcreader-port\mirror\PHerc0800\volumes\20250521135224-8.640um-1.2m-116keV-masked.zarr -s C:\Users\me\Dev\vesuvius\preuves-vcreader-port\mirror\PHerc0800\segments\20251029010146-auto_grown_20251029010146642\mesh\intermediate\tifxyz_original -g 2 --scale 1 --tif-output C:\Users\me\Dev\vesuvius\preuves-vcreader-port\runs\branch\output\local --cache-gb 1
+    zarr dataset size for group 2 [6075 2467 2467 ]
+    Source dtype: uint8
+    chunk shape [128 128 128 ]
+    Voxel size (local store metadata): 8.64 micrometer
+    Surface interpolation: bicubic
+    Rendering: C:\Users\me\Dev\vesuvius\preuves-vcreader-port\mirror\PHerc0800\segments\20251029010146-auto_grown_20251029010146642\mesh\intermediate\tifxyz_original -> C:\Users\me\Dev\vesuvius\preuves-vcreader-port\runs\branch\output\local (tif)
+    ds_level=2 ds_scale=0.25 sA=1 Pg=1 render_scale=0.25
+    rendering 210x210 at scale 1 crop [210×210 from (0,0)]
+    exit code 0
+
+$ vc_render_tifxyz.exe -v http://127.0.0.1:41235/PHerc0800/volumes/20250521135224-8.640um-1.2m-116keV-masked.zarr -s C:\Users\me\Dev\vesuvius\preuves-vcreader-port\mirror\PHerc0800\segments\20251029010146-auto_grown_20251029010146642\mesh\intermediate\tifxyz_original -g 2 --scale 1 --tif-output C:\Users\me\Dev\vesuvius\preuves-vcreader-port\runs\branch\output\port --cache-gb 1
+    Remote zarr streaming: http://127.0.0.1:41235/PHerc0800/volumes/20250521135224-8.640um-1.2m-116keV-masked.zarr
+    zarr dataset size for group 2 [6075 2467 2467 ]
+    Source dtype: uint8
+    chunk shape [128 128 128 ]
+    Voxel size (remote volume metadata): 8.64 micrometer
+    Surface interpolation: bicubic
+    Rendering: C:\Users\me\Dev\vesuvius\preuves-vcreader-port\mirror\PHerc0800\segments\20251029010146-auto_grown_20251029010146642\mesh\intermediate\tifxyz_original -> C:\Users\me\Dev\vesuvius\preuves-vcreader-port\runs\branch\output\port (tif)
+    ds_level=2 ds_scale=0.25 sA=1 Pg=1 render_scale=0.25
+    rendering 210x210 at scale 1 crop [210×210 from (0,0)]
+    exit code 0
+
+$ vc_render_tifxyz.exe -v http://127.0.0.1:41270 -s C:\Users\me\Dev\vesuvius\preuves-vcreader-port\mirror\PHerc0800\segments\20251029010146-auto_grown_20251029010146642\mesh\intermediate\tifxyz_original -g 2 --scale 1 --tif-output C:\Users\me\Dev\vesuvius\preuves-vcreader-port\runs\branch\output\root --cache-gb 1
+    Remote zarr streaming: http://127.0.0.1:41270
+    zarr dataset size for group 2 [6075 2467 2467 ]
+    Source dtype: uint8
+    chunk shape [128 128 128 ]
+    Voxel size (remote volume metadata): 8.64 micrometer
+    Surface interpolation: bicubic
+    Rendering: C:\Users\me\Dev\vesuvius\preuves-vcreader-port\mirror\PHerc0800\segments\20251029010146-auto_grown_20251029010146642\mesh\intermediate\tifxyz_original -> C:\Users\me\Dev\vesuvius\preuves-vcreader-port\runs\branch\output\root (tif)
+    ds_level=2 ds_scale=0.25 sA=1 Pg=1 render_scale=0.25
+    rendering 210x210 at scale 1 crop [210×210 from (0,0)]
+    exit code 0
+
+local  exit code 0   image: 210x210, values 0 to 254, pixels 8de2fa2dcb7f2068af009d63cab8ac73364c37ecafbde9a57a43fcab6cd643b4
+port   exit code 0   image: 210x210, values 0 to 254, pixels 8de2fa2dcb7f2068af009d63cab8ac73364c37ecafbde9a57a43fcab6cd643b4
+root   exit code 0   image: 210x210, values 0 to 254, pixels 8de2fa2dcb7f2068af009d63cab8ac73364c37ecafbde9a57a43fcab6cd643b4
+remote cache: http\127.0.0.1%3A41235, http\127.0.0.1%3A41270
+RESULT: the volume served on a port was rendered, and its image is the local one
