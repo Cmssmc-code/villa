@@ -1,0 +1,12 @@
+$ python -I %USERPROFILE%\Dev\vesuvius\preuves-dinovol-gen19\worker.py build %USERPROFILE%\Dev\vesuvius\donnees-dinovol\gen19\travail\before\dinovol %USERPROFILE%\Dev\vesuvius\donnees-dinovol\gen19\travail\catalogue.json %USERPROFILE%\Dev\vesuvius\donnees-dinovol\gen19\travail\config-before.json %USERPROFILE%\Dev\vesuvius\donnees-dinovol\gen19\travail\cache-before %USERPROFILE%\Dev\vesuvius\donnees-dinovol\gen19\travail\build-before.json banded
+[peak 1.52 GB] read 20260926044226-spiral-output-generation-19/mesh/intermediate/tifxyz_normalized/x.tif (956, 56913) float32 in 17 s
+[peak 1.73 GB] read 20260926044226-spiral-output-generation-19/mesh/intermediate/tifxyz_normalized/y.tif (956, 56913) float32 in 16 s
+[peak 1.95 GB] read 20260926044226-spiral-output-generation-19/mesh/intermediate/tifxyz_normalized/z.tif (956, 56913) float32 in 17 s
+[peak 1.95 GB] build 20260926044226: coordinate_scale=1.0, transform=False, arrays (956, 56913) float32, scale0_shape=(75784, 32693, 32693), selected_shape=(18946, 8174, 8174)
+[peak 2.16 GB] banded call equals whole-array call on 24 rows (1,364,493 points): True
+[peak 2.62 GB] banded build done (956 rows in slices of 64)
+[1/1] PHercParis4: 1 meshes (0 with ink-labels)
+Done: cached 1 meshes (0 with ink-labels) across 1/1 volumes in %USERPROFILE%\Dev\vesuvius\donnees-dinovol\gen19\travail\cache-before
+[peak 2.85 GB] cmm.main() finished (mesh built, .npz written)
+
+--- exit code 0; wall time 79 s; peak committed memory 2.85 GB (2.65 GiB), limit 3.5 GB

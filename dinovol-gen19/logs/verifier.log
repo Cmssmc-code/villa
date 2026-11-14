@@ -1,0 +1,53 @@
+Check of the dinovol report: PHercParis4 gen-19 mesh cached at 1/4 of its position.
+Real dinovol code and real public data, in a job object limited to 3.5 GB. Needs Internet; a few minutes.
+Nothing is opened or installed. Work folder: %USERPROFILE%\Dev\vesuvius\donnees-dinovol\gen19\travail
+Free memory: 6.09 GiB (at least 4.5 GiB needed before the heavy steps).
+
+Step 1/6: public catalog (metadata.json) and the facts of the report.
+   catalog: 17,667,383 bytes after gunzip, Last-Modified Thu, 05 Nov 2026 09:47:54 GMT
+   OK: segment 20260926044226-spiral-output-generation-19: original volume 20260411134726, original_volume_downscale 4, tifxyz-normalized present, no tifxyz-transformed onto 20260411134726 (representations: tifxyz-normalized, spiral-fit, tifxyz-transformed, tifxyz-transformed, 3d-ink-prediction-tif, 3d-ink-prediction-tif-downsampled, ink-detection-composite, ink-detection-zarr)
+   other PHercParis4 segments of this volume with downscale 4 and no transformed copy onto it: 0
+
+Step 2/6: shape and existing chunks of the masked volume (level 2 and level 4).
+   level 2 shape [18946, 8174, 8174], level 4 shape [4737, 2044, 2044], chunks [128, 128, 128]: 3328 chunks exist out of 9728
+
+Step 3/6: code of dinovol, exported with git archive (commit 6ef70e322 = main 97fb9336c + the gzip fix).
+   OK: the export with correctif.diff has exactly one more line in object_labels.py
+   before: config pretrain_8_9um.json restricted to PHercParis4 (1 entry, volume_scale 2)
+   after: config pretrain_8_9um.json restricted to PHercParis4 (1 entry, volume_scale 2)
+
+Step 4/6: BEFORE (code as it is): real cache_metadata_meshes on gen-19, in 3.5 GB.
+   first the whole-array call, without slices of rows (expected not to fit in 3.5 GB)...
+        30 s ...
+   whole-array call: did not finish (exit code 1; numpy._core._exceptions._ArrayMemoryError: Unable to allocate 1.22 GiB for an array with shape (956, 56913, 3) and data type float64)
+        30 s ...
+        61 s ...
+   build: exit code 0, 79 s, peak 2.85 GB
+   OK: before: the real cache_metadata_meshes cached the mesh, under 3.5 GB
+   OK: before: the cached mesh is read back and measured
+
+Step 5/6: AFTER (same export with correctif.diff applied).
+        30 s ...
+        61 s ...
+   build: exit code 0, 81 s, peak 2.85 GB
+   OK: after: the real cache_metadata_meshes cached the mesh, under 3.5 GB
+   OK: after: the cached mesh is read back and measured
+
+Step 6/6: comparison.
+   before: banded call equals whole-array call on 24 rows: True; selected shape [[18946, 8174, 8174]]; tiff files read: ['tifxyz_normalized']
+   after: banded call equals whole-array call on 24 rows: True; selected shape [[18946, 8174, 8174]]; tiff files read: ['tifxyz_normalized']
+   OK: selected shape given to dinovol = level 2 of the volume [18946, 8174, 8174]
+   OK: slicing the rows gives exactly the whole-array result (checked with the real function on 24 rows)
+   OK: coordinate_scale given to the mesh builder: 1.0 before, 4.0 after (original_volume_downscale is 4)
+   OK: same files read (tifxyz_normalized/x.tif, y.tif, z.tif): only the scale differs
+   before: 47,026,606 points, 705 in an existing level-4 chunk (0.0015 %), bbox z 1001-4436, y 298-1860, x 322-1897
+   after: 47,026,606 points, 46,410,423 in an existing level-4 chunk (98.6897 %), bbox z 4005-17746, y 1191-7442, x 1288-7589
+   OK: same number of cached points before and after (47,026,606): nothing is dropped, only moved
+   OK: BEFORE: 0.0015 % of the cached points fall in an existing chunk (almost all in empty space)
+   OK: AFTER: 98.69 % of the cached points fall in an existing chunk
+   OK: AFTER: the bounding box of the cached mesh equals the one the catalog gives for the segment (creation bbox z 4005-17747, y 1192-7441, x 1288-7589; largest gap 0.38 voxel)
+   OK: 31,771 sampled points: position after = 4 x position before (max deviation 0.0005 voxel)
+   whole-array call in 3.5 GB: it did not fit (MemoryError)
+
+Duration: 237 s
+TOUT EST CONFORME
