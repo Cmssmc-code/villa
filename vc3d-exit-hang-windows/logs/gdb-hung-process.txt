@@ -1,0 +1,129 @@
+[New Thread 2556.0x6988]
+  Id   Target Id          Frame 
+  1    Thread 2556.0x5384 0x00007ff808076f34 in ntdll!ZwWaitForMultipleObjects () from C:\WINDOWS\SYSTEM32\ntdll.dll
+* 2    Thread 2556.0x6988 0x00007ff808036ae1 in ntdll!DbgBreakPoint () from C:\WINDOWS\SYSTEM32\ntdll.dll
+
+Thread 2 (Thread 2556.0x6988):
+#0  0x00007ff808036ae1 in ntdll!DbgBreakPoint () from C:\WINDOWS\SYSTEM32\ntdll.dll
+#1  0x00007ff80804902e in ntdll!DbgUiRemoteBreakin () from C:\WINDOWS\SYSTEM32\ntdll.dll
+#2  0x00007ff806ffdda7 in KERNEL32!BaseThreadInitThunk () from C:\WINDOWS\System32\kernel32.dll
+#3  0x00007ff807fd9c5c in ntdll!RtlUserThreadStart () from C:\WINDOWS\SYSTEM32\ntdll.dll
+#4  0x0000000000000000 in ?? ()
+
+Thread 1 (Thread 2556.0x5384):
+#0  0x00007ff808076f34 in ntdll!ZwWaitForMultipleObjects () from C:\WINDOWS\SYSTEM32\ntdll.dll
+#1  0x00007ff80539ab53 in WaitForMultipleObjectsEx () from C:\WINDOWS\System32\KernelBase.dll
+#2  0x00007ff80539aa21 in WaitForMultipleObjects () from C:\WINDOWS\System32\KernelBase.dll
+#3  0x00007fffab1b236a in ?? () from %USERPROFILE%\Dev\vesuvius\donnees-regression-main\vc3d-main\VC3D-97fb933-2026-11-13-win64\bin\libwinpthread-1.dll
+#4  0x00007fffab1b262d in ?? () from %USERPROFILE%\Dev\vesuvius\donnees-regression-main\vc3d-main\VC3D-97fb933-2026-11-13-win64\bin\libwinpthread-1.dll
+#5  0x00007fffab1b26c5 in ?? () from %USERPROFILE%\Dev\vesuvius\donnees-regression-main\vc3d-main\VC3D-97fb933-2026-11-13-win64\bin\libwinpthread-1.dll
+#6  0x00007fff760f2679 in ?? () from %USERPROFILE%\Dev\vesuvius\donnees-regression-main\vc3d-main\VC3D-97fb933-2026-11-13-win64\bin\libstdc++-6.dll
+#7  0x00007fff692fba71 in __tcf_ZZN3vcr18scratchMaintenanceEvE6holder () from %USERPROFILE%\Dev\vesuvius\donnees-regression-main\vc3d-main\VC3D-97fb933-2026-11-13-win64\bin\libvc_reader_native.dll
+#8  0x00007ff8058b9c85 in ucrtbase!bsearch_s () from C:\WINDOWS\System32\ucrtbase.dll
+#9  0x00007ff8058b98a7 in ucrtbase!_execute_onexit_table () from C:\WINDOWS\System32\ucrtbase.dll
+#10 0x00007ff8058b985d in ucrtbase!_execute_onexit_table () from C:\WINDOWS\System32\ucrtbase.dll
+#11 0x00007fff68f31090 in _CRT_INIT (hDllHandle=hDllHandle@entry=0x7fff68f30000, dwReason=dwReason@entry=0, lpreserved=lpreserved@entry=0x1) at D:/W/B/src/mingw-w64/mingw-w64-crt/crt/crtdll.c:119
+#12 0x00007fff68f31257 in DllMainCRTStartup (hDllHandle=0x7fff68f30000, dwReason=0, lpreserved=0x1) at D:/W/B/src/mingw-w64/mingw-w64-crt/crt/crtdll.c:167
+#13 0x00007ff80803147a in ntdll!RtlWow64SuspendThread () from C:\WINDOWS\SYSTEM32\ntdll.dll
+#14 0x00007ff807f2b2e3 in ntdll!RtlRaiseException () from C:\WINDOWS\SYSTEM32\ntdll.dll
+#15 0x00007ff807fdb08f in ntdll!LdrShutdownProcess () from C:\WINDOWS\SYSTEM32\ntdll.dll
+#16 0x00007ff807fd9d9e in ntdll!RtlExitUserProcess () from C:\WINDOWS\SYSTEM32\ntdll.dll
+#17 0x00007ff8070117ab in KERNEL32!FatalExit () from C:\WINDOWS\System32\kernel32.dll
+#18 0x00007ff805910813 in ucrtbase!logbf () from C:\WINDOWS\System32\ucrtbase.dll
+#19 0x00007ff65fe4148f in __tmainCRTStartup () at D:/W/B/src/mingw-w64/mingw-w64-crt/crt/crtexe.c:267
+#20 0x00007ff806ffdda7 in KERNEL32!BaseThreadInitThunk () from C:\WINDOWS\System32\kernel32.dll
+#21 0x00007ff807fd9c5c in ntdll!RtlUserThreadStart () from C:\WINDOWS\SYSTEM32\ntdll.dll
+#22 0x0000000000000000 in ?? ()
+From                To                  Syms Read   Shared Object Library
+0x00007ff807f11000  0x00007ff80817b844  Yes (*)     C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ff806fd1000  0x00007ff80709a728  Yes (*)     C:\WINDOWS\System32\kernel32.dll
+0x00007ff805381000  0x00007ff80578806c  Yes (*)     C:\WINDOWS\System32\KernelBase.dll
+0x00007ff805871000  0x00007ff8059bbec0  Yes (*)     C:\WINDOWS\System32\ucrtbase.dll
+0x00007fffb2a51000  0x00007fffb2a7a04c  Yes (*)     %USERPROFILE%\Dev\vesuvius\donnees-regression-main\vc3d-main\VC3D-97fb933-2026-11-13-win64\bin\libgcc_s_seh-1.dll
+0x00007fffab1b1000  0x00007fffab1c5058  Yes (*)     %USERPROFILE%\Dev\vesuvius\donnees-regression-main\vc3d-main\VC3D-97fb933-2026-11-13-win64\bin\libwinpthread-1.dll
+0x00007fff785e1000  0x00007fff7863617c  Yes (*)     %USERPROFILE%\Dev\vesuvius\donnees-regression-main\vc3d-main\VC3D-97fb933-2026-11-13-win64\bin\libgomp-1.dll
+0x00007fff69ae1000  0x00007fff69e71bac  Yes         %USERPROFILE%\Dev\vesuvius\donnees-regression-main\vc3d-main\VC3D-97fb933-2026-11-13-win64\bin\libvc_core.dll
+0x00007ff805e91000  0x00007ff805f0f204  Yes (*)     C:\WINDOWS\System32\ws2_32.dll
+0x00007fff75fe1000  0x00007fff7626ea00  Yes (*)     %USERPROFILE%\Dev\vesuvius\donnees-regression-main\vc3d-main\VC3D-97fb933-2026-11-13-win64\bin\libstdc++-6.dll
+0x00007fff69571000  0x00007fff69ad0304  Yes (*)     %USERPROFILE%\Dev\vesuvius\donnees-regression-main\vc3d-main\VC3D-97fb933-2026-11-13-win64\bin\libopencv_core-413.dll
+0x00007fff68f31000  0x00007fff6951dcac  Yes         %USERPROFILE%\Dev\vesuvius\donnees-regression-main\vc3d-main\VC3D-97fb933-2026-11-13-win64\bin\libvc_reader_native.dll
+0x00007ff807541000  0x00007ff807657864  Yes (*)     C:\WINDOWS\System32\rpcrt4.dll
+0x00007ff807ac1000  0x00007ff807c58714  Yes (*)     C:\WINDOWS\System32\ole32.dll
+0x00007ff8057c1000  0x00007ff805862894  Yes (*)     C:\WINDOWS\System32\msvcp_win.dll
+0x00007fffab141000  0x00007fffab16206c  Yes (*)     %USERPROFILE%\Dev\vesuvius\donnees-regression-main\vc3d-main\VC3D-97fb933-2026-11-13-win64\bin\libblosc.dll
+0x00007ff806fa1000  0x00007ff806fca51c  Yes (*)     C:\WINDOWS\System32\gdi32.dll
+0x00007fff754b1000  0x00007fff755a5130  Yes (*)     %USERPROFILE%\Dev\vesuvius\donnees-regression-main\vc3d-main\VC3D-97fb933-2026-11-13-win64\bin\libblosc2.dll
+0x00007ff805791000  0x00007ff8057b6028  Yes (*)     C:\WINDOWS\System32\win32u.dll
+0x00007fff6e5c1000  0x00007fff6e70dc18  Yes (*)     %USERPROFILE%\Dev\vesuvius\donnees-regression-main\vc3d-main\VC3D-97fb933-2026-11-13-win64\bin\libcurl-4.dll
+0x00007ff805251000  0x00007ff8053786b0  Yes (*)     C:\WINDOWS\System32\gdi32full.dll
+0x00007fff6c931000  0x00007fff6ca2134c  Yes (*)     %USERPROFILE%\Dev\vesuvius\donnees-regression-main\vc3d-main\VC3D-97fb933-2026-11-13-win64\bin\libjpeg-8.dll
+0x00007ff8059d1000  0x00007ff805b4d214  Yes (*)     C:\WINDOWS\System32\crypt32.dll
+0x00007fffaaf41000  0x00007fffaaf6d0ac  Yes (*)     %USERPROFILE%\Dev\vesuvius\donnees-regression-main\vc3d-main\VC3D-97fb933-2026-11-13-win64\bin\liblz4.dll
+0x00007ff806c01000  0x00007ff806ddd5a8  Yes (*)     C:\WINDOWS\System32\user32.dll
+0x00007ff807961000  0x00007ff8079d1118  Yes (*)     C:\WINDOWS\System32\Wldap32.dll
+0x00007fff7e6f1000  0x00007fff7e7350b8  Yes (*)     %USERPROFILE%\Dev\vesuvius\donnees-regression-main\vc3d-main\VC3D-97fb933-2026-11-13-win64\bin\libpng16-16.dll
+0x00007ff806771000  0x00007ff806b14818  Yes (*)     C:\WINDOWS\System32\combase.dll
+0x00007fffa3d41000  0x00007fffa3d640a0  Yes (*)     %USERPROFILE%\Dev\vesuvius\donnees-regression-main\vc3d-main\VC3D-97fb933-2026-11-13-win64\bin\zlib1.dll
+0x00007fff74b41000  0x00007fff74bda4a4  Yes (*)     %USERPROFILE%\Dev\vesuvius\donnees-regression-main\vc3d-main\VC3D-97fb933-2026-11-13-win64\bin\libtiff-6.dll
+0x00007fff6c521000  0x00007fff6c6a9044  Yes (*)     %USERPROFILE%\Dev\vesuvius\donnees-regression-main\vc3d-main\VC3D-97fb933-2026-11-13-win64\bin\libsqlite3-0.dll
+0x00007fff6be21000  0x00007fff6bf4d120  Yes (*)     %USERPROFILE%\Dev\vesuvius\donnees-regression-main\vc3d-main\VC3D-97fb933-2026-11-13-win64\bin\libzstd.dll
+0x00007fff7e411000  0x00007fff7e44108c  Yes         %USERPROFILE%\Dev\vesuvius\donnees-regression-main\vc3d-main\VC3D-97fb933-2026-11-13-win64\bin\libvc_reader_sftp.dll
+0x00007fff77921000  0x00007fff77962114  Yes         %USERPROFILE%\Dev\vesuvius\donnees-regression-main\vc3d-main\VC3D-97fb933-2026-11-13-win64\bin\libvc_geometry.dll
+0x00007fff68c11000  0x00007fff68f23fc8  Yes (*)     %USERPROFILE%\Dev\vesuvius\donnees-regression-main\vc3d-main\VC3D-97fb933-2026-11-13-win64\bin\libopencv_calib3d-413.dll
+0x00007fff66231000  0x00007fff66a1efd4  Yes (*)     %USERPROFILE%\Dev\vesuvius\donnees-regression-main\vc3d-main\VC3D-97fb933-2026-11-13-win64\bin\libopencv_imgproc-413.dll
+0x00007fff74a01000  0x00007fff74a42134  Yes         %USERPROFILE%\Dev\vesuvius\donnees-regression-main\vc3d-main\VC3D-97fb933-2026-11-13-win64\bin\libvc_object_formats.dll
+0x00007fffa0f51000  0x00007fffa0f63050  Yes         %USERPROFILE%\Dev\vesuvius\donnees-regression-main\vc3d-main\VC3D-97fb933-2026-11-13-win64\bin\libvc_resident_geometry.dll
+0x00007fff61c01000  0x00007fff624795a8  Yes         %USERPROFILE%\Dev\vesuvius\donnees-regression-main\vc3d-main\VC3D-97fb933-2026-11-13-win64\bin\libvc_objects.dll
+0x00007fffab191000  0x00007fffab1a3074  Yes (*)     %USERPROFILE%\Dev\vesuvius\donnees-regression-main\vc3d-main\VC3D-97fb933-2026-11-13-win64\bin\libsnappy.dll
+0x00007fffaae11000  0x00007fffaae25054  Yes (*)     %USERPROFILE%\Dev\vesuvius\donnees-regression-main\vc3d-main\VC3D-97fb933-2026-11-13-win64\bin\libbrotlidec.dll
+0x00007ff804fb1000  0x00007ff804fd91b4  Yes (*)     C:\WINDOWS\SYSTEM32\bcrypt.dll
+0x00007fff7beb1000  0x00007fff7bef2094  Yes (*)     %USERPROFILE%\Dev\vesuvius\donnees-regression-main\vc3d-main\VC3D-97fb933-2026-11-13-win64\bin\libidn2-0.dll
+0x00007ff8036c1000  0x00007ff8036f2128  Yes (*)     C:\WINDOWS\SYSTEM32\IPHLPAPI.DLL
+0x00007fff86b11000  0x00007fff86b4b260  Yes (*)     %USERPROFILE%\Dev\vesuvius\donnees-regression-main\vc3d-main\VC3D-97fb933-2026-11-13-win64\bin\libnghttp2-14.dll
+0x00007ff807e01000  0x00007ff807ea761c  Yes (*)     C:\WINDOWS\System32\sechost.dll
+0x00007fff84ac1000  0x00007fff84af620c  Yes (*)     %USERPROFILE%\Dev\vesuvius\donnees-regression-main\vc3d-main\VC3D-97fb933-2026-11-13-win64\bin\libnghttp3-9.dll
+0x00007fffa3ad1000  0x00007fffa3ae2058  Yes (*)     %USERPROFILE%\Dev\vesuvius\donnees-regression-main\vc3d-main\VC3D-97fb933-2026-11-13-win64\bin\libngtcp2_crypto_ossl-0.dll
+0x00007fff75bd1000  0x00007fff75c3609c  Yes (*)     %USERPROFILE%\Dev\vesuvius\donnees-regression-main\vc3d-main\VC3D-97fb933-2026-11-13-win64\bin\libngtcp2-16.dll
+0x00007fff86a11000  0x00007fff86a3006c  Yes (*)     %USERPROFILE%\Dev\vesuvius\donnees-regression-main\vc3d-main\VC3D-97fb933-2026-11-13-win64\bin\libpsl-5.dll
+0x00007fff74511000  0x00007fff7456136c  Yes (*)     %USERPROFILE%\Dev\vesuvius\donnees-regression-main\vc3d-main\VC3D-97fb933-2026-11-13-win64\bin\libssh2-1.dll
+0x00007ff801881000  0x00007ff80188c098  Yes (*)     C:\WINDOWS\SYSTEM32\secur32.dll
+0x00007fff6c421000  0x00007fff6c5114d0  Yes (*)     %USERPROFILE%\Dev\vesuvius\donnees-regression-main\vc3d-main\VC3D-97fb933-2026-11-13-win64\bin\libssl-3-x64.dll
+0x00007fff5cba1000  0x00007fff5ccab354  Yes (*)     C:\WINDOWS\SYSTEM32\opengl32.dll
+0x00007fff744a1000  0x00007fff74507b54  Yes (*)     %USERPROFILE%\Dev\vesuvius\donnees-regression-main\vc3d-main\VC3D-97fb933-2026-11-13-win64\bin\libtbb12.dll
+0x00007ff805bf1000  0x00007ff805c985f4  Yes (*)     C:\WINDOWS\System32\msvcrt.dll
+0x00007ff807661000  0x00007ff80771ab0c  Yes (*)     C:\WINDOWS\System32\advapi32.dll
+0x00007fffa30f1000  0x00007fffa310f060  Yes (*)     %USERPROFILE%\Dev\vesuvius\donnees-regression-main\vc3d-main\VC3D-97fb933-2026-11-13-win64\bin\libdeflate.dll
+0x00007fffa21d1000  0x00007fffa21e6098  Yes (*)     %USERPROFILE%\Dev\vesuvius\donnees-regression-main\vc3d-main\VC3D-97fb933-2026-11-13-win64\bin\libjbig-0.dll
+0x00007fff616b1000  0x00007fff61bf6d38  Yes (*)     %USERPROFILE%\Dev\vesuvius\donnees-regression-main\vc3d-main\VC3D-97fb933-2026-11-13-win64\bin\libcrypto-3-x64.dll
+0x00007fff6cb01000  0x00007fff6cbca094  Yes (*)     %USERPROFILE%\Dev\vesuvius\donnees-regression-main\vc3d-main\VC3D-97fb933-2026-11-13-win64\bin\libLerc.dll
+0x00007fff2be61000  0x00007fff2e88c8fc  Yes (*)     %USERPROFILE%\Dev\vesuvius\donnees-regression-main\vc3d-main\VC3D-97fb933-2026-11-13-win64\bin\libopenblas.dll
+0x00007fff7df31000  0x00007fff7df6516c  Yes (*)     %USERPROFILE%\Dev\vesuvius\donnees-regression-main\vc3d-main\VC3D-97fb933-2026-11-13-win64\bin\liblzma-5.dll
+0x00007fff6c871000  0x00007fff6c92c284  Yes (*)     %USERPROFILE%\Dev\vesuvius\donnees-regression-main\vc3d-main\VC3D-97fb933-2026-11-13-win64\bin\libwebp-7.dll
+0x00007fff6ba01000  0x00007fff6bae60a8  Yes (*)     %USERPROFILE%\Dev\vesuvius\donnees-regression-main\vc3d-main\VC3D-97fb933-2026-11-13-win64\bin\libopencv_features2d-413.dll
+0x00007fff6ac31000  0x00007fff6accf814  Yes (*)     %USERPROFILE%\Dev\vesuvius\donnees-regression-main\vc3d-main\VC3D-97fb933-2026-11-13-win64\bin\libopencv_flann-413.dll
+0x00007fff85511000  0x00007fff8553a060  Yes (*)     %USERPROFILE%\Dev\vesuvius\donnees-regression-main\vc3d-main\VC3D-97fb933-2026-11-13-win64\bin\libbrotlicommon.dll
+0x00007fff735e1000  0x00007fff73631550  Yes (*)     %USERPROFILE%\Dev\vesuvius\donnees-regression-main\vc3d-main\VC3D-97fb933-2026-11-13-win64\bin\libintl-8.dll
+0x00007fff6ab11000  0x00007fff6ac2d3b8  Yes (*)     %USERPROFILE%\Dev\vesuvius\donnees-regression-main\vc3d-main\VC3D-97fb933-2026-11-13-win64\bin\libiconv-2.dll
+0x00007fff66be1000  0x00007fff66e0db5c  Yes (*)     %USERPROFILE%\Dev\vesuvius\donnees-regression-main\vc3d-main\VC3D-97fb933-2026-11-13-win64\bin\libunistring-5.dll
+0x00007fff6b741000  0x00007fff6b77717c  Yes (*)     C:\WINDOWS\SYSTEM32\glu32.dll
+0x00007fff84191000  0x00007fff841a3050  Yes (*)     %USERPROFILE%\Dev\vesuvius\donnees-regression-main\vc3d-main\VC3D-97fb933-2026-11-13-win64\bin\libsharpyuv-0.dll
+0x00007fff5c691000  0x00007fff5ca31234  Yes (*)     %USERPROFILE%\Dev\vesuvius\donnees-regression-main\vc3d-main\VC3D-97fb933-2026-11-13-win64\bin\libgfortran-5.dll
+0x00007fff72f41000  0x00007fff72fab058  Yes (*)     %USERPROFILE%\Dev\vesuvius\donnees-regression-main\vc3d-main\VC3D-97fb933-2026-11-13-win64\bin\libquadmath-0.dll
+0x00007ff801eb1000  0x00007ff801ef93d4  Yes (*)     C:\WINDOWS\SYSTEM32\DXCore.dll
+0x00007ff803fa1000  0x00007ff803fe9474  Yes (*)     C:\WINDOWS\SYSTEM32\sspicli.dll
+0x00007ff8045b1000  0x00007ff8045bb044  Yes (*)     C:\WINDOWS\SYSTEM32\cryptbase.dll
+0x00007ff805191000  0x00007ff80523b860  Yes (*)     C:\WINDOWS\System32\bcryptprimitives.dll
+0x00007ff807821000  0x00007ff8078501f4  Yes (*)     C:\WINDOWS\System32\imm32.dll
+0x00007fffda351000  0x00007fffda441d30  Yes (*)     C:\Program Files\Windhawk\Engine\1.7.3\64\windhawk.dll
+0x00007ff8042a1000  0x00007ff80430a1bc  Yes (*)     C:\WINDOWS\system32\mswsock.dll
+0x00007ff803761000  0x00007ff8038ab634  Yes (*)     C:\WINDOWS\SYSTEM32\dnsapi.dll
+0x00007ff8040a1000  0x00007ff8040ac090  Yes (*)     C:\WINDOWS\SYSTEM32\dsparse.dll
+0x00007ff807eb1000  0x00007ff807eb9028  Yes (*)     C:\WINDOWS\System32\nsi.dll
+0x00007ff800001000  0x00007ff80000a090  Yes (*)     C:\Windows\System32\rasadhlp.dll
+0x00007ffffe1e1000  0x00007ffffe26561c  Yes (*)     C:\WINDOWS\System32\FWPUCLNT.DLL
+0x00007ff804591000  0x00007ff8045aa1c4  Yes (*)     C:\WINDOWS\SYSTEM32\cryptsp.dll
+0x00007ff803c41000  0x00007ff803c78138  Yes (*)     C:\WINDOWS\system32\rsaenh.dll
+0x00007ff804611000  0x00007ff804622080  Yes (*)     C:\WINDOWS\SYSTEM32\msasn1.dll
+0x00007ff803ce1000  0x00007ff803cfa140  Yes (*)     C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+(*): Shared library is missing debugging information.
+[Inferior 1 (process 2556) detached]

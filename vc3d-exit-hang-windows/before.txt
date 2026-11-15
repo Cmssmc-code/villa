@@ -1,0 +1,72 @@
+vc_render_tifxyz never exits on Windows after a complete render (main 2d3fb38d3)
+==============================================================================
+Machine: Windows 11 Home 10.0.26300, 15.7 GB RAM, no GPU. Date: 2026-11-15 (night).
+
+Builds compared
+- "avance" = main 2d3fb38d3 built on this PC (MSYS2 UCRT64), copied from
+  %USERPROFILE%\Dev\vesuvius\outils-vc3d\bin-main-2d3fb38d3 to
+  %USERPROFILE%\Dev\vesuvius\donnees-blocage-sortie\bin-avance
+  PATH = bin-avance;%USERPROFILE%\Dev\vesuvius\outils-vc3d\msys64\ucrt64\bin;C:\WINDOWS\system32;...
+- "temoin" = official Windows package VC3D-97fb933-2026-11-13-win64 (its own bin folder, nothing else on PATH).
+
+Data (public, open-data bucket, streamed)
+- volume: s3://vesuvius-challenge-open-data/PHerc0800/volumes/20250521135224-8.640um-1.2m-116keV-masked.zarr/
+- segmentation: PHerc0800 seg 20251029010146 (tifxyz, 4 files, 56 459 bytes)
+
+Command "r1" (launcher: nuit-1511\blocage-sortie\serie.ps1 + essai.ps1, hidden window, per-run timeout)
+  vc_render_tifxyz.exe --volume <volume above> --segmentation <seg> --zarr-output "<out>\rendu zarr\seg0800.zarr"
+    --scale 1 --group-idx 1 --num-slices 8 --cache-gb 1 --voxel-size 8.64 --voxel-unit micrometer --flip-normals
+
+Results
+| Build            | Runs | Timeout | Exited by itself          | Notes |
+|------------------|------|---------|---------------------------|-------|
+| main 2d3fb38d3   | 3    | 180 s   | 0 (all killed at 180 s)   | t1, 04:05-04:14; each printed "tile 16/16 (100%)" and "[pyramid L5] 1 chunks", then sat idle with 1 thread (cpu 4.58 s / 0.36 s / 0.55 s) |
+| main 2d3fb38d3   | 3    | 120 s   | 0 (all killed at 120 s)   | t2, 05:05:56-05:12, ASCII segmentation path; 1 thread, cpu 0.34 s / 0.48 s / 0.58 s; output 32 files, sha256 identical to 97fb933 t2 |
+| package 97fb933  | 3    | 120 s   | 3 of 3, rc=0              | t2, 0.7 s / 0.5 s / 0.7 s |
+| main 2d3fb38d3   | 1    | 600 s   | 0                         | earlier run by the "regression-main" agent, 1 thread, cpu 3.44 s |
+| package 97fb933  | 1    | 600 s   | 1, rc=0 in 3 s            | earlier run by "regression-main" |
+| main 2d3fb38d3, r5 (https volume, --tif-output composite) | 1 | 600 s | 1, rc=0 in 4.5 s | earlier run by "regression-main" |
+
+Note on an invalid first witness series (t1, 05:04): the 97fb933 package returned rc=1
+"Error loading: ...\DonnÃ©es rouleaux\PHerc0800 seg 20251029010146" 3 times: the accented folder
+name was misread through this launcher. The segmentation was copied to an ASCII path
+(donnees-blocage-sortie\seg0800) and the series was rerun (t2). Not a finding about this hang.
+
+Output on disk despite the hang
+- main run t1 (killed at 180 s): 32 files, 1 526 988 bytes in seg0800.zarr (levels 0-5).
+- 97fb933 run t2 (exited rc=0): 32 files, 1 526 988 bytes.
+- sha256 of all 32 files compared: 0 differences. The output is complete; only the exit is broken.
+
+Kill behaviour
+- The three main runs of t1 (PIDs 21636, 17780, 23436) were killed by Process.Kill() and are gone.
+- PID 2556 (vc_render_tifxyz, main, started 03:24) and PID 26584 (vc_objrefine, package 97fb933, started 00:22)
+  are still listed after Stop-Process -Force and taskkill /F ("no running instance"). Left as is.
+
+Stack of the hung process (gdb, PID 2556, full dump in gdb-2556.txt, module list in modules-2556.txt)
+Thread 2 is only gdb's own break-in thread. Thread 1 is the only real thread left:
+  #19 __tmainCRTStartup (crtexe.c:267)            main() returned, exit() called
+  #17 KERNEL32 -> #16 ntdll!RtlExitUserProcess -> #15 ntdll!LdrShutdownProcess
+  #12 DllMainCRTStartup(libvc_reader_native.dll, dwReason=0 = DLL_PROCESS_DETACH)
+  #11 _CRT_INIT -> #9/#10 ucrtbase!_execute_onexit_table
+  #7  __tcf_ZZN3vcr18scratchMaintenanceEvE6holder   = destructor of the function-local
+      "static Holder holder" in vcr::scratchMaintenance(), vc_reader/src/cpp/scratch_pool.hpp
+  #6  libstdc++-6.dll (std::thread::join called from ~ScratchMaintenance)
+  #3-#5 libwinpthread-1.dll -> #0-#2 WaitForMultipleObjects  (never returns)
+
+Source (origin/main 2d3fb38d3, file added by #2546, commit 294ac4cf2)
+- vc_reader/src/cpp/scratch_pool.hpp:180  start() creates the worker thread once (std::call_once).
+- :181  ~ScratchMaintenance() sets stop_, notifies, then worker_.join().
+- :188-192  struct Holder { ~Holder(){ ... delete p; } }; static Holder holder;
+- :197  scratchMaintenance() calls current->start() on every call.
+- :200-205  workerScratch() calls scratchMaintenance() on the first use per thread.
+- Callers of workerScratch(): codecs.hpp:106 (blosc decode), codecs.hpp:112 (zstd decode),
+  channel_decode.hpp:66.
+So the maintenance thread only exists in a process that decoded at least one blosc/zstd chunk
+through vc_reader; such a process then joins that thread from a static destructor during
+DLL_PROCESS_DETACH, where Windows has already ended the other threads, and the join never returns.
+
+Not proven tonight
+- Why r5 (https volume, composite tif output) did not hang on main: only one run, and I did not
+  check whether that path reaches workerScratch(). The hang may also be timing dependent.
+- Whether vc_objrefine 26584 (package 97fb933, no scratch_pool.hpp yet) hangs in the same place: not attached with gdb.
+- No fix was built or tested.
