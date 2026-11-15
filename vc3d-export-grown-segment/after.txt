@@ -1,0 +1,119 @@
+AFTER - export of a segment grown in store mode (branch vc3d-export-grown-segment, commit 42d3c14f6)
+Date: Sunday 2026-11-15, 05:04-05:10 (Windows 11, PC without GPU, 15.7 GB RAM). Agent: finisseur-export-segment.
+
+Binaries
+- bin-main  = %USERPROFILE%\Dev\vesuvius\donnees-correcteur-export-segment\bin-main
+              plain copy of %USERPROFILE%\Dev\vesuvius\outils-vc3d\bin-main-2d3fb38d3 (main 2d3fb38d3 built on this PC, preset ci-windows-mingw).
+- bin-apres = %USERPROFILE%\Dev\vesuvius\donnees-correcteur-export-segment\bin-apres
+              copy of bin-main where ONLY libvc_object_geometry.dll is replaced by
+              %USERPROFILE%\Dev\vesuvius\outils-vc3d\bin-corrige\vc3d-export-grown-segment\libvc_object_geometry.dll
+              (RECETTE.txt: built 2026-11-15 02:11:03 from the compiled main tree 2d3fb38d3; only file different from main:
+               vc_object_store/src/geometry/SourceMetadata.cpp taken from commit 42d3c14f6, 5 insertions, 1 deletion).
+  diff -rq bin-main bin-apres -> only "libvc_object_geometry.dll differ".
+  sha256 bin-main/libvc_object_geometry.dll  = de5f7b94f32610f244310b4f5de72ded66626cf70bf8129edda31d298d04998e
+  sha256 bin-apres/libvc_object_geometry.dll = 8f27cc4625cce53176dae66f8f70e4b5df03c99c9d5c559d5e007398949e5488 (= RECETTE.txt)
+  sha256 VC3D.exe (both)                     = 312ff32b057c207260264d6e3de4767bf82adb3363e25a0940723b6f170ee2fd
+- Dependency DLLs: PATH += %USERPROFILE%\Dev\vesuvius\outils-vc3d\msys64\ucrt64\bin ; QT_PLUGIN_PATH = ...\msys64\ucrt64\share\qt6\plugins.
+
+Commands (VC3D on a hidden desktop, agent bridge, window lock nuit-1511\verrou-fenetre held 05:04-05:08)
+  cd %USERPROFILE%\Dev\vesuvius\nuit-1511\correcteur-export-segment\outils
+  python finisseur_lance.py main-avant  %USERPROFILE%\Dev\vesuvius\donnees-correcteur-export-segment\bin-main    (profile restored from profil-apres-paquet)
+  python finisseur_lance.py main-avant2 %USERPROFILE%\Dev\vesuvius\donnees-correcteur-export-segment\bin-main    (empty profile)
+  python finisseur_lance.py main-apres  %USERPROFILE%\Dev\vesuvius\donnees-correcteur-export-segment\bin-apres   (empty profile)
+scenario.py calls, in order: catalog.open_sample PHerc1447 (prediction + normal_grids) ; segments.activate 09f10f4e ;
+objects.export 2a392224 (segment grown by the 13/11 package, only present in the restored profile) ;
+segmentation.grow_surface_from_seed seed (4171, 4171, 12148), 15 iterations, volume 20250521151220-surface-20260413222639-surface-m7-L0-th0.2.zarr-9279f79c1a22f778 ;
+objects.export <new segment> ; objects.export 09f10f4e (catalog segment).
+
+Note on the first main run (main-avant, restored profile): the store PHerc1447.vcobj written by the official 13/11 package
+is not opened by main 2d3fb38d3 (segments.activate -> -32000 "No project or no volume open", objects.export -> -32007
+"Object not found in the project's stores"). This is a separate store-version topic (also seen by the conversion-projet
+agent), not this bug. So both runs below use an empty profile: main creates its own store, and the segment is grown by
+the same build that exports it. The old segment 2a392224 could not be exported with main (not found), before or after.
+
+VC3D did not close by itself within 20 s after the scenario in all three runs; lanceur.py killed it by PID each time
+("VC3D tué (pas fermé en 20 s)"). All exports had finished before that.
+
+Result on disk (exports in %USERPROFILE%\Dev\vesuvius\donnees-correcteur-export-segment\exports)
+- main-avant2 (bin-main): pousse-main-avant2 not created (export failed). catalogue-main-avant2: meta.json, x.tif, y.tif, z.tif.
+- main-apres (bin-apres): pousse-main-apres: generations.tif, meta.json, x.tif, y.tif, z.tif.
+    meta.json: "source": "vc_grow_seg_from_seed", "format": "tifxyz", "type": "seg", "uuid": "73de07e1-2bef-4502-84c0-8ec04f39085d",
+               "tiff_dimensions": [32, 32], bbox [[3869.9, 3963.5, 11819.5], [4468.9, 4345.0, 12505.2]].
+    x.tif/y.tif/z.tif read back with OpenCV (cv2.IMREAD_UNCHANGED): each 32x32 float32, 784 valid points (not -1);
+      x 3869.9..4468.9, y 3963.5..4345.0, z 11819.5..12505.2 (matches the bbox in meta.json).
+  catalogue-main-apres: meta.json, x.tif, y.tif, z.tif; x/y/z 191x193 float32, 17973 valid points;
+    x 4258.7..5673.8, y 2544.0..4312.3, z 20911.9..24561.0; meta.json "source" absent (null), as before.
+    cmp catalogue-main-avant2 vs catalogue-main-apres: x.tif and meta.json byte-identical.
+
+Unit test test_object_store_surface_tifxyz (case added by the commit): NOT run on Windows. The out-of-tree build
+(nuit-1511\wf\tests-hors-arbre, test_object_store_surface_tifxyz.log, 04:22:16) stopped at compile time:
+  test_object_store_surface_tifxyz.cpp:27:72: error: cannot convert 'const std::filesystem::__cxx11::path::value_type*'
+  {aka 'const wchar_t*'} to 'const char*'  (TIFFOpen(path.c_str(), "w") in the existing helper writeVcMask)
+so there is no log of the test failing before and passing after.
+
+===== Raw scenario output: main-avant (bin-main, restored profile) =====
+05:04:33 BIN=%USERPROFILE%\Dev\vesuvius\donnees-correcteur-export-segment\bin-main
+05:04:36 catalog.open_sample {"sampleId": "PHerc1447", "resources": {"kinds": ["prediction", "normal_grids"]}} -> {"jobId": "job-1", "kind": "catalog.open_sample", "sampleId": "PHerc1447", "source": "catalog"}
+05:04:39 job.status job-1 -> succeeded | Opened sample PHerc1447 | []
+05:04:39 segments.activate {"segmentId": "09f10f4e-d698-565a-a2fa-5720f5b63530"} -> {"code": -32000, "message": "No project or no volume open"}
+05:04:39 objects.export {"uuid": "2a392224-4114-423c-8137-d1d81013d83f", "path": "%USERPROFILE%\\Dev\\vesuvius\\donnees-correcteur-export-segment\\exports\\ancien-main-avant"} -> {"code": -32007, "data": {"id": "2a392224-4114-423c-8137-d1d81013d83f", "kind": "object"}, "message": "Object not found in the project's stores"}
+05:04:39 segmentation.grow_surface_from_seed {"seed": {"x": 4171, "y": 4171, "z": 12148}, "iterations": 15, "volumeId": "20250521151220-surface-20260413222639-surface-m7-L0-th0.2.zarr-9279f79c1a22f778"} -> {"code": -32005, "data": {"detail": "Attach an object store and open a volume first."}, "message": "Failed to start GrowPatch from seed"}
+05:04:39 pas de surface_uuid dans le job de pousse
+05:04:39 objects.export {"uuid": "09f10f4e-d698-565a-a2fa-5720f5b63530", "path": "%USERPROFILE%\\Dev\\vesuvius\\donnees-correcteur-export-segment\\exports\\catalogue-main-avant"} -> {"code": -32007, "data": {"id": "09f10f4e-d698-565a-a2fa-5720f5b63530", "kind": "object"}, "message": "Object not found in the project's stores"}
+05:05:03 FIN rc=0
+--- lanceur.log (main-avant) ---
+05:04:33 BIN=%USERPROFILE%\Dev\vesuvius\donnees-correcteur-export-segment\bin-main
+05:04:34 VC3D pid=18264 pont=vc3d-ces-11596
+05:04:40 STOP demandé
+05:04:40 pic mémoire 1396312 Ko
+05:05:00 VC3D tué (pas fermé en 20 s)
+05:05:02 annonce du pont retirée
+05:05:02 FIN rc=0
+===== Raw scenario output: main-avant2 =====
+05:06:06 BIN=%USERPROFILE%\Dev\vesuvius\donnees-correcteur-export-segment\bin-main
+05:06:09 catalog.open_sample {"sampleId": "PHerc1447", "resources": {"kinds": ["prediction", "normal_grids"]}} -> {"jobId": "job-1", "kind": "catalog.open_sample", "sampleId": "PHerc1447", "source": "catalog"}
+05:06:12 job.status job-1 -> succeeded | Opened sample PHerc1447 | []
+05:06:14 segments.activate {"segmentId": "09f10f4e-d698-565a-a2fa-5720f5b63530"} -> {"activated": true, "alreadyActive": false, "previousSegmentId": null, "segment": {"active": true, "bound": true, "catalog": true, "id": "09f10f4e-d698-565a-a2fa-5720f5b63530", "name": "auto_grown_20250502161744358", "store": "45a49f10-5ddd-4f52-baf4-577cebdb8d80", "tags": [], "writable": true}}
+05:06:14 objects.export {"uuid": "2a392224-4114-423c-8137-d1d81013d83f", "path": "%USERPROFILE%\\Dev\\vesuvius\\donnees-correcteur-export-segment\\exports\\ancien-main-avant2"} -> {"code": -32007, "data": {"id": "2a392224-4114-423c-8137-d1d81013d83f", "kind": "object"}, "message": "Object not found in the project's stores"}
+05:06:15 segmentation.grow_surface_from_seed {"seed": {"x": 4171, "y": 4171, "z": 12148}, "iterations": 15, "volumeId": "20250521151220-surface-20260413222639-surface-m7-L0-th0.2.zarr-9279f79c1a22f778"} -> {"jobId": "job-2", "kind": "segmentation.grow_surface_from_seed", "volumeId": "20250521151220-surface-20260413222639-surface-m7-L0-th0.2.zarr-9279f79c1a22f778"}
+05:06:51 job.status job-2 -> succeeded | vc_grow_seg_from_seed completed successfully | ['generated surface 293531.437515 vx^2 (0.219120 cm^2)', 'surface_uuid: f0b5264a-13c6-4dcc-bf0f-78b156bc1a85']
+05:06:51 objects.export {"uuid": "f0b5264a-13c6-4dcc-bf0f-78b156bc1a85", "path": "%USERPROFILE%\\Dev\\vesuvius\\donnees-correcteur-export-segment\\exports\\pousse-main-avant2"} -> {"jobId": "job-3", "kind": "objects.export", "objectKind": "surface", "source": "export", "store": "45a49f10-5ddd-4f52-baf4-577cebdb8d80", "uuid": "f0b5264a-13c6-4dcc-bf0f-78b156bc1a85"}
+05:06:54 job.status job-3 -> failed | [json.exception.type_error.307] cannot use erase() with string | []
+05:06:54 objects.export {"uuid": "09f10f4e-d698-565a-a2fa-5720f5b63530", "path": "%USERPROFILE%\\Dev\\vesuvius\\donnees-correcteur-export-segment\\exports\\catalogue-main-avant2"} -> {"jobId": "job-4", "kind": "objects.export", "objectKind": "surface", "source": "export", "store": "45a49f10-5ddd-4f52-baf4-577cebdb8d80", "uuid": "09f10f4e-d698-565a-a2fa-5720f5b63530"}
+05:06:57 job.status job-4 -> succeeded | Exported 09f10f4e-d698-565a-a2fa-5720f5b63530 | []
+05:07:21 catalogue-main-avant2: ['meta.json', 'x.tif', 'y.tif', 'z.tif']
+05:07:21   meta.json source = null
+05:07:21 FIN rc=0
+--- lanceur.log (main-avant2) ---
+05:06:06 BIN=%USERPROFILE%\Dev\vesuvius\donnees-correcteur-export-segment\bin-main
+05:06:06 VC3D pid=2976 pont=vc3d-ces-24968
+05:06:58 STOP demandé
+05:06:58 pic mémoire 1351108 Ko
+05:07:19 VC3D tué (pas fermé en 20 s)
+05:07:21 annonce du pont retirée
+05:07:21 FIN rc=0
+===== Raw scenario output: main-apres =====
+05:07:30 BIN=%USERPROFILE%\Dev\vesuvius\donnees-correcteur-export-segment\bin-apres
+05:07:34 catalog.open_sample {"sampleId": "PHerc1447", "resources": {"kinds": ["prediction", "normal_grids"]}} -> {"jobId": "job-1", "kind": "catalog.open_sample", "sampleId": "PHerc1447", "source": "catalog"}
+05:07:37 job.status job-1 -> succeeded | Opened sample PHerc1447 | []
+05:07:38 segments.activate {"segmentId": "09f10f4e-d698-565a-a2fa-5720f5b63530"} -> {"activated": true, "alreadyActive": false, "previousSegmentId": null, "segment": {"active": true, "bound": true, "catalog": true, "id": "09f10f4e-d698-565a-a2fa-5720f5b63530", "name": "auto_grown_20250502161744358", "store": "3ae09c99-53b3-4269-b69d-c15e266a659f", "tags": [], "writable": true}}
+05:07:38 objects.export {"uuid": "2a392224-4114-423c-8137-d1d81013d83f", "path": "%USERPROFILE%\\Dev\\vesuvius\\donnees-correcteur-export-segment\\exports\\ancien-main-apres"} -> {"code": -32007, "data": {"id": "2a392224-4114-423c-8137-d1d81013d83f", "kind": "object"}, "message": "Object not found in the project's stores"}
+05:07:39 segmentation.grow_surface_from_seed {"seed": {"x": 4171, "y": 4171, "z": 12148}, "iterations": 15, "volumeId": "20250521151220-surface-20260413222639-surface-m7-L0-th0.2.zarr-9279f79c1a22f778"} -> {"jobId": "job-2", "kind": "segmentation.grow_surface_from_seed", "volumeId": "20250521151220-surface-20260413222639-surface-m7-L0-th0.2.zarr-9279f79c1a22f778"}
+05:07:54 job.status job-2 -> succeeded | vc_grow_seg_from_seed completed successfully | ['generated surface 293462.127318 vx^2 (0.219068 cm^2)', 'surface_uuid: 73de07e1-2bef-4502-84c0-8ec04f39085d']
+05:07:54 objects.export {"uuid": "73de07e1-2bef-4502-84c0-8ec04f39085d", "path": "%USERPROFILE%\\Dev\\vesuvius\\donnees-correcteur-export-segment\\exports\\pousse-main-apres"} -> {"jobId": "job-3", "kind": "objects.export", "objectKind": "surface", "source": "export", "store": "3ae09c99-53b3-4269-b69d-c15e266a659f", "uuid": "73de07e1-2bef-4502-84c0-8ec04f39085d"}
+05:07:57 job.status job-3 -> succeeded | Exported 73de07e1-2bef-4502-84c0-8ec04f39085d | []
+05:07:57 objects.export {"uuid": "09f10f4e-d698-565a-a2fa-5720f5b63530", "path": "%USERPROFILE%\\Dev\\vesuvius\\donnees-correcteur-export-segment\\exports\\catalogue-main-apres"} -> {"jobId": "job-4", "kind": "objects.export", "objectKind": "surface", "source": "export", "store": "3ae09c99-53b3-4269-b69d-c15e266a659f", "uuid": "09f10f4e-d698-565a-a2fa-5720f5b63530"}
+05:08:00 job.status job-4 -> succeeded | Exported 09f10f4e-d698-565a-a2fa-5720f5b63530 | []
+05:08:24 catalogue-main-apres: ['meta.json', 'x.tif', 'y.tif', 'z.tif']
+05:08:24   meta.json source = null
+05:08:24 pousse-main-apres: ['generations.tif', 'meta.json', 'x.tif', 'y.tif', 'z.tif']
+05:08:24   meta.json source = "vc_grow_seg_from_seed"
+05:08:24 FIN rc=0
+--- lanceur.log (main-apres) ---
+05:07:30 BIN=%USERPROFILE%\Dev\vesuvius\donnees-correcteur-export-segment\bin-apres
+05:07:30 VC3D pid=27644 pont=vc3d-ces-4844
+05:08:00 STOP demandé
+05:08:00 pic mémoire 1225180 Ko
+05:08:21 VC3D tué (pas fermé en 20 s)
+05:08:23 annonce du pont retirée
+05:08:23 FIN rc=0

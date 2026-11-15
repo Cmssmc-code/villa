@@ -1,0 +1,9 @@
+04:10:00
+[2026-11-15 04:10:00.824] [WARN ] volume '%USERPROFILE%\Dev\vesuvius\nuit-1511\wf\tests-hors-arbre\tmp\vc_vol_local_unusable_voxelsize_18128676297811371116\meta.json': no voxel size in its store metadata, so physical measurements are unavailable for it
+[2026-11-15 04:10:00.853] [WARN ] volume '%USERPROFILE%\Dev\vesuvius\nuit-1511\wf\tests-hors-arbre\tmp\vc_vol_local_unusable_voxelsize_2198660099813217804\meta.json': no voxel size in its store metadata, so physical measurements are unavailable for it
+[2026-11-15 04:10:00.873] [WARN ] volume '%USERPROFILE%\Dev\vesuvius\nuit-1511\wf\tests-hors-arbre\tmp\vc_vol_local_unusable_voxelsize_2416454187048599125\meta.json': no voxel size in its store metadata, so physical measurements are unavailable for it
+[2026-11-15 04:10:00.899] [WARN ] volume '%USERPROFILE%\Dev\vesuvius\nuit-1511\wf\tests-hors-arbre\tmp\vc_vol_local_unusable_voxelsize_5461952182241887321\meta.json': no voxel size in its store metadata, so physical measurements are unavailable for it
+[2026-11-15 04:10:00.940] [WARN ] volume '%USERPROFILE%\Dev\vesuvius\nuit-1511\wf\tests-hors-arbre\tmp\vc_vol_local_sidecar_5097224710774250292\metadata.json': no voxel size in its store metadata, so physical measurements are unavailable for it
+[2026-11-15 04:10:00.946] [WARN ] volume '%USERPROFILE%\Dev\vesuvius\nuit-1511\wf\tests-hors-arbre\tmp\vc_vol_local_sidecar_5097224710774250292\meta.json': no voxel size in its store metadata, so physical measurements are unavailable for it
+4 test case(s) passed
+rc=0

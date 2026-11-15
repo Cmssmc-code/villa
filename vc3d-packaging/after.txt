@@ -1,0 +1,40 @@
+AFTER - branch vc3d-package-skip-unbuilt-targets = 4675779f1 (one commit on main 2d3fb38d3)
+
+1) Local, Windows 11, MSYS2 UCRT64 of the CI, same tree and same build directory as before.txt, tree at 4675779f1 (git status empty), in volume-cartographer:
+
+$ cmake --preset ci-windows-mingw -DVC_TESTING=ON
+cmake rc=0
+$ grep -rn -e bench_fiber_projection -e test_fiber_normal_publication --include=cmake_install.cmake build/ci-windows-mingw
+(no output: 0 lines; 18 "TYPE EXECUTABLE" install rules instead of 20)
+
+Full log: journaux/cfg-seule.log (replayed on 2026-11-15 05:05-05:06 with the same result)
+
+2) Local, real package step, same build tree as before.txt section 3, switched to 4675779f1, then
+   `cmake --preset ci-windows-mingw`, `ninja -C build/ci-windows-mingw`, and in build/ci-windows-mingw:
+
+$ cpack -V
+CPack: - package: <tree>/volume-cartographer/build/ci-windows-mingw/VC3D-4675779-2026-11-15-win64.exe generated.
+CPack: - package: <tree>/volume-cartographer/build/ci-windows-mingw/VC3D-4675779-2026-11-15-win64.zip generated.
+cpack rc=0
+
+VC3D-4675779-2026-11-15-win64.exe  73292248 bytes  SHA-256 166aad941e028c2b5605db6579f10f83d929061f6c47058eb2d0e3b11fa273cc
+VC3D-4675779-2026-11-15-win64.zip  111413541 bytes  SHA-256 deea9938011a177775feee45e6d9438acac5933897cc4dd7e2f77dcd1226ec4e
+
+Full log: journaux/cpack-apres.log
+
+3) Content (7z l), compared with the last official release VC3D-97fb933-2026-11-13-win64.zip:
+- bench_fiber_projection / test_fiber_normal_publication: in neither package.
+- Installer: 18 programs (VC3D.exe + 17 vc_* tools), the same 18 as the official 97fb933 installer.
+- ZIP: 20 programs (the same 18 + vc_object_convert.exe, vc_object_server.exe), the same 20 as the official 97fb933 ZIP.
+- Every path of the official 97fb933 ZIP is also in this ZIP (0 missing); the new paths are files main added since (e.g. bin/libblosc2.dll, new vc_object_store / vc_reader headers).
+Full list: journaux/contenu-apres.txt
+
+4) The unpacked ZIP runs, with PATH = its bin folder + C:\Windows\System32 only:
+$ vc_render_tifxyz --help        -> rc=0, "vc_render_tifxyz: Render volume data using segmentation surfaces"
+$ vc_object_convert --help       -> rc=2, prints its usage line ("usage: vc_object_convert SOURCE.vcobj DESTINATION.vcobj ...")
+$ vc_tifxyz2obj <segment auto_grown_20251029010146642 (tifxyz, 42 x 42)> segment.obj
+Point dims: [42 x 42] cols: 42 rows: 42
+UVs: scaled by 1/scale from meta.json  (u*= 20, v*= 20 )
+rc=0, segment.obj = 254042 bytes, 1444 vertices, 2738 faces
+
+NOT DONE: the job's -DVC_TESTING=ON reconfigure + test step before cpack (checked by configure only, section 1); the job's "Smoke test packaged tree" step; opening the VC3D window from this ZIP; running the NSIS installer (no administrator rights on this PC); macOS and Linux.

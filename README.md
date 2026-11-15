@@ -7,3 +7,7 @@ Proof files (screenshots, scripts and logs) for pull requests to ScrollPrize/vil
 - `vc3d-tutorial-windows/`: The VC3D tutorial's Windows instructions, checked against the released files.
 - `spiral-cpu-windows/`: spiral-fitting's CPU track extraction on Windows (and Linux/macOS CI runs).
 - `dinovol-gen19/`: dinovol's cached mesh for PHercParis4 `20260926044226-spiral-output-generation-19` (issue evidence).
+- `vc3d-packaging/`: VC3D packaging (cpack) on Windows after the fiber tools were added to the build.
+- `vc3d-old-project-stores/`: VC3D opening a project whose object store has the previous schema.
+- `vc3d-local-volume/`: VC3D opening a volume downloaded as is from the open-data bucket.
+- `vc3d-export-grown-segment/`: Exporting a segment grown from a seed in VC3D.

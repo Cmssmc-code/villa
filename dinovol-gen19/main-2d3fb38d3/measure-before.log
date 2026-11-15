@@ -1,0 +1,5 @@
+$ python -I %USERPROFILE%\Dev\vesuvius\nuit-1511\gen19-main\worker.py measure %USERPROFILE%\Dev\vesuvius\donnees-dinovol\gen19\travail\before\dinovol %USERPROFILE%\Dev\vesuvius\donnees-dinovol\gen19\travail\cache-before %USERPROFILE%\Dev\vesuvius\donnees-dinovol\gen19\travail\volume.json %USERPROFILE%\Dev\vesuvius\donnees-dinovol\gen19\travail\measure-before.json %USERPROFILE%\Dev\vesuvius\donnees-dinovol\gen19\travail\sample-before.npz
+[peak 2.16 GB] PHercParis4_20260411134726_scale2.npz: 1 mesh(es)
+[peak 2.16 GB] {"segment_id": "20260926044226", "grid_shape": [956, 56913], "valid_points": 47026606, "points_in_existing_level4_chunk": 705, "bbox_lo_zyx": [1000.8575439453125, 297.53936767578125, 321.7120056152344], "bbox_hi_zyx": [4436.341796875, 1860.1275634765625, 1897.0115966796875], "n_meshes": 1}
+
+--- exit code 0; wall time 55 s; peak committed memory 2.16 GB (2.02 GiB), limit 3.5 GB

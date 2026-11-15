@@ -1,0 +1,207 @@
+
+7-Zip 26.06 (x64) : Copyright (c) 1999-2026 Igor Pavlov : 2026-11-06
+
+Scanning the drive for archives:
+1 file, 71687165 bytes (69 MiB)
+
+Listing archive: outils-vc3d\installateur\VC3D-97fb933-2026-11-13-win64.exe
+
+--
+Path = outils-vc3d\installateur\VC3D-97fb933-2026-11-13-win64.exe
+Type = Nsis
+Physical Size = 71687165
+Method = LZMA:23
+Solid = -
+64-bit = +
+Headers Size = 569274
+Embedded Stub Size = 212992
+SubType = NSIS-3 Unicode 64-bit
+
+   Date      Time    Attr         Size   Compressed  Name
+------------------- ----- ------------ ------------  ------------------------
+                    .....                     12668  $PLUGINSDIR\InstallOptions.dll
+                    .....                      4364  $PLUGINSDIR\StartMenu.dll
+                    .....                     10647  $PLUGINSDIR\System.dll
+2026-04-20 07:15:28 .....                       141  $PLUGINSDIR\ioSpecial.ini
+2026-04-20 07:15:28 .....                      1481  $PLUGINSDIR\modern-wizard.bmp
+2026-04-20 07:15:28 .....                      4213  $PLUGINSDIR\modern-header.bmp
+2026-11-13 19:53:02 .....                       264  $PLUGINSDIR\NSIS.InstallOptions.ini
+                    .....                      2355  $PLUGINSDIR\UserInfo.dll
+2026-06-07 05:21:50 .....                   2205982  bin\Qt6Core.dll
+2026-06-07 05:21:50 .....                   3342500  bin\Qt6Gui.dll
+2026-06-07 05:21:50 .....                    667636  bin\Qt6Network.dll
+2026-06-07 05:21:50 .....                    174026  bin\Qt6OpenGL.dll
+2026-06-07 05:21:50 .....                     19294  bin\Qt6OpenGLWidgets.dll
+2026-06-07 06:11:58 .....                    220182  bin\Qt6Svg.dll
+2026-06-07 05:21:50 .....                   2520133  bin\Qt6Widgets.dll
+2026-11-13 19:52:08 .....                   5583521  bin\VC3D.exe
+2026-06-22 17:20:30 .....                     46249  bin\libIex-3_4.dll
+2026-06-22 17:20:30 .....                     13625  bin\libIlmThread-3_4.dll
+2026-01-26 23:55:46 .....                     50336  bin\libImath-3_2.dll
+2026-07-07 07:39:08 .....                    225620  bin\libLerc.dll
+2026-06-22 17:20:30 .....                    350725  bin\libOpenEXR-3_4.dll
+2026-06-22 17:20:30 .....                    160140  bin\libOpenEXRCore-3_4.dll
+2026-06-08 05:03:54 .....                      8134  bin\libabsl_base-2605.0.0.dll
+2026-06-08 05:03:54 .....                      6067  bin\libabsl_city-2605.0.0.dll
+2026-06-08 05:03:54 .....                     48611  bin\libabsl_cord-2605.0.0.dll
+2026-06-08 05:03:54 .....                     29681  bin\libabsl_cord_internal-2605.0.0.dll
+2026-06-08 05:03:54 .....                      7182  bin\libabsl_cordz_handle-2605.0.0.dll
+2026-06-08 05:03:54 .....                      9012  bin\libabsl_cordz_info-2605.0.0.dll
+2026-06-08 05:03:54 .....                      8407  bin\libabsl_crc32c-2605.0.0.dll
+2026-06-08 05:03:54 .....                     12509  bin\libabsl_crc_cord_state-2605.0.0.dll
+2026-06-08 05:03:54 .....                      8896  bin\libabsl_crc_internal-2605.0.0.dll
+2026-06-08 05:03:54 .....                      5624  bin\libabsl_die_if_null-2605.0.0.dll
+2026-06-08 05:03:54 .....                     19406  bin\libabsl_examine_stack-2605.0.0.dll
+2026-06-08 05:03:54 .....                      5655  bin\libabsl_hash-2605.0.0.dll
+2026-06-08 05:03:54 .....                      7603  bin\libabsl_hashtablez_sampler-2605.0.0.dll
+2026-06-08 05:03:54 .....                      9257  bin\libabsl_int128-2605.0.0.dll
+2026-06-08 05:03:54 .....                      6242  bin\libabsl_kernel_timeout_internal-2605.0.0.dll
+2026-06-08 05:03:54 .....                      4743  bin\libabsl_leak_check-2605.0.0.dll
+2026-06-08 05:03:54 .....                      7408  bin\libabsl_log_globals-2605.0.0.dll
+2026-06-08 05:03:54 .....                      9298  bin\libabsl_log_internal_check_op-2605.0.0.dll
+2026-06-08 05:03:54 .....                      4970  bin\libabsl_log_internal_conditions-2605.0.0.dll
+2026-06-08 05:03:54 .....                      6986  bin\libabsl_log_internal_format-2605.0.0.dll
+2026-06-08 05:03:54 .....                      5347  bin\libabsl_log_internal_globals-2605.0.0.dll
+2026-06-08 05:03:54 .....                      8988  bin\libabsl_log_internal_log_sink_set-2605.0.0.dll
+2026-06-08 05:03:54 .....                     16732  bin\libabsl_log_internal_message-2605.0.0.dll
+2026-06-08 05:03:54 .....                      4638  bin\libabsl_log_internal_nullguard-2605.0.0.dll
+2026-06-08 05:03:54 .....                      6260  bin\libabsl_log_internal_proto-2605.0.0.dll
+2026-06-08 05:03:54 .....                      4930  bin\libabsl_log_internal_structured_proto-2605.0.0.dll
+2026-06-08 05:03:54 .....                      4812  bin\libabsl_log_sink-2605.0.0.dll
+2026-06-08 05:03:54 .....                     10720  bin\libabsl_malloc_internal-2605.0.0.dll
+2026-06-08 05:03:54 .....                     13428  bin\libabsl_raw_hash_set-2605.0.0.dll
+2026-06-08 05:03:54 .....                     19402  bin\libabsl_raw_logging_internal-2605.0.0.dll
+2026-06-08 05:03:54 .....                      5069  bin\libabsl_spinlock_wait-2605.0.0.dll
+2026-06-08 05:03:54 .....                      5446  bin\libabsl_stacktrace-2605.0.0.dll
+2026-06-08 05:03:54 .....                     18813  bin\libabsl_status-2605.0.0.dll
+2026-06-08 05:03:54 .....                      8582  bin\libabsl_statusor-2605.0.0.dll
+2026-06-08 05:03:54 .....                     52603  bin\libabsl_str_format_internal-2605.0.0.dll
+2026-06-08 05:03:54 .....                     19594  bin\libabsl_strerror-2605.0.0.dll
+2026-06-08 05:03:54 .....                     88971  bin\libabsl_strings-2605.0.0.dll
+2026-06-08 05:03:54 .....                      7050  bin\libabsl_strings_internal-2605.0.0.dll
+2026-06-08 05:03:54 .....                      5633  bin\libabsl_symbolize-2605.0.0.dll
+2026-06-08 05:03:54 .....                     33391  bin\libabsl_synchronization-2605.0.0.dll
+2026-06-08 05:03:54 .....                      6809  bin\libabsl_throw_delegate-2605.0.0.dll
+2026-06-08 05:03:54 .....                     29254  bin\libabsl_time-2605.0.0.dll
+2026-06-08 05:03:54 .....                     51574  bin\libabsl_time_zone-2605.0.0.dll
+2026-06-08 05:03:54 .....                      4653  bin\libabsl_tracing_internal-2605.0.0.dll
+2026-05-10 11:03:20 .....                     20351  bin\libamd.dll
+2025-09-01 13:12:56 .....                     13770  bin\libb2-1.dll
+2025-06-01 13:27:36 .....                     52208  bin\libblosc.dll
+2025-11-06 04:56:56 .....                     58767  bin\libbrotlicommon.dll
+2025-11-06 04:56:56 .....                     25062  bin\libbrotlidec.dll
+2023-09-27 07:46:16 .....                     30891  bin\libbz2-1.dll
+2026-05-10 11:03:20 .....                     23628  bin\libcamd.dll
+2026-05-10 11:03:20 .....                     24299  bin\libccolamd.dll
+2026-04-29 18:13:48 .....                   1187334  bin\libceres-4.dll
+2026-05-10 11:03:20 .....                    872209  bin\libcholmod.dll
+2026-05-10 11:03:20 .....                     15634  bin\libcolamd.dll
+2026-06-10 02:06:50 .....                   1643058  bin\libcrypto-3-x64.dll
+2026-07-06 11:13:34 .....                    534774  bin\libcurl-4.dll
+2025-11-03 20:00:30 .....                     47515  bin\libdeflate.dll
+2026-01-12 15:22:50 .....                     34257  bin\libdouble-conversion.dll
+2026-03-26 17:24:14 .....                    353366  bin\libfreetype-6.dll
+2026-05-17 22:33:06 .....                     58342  bin\libgcc_s_seh-1.dll
+2026-05-17 22:33:06 .....                    891198  bin\libgfortran-5.dll
+2026-06-27 08:25:00 .....                    522450  bin\libglib-2.0-0.dll
+2026-05-10 00:52:46 .....                    176473  bin\libglog-2.dll
+2026-05-17 22:33:06 .....                    130277  bin\libgomp-1.dll
+2026-06-03 23:18:34 .....                     72276  bin\libgraphite2.dll
+2026-06-03 09:24:52 .....                    540603  bin\libharfbuzz-0.dll
+2026-03-14 09:45:32 .....                    572364  bin\libiconv-2.dll
+2026-06-21 21:44:42 .....                   7942583  bin\libicudt78.dll
+2026-06-21 21:44:42 .....                   1084231  bin\libicuin78.dll
+2026-06-21 21:44:42 .....                    720528  bin\libicuuc78.dll
+2025-10-04 17:56:50 .....                     87377  bin\libidn2-0.dll
+2026-01-31 13:17:20 .....                     93723  bin\libintl-8.dll
+2023-08-18 10:47:22 .....                     26492  bin\libjbig-0.dll
+2026-07-01 12:58:24 .....                    248779  bin\libjpeg-8.dll
+2024-07-23 01:08:22 .....                     62236  bin\liblz4.dll
+2026-04-01 05:25:48 .....                     87386  bin\liblzma-5.dll
+2026-04-24 01:50:08 .....                     39558  bin\libmd4c.dll
+2026-04-20 01:51:36 .....                     77798  bin\libnghttp2-14.dll
+2026-07-01 08:55:02 .....                     77052  bin\libnghttp3-9.dll
+2026-07-01 08:52:06 .....                    152845  bin\libngtcp2-16.dll
+2026-07-01 08:52:06 .....                     18545  bin\libngtcp2_crypto_ossl-0.dll
+2026-05-10 01:02:58 .....                   5554420  bin\libopenblas.dll
+2026-06-24 18:12:00 .....                   1064094  bin\libopencv_calib3d-413.dll
+2026-06-24 18:12:00 .....                   1710553  bin\libopencv_core-413.dll
+2026-06-24 18:12:00 .....                   1760576  bin\libopencv_dnn-413.dll
+2026-06-24 18:12:00 .....                    305720  bin\libopencv_features2d-413.dll
+2026-06-24 18:12:00 .....                    187039  bin\libopencv_flann-413.dll
+2026-06-24 18:12:00 .....                    273526  bin\libopencv_imgcodecs-413.dll
+2026-06-24 18:12:00 .....                   2253958  bin\libopencv_imgproc-413.dll
+2026-06-24 18:12:00 .....                    232918  bin\libopencv_video-413.dll
+2026-06-24 18:12:00 .....                    522005  bin\libopencv_ximgproc-413.dll
+2025-09-26 14:40:48 .....                    194016  bin\libopenjp2-7.dll
+2026-06-22 17:14:20 .....                    190792  bin\libopenjph-0.30.dll
+2025-10-22 17:42:40 .....                    214128  bin\libpcre2-16-0.dll
+2025-10-22 17:42:40 .....                    230068  bin\libpcre2-8-0.dll
+2026-04-17 15:41:18 .....                    114227  bin\libpng16-16.dll
+2026-06-27 08:54:04 .....                   1041483  bin\libprotobuf.dll
+2024-11-28 20:00:06 .....                     65626  bin\libpsl-5.dll
+2026-05-17 22:33:06 .....                    160851  bin\libquadmath-0.dll
+2025-07-10 20:07:26 .....                     20706  bin\libsharpyuv-0.dll
+2025-06-20 07:14:12 .....                     22728  bin\libsnappy.dll
+2026-05-10 11:03:20 .....                    140887  bin\libspqr.dll
+2026-06-28 13:37:10 .....                    728670  bin\libsqlite3-0.dll
+2026-01-29 14:27:26 .....                    122277  bin\libssh2-1.dll
+2026-06-10 02:06:50 .....                    360608  bin\libssl-3-x64.dll
+2026-05-17 22:33:06 .....                    718028  bin\libstdc++-6.dll
+2026-05-10 11:03:20 .....                     19945  bin\libsuitesparseconfig.dll
+2026-05-11 20:57:36 .....                    104134  bin\libtbb12.dll
+2026-07-03 13:56:10 .....                    197355  bin\libtiff-6.dll
+2026-04-19 19:45:10 .....                    492861  bin\libunistring-5.dll
+2026-07-01 03:21:56 .....                     83953  bin\libunwind.dll
+2026-06-27 08:54:04 .....                      5000  bin\libutf8_validity.dll
+2026-11-13 19:40:04 .....                   1083803  bin\libvc_core.dll
+2026-11-13 19:45:48 .....                   2232195  bin\libvc_fiber_tracer.dll
+2026-11-13 19:36:58 .....                    188858  bin\libvc_geometry.dll
+2026-11-13 19:41:14 .....                     38856  bin\libvc_inpaint.dll
+2026-11-13 19:41:26 .....                    874517  bin\libvc_lasagna.dll
+2026-11-13 19:38:26 .....                    184829  bin\libvc_object_formats.dll
+2026-11-13 19:38:28 .....                    605983  bin\libvc_object_geometry.dll
+2026-11-13 19:38:26 .....                   2599406  bin\libvc_objects.dll
+2026-11-13 19:38:50 .....                    120172  bin\libvc_reader_c.dll
+2026-11-13 19:38:32 .....                   2138586  bin\libvc_reader_native.dll
+2026-11-13 19:36:30 .....                     97984  bin\libvc_reader_sftp.dll
+2026-11-13 19:38:24 .....                     44789  bin\libvc_resident_geometry.dll
+2026-11-13 19:41:18 .....                    633991  bin\libvc_tracer.dll
+2025-07-10 20:07:26 .....                    285715  bin\libwebp-7.dll
+2025-07-10 20:07:26 .....                     10449  bin\libwebpdemux-2.dll
+2025-07-10 20:07:26 .....                     34589  bin\libwebpmux-3.dll
+2026-07-07 16:37:02 .....                     24207  bin\libwinpthread-1.dll
+2026-05-01 20:15:42 .....                    386548  bin\libzstd.dll
+2026-11-13 19:45:44 .....                    122199  bin\vc_cache_root.exe
+2026-11-13 19:46:30 .....                    305293  bin\vc_extend_edge.exe
+2026-11-13 19:46:28 .....                    207592  bin\vc_fiber_bake_annotations.exe
+2026-11-13 19:51:40 .....                    296717  bin\vc_fiber_constraints.exe
+2026-11-13 19:51:40 .....                    380517  bin\vc_fiber_trace_metric.exe
+2026-11-13 19:51:40 .....                    232993  bin\vc_fiberlets.exe
+2026-11-13 19:45:48 .....                    551851  bin\vc_gen_normalgrids.exe
+2026-11-13 19:45:48 .....                    256642  bin\vc_gen_umbilicus.exe
+2026-11-13 19:45:46 .....                    491234  bin\vc_grow_seg_from_seed.exe
+2026-11-13 19:45:46 .....                    391474  bin\vc_grow_seg_from_segments.exe
+2026-11-13 19:46:28 .....                    531642  bin\vc_ngrids.exe
+2026-11-13 19:45:48 .....                    107077  bin\vc_obj2tifxyz.exe
+2026-11-13 19:45:48 .....                    104330  bin\vc_obj2tifxyz_legacy.exe
+2026-11-13 19:45:46 .....                    197563  bin\vc_objrefine.exe
+2026-11-13 19:45:46 .....                    366271  bin\vc_render_tifxyz.exe
+2026-11-13 19:45:48 .....                     67580  bin\vc_thinning.exe
+2026-11-13 19:45:48 .....                    104498  bin\vc_tifxyz2obj.exe
+2026-03-05 09:24:20 .....                     60932  bin\zlib1.dll
+2026-06-07 05:21:50 .....                     34569  bin\generic\qtuiotouchplugin.dll
+2026-06-07 06:11:58 .....                     23786  bin\iconengines\qsvgicon.dll
+2026-06-07 05:21:50 .....                     15853  bin\imageformats\qgif.dll
+2026-06-07 05:21:50 .....                     16280  bin\imageformats\qico.dll
+2026-06-07 05:21:50 .....                     23429  bin\imageformats\qjpeg.dll
+2026-06-07 06:11:58 .....                     10928  bin\imageformats\qsvg.dll
+2026-06-07 05:21:50 .....                      8767  bin\networkinformation\qglib.dll
+2026-06-07 05:21:50 .....                     64238  bin\networkinformation\qnetworklistmanager.dll
+2026-06-07 05:21:50 .....                    488667  bin\platforms\qwindows.dll
+2026-06-07 05:21:50 .....                    105827  bin\styles\qmodernwindowsstyle.dll
+2026-06-07 05:21:50 .....                     37848  bin\tls\qcertonlybackend.dll
+2026-06-07 05:21:50 .....                     94123  bin\tls\qschannelbackend.dll
+                    .....                     52167  Uninstall.exe
+------------------- ----- ------------ ------------  ------------------------
+2026-11-13 19:53:02                        71326247  184 files

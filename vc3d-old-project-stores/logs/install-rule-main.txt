@@ -1,0 +1,12 @@
+# 2026-11-15 01:57:12 wt-vc3d HEAD 2d3fb38d3, build/ci-windows-mingw configuré depuis main
+$ grep -rln vc_object_convert --include=cmake_install.cmake .
+./object_store/cmake_install.cmake
+$ grep -n -B1 "bin/vc_object_convert.exe\")" object_store/cmake_install.cmake
+45-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+46:  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "%USERPROFILE%/Dev/vesuvius/wt-vc3d/volume-cartographer/build/ci-windows-mingw/bin/vc_object_convert.exe")
+47-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/vc_object_convert.exe" AND
+48:     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/vc_object_convert.exe")
+49-    if(CMAKE_INSTALL_DO_STRIP)
+50:      execute_process(COMMAND "%USERPROFILE%/Dev/vesuvius/outils-vc3d/msys64/ucrt64/bin/strip.exe" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/vc_object_convert.exe")
+$ grep -c "COMPONENT STREQUAL \"vc_runtime\"" cmake_install.cmake
+36

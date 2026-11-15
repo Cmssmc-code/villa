@@ -1,0 +1,50 @@
+AFTER - main 2d3fb38d3 with only libvc_core.dll replaced by the one built from this branch (commit 5e5d8b398)
+The corrected libvc_core.dll is main compiled on this PC with only volume-cartographer/core/src/Volume.cpp taken from 5e5d8b398
+(recipe: outils-vc3d/bin-corrige/vc3d-local-volume-bucket-metadata/RECETTE.txt, SHA-256 78580599e03247ab5daae8c8da3c0a87a2ed5fbe89ae1c82af684cc5a79bfbc9).
+vc_grow_seg_from_seed.exe is the same file as in the main run (sha256 prefix 2261d757bb02ed7a).
+Run: 2026-11-15 02:47 on Windows 11, same script essai.sh, fresh copies of the same downloaded stores as before.txt.
+
+binaire: %USERPROFILE%/Dev/vesuvius/nuit-1511/correcteur-volume-local/apres-bin/vc_grow_seg_from_seed.exe
+sha256: 2261d757bb02ed7a  core: 78580599e03247ab
+
+=== PHerc0800-20250521135224-8.640um-masked.zarr (racine: .zattrs .zgroup metadata.json )
+$ vc_grow_seg_from_seed -v %USERPROFILE%/Dev/vesuvius/donnees-correcteur-volume-local/essais/apres-main/PHerc0800-20250521135224-8.640um-masked.zarr -t %USERPROFILE%/Dev/vesuvius/donnees-correcteur-volume-local/essais/apres-main/out-PHerc0800-20250521135224-8.640um-masked.zarr -p %USERPROFILE%/Dev/vesuvius/donnees-correcteur-volume-local/essais/apres-main/params.json -s 4900 4900 10000
+voxelsize: 8.64
+rc=0 (lignes de journal: 17)
+
+=== PHerc0139-20250728140407-9.362um-masked.zarr (racine: .zattrs .zgroup metadata.json )
+$ vc_grow_seg_from_seed -v %USERPROFILE%/Dev/vesuvius/donnees-correcteur-volume-local/essais/apres-main/PHerc0139-20250728140407-9.362um-masked.zarr -t %USERPROFILE%/Dev/vesuvius/donnees-correcteur-volume-local/essais/apres-main/out-PHerc0139-20250728140407-9.362um-masked.zarr -p %USERPROFILE%/Dev/vesuvius/donnees-correcteur-volume-local/essais/apres-main/params.json -s 4900 4900 10000
+voxelsize: 9.362
+rc=0 (lignes de journal: 17)
+
+=== PHerc0139-surface-m7-L0-th0.2.zarr (racine: .zattrs .zgroup metadata.json )
+$ vc_grow_seg_from_seed -v %USERPROFILE%/Dev/vesuvius/donnees-correcteur-volume-local/essais/apres-main/PHerc0139-surface-m7-L0-th0.2.zarr -t %USERPROFILE%/Dev/vesuvius/donnees-correcteur-volume-local/essais/apres-main/out-PHerc0139-surface-m7-L0-th0.2.zarr -p %USERPROFILE%/Dev/vesuvius/donnees-correcteur-volume-local/essais/apres-main/params.json -s 4900 4900 10000
+voxelsize: 9.362
+rc=0 (lignes de journal: 17)
+
+=== PHerc0800-sans-metadata.zarr (racine: .zattrs .zgroup )
+$ vc_grow_seg_from_seed -v %USERPROFILE%/Dev/vesuvius/donnees-correcteur-volume-local/essais/apres-main/PHerc0800-sans-metadata.zarr -t %USERPROFILE%/Dev/vesuvius/donnees-correcteur-volume-local/essais/apres-main/out-PHerc0800-sans-metadata.zarr -p %USERPROFILE%/Dev/vesuvius/donnees-correcteur-volume-local/essais/apres-main/params.json -s 4900 4900 10000
+voxelsize: 0
+ERROR: volume reports no usable voxel size (0 um/voxel), so min_area_cm 0.3 cannot be evaluated.
+       Set "voxelsize" (um per voxel) in %USERPROFILE%/Dev/vesuvius/donnees-correcteur-volume-local/essais/apres-main/params.json, or set "min_area_cm" to 0 to grow without an area threshold.
+rc=1 (lignes de journal: 9)
+
+=== PHerc0800-meta-readme.zarr (racine: .zattrs .zgroup meta.json metadata.json )
+$ vc_grow_seg_from_seed -v %USERPROFILE%/Dev/vesuvius/donnees-correcteur-volume-local/essais/apres-main/PHerc0800-meta-readme.zarr -t %USERPROFILE%/Dev/vesuvius/donnees-correcteur-volume-local/essais/apres-main/out-PHerc0800-meta-readme.zarr -p %USERPROFILE%/Dev/vesuvius/donnees-correcteur-volume-local/essais/apres-main/params.json -s 4900 4900 10000
+voxelsize: 8.64
+rc=0 (lignes de journal: 17)
+
+=== PHerc0172-20241024131838-7.910um-masked.zarr (racine: .zattrs .zgroup meta.json )
+$ vc_grow_seg_from_seed -v %USERPROFILE%/Dev/vesuvius/donnees-correcteur-volume-local/essais/apres-main/PHerc0172-20241024131838-7.910um-masked.zarr -t %USERPROFILE%/Dev/vesuvius/donnees-correcteur-volume-local/essais/apres-main/out-PHerc0172-20241024131838-7.910um-masked.zarr -p %USERPROFILE%/Dev/vesuvius/donnees-correcteur-volume-local/essais/apres-main/params.json -s 4900 4900 10000
+Error: zarr level 0 shape [z,y,x]=(21000, 6700, 9100) does not match expected downscaled meta.json dimensions (slices=21000, height=9100, width=6700) in %USERPROFILE%/Dev/vesuvius/donnees-correcteur-volume-local/essais/apres-main/PHerc0172-20241024131838-7.910um-masked.zarr
+rc=1 (lignes de journal: 2)
+
+=== PHerc0172-meta-abime.zarr (racine: .zattrs .zgroup meta.json )
+$ vc_grow_seg_from_seed -v %USERPROFILE%/Dev/vesuvius/donnees-correcteur-volume-local/essais/apres-main/PHerc0172-meta-abime.zarr -t %USERPROFILE%/Dev/vesuvius/donnees-correcteur-volume-local/essais/apres-main/out-PHerc0172-meta-abime.zarr -p %USERPROFILE%/Dev/vesuvius/donnees-correcteur-volume-local/essais/apres-main/params.json -s 4900 4900 10000
+Error: %USERPROFILE%/Dev/vesuvius/donnees-correcteur-volume-local/essais/apres-main/PHerc0172-meta-abime.zarr\meta.json missing required field: type
+rc=1 (lignes de journal: 2)
+FIN rc=0
+
+Note: only the coarse level 5 of each store was downloaded, so the seed reads 0 and the grown patch is discarded by min_area_cm;
+the output for the downloaded copy with its own metadata.json is identical (apart from paths) to the README-style meta.json case.
+The point here is that the store opens with its shape from the zarr levels and its voxel size from metadata.json.

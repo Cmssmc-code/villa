@@ -1,0 +1,38 @@
+BEFORE - main 2d3fb38d3 (no fix)
+
+1) CI: "VC3D Windows Installer", run 43611898753 (push of 2d3fb38d3, 2026-11-14), step "Package (NSIS installer + ZIP)", command `cpack -V`:
+
+CMake Error at C:/runner/_work/villa/villa/volume-cartographer/build/ci-windows-mingw/cmake_install.cmake:151 (file):
+  file INSTALL cannot find
+  "C:/runner/_work/villa/villa/volume-cartographer/build/ci-windows-mingw/bin/bench_fiber_projection.exe":
+  File exists.
+CPack Error: Error when generating package: VC3D
+
+(the "VC3D macOS App" run 43611898745 stops the same way on bin/bench_fiber_projection)
+
+2) Local, Windows 11, MSYS2 UCRT64 of the CI, tree at 2d3fb38d3 (git status empty), in volume-cartographer:
+
+$ cmake --preset ci-windows-mingw -DVC_TESTING=ON
+cmake rc=0
+$ grep -rn -e bench_fiber_projection -e test_fiber_normal_publication --include=cmake_install.cmake build/ci-windows-mingw
+build/ci-windows-mingw/cmake_install.cmake:151:  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "<tree>/volume-cartographer/build/ci-windows-mingw/bin/bench_fiber_projection.exe")
+build/ci-windows-mingw/cmake_install.cmake:161:  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "<tree>/volume-cartographer/build/ci-windows-mingw/bin/test_fiber_normal_publication.exe")
+build/ci-windows-mingw/cmake_install.cmake:398:      "<tree>/volume-cartographer/build/ci-windows-mingw/bin/bench_fiber_projection.exe"
+build/ci-windows-mingw/cmake_install.cmake:399:      "<tree>/volume-cartographer/build/ci-windows-mingw/bin/test_fiber_normal_publication.exe"
+(10 lines in total; 20 "TYPE EXECUTABLE" install rules in that file)
+
+Both programs are EXCLUDE_FROM_ALL (volume-cartographer/apps/CMakeLists.txt), so `ninja -C build/ci-windows-mingw` never builds them, and cpack stops at line 151.
+Full log: journaux/cfg-seule.log
+
+3) Local, real package step on the same Windows build of main (2d3fb38d3 fully built with `ninja -C build/ci-windows-mingw`, 2026-11-15 04:24; the job's `-DVC_TESTING=ON` reconfigure and test step were skipped here), in volume-cartographer/build/ci-windows-mingw:
+
+$ cpack -V
+CMake Error at <tree>/volume-cartographer/build/ci-windows-mingw/cmake_install.cmake:151 (file):
+  file INSTALL cannot find
+  "<tree>/volume-cartographer/build/ci-windows-mingw/bin/bench_fiber_projection.exe":
+...
+CPack Error: Error when generating package: VC3D
+cpack rc=1   (no .exe, no .zip produced)
+
+Same error, same line as the CI. Full log: journaux/cpack-avant.log
+(Note: in this tree `git status` shows cmake/windows/utf8.manifest as modified, before and after alike; it is not part of the change.)

@@ -1,0 +1,73 @@
+BEFORE: VC3D built from origin/main 2d3fb38d3 (outils-vc3d/bin-main-2d3fb38d3, unchanged), same two real projects made with the official VC3D 97fb933 (store schema 21).
+Command: sh essai.sh avant1 <bin-main>  (fresh copy, hidden desktop, agent bridge: volume.open, screenshot.capture, segments.list, points.list)
+Status bar seen in the screenshot (captures/before-p1.png): "Unavailable project stores:" / "p1.vcobj: object store: unsu..." (cut by the window width)
+
+=== essai avant1, 2026-11-15 05:04:13, BIN=%USERPROFILE%/Dev/vesuvius/donnees-conversion-projet/bin-main
+--- fichiers avant (sha256)
+d36cfd3ea217df0ca320506eab917d02b46234881a5e21c98cd84b182f1320f0 *p1.vcobj
+ce63c373735b6a5bff4ec8d2967543985e559fd25d9d99a480995fe40a630f70 *p1.vcproj
+4246ef4c8a3851f55db7ce24059e1fba4190c2cb207705f9d85d7afe6163f5a7 *projet été.vcobj
+abf1b94523add8f1aba3c91061eb5e70cfd0cd000ab7d1b22715cfd091403aa3 *projet été.vcproj
+--- user_version / application_id des magasins
+avant1\p1.vcobj user_version 21 application_id 0x56434f42
+avant1\projet �t�.vcobj user_version 21 application_id 0x56434f42
+--- ping
+{"id": 715468810, "jsonrpc": "2.0", "result": {"pid": 15588, "pong": true, "protocolVersion": 2, "version": "2d3fb38-2026-11-14"}}
+(0.0 s)
+--- volume.open p1.vcproj
+{"id": 715468962, "jsonrpc": "2.0", "result": {"opened": true, "volumeId": "20250521151220", "volumeIds": ["20250521151220"], "vpkgPath": "C:\\Users\\me\\Dev\\vesuvius\\donnees-conversion-projet\\essais\\avant1"}}
+(0.3 s)
+--- screenshot.capture (p1)
+{"id": 715473564, "jsonrpc": "2.0", "result": {"base64": null, "filePath": "%USERPROFILE%/Dev/vesuvius/nuit-1511/conversion-projet/captures/avant1/p1.png", "format": "png", "height": 1171, "width": 1920}}
+(0.8 s)
+--- segments.list
+{"error": {"code": -32000, "message": "No project or no volume open"}, "id": 715474550, "jsonrpc": "2.0"}
+(0.0 s)
+--- points.list
+{"id": 715474712, "jsonrpc": "2.0", "result": {"collections": []}}
+(0.0 s)
+--- volume.open projet été.vcproj
+{"id": 715480872, "jsonrpc": "2.0", "result": {"opened": true, "volumeId": "20250521151220", "volumeIds": ["20250521151220"], "vpkgPath": "C:\\Users\\me\\Dev\\vesuvius\\donnees-conversion-projet\\essais\\avant1"}}
+(0.1 s)
+--- screenshot.capture (projet___t__)
+{"id": 715485224, "jsonrpc": "2.0", "result": {"base64": null, "filePath": "%USERPROFILE%/Dev/vesuvius/nuit-1511/conversion-projet/captures/avant1/projet___t__.png", "format": "png", "height": 1171, "width": 1920}}
+(0.1 s)
+--- segments.list
+{"error": {"code": -32000, "message": "No project or no volume open"}, "id": 715485460, "jsonrpc": "2.0"}
+(0.0 s)
+--- points.list
+{"id": 715485543, "jsonrpc": "2.0", "result": {"collections": []}}
+(0.0 s)
+--- lanceur.log
+05:04:14 BIN=%USERPROFILE%\Dev\vesuvius\donnees-conversion-projet\bin-main PATH=%USERPROFILE%\Dev\vesuvius\donnees-conversion-projet\bin-main;%USERPROFILE%\Dev\vesuvius\outils-vc3d\msys64\ucrt64\bin;C:\Windows\System32;C:\Windows QT_PLUGIN_PATH=%USERPROFILE%\Dev\vesuvius\outils-vc3d\msys64\ucrt64\share\qt6\plugins
+05:04:14 VC3D pid=15588 pont=vc3d-conv-20592
+05:04:35 capture avant1-p1: 2 images
+05:04:46 capture avant1-projet___t__: 2 images
+05:04:52 STOP demandé
+05:04:52 pic mémoire 1330172 Ko
+05:05:07 VC3D tué (pas fermé en 15 s)
+05:05:09 annonce du pont retirée
+05:05:09 verrou-fenetre relâché
+05:05:09 FIN rc=0
+--- stderr VC3D (lignes store/convert/Unavailable)
+--- fichiers après (sha256)
+total 2236
+drwxr-xr-x 1 me 197121       0 Nov 15 05:04 .
+drwxr-xr-x 1 me 197121       0 Nov 15 05:04 ..
+-rw-r--r-- 1 me 197121  757760 Nov 15 00:41 p1.vcobj
+-rw-r--r-- 1 me 197121       0 Nov 15 05:04 p1.vcobj-owner
+-rw-r--r-- 1 me 197121     813 Nov 15 00:30 p1.vcproj
+-rw-r--r-- 1 me 197121 1519616 Nov 15 00:42 projet été.vcobj
+-rw-r--r-- 1 me 197121       0 Nov 15 05:04 projet été.vcobj-owner
+-rw-r--r-- 1 me 197121     833 Nov 15 00:26 projet été.vcproj
+ce63c373735b6a5bff4ec8d2967543985e559fd25d9d99a480995fe40a630f70 *p1.vcproj
+abf1b94523add8f1aba3c91061eb5e70cfd0cd000ab7d1b22715cfd091403aa3 *projet été.vcproj
+d36cfd3ea217df0ca320506eab917d02b46234881a5e21c98cd84b182f1320f0 *p1.vcobj
+4246ef4c8a3851f55db7ce24059e1fba4190c2cb207705f9d85d7afe6163f5a7 *projet été.vcobj
+--- user_version / application_id après
+avant1\p1.vcobj user_version 21 application_id 0x56434f42
+avant1\projet �t�.vcobj user_version 21 application_id 0x56434f42
+--- .vcproj : différences avec la source
+p1.vcproj inchangé
+projet été.vcproj inchangé
+=== FIN 05:05:10

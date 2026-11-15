@@ -1,0 +1,91 @@
+BEFORE - official Windows package VC3D-97fb933-2026-11-13-win64 (Volume.cpp identical on main 2d3fb38d3)
+Run: 2026-11-15 01:05 on Windows 11, script nuit-1511/correcteur-volume-local/essai.sh (fresh copies of the downloaded stores for each run)
+
+Data (public bucket https://vesuvius-challenge-open-data.s3.amazonaws.com/, downloaded as is: root files + every level's .zarray + all of level 5):
+  PHerc0800/volumes/20250521135224-8.640um-1.2m-116keV-masked.zarr
+  PHerc0139/volumes/20250728140407-9.362um-1.2m-113keV-masked.zarr
+  PHerc0139/representations/predictions/surfaces/20250728140407-surface-20260413222639-surface-m7-L0-th0.2.zarr
+  PHerc0172/volumes/20241024131838-7.910um-53keV-masked.zarr
+Neighbour cases made from these copies: PHerc0800 with metadata.json deleted; PHerc0172 with 'type' removed from its meta.json.
+
+binaire: %USERPROFILE%/Dev/vesuvius/nuit-1511/correcteur-volume-local/paquet/bin/vc_grow_seg_from_seed.exe
+sha256: d7e1b4a080a84b97  core: e9f89cd64d501ca4
+
+=== PHerc0800-20250521135224-8.640um-masked.zarr (racine: .zattrs .zgroup metadata.json )
+$ vc_grow_seg_from_seed -v %USERPROFILE%/Dev/vesuvius/donnees-correcteur-volume-local/essais/avant/PHerc0800-20250521135224-8.640um-masked.zarr -t %USERPROFILE%/Dev/vesuvius/donnees-correcteur-volume-local/essais/avant/out-PHerc0800-20250521135224-8.640um-masked.zarr -p %USERPROFILE%/Dev/vesuvius/donnees-correcteur-volume-local/essais/avant/params.json -s 4900 4900 10000
+Error: %USERPROFILE%/Dev/vesuvius/donnees-correcteur-volume-local/essais/avant/PHerc0800-20250521135224-8.640um-masked.zarr\metadata.json missing required field: type
+rc=1 (lignes de journal: 2)
+
+=== PHerc0139-20250728140407-9.362um-masked.zarr (racine: .zattrs .zgroup metadata.json )
+$ vc_grow_seg_from_seed -v %USERPROFILE%/Dev/vesuvius/donnees-correcteur-volume-local/essais/avant/PHerc0139-20250728140407-9.362um-masked.zarr -t %USERPROFILE%/Dev/vesuvius/donnees-correcteur-volume-local/essais/avant/out-PHerc0139-20250728140407-9.362um-masked.zarr -p %USERPROFILE%/Dev/vesuvius/donnees-correcteur-volume-local/essais/avant/params.json -s 4900 4900 10000
+Error: %USERPROFILE%/Dev/vesuvius/donnees-correcteur-volume-local/essais/avant/PHerc0139-20250728140407-9.362um-masked.zarr\metadata.json missing required field: type
+rc=1 (lignes de journal: 2)
+
+=== PHerc0139-surface-m7-L0-th0.2.zarr (racine: .zattrs .zgroup metadata.json )
+$ vc_grow_seg_from_seed -v %USERPROFILE%/Dev/vesuvius/donnees-correcteur-volume-local/essais/avant/PHerc0139-surface-m7-L0-th0.2.zarr -t %USERPROFILE%/Dev/vesuvius/donnees-correcteur-volume-local/essais/avant/out-PHerc0139-surface-m7-L0-th0.2.zarr -p %USERPROFILE%/Dev/vesuvius/donnees-correcteur-volume-local/essais/avant/params.json -s 4900 4900 10000
+Error: %USERPROFILE%/Dev/vesuvius/donnees-correcteur-volume-local/essais/avant/PHerc0139-surface-m7-L0-th0.2.zarr\metadata.json missing required field: type
+rc=1 (lignes de journal: 2)
+
+=== PHerc0800-sans-metadata.zarr (racine: .zattrs .zgroup )
+$ vc_grow_seg_from_seed -v %USERPROFILE%/Dev/vesuvius/donnees-correcteur-volume-local/essais/avant/PHerc0800-sans-metadata.zarr -t %USERPROFILE%/Dev/vesuvius/donnees-correcteur-volume-local/essais/avant/out-PHerc0800-sans-metadata.zarr -p %USERPROFILE%/Dev/vesuvius/donnees-correcteur-volume-local/essais/avant/params.json -s 4900 4900 10000
+voxelsize: 0
+ERROR: volume reports no usable voxel size (0 um/voxel), so min_area_cm 0.3 cannot be evaluated.
+       Set "voxelsize" (um per voxel) in %USERPROFILE%/Dev/vesuvius/donnees-correcteur-volume-local/essais/avant/params.json, or set "min_area_cm" to 0 to grow without an area threshold.
+rc=1 (lignes de journal: 9)
+
+=== PHerc0172-20241024131838-7.910um-masked.zarr (racine: .zattrs .zgroup meta.json )
+$ vc_grow_seg_from_seed -v %USERPROFILE%/Dev/vesuvius/donnees-correcteur-volume-local/essais/avant/PHerc0172-20241024131838-7.910um-masked.zarr -t %USERPROFILE%/Dev/vesuvius/donnees-correcteur-volume-local/essais/avant/out-PHerc0172-20241024131838-7.910um-masked.zarr -p %USERPROFILE%/Dev/vesuvius/donnees-correcteur-volume-local/essais/avant/params.json -s 4900 4900 10000
+Error: zarr level 0 shape [z,y,x]=(21000, 6700, 9100) does not match expected downscaled meta.json dimensions (slices=21000, height=9100, width=6700) in %USERPROFILE%/Dev/vesuvius/donnees-correcteur-volume-local/essais/avant/PHerc0172-20241024131838-7.910um-masked.zarr
+rc=1 (lignes de journal: 2)
+
+=== PHerc0172-meta-abime.zarr (racine: .zattrs .zgroup meta.json )
+$ vc_grow_seg_from_seed -v %USERPROFILE%/Dev/vesuvius/donnees-correcteur-volume-local/essais/avant/PHerc0172-meta-abime.zarr -t %USERPROFILE%/Dev/vesuvius/donnees-correcteur-volume-local/essais/avant/out-PHerc0172-meta-abime.zarr -p %USERPROFILE%/Dev/vesuvius/donnees-correcteur-volume-local/essais/avant/params.json -s 4900 4900 10000
+Error: %USERPROFILE%/Dev/vesuvius/donnees-correcteur-volume-local/essais/avant/PHerc0172-meta-abime.zarr\meta.json missing required field: type
+rc=1 (lignes de journal: 2)
+FIN rc=0
+
+
+=====================================================================
+BEFORE on main 2d3fb38d3 (programs of main built on this PC: outils-vc3d/bin-main-avance-2d3fb38d3, see its RECETTE.txt)
+Run: 2026-11-15 02:46, same script essai.sh, fresh copies of the same downloaded stores
+
+binaire: %USERPROFILE%/Dev/vesuvius/nuit-1511/correcteur-volume-local/main-bin/vc_grow_seg_from_seed.exe
+sha256: 2261d757bb02ed7a  core: 4ab3faa1ebf09e38
+
+=== PHerc0800-20250521135224-8.640um-masked.zarr (racine: .zattrs .zgroup metadata.json )
+$ vc_grow_seg_from_seed -v %USERPROFILE%/Dev/vesuvius/donnees-correcteur-volume-local/essais/avant-main/PHerc0800-20250521135224-8.640um-masked.zarr -t %USERPROFILE%/Dev/vesuvius/donnees-correcteur-volume-local/essais/avant-main/out-PHerc0800-20250521135224-8.640um-masked.zarr -p %USERPROFILE%/Dev/vesuvius/donnees-correcteur-volume-local/essais/avant-main/params.json -s 4900 4900 10000
+Error: %USERPROFILE%/Dev/vesuvius/donnees-correcteur-volume-local/essais/avant-main/PHerc0800-20250521135224-8.640um-masked.zarr\metadata.json missing required field: type
+rc=1 (lignes de journal: 2)
+
+=== PHerc0139-20250728140407-9.362um-masked.zarr (racine: .zattrs .zgroup metadata.json )
+$ vc_grow_seg_from_seed -v %USERPROFILE%/Dev/vesuvius/donnees-correcteur-volume-local/essais/avant-main/PHerc0139-20250728140407-9.362um-masked.zarr -t %USERPROFILE%/Dev/vesuvius/donnees-correcteur-volume-local/essais/avant-main/out-PHerc0139-20250728140407-9.362um-masked.zarr -p %USERPROFILE%/Dev/vesuvius/donnees-correcteur-volume-local/essais/avant-main/params.json -s 4900 4900 10000
+Error: %USERPROFILE%/Dev/vesuvius/donnees-correcteur-volume-local/essais/avant-main/PHerc0139-20250728140407-9.362um-masked.zarr\metadata.json missing required field: type
+rc=1 (lignes de journal: 2)
+
+=== PHerc0139-surface-m7-L0-th0.2.zarr (racine: .zattrs .zgroup metadata.json )
+$ vc_grow_seg_from_seed -v %USERPROFILE%/Dev/vesuvius/donnees-correcteur-volume-local/essais/avant-main/PHerc0139-surface-m7-L0-th0.2.zarr -t %USERPROFILE%/Dev/vesuvius/donnees-correcteur-volume-local/essais/avant-main/out-PHerc0139-surface-m7-L0-th0.2.zarr -p %USERPROFILE%/Dev/vesuvius/donnees-correcteur-volume-local/essais/avant-main/params.json -s 4900 4900 10000
+Error: %USERPROFILE%/Dev/vesuvius/donnees-correcteur-volume-local/essais/avant-main/PHerc0139-surface-m7-L0-th0.2.zarr\metadata.json missing required field: type
+rc=1 (lignes de journal: 2)
+
+=== PHerc0800-sans-metadata.zarr (racine: .zattrs .zgroup )
+$ vc_grow_seg_from_seed -v %USERPROFILE%/Dev/vesuvius/donnees-correcteur-volume-local/essais/avant-main/PHerc0800-sans-metadata.zarr -t %USERPROFILE%/Dev/vesuvius/donnees-correcteur-volume-local/essais/avant-main/out-PHerc0800-sans-metadata.zarr -p %USERPROFILE%/Dev/vesuvius/donnees-correcteur-volume-local/essais/avant-main/params.json -s 4900 4900 10000
+voxelsize: 0
+ERROR: volume reports no usable voxel size (0 um/voxel), so min_area_cm 0.3 cannot be evaluated.
+       Set "voxelsize" (um per voxel) in %USERPROFILE%/Dev/vesuvius/donnees-correcteur-volume-local/essais/avant-main/params.json, or set "min_area_cm" to 0 to grow without an area threshold.
+rc=1 (lignes de journal: 9)
+
+=== PHerc0800-meta-readme.zarr (racine: .zattrs .zgroup meta.json metadata.json )
+$ vc_grow_seg_from_seed -v %USERPROFILE%/Dev/vesuvius/donnees-correcteur-volume-local/essais/avant-main/PHerc0800-meta-readme.zarr -t %USERPROFILE%/Dev/vesuvius/donnees-correcteur-volume-local/essais/avant-main/out-PHerc0800-meta-readme.zarr -p %USERPROFILE%/Dev/vesuvius/donnees-correcteur-volume-local/essais/avant-main/params.json -s 4900 4900 10000
+voxelsize: 8.64
+rc=0 (lignes de journal: 17)
+
+=== PHerc0172-20241024131838-7.910um-masked.zarr (racine: .zattrs .zgroup meta.json )
+$ vc_grow_seg_from_seed -v %USERPROFILE%/Dev/vesuvius/donnees-correcteur-volume-local/essais/avant-main/PHerc0172-20241024131838-7.910um-masked.zarr -t %USERPROFILE%/Dev/vesuvius/donnees-correcteur-volume-local/essais/avant-main/out-PHerc0172-20241024131838-7.910um-masked.zarr -p %USERPROFILE%/Dev/vesuvius/donnees-correcteur-volume-local/essais/avant-main/params.json -s 4900 4900 10000
+Error: zarr level 0 shape [z,y,x]=(21000, 6700, 9100) does not match expected downscaled meta.json dimensions (slices=21000, height=9100, width=6700) in %USERPROFILE%/Dev/vesuvius/donnees-correcteur-volume-local/essais/avant-main/PHerc0172-20241024131838-7.910um-masked.zarr
+rc=1 (lignes de journal: 2)
+
+=== PHerc0172-meta-abime.zarr (racine: .zattrs .zgroup meta.json )
+$ vc_grow_seg_from_seed -v %USERPROFILE%/Dev/vesuvius/donnees-correcteur-volume-local/essais/avant-main/PHerc0172-meta-abime.zarr -t %USERPROFILE%/Dev/vesuvius/donnees-correcteur-volume-local/essais/avant-main/out-PHerc0172-meta-abime.zarr -p %USERPROFILE%/Dev/vesuvius/donnees-correcteur-volume-local/essais/avant-main/params.json -s 4900 4900 10000
+Error: %USERPROFILE%/Dev/vesuvius/donnees-correcteur-volume-local/essais/avant-main/PHerc0172-meta-abime.zarr\meta.json missing required field: type
+rc=1 (lignes de journal: 2)
+FIN rc=0

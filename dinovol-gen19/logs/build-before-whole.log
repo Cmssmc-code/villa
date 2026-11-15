@@ -1,7 +1,7 @@
 $ python -I %USERPROFILE%\Dev\vesuvius\preuves-dinovol-gen19\worker.py build %USERPROFILE%\Dev\vesuvius\donnees-dinovol\gen19\travail\before\dinovol %USERPROFILE%\Dev\vesuvius\donnees-dinovol\gen19\travail\catalogue.json %USERPROFILE%\Dev\vesuvius\donnees-dinovol\gen19\travail\config-before.json %USERPROFILE%\Dev\vesuvius\donnees-dinovol\gen19\travail\cache-whole %USERPROFILE%\Dev\vesuvius\donnees-dinovol\gen19\travail\build-whole.json unbanded
-[peak 1.50 GB] read 20260926044226-spiral-output-generation-19/mesh/intermediate/tifxyz_normalized/x.tif (956, 56913) float32 in 17 s
+[peak 1.50 GB] read 20260926044226-spiral-output-generation-19/mesh/intermediate/tifxyz_normalized/x.tif (956, 56913) float32 in 15 s
 [peak 1.72 GB] read 20260926044226-spiral-output-generation-19/mesh/intermediate/tifxyz_normalized/y.tif (956, 56913) float32 in 16 s
-[peak 1.94 GB] read 20260926044226-spiral-output-generation-19/mesh/intermediate/tifxyz_normalized/z.tif (956, 56913) float32 in 17 s
+[peak 1.94 GB] read 20260926044226-spiral-output-generation-19/mesh/intermediate/tifxyz_normalized/z.tif (956, 56913) float32 in 16 s
 [peak 1.94 GB] build 20260926044226: coordinate_scale=1.0, transform=False, arrays (956, 56913) float32, scale0_shape=(75784, 32693, 32693), selected_shape=(18946, 8174, 8174)
 [peak 1.94 GB] calling the real build_mesh_segment_from_arrays on the whole arrays
 Traceback (most recent call last):
@@ -55,4 +55,4 @@ Traceback (most recent call last):
                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 numpy._core._exceptions._ArrayMemoryError: Unable to allocate 1.22 GiB for an array with shape (956, 56913, 3) and data type float64
 
---- exit code 1; wall time 54 s; peak committed memory 4.61 GB (4.29 GiB), limit 3.5 GB
+--- exit code 1; wall time 61 s; peak committed memory 4.61 GB (4.29 GiB), limit 3.5 GB

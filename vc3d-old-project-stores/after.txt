@@ -1,0 +1,288 @@
+AFTER (1): same main binaries, only VC3D.exe replaced by the build of commit 1728c93fa (CState.cpp, one line). Recipe: outils-vc3d/bin-corrige/vc3d-upgrade-old-project-stores/RECETTE.txt, VC3D.exe sha256 295fc4f72d5415f86efe6b7a9dafcf59b9b7debe63c058a2fa1bbd49bd26538b. vc_object_convert.exe (from main) is next to VC3D.exe.
+
+=== essai apres1, 2026-11-15 05:05:25, BIN=%USERPROFILE%/Dev/vesuvius/donnees-conversion-projet/bin-apres
+--- fichiers avant (sha256)
+d36cfd3ea217df0ca320506eab917d02b46234881a5e21c98cd84b182f1320f0 *p1.vcobj
+ce63c373735b6a5bff4ec8d2967543985e559fd25d9d99a480995fe40a630f70 *p1.vcproj
+4246ef4c8a3851f55db7ce24059e1fba4190c2cb207705f9d85d7afe6163f5a7 *projet été.vcobj
+abf1b94523add8f1aba3c91061eb5e70cfd0cd000ab7d1b22715cfd091403aa3 *projet été.vcproj
+--- user_version / application_id des magasins
+apres1\p1.vcobj user_version 21 application_id 0x56434f42
+apres1\projet �t�.vcobj user_version 21 application_id 0x56434f42
+--- ping
+{"id": 715528587, "jsonrpc": "2.0", "result": {"pid": 2196, "pong": true, "protocolVersion": 2, "version": "2d3fb38-2026-11-14"}}
+(0.0 s)
+--- volume.open p1.vcproj
+{"id": 715528862, "jsonrpc": "2.0", "result": {"opened": true, "volumeId": "20250521151220", "volumeIds": ["20250521151220"], "vpkgPath": "C:\\Users\\me\\Dev\\vesuvius\\donnees-conversion-projet\\essais\\apres1"}}
+(0.3 s)
+--- screenshot.capture (p1)
+{"id": 715533552, "jsonrpc": "2.0", "result": {"base64": null, "filePath": "%USERPROFILE%/Dev/vesuvius/nuit-1511/conversion-projet/captures/apres1/p1.png", "format": "png", "height": 1171, "width": 1920}}
+(0.3 s)
+--- segments.list
+{"id": 715533951, "jsonrpc": "2.0", "result": {"loading": false, "segments": [{"active": false, "bound": true, "catalog": false, "id": "2c63849f-e868-5182-a011-37fcfd6743f9", "name": "20250502160708188_original", "store": "c2b2e989-2208-4975-8a87-42056c223477", "tags": ["paths"], "writable": true}]}}
+(0.0 s)
+--- points.list
+{"id": 715534050, "jsonrpc": "2.0", "result": {"collections": [{"color": [0.0012512588873505592, 0.5635853409767151, 0.19330424070358276], "id": 1, "name": "plis été", "points": [{"id": 3, "position": {"x": 4230, "y": 4190, "z": 12150}, "winding": null}, {"id": 2, "position": {"x": 4200, "y": 4180, "z": 12148}, "winding": null}, {"id": 1, "position": {"x": 4171, "y": 4171, "z": 12148}, "winding": null}], "store": "c2b2e989-2208-4975-8a87-42056c223477", "uuid": "c83cc5ef-943c-4fec-8f2e-e80c70854b4b"}]}}
+(0.0 s)
+--- volume.open projet été.vcproj
+{"id": 715540196, "jsonrpc": "2.0", "result": {"opened": true, "volumeId": "20250521151220", "volumeIds": ["20250521151220"], "vpkgPath": "C:\\Users\\me\\Dev\\vesuvius\\donnees-conversion-projet\\essais\\apres1"}}
+(0.2 s)
+--- screenshot.capture (projet___t__)
+{"id": 715544646, "jsonrpc": "2.0", "result": {"base64": null, "filePath": "%USERPROFILE%/Dev/vesuvius/nuit-1511/conversion-projet/captures/apres1/projet___t__.png", "format": "png", "height": 1171, "width": 1920}}
+(0.1 s)
+--- segments.list
+{"id": 715544879, "jsonrpc": "2.0", "result": {"loading": false, "segments": [{"active": false, "bound": true, "catalog": false, "id": "09f10f4e-d698-565a-a2fa-5720f5b63530", "name": "auto_grown_20250502161744358", "store": "279ded74-f608-4ff9-aff7-9b4550e7cd6b", "tags": ["cat1"], "writable": true}, {"active": false, "bound": true, "catalog": false, "id": "7829902d-d3e6-439e-bf45-b0dfb98ac5fc", "name": "auto_grown_20261115004106362", "store": "279ded74-f608-4ff9-aff7-9b4550e7cd6b", "tags": ["paths"], "writable": true}, {"active": false, "bound": true, "catalog": false, "id": "83fd5ed7-39ae-4678-ae49-0853cd024e95", "name": "auto_grown_20261115002935256", "store": "279ded74-f608-4ff9-aff7-9b4550e7cd6b", "tags": ["paths"], "writable": true}]}}
+(0.0 s)
+--- points.list
+{"id": 715544969, "jsonrpc": "2.0", "result": {"collections": [{"color": [0.0012512588873505592, 0.5635853409767151, 0.19330424070358276], "id": 3, "name": "plis été", "points": [{"id": 3, "position": {"x": 4230, "y": 4190, "z": 12150}, "winding": null}, {"id": 2, "position": {"x": 4200, "y": 4180, "z": 12148}, "winding": null}, {"id": 1, "position": {"x": 4171, "y": 4171, "z": 12148}, "winding": null}], "store": "279ded74-f608-4ff9-aff7-9b4550e7cd6b", "uuid": "c83cc5ef-943c-4fec-8f2e-e80c70854b4b"}, {"color": [0.808740496635437, 0.5850093364715576, 0.47987303137779236], "id": 2, "name": "graines été", "points": [{"id": 4, "position": {"x": 4171, "y": 4171, "z": 12148}, "winding": null}], "store": "279ded74-f608-4ff9-aff7-9b4550e7cd6b", "uuid": "a35d50a2-4fdd-4720-9776-51c77881b76c"}]}}
+(0.0 s)
+--- lanceur.log
+05:05:26 BIN=%USERPROFILE%\Dev\vesuvius\donnees-conversion-projet\bin-apres PATH=%USERPROFILE%\Dev\vesuvius\donnees-conversion-projet\bin-apres;%USERPROFILE%\Dev\vesuvius\outils-vc3d\msys64\ucrt64\bin;C:\Windows\System32;C:\Windows QT_PLUGIN_PATH=%USERPROFILE%\Dev\vesuvius\outils-vc3d\msys64\ucrt64\share\qt6\plugins
+05:05:26 VC3D pid=2196 pont=vc3d-conv-23812
+05:05:34 capture apres1-p1: 2 images
+05:05:46 capture apres1-projet___t__: 2 images
+05:05:51 STOP demandé
+05:05:51 pic mémoire 1388244 Ko
+05:06:06 VC3D tué (pas fermé en 15 s)
+05:06:08 annonce du pont retirée
+05:06:08 verrou-fenetre relâché
+05:06:08 FIN rc=0
+--- stderr VC3D (lignes store/convert/Unavailable)
+--- fichiers après (sha256)
+total 4604
+drwxr-xr-x 1 me 197121       0 Nov 15 05:05 .
+drwxr-xr-x 1 me 197121       0 Nov 15 05:05 ..
+-rw-r--r-- 1 me 197121  749568 Nov 15 05:05 p1-upgraded-5067c30c-3371-4c0a-a5d9-75c945375622.vcobj
+-rw-r--r-- 1 me 197121       0 Nov 15 05:05 p1-upgraded-5067c30c-3371-4c0a-a5d9-75c945375622.vcobj-owner
+-rw-r--r-- 1 me 197121     438 Nov 15 05:05 p1-upgraded-5067c30c-3371-4c0a-a5d9-75c945375622.vcobj.mapping.json
+-rw-r--r-- 1 me 197121    1864 Nov 15 05:05 p1-upgraded-5067c30c-3371-4c0a-a5d9-75c945375622.vcobj.report.json
+-rw-r--r-- 1 me 197121  757760 Nov 15 00:41 p1.vcobj
+-rw-r--r-- 1 me 197121       0 Nov 15 05:05 p1.vcobj-owner
+-rw-r--r-- 1 me 197121   32768 Nov 15 05:05 p1.vcobj-shm
+-rw-r--r-- 1 me 197121       0 Nov 15 05:05 p1.vcobj-wal
+-rw-r--r-- 1 me 197121     859 Nov 15 05:05 p1.vcproj
+-rw-r--r-- 1 me 197121 1511424 Nov 15 05:05 projet été-upgraded-64b453b1-4c03-4fb7-bcc6-7ad1a378a277.vcobj
+-rw-r--r-- 1 me 197121       0 Nov 15 05:05 projet été-upgraded-64b453b1-4c03-4fb7-bcc6-7ad1a378a277.vcobj-owner
+-rw-r--r-- 1 me 197121   32768 Nov 15 05:05 projet été-upgraded-64b453b1-4c03-4fb7-bcc6-7ad1a378a277.vcobj-shm
+-rw-r--r-- 1 me 197121   45352 Nov 15 05:05 projet été-upgraded-64b453b1-4c03-4fb7-bcc6-7ad1a378a277.vcobj-wal
+-rw-r--r-- 1 me 197121    1050 Nov 15 05:05 projet été-upgraded-64b453b1-4c03-4fb7-bcc6-7ad1a378a277.vcobj.mapping.json
+-rw-r--r-- 1 me 197121    1798 Nov 15 05:05 projet été-upgraded-64b453b1-4c03-4fb7-bcc6-7ad1a378a277.vcobj.report.json
+-rw-r--r-- 1 me 197121 1519616 Nov 15 00:42 projet été.vcobj
+-rw-r--r-- 1 me 197121       0 Nov 15 05:05 projet été.vcobj-owner
+-rw-r--r-- 1 me 197121   32768 Nov 15 05:05 projet été.vcobj-shm
+-rw-r--r-- 1 me 197121       0 Nov 15 05:05 projet été.vcobj-wal
+-rw-r--r-- 1 me 197121     879 Nov 15 05:05 projet été.vcproj
+2f9aa67dcf5df599486f470341054cd4c4b52ca98c896fb26cc88ce3ca196ede *p1.vcproj
+59f583bbe6fff2887d285e33afb8c4b60d9b844b67b81bbf0bdd9abe44b49884 *projet été.vcproj
+a7867d5ccc19c975bd258cc81ec2c48afb45c02bdc3658b4ce452930e56fd18f *p1-upgraded-5067c30c-3371-4c0a-a5d9-75c945375622.vcobj
+d36cfd3ea217df0ca320506eab917d02b46234881a5e21c98cd84b182f1320f0 *p1.vcobj
+ee06d6762a4a7ab1ba4d50d838d3837ed4694b0bd854580de77f4c53a6a92c72 *projet été-upgraded-64b453b1-4c03-4fb7-bcc6-7ad1a378a277.vcobj
+4246ef4c8a3851f55db7ce24059e1fba4190c2cb207705f9d85d7afe6163f5a7 *projet été.vcobj
+--- user_version / application_id après
+apres1\p1-upgraded-5067c30c-3371-4c0a-a5d9-75c945375622.vcobj user_version 22 application_id 0x56434f42
+apres1\p1.vcobj user_version 21 application_id 0x56434f42
+apres1\projet �t�-upgraded-64b453b1-4c03-4fb7-bcc6-7ad1a378a277.vcobj user_version 22 application_id 0x56434f42
+apres1\projet �t�.vcobj user_version 21 application_id 0x56434f42
+--- .vcproj : différences avec la source
+16c16
+<       "location": "p1.vcobj",
+---
+>       "location": "p1-upgraded-5067c30c-3371-4c0a-a5d9-75c945375622.vcobj",
+16c16
+<       "location": "projet été.vcobj",
+---
+>       "location": "projet été-upgraded-64b453b1-4c03-4fb7-bcc6-7ad1a378a277.vcobj",
+=== FIN 05:06:09
+
+
+AFTER (2): reopen the converted copy (no fresh copy) with the same VC3D: no second conversion.
+
+=== essai apres1, 2026-11-15 05:06:20, BIN=%USERPROFILE%/Dev/vesuvius/donnees-conversion-projet/bin-apres
+--- fichiers avant (sha256)
+a7867d5ccc19c975bd258cc81ec2c48afb45c02bdc3658b4ce452930e56fd18f *p1-upgraded-5067c30c-3371-4c0a-a5d9-75c945375622.vcobj
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 *p1-upgraded-5067c30c-3371-4c0a-a5d9-75c945375622.vcobj-owner
+fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb *p1-upgraded-5067c30c-3371-4c0a-a5d9-75c945375622.vcobj-shm
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 *p1-upgraded-5067c30c-3371-4c0a-a5d9-75c945375622.vcobj-wal
+809032b280329d26888513dca0f4a4fccb3447c130553feaa4e5c338028b898b *p1-upgraded-5067c30c-3371-4c0a-a5d9-75c945375622.vcobj.mapping.json
+9c0fac9111d9007ea099f2809eb94964f38b890ce7c49e59687b0c3a1a605d98 *p1-upgraded-5067c30c-3371-4c0a-a5d9-75c945375622.vcobj.report.json
+d36cfd3ea217df0ca320506eab917d02b46234881a5e21c98cd84b182f1320f0 *p1.vcobj
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 *p1.vcobj-owner
+fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb *p1.vcobj-shm
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 *p1.vcobj-wal
+2f9aa67dcf5df599486f470341054cd4c4b52ca98c896fb26cc88ce3ca196ede *p1.vcproj
+ee06d6762a4a7ab1ba4d50d838d3837ed4694b0bd854580de77f4c53a6a92c72 *projet été-upgraded-64b453b1-4c03-4fb7-bcc6-7ad1a378a277.vcobj
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 *projet été-upgraded-64b453b1-4c03-4fb7-bcc6-7ad1a378a277.vcobj-owner
+f52cf83595ef642425caea8c7357842289c4126dba8457bd9968acebf39b8d43 *projet été-upgraded-64b453b1-4c03-4fb7-bcc6-7ad1a378a277.vcobj-shm
+42d60568b7a84c2dccff52ec911f08391238423bbc59a225931c59f1b65fe599 *projet été-upgraded-64b453b1-4c03-4fb7-bcc6-7ad1a378a277.vcobj-wal
+fa2aa77f314c21b04371db66086dd7fe42cf025367eeb0ed31d6aa5479bfe1f4 *projet été-upgraded-64b453b1-4c03-4fb7-bcc6-7ad1a378a277.vcobj.mapping.json
+fbd91f1213ee185380d66a0a0f3c59e62a93e9a790d315ac4de31f25668add83 *projet été-upgraded-64b453b1-4c03-4fb7-bcc6-7ad1a378a277.vcobj.report.json
+4246ef4c8a3851f55db7ce24059e1fba4190c2cb207705f9d85d7afe6163f5a7 *projet été.vcobj
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 *projet été.vcobj-owner
+fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb *projet été.vcobj-shm
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 *projet été.vcobj-wal
+59f583bbe6fff2887d285e33afb8c4b60d9b844b67b81bbf0bdd9abe44b49884 *projet été.vcproj
+--- user_version / application_id des magasins
+apres1\p1-upgraded-5067c30c-3371-4c0a-a5d9-75c945375622.vcobj user_version 22 application_id 0x56434f42
+apres1\p1.vcobj user_version 21 application_id 0x56434f42
+apres1\projet �t�-upgraded-64b453b1-4c03-4fb7-bcc6-7ad1a378a277.vcobj user_version 22 application_id 0x56434f42
+apres1\projet �t�.vcobj user_version 21 application_id 0x56434f42
+--- ping
+{"id": 715583411, "jsonrpc": "2.0", "result": {"pid": 16960, "pong": true, "protocolVersion": 2, "version": "2d3fb38-2026-11-14"}}
+(0.0 s)
+--- volume.open p1.vcproj
+{"id": 715583519, "jsonrpc": "2.0", "result": {"opened": true, "volumeId": "20250521151220", "volumeIds": ["20250521151220"], "vpkgPath": "C:\\Users\\me\\Dev\\vesuvius\\donnees-conversion-projet\\essais\\apres1"}}
+(0.1 s)
+--- screenshot.capture (p1)
+{"id": 715587931, "jsonrpc": "2.0", "result": {"base64": null, "filePath": "%USERPROFILE%/Dev/vesuvius/nuit-1511/conversion-projet/captures/apres1/p1.png", "format": "png", "height": 1171, "width": 1920}}
+(0.3 s)
+--- segments.list
+{"id": 715588345, "jsonrpc": "2.0", "result": {"loading": false, "segments": [{"active": false, "bound": true, "catalog": false, "id": "2c63849f-e868-5182-a011-37fcfd6743f9", "name": "20250502160708188_original", "store": "c2b2e989-2208-4975-8a87-42056c223477", "tags": ["paths"], "writable": true}]}}
+(0.0 s)
+--- points.list
+{"id": 715588445, "jsonrpc": "2.0", "result": {"collections": [{"color": [0.0012512588873505592, 0.5635853409767151, 0.19330424070358276], "id": 1, "name": "plis été", "points": [{"id": 3, "position": {"x": 4230, "y": 4190, "z": 12150}, "winding": null}, {"id": 2, "position": {"x": 4200, "y": 4180, "z": 12148}, "winding": null}, {"id": 1, "position": {"x": 4171, "y": 4171, "z": 12148}, "winding": null}], "store": "c2b2e989-2208-4975-8a87-42056c223477", "uuid": "c83cc5ef-943c-4fec-8f2e-e80c70854b4b"}]}}
+(0.0 s)
+--- volume.open projet été.vcproj
+{"id": 715594648, "jsonrpc": "2.0", "result": {"opened": true, "volumeId": "20250521151220", "volumeIds": ["20250521151220"], "vpkgPath": "C:\\Users\\me\\Dev\\vesuvius\\donnees-conversion-projet\\essais\\apres1"}}
+(0.1 s)
+--- screenshot.capture (projet___t__)
+{"id": 715599257, "jsonrpc": "2.0", "result": {"base64": null, "filePath": "%USERPROFILE%/Dev/vesuvius/nuit-1511/conversion-projet/captures/apres1/projet___t__.png", "format": "png", "height": 1171, "width": 1920}}
+(0.1 s)
+--- segments.list
+{"id": 715599501, "jsonrpc": "2.0", "result": {"loading": false, "segments": [{"active": false, "bound": true, "catalog": false, "id": "09f10f4e-d698-565a-a2fa-5720f5b63530", "name": "auto_grown_20250502161744358", "store": "279ded74-f608-4ff9-aff7-9b4550e7cd6b", "tags": ["cat1"], "writable": true}, {"active": false, "bound": true, "catalog": false, "id": "7829902d-d3e6-439e-bf45-b0dfb98ac5fc", "name": "auto_grown_20261115004106362", "store": "279ded74-f608-4ff9-aff7-9b4550e7cd6b", "tags": ["paths"], "writable": true}, {"active": false, "bound": true, "catalog": false, "id": "83fd5ed7-39ae-4678-ae49-0853cd024e95", "name": "auto_grown_20261115002935256", "store": "279ded74-f608-4ff9-aff7-9b4550e7cd6b", "tags": ["paths"], "writable": true}]}}
+(0.0 s)
+--- points.list
+{"id": 715599626, "jsonrpc": "2.0", "result": {"collections": [{"color": [0.0012512588873505592, 0.5635853409767151, 0.19330424070358276], "id": 3, "name": "plis été", "points": [{"id": 3, "position": {"x": 4230, "y": 4190, "z": 12150}, "winding": null}, {"id": 2, "position": {"x": 4200, "y": 4180, "z": 12148}, "winding": null}, {"id": 1, "position": {"x": 4171, "y": 4171, "z": 12148}, "winding": null}], "store": "279ded74-f608-4ff9-aff7-9b4550e7cd6b", "uuid": "c83cc5ef-943c-4fec-8f2e-e80c70854b4b"}, {"color": [0.808740496635437, 0.5850093364715576, 0.47987303137779236], "id": 2, "name": "graines été", "points": [{"id": 4, "position": {"x": 4171, "y": 4171, "z": 12148}, "winding": null}], "store": "279ded74-f608-4ff9-aff7-9b4550e7cd6b", "uuid": "a35d50a2-4fdd-4720-9776-51c77881b76c"}]}}
+(0.0 s)
+--- lanceur.log
+05:06:08 verrou-fenetre relâché
+05:06:08 FIN rc=0
+05:06:21 BIN=%USERPROFILE%\Dev\vesuvius\donnees-conversion-projet\bin-apres PATH=%USERPROFILE%\Dev\vesuvius\donnees-conversion-projet\bin-apres;%USERPROFILE%\Dev\vesuvius\outils-vc3d\msys64\ucrt64\bin;C:\Windows\System32;C:\Windows QT_PLUGIN_PATH=%USERPROFILE%\Dev\vesuvius\outils-vc3d\msys64\ucrt64\share\qt6\plugins
+05:06:21 VC3D pid=16960 pont=vc3d-conv-20304
+05:06:29 capture apres1-p1: 2 images
+05:06:40 capture apres1-projet___t__: 2 images
+05:06:46 STOP demandé
+05:06:46 pic mémoire 1418916 Ko
+05:07:01 VC3D tué (pas fermé en 15 s)
+05:07:03 annonce du pont retirée
+05:07:03 verrou-fenetre relâché
+05:07:03 FIN rc=0
+--- stderr VC3D (lignes store/convert/Unavailable)
+--- fichiers après (sha256)
+total 4648
+drwxr-xr-x 1 me 197121       0 Nov 15 05:06 .
+drwxr-xr-x 1 me 197121       0 Nov 15 05:05 ..
+-rw-r--r-- 1 me 197121  749568 Nov 15 05:06 p1-upgraded-5067c30c-3371-4c0a-a5d9-75c945375622.vcobj
+-rw-r--r-- 1 me 197121       0 Nov 15 05:05 p1-upgraded-5067c30c-3371-4c0a-a5d9-75c945375622.vcobj-owner
+-rw-r--r-- 1 me 197121     438 Nov 15 05:05 p1-upgraded-5067c30c-3371-4c0a-a5d9-75c945375622.vcobj.mapping.json
+-rw-r--r-- 1 me 197121    1864 Nov 15 05:05 p1-upgraded-5067c30c-3371-4c0a-a5d9-75c945375622.vcobj.report.json
+-rw-r--r-- 1 me 197121  757760 Nov 15 00:41 p1.vcobj
+-rw-r--r-- 1 me 197121       0 Nov 15 05:05 p1.vcobj-owner
+-rw-r--r-- 1 me 197121   32768 Nov 15 05:06 p1.vcobj-shm
+-rw-r--r-- 1 me 197121       0 Nov 15 05:05 p1.vcobj-wal
+-rw-r--r-- 1 me 197121     859 Nov 15 05:05 p1.vcproj
+-rw-r--r-- 1 me 197121 1511424 Nov 15 05:05 projet été-upgraded-64b453b1-4c03-4fb7-bcc6-7ad1a378a277.vcobj
+-rw-r--r-- 1 me 197121       0 Nov 15 05:05 projet été-upgraded-64b453b1-4c03-4fb7-bcc6-7ad1a378a277.vcobj-owner
+-rw-r--r-- 1 me 197121   32768 Nov 15 05:06 projet été-upgraded-64b453b1-4c03-4fb7-bcc6-7ad1a378a277.vcobj-shm
+-rw-r--r-- 1 me 197121   90672 Nov 15 05:06 projet été-upgraded-64b453b1-4c03-4fb7-bcc6-7ad1a378a277.vcobj-wal
+-rw-r--r-- 1 me 197121    1050 Nov 15 05:05 projet été-upgraded-64b453b1-4c03-4fb7-bcc6-7ad1a378a277.vcobj.mapping.json
+-rw-r--r-- 1 me 197121    1798 Nov 15 05:05 projet été-upgraded-64b453b1-4c03-4fb7-bcc6-7ad1a378a277.vcobj.report.json
+-rw-r--r-- 1 me 197121 1519616 Nov 15 00:42 projet été.vcobj
+-rw-r--r-- 1 me 197121       0 Nov 15 05:05 projet été.vcobj-owner
+-rw-r--r-- 1 me 197121   32768 Nov 15 05:06 projet été.vcobj-shm
+-rw-r--r-- 1 me 197121       0 Nov 15 05:05 projet été.vcobj-wal
+-rw-r--r-- 1 me 197121     879 Nov 15 05:05 projet été.vcproj
+2f9aa67dcf5df599486f470341054cd4c4b52ca98c896fb26cc88ce3ca196ede *p1.vcproj
+59f583bbe6fff2887d285e33afb8c4b60d9b844b67b81bbf0bdd9abe44b49884 *projet été.vcproj
+a7867d5ccc19c975bd258cc81ec2c48afb45c02bdc3658b4ce452930e56fd18f *p1-upgraded-5067c30c-3371-4c0a-a5d9-75c945375622.vcobj
+d36cfd3ea217df0ca320506eab917d02b46234881a5e21c98cd84b182f1320f0 *p1.vcobj
+ee06d6762a4a7ab1ba4d50d838d3837ed4694b0bd854580de77f4c53a6a92c72 *projet été-upgraded-64b453b1-4c03-4fb7-bcc6-7ad1a378a277.vcobj
+4246ef4c8a3851f55db7ce24059e1fba4190c2cb207705f9d85d7afe6163f5a7 *projet été.vcobj
+--- user_version / application_id après
+apres1\p1-upgraded-5067c30c-3371-4c0a-a5d9-75c945375622.vcobj user_version 22 application_id 0x56434f42
+apres1\p1.vcobj user_version 21 application_id 0x56434f42
+apres1\projet �t�-upgraded-64b453b1-4c03-4fb7-bcc6-7ad1a378a277.vcobj user_version 22 application_id 0x56434f42
+apres1\projet �t�.vcobj user_version 21 application_id 0x56434f42
+--- .vcproj : différences avec la source
+16c16
+<       "location": "p1.vcobj",
+---
+>       "location": "p1-upgraded-5067c30c-3371-4c0a-a5d9-75c945375622.vcobj",
+16c16
+<       "location": "projet été.vcobj",
+---
+>       "location": "projet été-upgraded-64b453b1-4c03-4fb7-bcc6-7ad1a378a277.vcobj",
+=== FIN 05:07:04
+
+
+AFTER (3): fixed VC3D.exe, but vc_object_convert.exe and vc_object_server.exe removed from the folder (same layout as the official 97fb933 installer, see official-installer-listing.txt).
+Status bar (captures/no-tool-p1.png): "Unavailable project stores:" / "p1.vcobj: Store upgrade fail..." (cut by the window width)
+
+=== essai sans1, 2026-11-15 05:07:12, BIN=%USERPROFILE%/Dev/vesuvius/donnees-conversion-projet/bin-apres-sans
+--- fichiers avant (sha256)
+d36cfd3ea217df0ca320506eab917d02b46234881a5e21c98cd84b182f1320f0 *p1.vcobj
+ce63c373735b6a5bff4ec8d2967543985e559fd25d9d99a480995fe40a630f70 *p1.vcproj
+4246ef4c8a3851f55db7ce24059e1fba4190c2cb207705f9d85d7afe6163f5a7 *projet été.vcobj
+abf1b94523add8f1aba3c91061eb5e70cfd0cd000ab7d1b22715cfd091403aa3 *projet été.vcproj
+--- user_version / application_id des magasins
+sans1\p1.vcobj user_version 21 application_id 0x56434f42
+sans1\projet �t�.vcobj user_version 21 application_id 0x56434f42
+--- ping
+{"id": 715635548, "jsonrpc": "2.0", "result": {"pid": 27084, "pong": true, "protocolVersion": 2, "version": "2d3fb38-2026-11-14"}}
+(0.0 s)
+--- volume.open p1.vcproj
+{"id": 715635639, "jsonrpc": "2.0", "result": {"opened": true, "volumeId": "20250521151220", "volumeIds": ["20250521151220"], "vpkgPath": "C:\\Users\\me\\Dev\\vesuvius\\donnees-conversion-projet\\essais\\sans1"}}
+(0.1 s)
+--- screenshot.capture (p1)
+{"id": 715639989, "jsonrpc": "2.0", "result": {"base64": null, "filePath": "%USERPROFILE%/Dev/vesuvius/nuit-1511/conversion-projet/captures/sans1/p1.png", "format": "png", "height": 1171, "width": 1920}}
+(0.2 s)
+--- segments.list
+{"error": {"code": -32000, "message": "No project or no volume open"}, "id": 715640338, "jsonrpc": "2.0"}
+(0.0 s)
+--- points.list
+{"id": 715640493, "jsonrpc": "2.0", "result": {"collections": []}}
+(0.0 s)
+--- volume.open projet été.vcproj
+{"id": 715646632, "jsonrpc": "2.0", "result": {"opened": true, "volumeId": "20250521151220", "volumeIds": ["20250521151220"], "vpkgPath": "C:\\Users\\me\\Dev\\vesuvius\\donnees-conversion-projet\\essais\\sans1"}}
+(0.0 s)
+--- screenshot.capture (projet___t__)
+{"id": 715650898, "jsonrpc": "2.0", "result": {"base64": null, "filePath": "%USERPROFILE%/Dev/vesuvius/nuit-1511/conversion-projet/captures/sans1/projet___t__.png", "format": "png", "height": 1171, "width": 1920}}
+(0.1 s)
+--- segments.list
+{"error": {"code": -32000, "message": "No project or no volume open"}, "id": 715651127, "jsonrpc": "2.0"}
+(0.0 s)
+--- points.list
+{"id": 715651209, "jsonrpc": "2.0", "result": {"collections": []}}
+(0.0 s)
+--- lanceur.log
+05:07:13 BIN=%USERPROFILE%\Dev\vesuvius\donnees-conversion-projet\bin-apres-sans PATH=%USERPROFILE%\Dev\vesuvius\donnees-conversion-projet\bin-apres-sans;%USERPROFILE%\Dev\vesuvius\outils-vc3d\msys64\ucrt64\bin;C:\Windows\System32;C:\Windows QT_PLUGIN_PATH=%USERPROFILE%\Dev\vesuvius\outils-vc3d\msys64\ucrt64\share\qt6\plugins
+05:07:13 VC3D pid=27084 pont=vc3d-conv-25100
+05:07:21 capture sans1-p1: 2 images
+05:07:31 capture sans1-projet___t__: 2 images
+05:07:37 STOP demandé
+05:07:37 pic mémoire 1418304 Ko
+05:07:53 VC3D tué (pas fermé en 15 s)
+05:07:55 annonce du pont retirée
+05:07:55 verrou-fenetre relâché
+05:07:55 FIN rc=0
+--- stderr VC3D (lignes store/convert/Unavailable)
+--- fichiers après (sha256)
+total 2236
+drwxr-xr-x 1 me 197121       0 Nov 15 05:07 .
+drwxr-xr-x 1 me 197121       0 Nov 15 05:07 ..
+-rw-r--r-- 1 me 197121  757760 Nov 15 00:41 p1.vcobj
+-rw-r--r-- 1 me 197121       0 Nov 15 05:07 p1.vcobj-owner
+-rw-r--r-- 1 me 197121     813 Nov 15 00:30 p1.vcproj
+-rw-r--r-- 1 me 197121 1519616 Nov 15 00:42 projet été.vcobj
+-rw-r--r-- 1 me 197121       0 Nov 15 05:07 projet été.vcobj-owner
+-rw-r--r-- 1 me 197121     833 Nov 15 00:26 projet été.vcproj
+ce63c373735b6a5bff4ec8d2967543985e559fd25d9d99a480995fe40a630f70 *p1.vcproj
+abf1b94523add8f1aba3c91061eb5e70cfd0cd000ab7d1b22715cfd091403aa3 *projet été.vcproj
+d36cfd3ea217df0ca320506eab917d02b46234881a5e21c98cd84b182f1320f0 *p1.vcobj
+4246ef4c8a3851f55db7ce24059e1fba4190c2cb207705f9d85d7afe6163f5a7 *projet été.vcobj
+--- user_version / application_id après
+sans1\p1.vcobj user_version 21 application_id 0x56434f42
+sans1\projet �t�.vcobj user_version 21 application_id 0x56434f42
+--- .vcproj : différences avec la source
+p1.vcproj inchangé
+projet été.vcproj inchangé
+=== FIN 05:07:56

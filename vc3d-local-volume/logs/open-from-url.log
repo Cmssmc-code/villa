@@ -1,0 +1,19 @@
+$ vc_grow_seg_from_seed -v https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc0800/volumes/20250521135224-8.640um-1.2m-116keV-masked.zarr/ -t %USERPROFILE%/Dev/vesuvius/donnees-correcteur-volume-local/essais/distant/out -p %USERPROFILE%/Dev/vesuvius/donnees-correcteur-volume-local/essais/distant/params.json -s 4900 4900 10000
+zarr dataset size for scale group 0 [24298, 9867, 9867]
+chunk shape shape [128, 128, 128]
+mode: seed
+step size: 20
+min_area_cm: 0.3
+voxelsize: 8.64
+tgt_overlap_count: 20
+seed location [4900, 4900, 10000] value is 110
+NOTE: running with 12 OpenMP threads; tracing does not scale past a few threads. Set "thread_limit" in the params JSON (VC3D uses 1) or OMP_NUM_THREADS to cap it.
+GrowPatch loss weights:
+  DIST: 1 STRAIGHT: 0.2 SNAP: 0.1 NORMAL: 10 REFERENCE_RAY: 0 SDIR: 1
+empty space tracing
+seed val [4900, 4900, 10000] 110
+search & optimization ...lets go! 
+lets start fringe: 4
+generated surface 401.103846 vx^2 (0.000299 cm^2)
+discarding generated surface because area_cm2 0.000299422 is below min_area_cm 0.3
+FIN rc=0

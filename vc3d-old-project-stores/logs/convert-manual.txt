@@ -1,0 +1,77 @@
+=== 2026-11-15 02:38:55 BIN=%USERPROFILE%/Dev/vesuvius/donnees-conversion-projet/main-partiel
+$ vc_object_convert.exe %USERPROFILE%\Dev\vesuvius\donnees-conversion-projet\essais\manuel\p1.vcobj %USERPROFILE%\Dev\vesuvius\donnees-conversion-projet\essais\manuel\p1-converti.vcobj
+{
+  "copied_artifacts": 0,
+  "copied_rows": {
+    "a49f4d7b-04b0-4aed-81c5-1b90e6df7621": {
+      "database_identity": 1,
+      "edge_tags": 0,
+      "edges": 0,
+      "fibers": 0,
+      "geometry_chunks": 8,
+      "geometry_current_chunks": 0,
+      "geometry_deltas": 0,
+      "geometry_materializations": 0,
+      "geometry_revision_chunks": 4,
+      "geometry_revisions": 2,
+      "history_checked": 0,
+      "history_dirty_edges": 0,
+      "history_dirty_objects": 0,
+      "history_expected": 0,
+      "history_generations": 1,
+      "history_required": 0,
+      "history_validated_edges": 0,
+      "journal": 5,
+      "key_allocators": 1,
+      "object_bounds": 2,
+      "object_head_records": 0,
+      "object_heads": 2,
+      "object_relationship_deltas": 0,
+      "object_relationship_heads": 0,
+      "object_revisions": 2,
+      "object_tags": 2,
+      "object_versions": 2,
+      "objects": 2,
+      "relationship_revisions": 0,
+      "relationship_versions": 0,
+      "source_collections": 1,
+      "source_identity_dirty": 0,
+      "source_points": 3,
+      "spatial_regions": 24,
+      "spatial_regions_rtree": 24,
+      "store_changes": 2,
+      "store_commits": 2,
+      "store_identity": 1,
+      "store_manifest": 1,
+      "store_required_features": 5,
+      "store_write_state": 1,
+      "surfaces": 1,
+      "table_directory": 46,
+      "table_key_columns": 58,
+      "tracks": 0,
+      "transaction_receipts": 2
+    }
+  },
+  "destination": "C:\\Users\\me\\Dev\\vesuvius\\donnees-conversion-projet\\essais\\manuel\\p1-converti.vcobj",
+  "destination_bytes": 749568,
+  "destination_database_bytes": 749568,
+  "physical_databases": 1,
+  "source": "C:\\Users\\me\\Dev\\vesuvius\\donnees-conversion-projet\\essais\\manuel\\p1.vcobj",
+  "source_schema": 21,
+  "target_schema": 22,
+  "validation": "ok"
+}
+rc=0 durée=2 s
+total 1513
+drwxr-xr-x 1 me 197121      0 Nov 15 02:38 .
+drwxr-xr-x 1 me 197121      0 Nov 15 02:38 ..
+-rw-r--r-- 1 me 197121 749568 Nov 15 02:38 p1-converti.vcobj
+-rw-r--r-- 1 me 197121    438 Nov 15 02:38 p1-converti.vcobj.mapping.json
+-rw-r--r-- 1 me 197121   1827 Nov 15 02:38 p1-converti.vcobj.report.json
+-rw-r--r-- 1 me 197121 757760 Nov 15 00:41 p1.vcobj
+-rw-r--r-- 1 me 197121  32768 Nov 15 02:38 p1.vcobj-shm
+-rw-r--r-- 1 me 197121      0 Nov 15 02:38 p1.vcobj-wal
+manuel\p1-converti.vcobj user_version 22
+manuel\p1.vcobj user_version 21
+d36cfd3ea217df0ca320506eab917d02b46234881a5e21c98cd84b182f1320f0 *%USERPROFILE%/Dev/vesuvius/donnees-conversion-projet/source/p1/p1.vcobj
+d36cfd3ea217df0ca320506eab917d02b46234881a5e21c98cd84b182f1320f0 *%USERPROFILE%/Dev/vesuvius/donnees-conversion-projet/essais/manuel/p1.vcobj

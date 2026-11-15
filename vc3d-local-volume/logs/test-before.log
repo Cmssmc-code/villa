@@ -1,0 +1,10 @@
+04:09:31
+[2026-11-15 04:09:58.022] [WARN ] volume '%USERPROFILE%\Dev\vesuvius\nuit-1511\wf\tests-hors-arbre\tmp\vc_vol_local_unusable_voxelsize_10424457839768529636\meta.json': no voxel size in its store metadata, so physical measurements are unavailable for it
+[2026-11-15 04:09:58.214] [WARN ] volume '%USERPROFILE%\Dev\vesuvius\nuit-1511\wf\tests-hors-arbre\tmp\vc_vol_local_unusable_voxelsize_13493628345787093751\meta.json': no voxel size in its store metadata, so physical measurements are unavailable for it
+[2026-11-15 04:09:58.338] [WARN ] volume '%USERPROFILE%\Dev\vesuvius\nuit-1511\wf\tests-hors-arbre\tmp\vc_vol_local_unusable_voxelsize_11352010608014134949\meta.json': no voxel size in its store metadata, so physical measurements are unavailable for it
+[2026-11-15 04:09:59.298] [WARN ] volume '%USERPROFILE%\Dev\vesuvius\nuit-1511\wf\tests-hors-arbre\tmp\vc_vol_local_unusable_voxelsize_9240813987681882195\meta.json': no voxel size in its store metadata, so physical measurements are unavailable for it
+[2026-11-15 04:09:59.699] [WARN ] volume '%USERPROFILE%\Dev\vesuvius\nuit-1511\wf\tests-hors-arbre\tmp\vc_vol_local_sidecar_5826903664238937973\metadata.json': no voxel size in its store metadata, so physical measurements are unavailable for it
+[2026-11-15 04:09:59.733] [WARN ] volume '%USERPROFILE%\Dev\vesuvius\nuit-1511\wf\tests-hors-arbre\tmp\vc_vol_local_sidecar_5826903664238937973\meta.json': no voxel size in its store metadata, so physical measurements are unavailable for it
+uncaught exception in 'Volume: a downloaded open-data store opens with its own metadata.json': %USERPROFILE%\Dev\vesuvius\nuit-1511\wf\tests-hors-arbre\tmp\vc_vol_local_open_data_record_258142201816901843\metadata.json missing required field: type
+1 check(s) failed
+rc=1

@@ -1,0 +1,9 @@
+Export of catalog segment 09f10f4e (PHerc1447) by main 2d3fb38d3 (before) and by main + this fix (after):
+sha256 of each exported file.
+
+meta.json  before 1e931d15bd1fe4375cfd9c0aaef0f12577bcbb7874de603eac4397f8d3ccb90f  after 1e931d15bd1fe4375cfd9c0aaef0f12577bcbb7874de603eac4397f8d3ccb90f  identical (476 bytes)
+x.tif      before 03591ce10d26006f8945d680978a761956ca451bcbe0c218419482b342db5e78  after 03591ce10d26006f8945d680978a761956ca451bcbe0c218419482b342db5e78  identical (72148 bytes)
+y.tif      before 775fdaeca2e926a9bfee366c117e88188403dfc17fd78ee55a72da4e63ac6281  after 775fdaeca2e926a9bfee366c117e88188403dfc17fd78ee55a72da4e63ac6281  identical (73110 bytes)
+z.tif      before 29047c6c5d2cda6f96b0d5927951cf5f75f9bc30364177260b6c10d5eec383ef  after 29047c6c5d2cda6f96b0d5927951cf5f75f9bc30364177260b6c10d5eec383ef  identical (61228 bytes)
+
+All four files identical.

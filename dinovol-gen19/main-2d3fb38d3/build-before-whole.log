@@ -1,0 +1,58 @@
+$ python -I %USERPROFILE%\Dev\vesuvius\nuit-1511\gen19-main\worker.py build %USERPROFILE%\Dev\vesuvius\donnees-dinovol\gen19\travail\before\dinovol %USERPROFILE%\Dev\vesuvius\donnees-dinovol\gen19\travail\catalogue.json %USERPROFILE%\Dev\vesuvius\donnees-dinovol\gen19\travail\config-before.json %USERPROFILE%\Dev\vesuvius\donnees-dinovol\gen19\travail\cache-whole %USERPROFILE%\Dev\vesuvius\donnees-dinovol\gen19\travail\build-whole.json unbanded
+[peak 1.50 GB] read 20260926044226-spiral-output-generation-19/mesh/intermediate/tifxyz_normalized/x.tif (956, 56913) float32 in 27 s
+[peak 1.72 GB] read 20260926044226-spiral-output-generation-19/mesh/intermediate/tifxyz_normalized/y.tif (956, 56913) float32 in 28 s
+[peak 1.93 GB] read 20260926044226-spiral-output-generation-19/mesh/intermediate/tifxyz_normalized/z.tif (956, 56913) float32 in 33 s
+[peak 1.93 GB] build 20260926044226: coordinate_scale=1.0, transform=False, arrays (956, 56913) float32, scale0_shape=(75784, 32693, 32693), selected_shape=(18946, 8174, 8174)
+[peak 1.93 GB] calling the real build_mesh_segment_from_arrays on the whole arrays
+Traceback (most recent call last):
+  File "%USERPROFILE%\Dev\vesuvius\nuit-1511\gen19-main\worker.py", line 168, in <module>
+    build(*sys.argv[3:8])
+    ~~~~~^^^^^^^^^^^^^^^^
+  File "%USERPROFILE%\Dev\vesuvius\nuit-1511\gen19-main\worker.py", line 133, in build
+    cmm.main()
+    ~~~~~~~~^^
+  File "%USERPROFILE%\Dev\vesuvius\donnees-dinovol\gen19\travail\before\dinovol\dinovol_2\cache_metadata_meshes.py", line 76, in main
+    meshes = load_or_build_volume_meshes(
+        vol_path,
+    ...<5 lines>...
+        s3_storage_options=s3_opts,
+    )
+  File "%USERPROFILE%\Dev\vesuvius\nuit-1511\gen19-main\worker.py", line 126, in load
+    res = real_load(*a, **k)
+  File "%USERPROFILE%\Dev\vesuvius\donnees-dinovol\gen19\travail\before\dinovol\dinovol_2\dataset\object_labels.py", line 832, in load_or_build_volume_meshes
+    for built in pool.map(_build_one_segment, raw_segments):
+                 ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "%USERPROFILE%\AppData\Roaming\uv\python\cpython-3.14-windows-x86_64-none\Lib\concurrent\futures\_base.py", line 645, in result_iterator
+    yield _result_or_cancel(fs.pop())
+          ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "%USERPROFILE%\AppData\Roaming\uv\python\cpython-3.14-windows-x86_64-none\Lib\concurrent\futures\_base.py", line 312, in _result_or_cancel
+    return fut.result(timeout)
+           ~~~~~~~~~~^^^^^^^^^
+  File "%USERPROFILE%\AppData\Roaming\uv\python\cpython-3.14-windows-x86_64-none\Lib\concurrent\futures\_base.py", line 454, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "%USERPROFILE%\AppData\Roaming\uv\python\cpython-3.14-windows-x86_64-none\Lib\concurrent\futures\_base.py", line 396, in __get_result
+    raise self._exception
+  File "%USERPROFILE%\AppData\Roaming\uv\python\cpython-3.14-windows-x86_64-none\Lib\concurrent\futures\thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "%USERPROFILE%\AppData\Roaming\uv\python\cpython-3.14-windows-x86_64-none\Lib\concurrent\futures\thread.py", line 73, in run
+    return fn(*args, **kwargs)
+  File "%USERPROFILE%\Dev\vesuvius\donnees-dinovol\gen19\travail\before\dinovol\dinovol_2\dataset\object_labels.py", line 812, in _build_one_segment
+    return build_mesh_segment_from_arrays(
+        seg_id,
+    ...<8 lines>...
+        supervision=sup_arr,
+    )
+  File "%USERPROFILE%\Dev\vesuvius\nuit-1511\gen19-main\worker.py", line 79, in banded
+    return real_build(seg_id, x, y, z, scale0_shape, selected_shape, inklabels=inklabels,
+                      supervision=supervision, **kw)
+  File "%USERPROFILE%\Dev\vesuvius\donnees-dinovol\gen19\travail\before\dinovol\dinovol_2\dataset\object_labels.py", line 516, in build_mesh_segment_from_arrays
+    xyz = np.stack([x, y, z], axis=-1)
+  File "%USERPROFILE%\Dev\vesuvius\venv-pywin\Lib\site-packages\numpy\_core\shape_base.py", line 465, in stack
+    return _nx.concatenate(expanded_arrays, axis=axis, out=out,
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                           dtype=dtype, casting=casting)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+numpy._core._exceptions._ArrayMemoryError: Unable to allocate 1.22 GiB for an array with shape (956, 56913, 3) and data type float64
+
+--- exit code 1; wall time 177 s; peak committed memory 4.61 GB (4.29 GiB), limit 3.5 GB

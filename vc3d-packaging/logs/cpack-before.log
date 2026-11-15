@@ -1,0 +1,35 @@
+CPack: Enable Verbose
+CPack Verbose: Read CPack config file: 
+CPack Verbose: Read CPack configuration file: %USERPROFILE%/Dev/vesuvius/wt-vc3d/volume-cartographer/build/ci-windows-mingw/CPackConfig.cmake
+CPack Verbose: Specified generator: NSIS
+CPack Verbose: Test NSIS version: "%USERPROFILE%/Dev/vesuvius/outils-vc3d/msys64/ucrt64/bin/makensis.exe" /VERSION
+CPack Verbose: Use generator: cmCPackNSISGenerator
+CPack Verbose: For project: VC3D
+CPack: Create package using NSIS
+CPack Verbose: Read description file: %USERPROFILE%/Dev/vesuvius/outils-vc3d/msys64/ucrt64/share/cmake/Templates/CPack.GenericDescription.txt
+CPack Verbose: [NSIS] requested component grouping = ALL_COMPONENTS_IN_ONE
+CPack Verbose: [NSIS] requested component grouping = ALL_COMPONENTS_IN_ONE
+CPack: Install projects
+CPack: - Install project: VC3D []
+CPack: -   Install component: vc_runtime
+CPack Verbose: Install configuration: "Release"
+CPack Verbose: Installing: %USERPROFILE%/Dev/vesuvius/wt-vc3d/volume-cartographer/build/ci-windows-mingw/_CPack_Packages/win64/NSIS/VC3D-2d3fb38-2026-11-14-win64/vc_runtime/bin/vc_fiber_bake_annotations.exe
+CPack Verbose: Installing: %USERPROFILE%/Dev/vesuvius/wt-vc3d/volume-cartographer/build/ci-windows-mingw/_CPack_Packages/win64/NSIS/VC3D-2d3fb38-2026-11-14-win64/vc_runtime/bin/vc_fiber_constraints.exe
+CPack Verbose: Installing: %USERPROFILE%/Dev/vesuvius/wt-vc3d/volume-cartographer/build/ci-windows-mingw/_CPack_Packages/win64/NSIS/VC3D-2d3fb38-2026-11-14-win64/vc_runtime/bin/vc_fiber_trace_metric.exe
+CPack Verbose: Installing: %USERPROFILE%/Dev/vesuvius/wt-vc3d/volume-cartographer/build/ci-windows-mingw/_CPack_Packages/win64/NSIS/VC3D-2d3fb38-2026-11-14-win64/vc_runtime/bin/vc_cache_root.exe
+CPack Verbose: Installing: %USERPROFILE%/Dev/vesuvius/wt-vc3d/volume-cartographer/build/ci-windows-mingw/_CPack_Packages/win64/NSIS/VC3D-2d3fb38-2026-11-14-win64/vc_runtime/bin/libvc_core.dll
+CPack Verbose: Installing: %USERPROFILE%/Dev/vesuvius/wt-vc3d/volume-cartographer/build/ci-windows-mingw/_CPack_Packages/win64/NSIS/VC3D-2d3fb38-2026-11-14-win64/vc_runtime/bin/libvc_inpaint.dll
+CPack Verbose: Installing: %USERPROFILE%/Dev/vesuvius/wt-vc3d/volume-cartographer/build/ci-windows-mingw/_CPack_Packages/win64/NSIS/VC3D-2d3fb38-2026-11-14-win64/vc_runtime/bin/libvc_lasagna.dll
+CPack Verbose: Installing: %USERPROFILE%/Dev/vesuvius/wt-vc3d/volume-cartographer/build/ci-windows-mingw/_CPack_Packages/win64/NSIS/VC3D-2d3fb38-2026-11-14-win64/vc_runtime/bin/libvc_fiber_tracer.dll
+CPack Verbose: Installing: %USERPROFILE%/Dev/vesuvius/wt-vc3d/volume-cartographer/build/ci-windows-mingw/_CPack_Packages/win64/NSIS/VC3D-2d3fb38-2026-11-14-win64/vc_runtime/bin/libvc_tracer.dll
+CPack Verbose: Up-to-date: %USERPROFILE%/Dev/vesuvius/wt-vc3d/volume-cartographer/build/ci-windows-mingw/_CPack_Packages/win64/NSIS/VC3D-2d3fb38-2026-11-14-win64/vc_runtime/bin/vc_cache_root.exe
+CPack Verbose: Up-to-date: %USERPROFILE%/Dev/vesuvius/wt-vc3d/volume-cartographer/build/ci-windows-mingw/_CPack_Packages/win64/NSIS/VC3D-2d3fb38-2026-11-14-win64/vc_runtime/bin/vc_fiber_trace_metric.exe
+CPack Verbose: Up-to-date: %USERPROFILE%/Dev/vesuvius/wt-vc3d/volume-cartographer/build/ci-windows-mingw/_CPack_Packages/win64/NSIS/VC3D-2d3fb38-2026-11-14-win64/vc_runtime/bin/vc_fiber_bake_annotations.exe
+CPack Verbose: Up-to-date: %USERPROFILE%/Dev/vesuvius/wt-vc3d/volume-cartographer/build/ci-windows-mingw/_CPack_Packages/win64/NSIS/VC3D-2d3fb38-2026-11-14-win64/vc_runtime/bin/vc_fiber_constraints.exe
+CMake Error at %USERPROFILE%/Dev/vesuvius/wt-vc3d/volume-cartographer/build/ci-windows-mingw/cmake_install.cmake:151 (file):
+  file INSTALL cannot find
+  "%USERPROFILE%/Dev/vesuvius/wt-vc3d/volume-cartographer/build/ci-windows-mingw/bin/bench_fiber_projection.exe":
+  File exists.
+
+
+CPack Error: Error when generating package: VC3D

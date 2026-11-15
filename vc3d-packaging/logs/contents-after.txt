@@ -1,0 +1,55 @@
+VC3D-4675779-2026-11-15-win64.exe  73292248 octets  SHA-256 166aad941e028c2b5605db6579f10f83d929061f6c47058eb2d0e3b11fa273cc
+VC3D-4675779-2026-11-15-win64.zip  111413541 octets  SHA-256 deea9938011a177775feee45e6d9438acac5933897cc4dd7e2f77dcd1226ec4e
+
+7z l VC3D-4675779-2026-11-15-win64.exe : rc=0, 185 fichiers
+7z l VC3D-4675779-2026-11-15-win64.zip : rc=0, 647 fichiers
+
+Exécutables (.exe) dans l'installateur : 18 ; dans le zip : 20
+Dans le zip, absents de l'installateur : vc_object_convert.exe, vc_object_server.exe
+Dans l'installateur, absents du zip : aucun
+DLL dans le zip, absentes de l'installateur : aucune
+DLL dans l'installateur, absentes du zip : installoptions.dll, startmenu.dll, system.dll, userinfo.dll
+bench_fiber_projection / test_fiber_normal_publication présents : exe=[] zip=[]
+
+== Liste des .exe du zip ==
+VC3D-4675779-2026-11-15-win64/bin/VC3D.exe
+VC3D-4675779-2026-11-15-win64/bin/vc_cache_root.exe
+VC3D-4675779-2026-11-15-win64/bin/vc_extend_edge.exe
+VC3D-4675779-2026-11-15-win64/bin/vc_fiber_bake_annotations.exe
+VC3D-4675779-2026-11-15-win64/bin/vc_fiber_constraints.exe
+VC3D-4675779-2026-11-15-win64/bin/vc_fiber_trace_metric.exe
+VC3D-4675779-2026-11-15-win64/bin/vc_fiberlets.exe
+VC3D-4675779-2026-11-15-win64/bin/vc_gen_normalgrids.exe
+VC3D-4675779-2026-11-15-win64/bin/vc_gen_umbilicus.exe
+VC3D-4675779-2026-11-15-win64/bin/vc_grow_seg_from_seed.exe
+VC3D-4675779-2026-11-15-win64/bin/vc_grow_seg_from_segments.exe
+VC3D-4675779-2026-11-15-win64/bin/vc_ngrids.exe
+VC3D-4675779-2026-11-15-win64/bin/vc_obj2tifxyz.exe
+VC3D-4675779-2026-11-15-win64/bin/vc_obj2tifxyz_legacy.exe
+VC3D-4675779-2026-11-15-win64/bin/vc_object_convert.exe
+VC3D-4675779-2026-11-15-win64/bin/vc_object_server.exe
+VC3D-4675779-2026-11-15-win64/bin/vc_objrefine.exe
+VC3D-4675779-2026-11-15-win64/bin/vc_render_tifxyz.exe
+VC3D-4675779-2026-11-15-win64/bin/vc_thinning.exe
+VC3D-4675779-2026-11-15-win64/bin/vc_tifxyz2obj.exe
+
+== Liste des .exe de l'installateur ==
+Uninstall.exe
+bin/VC3D.exe
+bin/vc_cache_root.exe
+bin/vc_extend_edge.exe
+bin/vc_fiber_bake_annotations.exe
+bin/vc_fiber_constraints.exe
+bin/vc_fiber_trace_metric.exe
+bin/vc_fiberlets.exe
+bin/vc_gen_normalgrids.exe
+bin/vc_gen_umbilicus.exe
+bin/vc_grow_seg_from_seed.exe
+bin/vc_grow_seg_from_segments.exe
+bin/vc_ngrids.exe
+bin/vc_obj2tifxyz.exe
+bin/vc_obj2tifxyz_legacy.exe
+bin/vc_objrefine.exe
+bin/vc_render_tifxyz.exe
+bin/vc_thinning.exe
+bin/vc_tifxyz2obj.exe

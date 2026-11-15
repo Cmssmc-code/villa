@@ -1,0 +1,43 @@
+BEFORE - official Windows package VC3D-97fb933-2026-11-13-win64 (same code as origin/main 2d3fb38d3 for the files involved)
+Data: PHerc1447 from the public bucket, opened with the VC3D catalog (catalog.open_sample), surface prediction 20250521151220-surface-20260413222639-surface-m7-L0-th0.2.zarr + normal grids.
+VC3D started hidden with --agent-bridge-name, own VC3D_CONFIG_DIR, own cache root. Calls = VC3D agent bridge (JSON-RPC over named pipe).
+Run on 2026-11-15, Windows 11.
+
+01:04:18 catalog.open_sample {"sampleId": "PHerc1447", "resources": {"kinds": ["prediction", "normal_grids"]}} -> {"jobId": "job-1", "kind": "catalog.open_sample", "sampleId": "PHerc1447", "source": "catalog"}
+01:04:21 job.status job-1 -> running | open sample PHerc1447 | []
+01:04:25 job.status job-1 -> succeeded | Opened sample PHerc1447 | []
+01:04:31 segments.activate {"segmentId": "09f10f4e-d698-565a-a2fa-5720f5b63530"} -> {"activated": true, "alreadyActive": false, "previousSegmentId": null, "segment": {"active": true, "bound": true, "catalog": true, "id": "09f10f4e-d698-565a-a2f
+01:04:32 segmentation.grow_surface_from_seed {"seed": {"x": 4171, "y": 4171, "z": 12148}, "iterations": 15, "volumeId": "20250521151220-surface-20260413222639-surface-m7-L0-th0.2.zarr-9279f79c1a22f778"} -> {"jobId": "job-2", "kind": "segmentation.grow_surface_from_seed", "volumeId": "20250521151220-surface-20260413222639-surface-m7-L0-th0.2.zarr-9279f79c1a22f778"}
+01:06:04 job.status job-2 -> succeeded | vc_grow_seg_from_seed completed successfully | ['generated surface 293009.149331 vx^2 (0.218730 cm^2)', 'surface_uuid: 2a392224-4114-423c-8137-d1d81013d83f']
+01:06:13 objects.export {"uuid": "2a392224-4114-423c-8137-d1d81013d83f", "path": "%USERPROFILE%/Dev/vesuvius/donnees-correcteur-export-segment/exports/pousse-avant"} -> {"jobId": "job-3", "kind": "objects.export", "objectKind": "surface", "source": "export", "store": "a6433976-5c92-4536-81c4-39e61773ec15", "uuid": "2a392224-411
+01:06:16 job.status job-3 -> failed | [json.exception.type_error.307] cannot use erase() with string | []
+01:06:16 objects.export {"uuid": "09f10f4e-d698-565a-a2fa-5720f5b63530", "path": "%USERPROFILE%/Dev/vesuvius/donnees-correcteur-export-segment/exports/catalogue-avant"} -> {"jobId": "job-4", "kind": "objects.export", "objectKind": "surface", "source": "export", "store": "a6433976-5c92-4536-81c4-39e61773ec15", "uuid": "09f10f4e-d69
+01:06:19 job.status job-4 -> succeeded | Exported 09f10f4e-d698-565a-a2fa-5720f5b63530 | []
+
+Object metadata of the grown surface, read-only from PHerc1447.vcobj (sqlite):
+  2a392224-4114-423c-8137-d1d81013d83f auto_grown_20261115010433417
+  source = 'vc_grow_seg_from_seed'   (a string)
+  keys: coordinates, elapsed_time_s, max_gen, provenance, seed, source, target_volume, vc_gsfs_mode, vc_gsfs_params, vc_gsfs_version
+
+Result: the grown segment cannot be exported; the catalog segment exports (meta.json, x.tif, y.tif, z.tif).
+
+===== main 2d3fb38d3 (added 2026-11-15 05:10) =====
+Binaries: %USERPROFILE%/Dev/vesuvius/donnees-correcteur-export-segment/bin-main = copy of outils-vc3d/bin-main-2d3fb38d3 (main 2d3fb38d3 built on this PC), DLLs from outils-vc3d/msys64/ucrt64/bin.
+Command: python finisseur_lance.py main-avant2 <bin-main> (nuit-1511/correcteur-export-segment/outils), empty VC3D profile, hidden desktop, agent bridge.
+(A first run with the profile written by the 13/11 package could not open its store on main: -32000 'No project or no volume open'; see after.txt.)
+Result: grown segment f0b5264a-13c6-4dcc-bf0f-78b156bc1a85 (0.219120 cm^2) -> objects.export failed '[json.exception.type_error.307] cannot use erase() with string', no folder written. Catalog segment 09f10f4e exported (meta.json, x.tif, y.tif, z.tif).
+Raw output:
+05:06:06 BIN=%USERPROFILE%\Dev\vesuvius\donnees-correcteur-export-segment\bin-main
+05:06:09 catalog.open_sample {"sampleId": "PHerc1447", "resources": {"kinds": ["prediction", "normal_grids"]}} -> {"jobId": "job-1", "kind": "catalog.open_sample", "sampleId": "PHerc1447", "source": "catalog"}
+05:06:12 job.status job-1 -> succeeded | Opened sample PHerc1447 | []
+05:06:14 segments.activate {"segmentId": "09f10f4e-d698-565a-a2fa-5720f5b63530"} -> {"activated": true, "alreadyActive": false, "previousSegmentId": null, "segment": {"active": true, "bound": true, "catalog": true, "id": "09f10f4e-d698-565a-a2fa-5720f5b63530", "name": "auto_grown_20250502161744358", "store": "45a49f10-5ddd-4f52-baf4-577cebdb8d80", "tags": [], "writable": true}}
+05:06:14 objects.export {"uuid": "2a392224-4114-423c-8137-d1d81013d83f", "path": "%USERPROFILE%\\Dev\\vesuvius\\donnees-correcteur-export-segment\\exports\\ancien-main-avant2"} -> {"code": -32007, "data": {"id": "2a392224-4114-423c-8137-d1d81013d83f", "kind": "object"}, "message": "Object not found in the project's stores"}
+05:06:15 segmentation.grow_surface_from_seed {"seed": {"x": 4171, "y": 4171, "z": 12148}, "iterations": 15, "volumeId": "20250521151220-surface-20260413222639-surface-m7-L0-th0.2.zarr-9279f79c1a22f778"} -> {"jobId": "job-2", "kind": "segmentation.grow_surface_from_seed", "volumeId": "20250521151220-surface-20260413222639-surface-m7-L0-th0.2.zarr-9279f79c1a22f778"}
+05:06:51 job.status job-2 -> succeeded | vc_grow_seg_from_seed completed successfully | ['generated surface 293531.437515 vx^2 (0.219120 cm^2)', 'surface_uuid: f0b5264a-13c6-4dcc-bf0f-78b156bc1a85']
+05:06:51 objects.export {"uuid": "f0b5264a-13c6-4dcc-bf0f-78b156bc1a85", "path": "%USERPROFILE%\\Dev\\vesuvius\\donnees-correcteur-export-segment\\exports\\pousse-main-avant2"} -> {"jobId": "job-3", "kind": "objects.export", "objectKind": "surface", "source": "export", "store": "45a49f10-5ddd-4f52-baf4-577cebdb8d80", "uuid": "f0b5264a-13c6-4dcc-bf0f-78b156bc1a85"}
+05:06:54 job.status job-3 -> failed | [json.exception.type_error.307] cannot use erase() with string | []
+05:06:54 objects.export {"uuid": "09f10f4e-d698-565a-a2fa-5720f5b63530", "path": "%USERPROFILE%\\Dev\\vesuvius\\donnees-correcteur-export-segment\\exports\\catalogue-main-avant2"} -> {"jobId": "job-4", "kind": "objects.export", "objectKind": "surface", "source": "export", "store": "45a49f10-5ddd-4f52-baf4-577cebdb8d80", "uuid": "09f10f4e-d698-565a-a2fa-5720f5b63530"}
+05:06:57 job.status job-4 -> succeeded | Exported 09f10f4e-d698-565a-a2fa-5720f5b63530 | []
+05:07:21 catalogue-main-avant2: ['meta.json', 'x.tif', 'y.tif', 'z.tif']
+05:07:21   meta.json source = null
+05:07:21 FIN rc=0

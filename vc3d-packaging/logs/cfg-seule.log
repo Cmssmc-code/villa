@@ -1,0 +1,23 @@
+=== 2026-11-15 02:00:41 avant : HEAD 2d3fb38d3 ; git status : []
+$ cmake --preset ci-windows-mingw -DVC_TESTING=ON
+cmake rc=0
+$ grep -rn -e bench_fiber_projection -e test_fiber_normal_publication --include=cmake_install.cmake build/ci-windows-mingw
+build/ci-windows-mingw/cmake_install.cmake:151:  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "<tree>/volume-cartographer/build/ci-windows-mingw/bin/bench_fiber_projection.exe")
+build/ci-windows-mingw/cmake_install.cmake:152:  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/bench_fiber_projection.exe" AND
+build/ci-windows-mingw/cmake_install.cmake:153:     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/bench_fiber_projection.exe")
+build/ci-windows-mingw/cmake_install.cmake:155:      execute_process(COMMAND "%USERPROFILE%/Dev/vesuvius/outils-vc3d/msys64/ucrt64/bin/strip.exe" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/bench_fiber_projection.exe")
+build/ci-windows-mingw/cmake_install.cmake:161:  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "<tree>/volume-cartographer/build/ci-windows-mingw/bin/test_fiber_normal_publication.exe")
+build/ci-windows-mingw/cmake_install.cmake:162:  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/test_fiber_normal_publication.exe" AND
+build/ci-windows-mingw/cmake_install.cmake:163:     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/test_fiber_normal_publication.exe")
+build/ci-windows-mingw/cmake_install.cmake:165:      execute_process(COMMAND "%USERPROFILE%/Dev/vesuvius/outils-vc3d/msys64/ucrt64/bin/strip.exe" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/test_fiber_normal_publication.exe")
+build/ci-windows-mingw/cmake_install.cmake:398:      "<tree>/volume-cartographer/build/ci-windows-mingw/bin/bench_fiber_projection.exe"
+build/ci-windows-mingw/cmake_install.cmake:399:      "<tree>/volume-cartographer/build/ci-windows-mingw/bin/test_fiber_normal_publication.exe"
+lignes trouvées : 10
+règles TYPE EXECUTABLE dans build/ci-windows-mingw/cmake_install.cmake : 20
+=== 2026-11-15 02:04:15 apres : HEAD 4675779f1 ; git status : []
+$ cmake --preset ci-windows-mingw -DVC_TESTING=ON
+cmake rc=0
+$ grep -rn -e bench_fiber_projection -e test_fiber_normal_publication --include=cmake_install.cmake build/ci-windows-mingw
+lignes trouvées : 0
+règles TYPE EXECUTABLE dans build/ci-windows-mingw/cmake_install.cmake : 18
+FIN rc=0 2026-11-15 02:04:59
