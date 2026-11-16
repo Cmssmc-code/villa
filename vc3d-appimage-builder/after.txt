@@ -1,0 +1,43 @@
+AFTER: VC3D Linux AppImage workflow (.github/workflows/vc3d-linux.yml) with the new builder-image pin
+=====================================================================================================
+
+Fix: branch vc3d-appimage-builder-concurrentqueue, one commit on origin/main 2d3fb38d3
+  (26be73018, same tree 5bc6cb138 as 49fd46f1d, the commit that ran on the fork; only the message was reworded).
+  volume-cartographer/scripts/Dockerfile.appimage line 24:
+  - ARG BUILDER_IMAGE=ghcr.io/scrollprize/villa/volume-cartographer@sha256:1bebf104edbd6c290ddbaf8036c919635259f3722e8eddb31340b240baf1ed68
+  + ARG BUILDER_IMAGE=ghcr.io/scrollprize/villa/volume-cartographer@sha256:e1c9abfd3f89cdb24fa0c4330d907408035669630f6450643d9055f486daab9b
+  The new digest is the amd64 image of the builder that vc3d-publish-ghcr.yml published from 294ac4cf2 (#2546)
+  on 14/11/2026. Its label vc-builder-deps-hash = 6309e96d71462b0a = the hash ci.sh computes for main
+  (verifier.py reads both labels anonymously from ghcr.io).
+
+All runs below: fork Cmssmc-code/villa, GitHub-hosted ubuntu-24.04, with one extra test-only commit
+(runs-on -> GitHub-hosted runner, timeout 330 min, free runner disk). The fork has no Blacksmith runners.
+That commit is NOT part of the fix.
+
+1) Pin only: essai-ci/pin-seul 9f45a0da4 = 49fd46f1d + test-only commit
+   https://github.com/Cmssmc-code/villa/actions/runs/43774807996 -> failure after 42 min, but LATER than before:
+   journaux/fork-linux-pinseul-43774807996.log
+     line  216: FROM ghcr.io/scrollprize/villa/volume-cartographer@sha256:e1c9abfd3f89...   (new image)
+     line 1007: #17 20.58 -- Configuring done (20.5s)                                     (no concurrentqueue error)
+     line 5752: #17 2283.6 [1400/1401] Linking CXX executable bin/VC3D                   (whole build compiles)
+     line 5827: #18 6.469   file INSTALL cannot find
+     line 5828: #18 6.469   "/src/volume-cartographer/build/ci-release-gcc/bin/bench_fiber_projection":
+   This last error is the one open PR #2557 fixes on Windows and macOS (same install loop).
+
+2) Pin + #2557: essai-ci/apres-linux 82bb0b101 = 49fd46f1d + 5118f45f1 (= #2557's 4675779f1 cherry-picked) + test-only commit
+   https://github.com/Cmssmc-code/villa/actions/runs/43774811522 -> SUCCESS in 58 min (all steps green)
+   journaux/fork-linux-apres-43774811522.log
+     line  713: #8 [build  1/10] FROM ghcr.io/scrollprize/villa/volume-cartographer@sha256:e1c9abfd3f89...
+     line 1502: #17 14.60 -- Configuring done (14.5s)
+     line 6247: #17 1976.7 [1400/1401] Linking CXX executable bin/VC3D
+     line 8371: #18 94.11 ==> Done: /out/VC3D-82bb0b1-2026-11-16-linux-x86_64.AppImage
+     line 9000: vc_tifxyz2obj OK (exit 1)          (workflow smoke test: CLI loads, prints usage)
+     line 9015: VC3D GUI init OK                   (workflow smoke test: GUI starts under xvfb)
+   Artifact VC3D-linux-appimage: 1 292 931 896 bytes (AppImage + debug .tar.zst), like the release
+   97fb933 (AppImage 135 428 600 + debug 1 042 601 917 bytes).
+   No line of this log contains "concurrentqueue".
+
+3) Real segment with that AppImage: see appimage-reel.txt (run on GitHub, ubuntu-24.04).
+
+Not verified: a team (Blacksmith) runner; the arm64 path (the Linux workflow only builds x86_64);
+the AppImage on a real Linux desktop.

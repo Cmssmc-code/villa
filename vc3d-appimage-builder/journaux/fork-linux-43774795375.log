@@ -1,0 +1,1026 @@
+Build + package (AppImage)	Build AppImage	﻿2026-11-15T23:29:05.4133054Z ##[group]Run docker/build-push-action@v6
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.4133308Z with:
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.4133475Z   context: .
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.4133691Z   file: volume-cartographer/scripts/Dockerfile.appimage
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.4133981Z   outputs: type=local,dest=volume-cartographer/dist
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.4134375Z   build-args: VC_GIT_SHA1=4dd979274b9bfcee9d2d6249a8c73e0a4ab68289
+Build + package (AppImage)	Build AppImage	VC_GIT_COMMIT_DATE=2026-11-16
+Build + package (AppImage)	Build AppImage	
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.4134776Z   cache-from: type=gha,scope=vc3d-appimage-linux-amd64
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.4135087Z   cache-to: type=gha,mode=max,scope=vc3d-appimage-linux-amd64
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.4135355Z   load: false
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.4135517Z   no-cache: false
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.4135682Z   pull: false
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.4135834Z   push: false
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.4137850Z   github-token: ***
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.4138226Z ##[endgroup]
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.6199431Z (node:2826) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.6200535Z (Use `node --trace-deprecation ...` to show where the warning was created)
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.6216625Z ##[group]GitHub Actions runtime token ACs
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.6222818Z refs/heads/essai-ci/avant: read/write
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.6223250Z refs/heads/main: read
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.6223770Z ##[endgroup]
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.6224218Z ##[group]Docker info
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.6262798Z [command]/usr/bin/docker version
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.6504491Z Client: Docker Engine - Community
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.6505539Z  Version:           28.0.4
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.6506102Z  API version:       1.48
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.6506490Z  Go version:        go1.23.7
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.6506820Z  Git commit:        b8034c0
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.6507153Z  Built:             Tue Mar 25 15:07:16 2025
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.6507497Z  OS/Arch:           linux/amd64
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.6507774Z  Context:           default
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.6508156Z 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.6508290Z Server: Docker Engine - Community
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.6508614Z  Engine:
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.6508849Z   Version:          28.0.4
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.6509171Z   API version:      1.48 (minimum version 1.24)
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.6509542Z   Go version:       go1.23.7
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.6509841Z   Git commit:       6430e49
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.6510151Z   Built:            Tue Mar 25 15:07:16 2025
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.6510493Z   OS/Arch:          linux/amd64
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.6510805Z   Experimental:     false
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.6511093Z  containerd:
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.6511334Z   Version:          v2.4.2
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.6511697Z   GitCommit:        b7a25261e029d68978bbf290df0a62fc819b3c51
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.6512097Z  runc:
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.6512334Z   Version:          1.5.2
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.6512623Z   GitCommit:        v1.5.2-0-g29dd3dc2
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.6512942Z  docker-init:
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.6513185Z   Version:          0.19.0
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.6513474Z   GitCommit:        de40ad0
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.6572966Z [command]/usr/bin/docker info
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.7088138Z Client: Docker Engine - Community
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.7088559Z  Version:    28.0.4
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.7088809Z  Context:    default
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.7089069Z  Debug Mode: false
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.7089319Z  Plugins:
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.7089562Z   buildx: Docker Buildx (Docker Inc.)
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.7089866Z     Version:  v0.38.2
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.7090193Z     Path:     /usr/libexec/docker/cli-plugins/docker-buildx
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.7090492Z   compose: Docker Compose (Docker Inc.)
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.7090711Z     Version:  v2.38.2
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.7090932Z     Path:     /usr/libexec/docker/cli-plugins/docker-compose
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.7091127Z 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.7091193Z Server:
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.7091342Z  Containers: 1
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.7091498Z   Running: 1
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.7091660Z   Paused: 0
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.7091811Z   Stopped: 0
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.7092544Z  Images: 7
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.7092703Z  Server Version: 28.0.4
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.7092889Z  Storage Driver: overlay2
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.7093282Z   Backing Filesystem: extfs
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.7093474Z   Supports d_type: true
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.7093978Z   Using metacopy: false
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.7094382Z   Native Overlay Diff: false
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.7094727Z   userxattr: false
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.7095005Z  Logging Driver: json-file
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.7095353Z  Cgroup Driver: systemd
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.7095709Z  Cgroup Version: 2
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.7095973Z  Plugins:
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.7096219Z   Volume: local
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.7096496Z   Network: bridge host ipvlan macvlan null overlay
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.7096995Z   Log: awslogs fluentd gcplogs gelf journald json-file local splunk syslog
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.7097362Z  Swarm: inactive
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.7097557Z  Runtimes: io.containerd.runc.v2 runc
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.7097777Z  Default Runtime: runc
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.7098146Z  Init Binary: docker-init
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.7098516Z  containerd version: b7a25261e029d68978bbf290df0a62fc819b3c51
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.7098937Z  runc version: v1.5.2-0-g29dd3dc2
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.7099236Z  init version: de40ad0
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.7099488Z  Security Options:
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.7099719Z   apparmor
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.7099930Z   seccomp
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.7100142Z    Profile: builtin
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.7100367Z   cgroupns
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.7100592Z  Kernel Version: 7.0.0-1017-azure
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.7100888Z  Operating System: Ubuntu 24.04.5 LTS
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.7101179Z  OSType: linux
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.7101401Z  Architecture: x86_64
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.7101634Z  CPUs: 4
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.7101855Z  Total Memory: 15.61GiB
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.7102114Z  Name: runnervm8axu0
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.7102376Z  ID: 0fef2a29-aadb-43ca-98b5-edbc7a28f18a
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.7102714Z  Docker Root Dir: /var/lib/docker
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.7103004Z  Debug Mode: false
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.7103254Z  Username: githubactions
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.7103533Z  Experimental: false
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.7103790Z  Insecure Registries:
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.7104081Z   ::1/128
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.7104289Z   127.0.0.0/8
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.7104526Z  Live Restore Enabled: false
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.7104712Z 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.7119037Z ##[endgroup]
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.7119517Z ##[group]Proxy configuration
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.7122732Z No proxy configuration found
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.7123241Z ##[endgroup]
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.7726069Z ##[group]Buildx version
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.7744453Z [command]/usr/bin/docker buildx version
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.8244572Z github.com/docker/buildx v0.38.2 3c4cbd35852fc1a476923627a780a7836c28b654
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.8284499Z ##[endgroup]
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.8285088Z ##[group]Builder info
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.9236083Z {
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.9236758Z   "nodes": [
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.9237733Z     {
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.9249427Z       "name": "builder-4c847412-29c7-4ecd-bedb-53d8fa2a51d60",
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.9251031Z       "endpoint": "unix:///var/run/docker.sock",
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.9251861Z       "status": "running",
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.9252994Z       "buildkitd-flags": "--allow-insecure-entitlement security.insecure --allow-insecure-entitlement network.host",
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.9253737Z       "buildkit": "v0.34.2",
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.9254148Z       "platforms": "linux/amd64,linux/amd64/v2,linux/amd64/v3,linux/amd64/v4,linux/386",
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.9254531Z       "features": {
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.9254918Z         "Automatically load images to the Docker Engine image store": true,
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.9255395Z         "Cache export": true,
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.9255602Z         "Direct push": true,
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.9255804Z         "Docker exporter": true,
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.9256120Z         "Multi-platform build": true,
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.9256375Z         "OCI exporter": true
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.9256568Z       },
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.9256795Z       "labels": {
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.9257036Z         "org.mobyproject.buildkit.worker.executor": "oci",
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.9258657Z         "org.mobyproject.buildkit.worker.hostname": "9f228c2213fe",
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.9259176Z         "org.mobyproject.buildkit.worker.network": "host",
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.9259508Z         "org.mobyproject.buildkit.worker.oci.process-mode": "sandbox",
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.9259874Z         "org.mobyproject.buildkit.worker.selinux.enabled": "false",
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.9260220Z         "org.mobyproject.buildkit.worker.snapshotter": "overlayfs"
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.9260477Z       },
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.9260635Z       "gcPolicy": [
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.9260842Z         {
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.9260994Z           "all": false,
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.9261191Z           "filter": [
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.9261452Z             "type==source.local type==exec.cachemount type==source.git.checkout"
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.9261753Z           ],
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.9261922Z           "keepDuration": "48h0m0s",
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.9262131Z           "maxUsedSpace": "488.3MiB"
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.9262341Z         },
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.9262509Z         {
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.9262691Z           "all": false,
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.9262869Z           "keepDuration": "1440h0m0s",
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.9263074Z           "reservedSpace": "9.313GiB",
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.9263282Z           "maxUsedSpace": "93.13GiB",
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.9263480Z           "minFreeSpace": "27.01GiB"
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.9263662Z         },
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.9263803Z         {
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.9263948Z           "all": false,
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.9264134Z           "reservedSpace": "9.313GiB",
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.9264343Z           "maxUsedSpace": "93.13GiB",
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.9264536Z           "minFreeSpace": "27.01GiB"
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.9264724Z         },
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.9264867Z         {
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.9265016Z           "all": true,
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.9265206Z           "reservedSpace": "9.313GiB",
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.9265413Z           "maxUsedSpace": "93.13GiB",
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.9265630Z           "minFreeSpace": "27.01GiB"
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.9265828Z         }
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.9265973Z       ]
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.9266118Z     }
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.9266254Z   ],
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.9266464Z   "name": "builder-4c847412-29c7-4ecd-bedb-53d8fa2a51d6",
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.9266722Z   "driver": "docker-container",
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.9266933Z   "lastActivity": "2026-11-15T23:29:04.000Z"
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.9267137Z }
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:05.9267551Z ##[endgroup]
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:06.0830775Z [command]/usr/bin/docker buildx build --build-arg VC_GIT_SHA1=4dd979274b9bfcee9d2d6249a8c73e0a4ab68289 --build-arg VC_GIT_COMMIT_DATE=2026-11-16 --cache-from type=gha,scope=vc3d-appimage-linux-amd64 --cache-to type=gha,mode=max,scope=vc3d-appimage-linux-amd64 --file volume-cartographer/scripts/Dockerfile.appimage --output type=local,dest=volume-cartographer/dist --attest type=provenance,mode=max,builder-id=https://github.com/Cmssmc-code/villa/actions/runs/43774795375/attempts/1 --metadata-file /home/runner/work/_temp/docker-actions-toolkit-LdamfM/build-metadata-be081d022e.json .
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:06.4390460Z #0 building with "builder-4c847412-29c7-4ecd-bedb-53d8fa2a51d6" instance using docker-container driver
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:06.4390900Z 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:06.4391052Z #1 [internal] load build definition from Dockerfile.appimage
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:06.4391341Z #1 transferring dockerfile: 4.09kB done
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:06.4391552Z #1 DONE 0.0s
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:06.4391646Z 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:06.4391778Z #2 [auth] docker/dockerfile:pull token for registry-1.docker.io
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:06.4392046Z #2 DONE 0.0s
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:06.4392137Z 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:06.4392325Z #3 resolve image config for docker-image://docker.io/docker/dockerfile:1.7
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:06.7868982Z #3 DONE 0.6s
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:06.9460854Z 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:06.9461732Z #4 docker-image://docker.io/docker/dockerfile:1.7@sha256:a57df69d0ea827fb7266491f2813635de6f17269be881f696fbfdf2d83dda33e
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:06.9462421Z #4 resolve docker.io/docker/dockerfile:1.7@sha256:a57df69d0ea827fb7266491f2813635de6f17269be881f696fbfdf2d83dda33e done
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:06.9481202Z #4 sha256:96918c57e42509b97f10c074d80672ecdbd3bb7dcd38c1bd95960cf291207416 11.98MB / 11.98MB 0.2s
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:07.0631398Z #4 sha256:96918c57e42509b97f10c074d80672ecdbd3bb7dcd38c1bd95960cf291207416 11.98MB / 11.98MB 0.2s done
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:07.0632170Z #4 extracting sha256:96918c57e42509b97f10c074d80672ecdbd3bb7dcd38c1bd95960cf291207416 0.1s done
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:07.0632531Z #4 DONE 0.3s
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:07.2990045Z 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:07.2990659Z #5 [auth] scrollprize/villa/volume-cartographer:pull token for ghcr.io
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:07.2991020Z #5 DONE 0.0s
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:07.2991113Z 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:07.2991495Z #6 [internal] load metadata for ghcr.io/scrollprize/villa/volume-cartographer@sha256:1bebf104edbd6c290ddbaf8036c919635259f3722e8eddb31340b240baf1ed68
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:07.5407589Z #6 DONE 0.4s
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:07.6733120Z 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:07.6735159Z #7 importing cache manifest from gha:3550761404444973161
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:07.7764296Z #7 DONE 0.1s
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:07.7764557Z 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:07.7765186Z #8 [build  1/10] FROM ghcr.io/scrollprize/villa/volume-cartographer@sha256:1bebf104edbd6c290ddbaf8036c919635259f3722e8eddb31340b240baf1ed68
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:07.7766840Z #8 resolve ghcr.io/scrollprize/villa/volume-cartographer@sha256:1bebf104edbd6c290ddbaf8036c919635259f3722e8eddb31340b240baf1ed68 done
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:07.9887419Z #8 sha256:9cc5ebc9ccfbc3551aee0d4cd76bfa991f21a72513e8c4aca96dfe341cb580d5 2.10MB / 1.07GB 0.2s
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:07.9888889Z #8 sha256:f3f25b84a7d74315d94ee4108231f8f5e0cd2a44725a7204d5dd6ce91c151697 392B / 392B 0.2s done
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:07.9890066Z #8 sha256:edafa32f5d9e4d9629f0dbc6c01e63c79ff08133c01cfb7d3363aa8bd8a614cf 0B / 42.14MB 0.2s
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:07.9891294Z #8 sha256:37066fbf423658cf1c18d80c6134043dbe0eb12c6d7187d18cdac4227e49a9f0 0B / 845B 0.2s
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:08.0981453Z #8 sha256:37066fbf423658cf1c18d80c6134043dbe0eb12c6d7187d18cdac4227e49a9f0 845B / 845B 0.2s done
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:08.2441065Z #8 sha256:edafa32f5d9e4d9629f0dbc6c01e63c79ff08133c01cfb7d3363aa8bd8a614cf 8.39MB / 42.14MB 0.3s
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:08.3942592Z #8 sha256:edafa32f5d9e4d9629f0dbc6c01e63c79ff08133c01cfb7d3363aa8bd8a614cf 42.14MB / 42.14MB 0.5s
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:08.5435288Z #8 ...
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:08.5435835Z 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:08.5438211Z #9 [internal] load build context
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:08.5438834Z #9 transferring context: 51.19MB 0.5s done
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:08.5439350Z #9 DONE 0.7s
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:08.5439653Z 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:08.5440403Z #8 [build  1/10] FROM ghcr.io/scrollprize/villa/volume-cartographer@sha256:1bebf104edbd6c290ddbaf8036c919635259f3722e8eddb31340b240baf1ed68
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:08.5441653Z #8 sha256:edafa32f5d9e4d9629f0dbc6c01e63c79ff08133c01cfb7d3363aa8bd8a614cf 42.14MB / 42.14MB 0.6s done
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:08.5442652Z #8 extracting sha256:edafa32f5d9e4d9629f0dbc6c01e63c79ff08133c01cfb7d3363aa8bd8a614cf
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:08.6939429Z #8 sha256:9cc5ebc9ccfbc3551aee0d4cd76bfa991f21a72513e8c4aca96dfe341cb580d5 57.67MB / 1.07GB 0.9s
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:09.4438862Z #8 extracting sha256:edafa32f5d9e4d9629f0dbc6c01e63c79ff08133c01cfb7d3363aa8bd8a614cf 0.9s done
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:09.4439972Z #8 extracting sha256:f3f25b84a7d74315d94ee4108231f8f5e0cd2a44725a7204d5dd6ce91c151697 0.0s done
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:09.4440710Z #8 extracting sha256:37066fbf423658cf1c18d80c6134043dbe0eb12c6d7187d18cdac4227e49a9f0 done
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:09.5933251Z #8 sha256:9cc5ebc9ccfbc3551aee0d4cd76bfa991f21a72513e8c4aca96dfe341cb580d5 114.29MB / 1.07GB 1.8s
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:10.7932452Z #8 sha256:9cc5ebc9ccfbc3551aee0d4cd76bfa991f21a72513e8c4aca96dfe341cb580d5 175.11MB / 1.07GB 3.0s
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:12.2941905Z #8 sha256:9cc5ebc9ccfbc3551aee0d4cd76bfa991f21a72513e8c4aca96dfe341cb580d5 230.69MB / 1.07GB 4.5s
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:13.3441410Z #8 sha256:9cc5ebc9ccfbc3551aee0d4cd76bfa991f21a72513e8c4aca96dfe341cb580d5 286.26MB / 1.07GB 5.6s
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:14.2433728Z #8 sha256:9cc5ebc9ccfbc3551aee0d4cd76bfa991f21a72513e8c4aca96dfe341cb580d5 341.84MB / 1.07GB 6.5s
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:15.1435896Z #8 sha256:9cc5ebc9ccfbc3551aee0d4cd76bfa991f21a72513e8c4aca96dfe341cb580d5 398.46MB / 1.07GB 7.4s
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:16.1940370Z #8 sha256:9cc5ebc9ccfbc3551aee0d4cd76bfa991f21a72513e8c4aca96dfe341cb580d5 464.52MB / 1.07GB 8.4s
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:17.2434985Z #8 sha256:9cc5ebc9ccfbc3551aee0d4cd76bfa991f21a72513e8c4aca96dfe341cb580d5 524.29MB / 1.07GB 9.5s
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:18.2938722Z #8 sha256:9cc5ebc9ccfbc3551aee0d4cd76bfa991f21a72513e8c4aca96dfe341cb580d5 580.91MB / 1.07GB 10.5s
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:19.3432915Z #8 sha256:9cc5ebc9ccfbc3551aee0d4cd76bfa991f21a72513e8c4aca96dfe341cb580d5 642.78MB / 1.07GB 11.6s
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:20.2435310Z #8 sha256:9cc5ebc9ccfbc3551aee0d4cd76bfa991f21a72513e8c4aca96dfe341cb580d5 713.03MB / 1.07GB 12.5s
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:20.9937365Z #8 sha256:9cc5ebc9ccfbc3551aee0d4cd76bfa991f21a72513e8c4aca96dfe341cb580d5 772.80MB / 1.07GB 13.2s
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:21.7435838Z #8 sha256:9cc5ebc9ccfbc3551aee0d4cd76bfa991f21a72513e8c4aca96dfe341cb580d5 830.47MB / 1.07GB 14.0s
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:22.6442699Z #8 sha256:9cc5ebc9ccfbc3551aee0d4cd76bfa991f21a72513e8c4aca96dfe341cb580d5 887.10MB / 1.07GB 14.9s
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:23.5439199Z #8 sha256:9cc5ebc9ccfbc3551aee0d4cd76bfa991f21a72513e8c4aca96dfe341cb580d5 943.72MB / 1.07GB 15.8s
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:24.4435269Z #8 sha256:9cc5ebc9ccfbc3551aee0d4cd76bfa991f21a72513e8c4aca96dfe341cb580d5 1.01GB / 1.07GB 16.7s
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:25.0439441Z #8 sha256:9cc5ebc9ccfbc3551aee0d4cd76bfa991f21a72513e8c4aca96dfe341cb580d5 1.07GB / 1.07GB 17.3s
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:30.1438767Z #8 sha256:9cc5ebc9ccfbc3551aee0d4cd76bfa991f21a72513e8c4aca96dfe341cb580d5 1.07GB / 1.07GB 22.4s
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:30.3299142Z #8 sha256:9cc5ebc9ccfbc3551aee0d4cd76bfa991f21a72513e8c4aca96dfe341cb580d5 1.07GB / 1.07GB 22.5s done
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:30.4482166Z #8 extracting sha256:9cc5ebc9ccfbc3551aee0d4cd76bfa991f21a72513e8c4aca96dfe341cb580d5
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:48.1576472Z #8 extracting sha256:9cc5ebc9ccfbc3551aee0d4cd76bfa991f21a72513e8c4aca96dfe341cb580d5 17.7s done
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:48.1577037Z #8 DONE 40.3s
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:48.3923664Z 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:48.3927503Z #10 [build  2/10] RUN apt-get update  && apt-get install -y --no-install-recommends patchelf file desktop-file-utils zstd  && rm -rf /var/lib/apt/lists/*
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:49.0916247Z #10 0.850 Get:1 http://archive.ubuntu.com/ubuntu resolute InRelease [136 kB]
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:49.2578426Z #10 0.865 Get:2 http://security.ubuntu.com/ubuntu resolute-security InRelease [137 kB]
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:49.5765220Z #10 1.334 Get:3 http://archive.ubuntu.com/ubuntu resolute-updates InRelease [137 kB]
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:49.7768674Z #10 1.535 Get:4 http://archive.ubuntu.com/ubuntu resolute-backports InRelease [137 kB]
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:49.9782141Z #10 1.585 Get:5 http://security.ubuntu.com/ubuntu resolute-security/multiverse amd64 Packages [24.6 kB]
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:50.0176672Z #10 1.776 Get:6 http://security.ubuntu.com/ubuntu resolute-security/main amd64 Packages [882 kB]
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:50.1685004Z #10 1.776 Get:7 http://archive.ubuntu.com/ubuntu resolute/universe amd64 Packages [20.1 MB]
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:50.4231208Z #10 2.180 Get:8 http://security.ubuntu.com/ubuntu resolute-security/restricted amd64 Packages [723 kB]
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:50.6400084Z #10 2.247 Get:9 http://security.ubuntu.com/ubuntu resolute-security/universe amd64 Packages [276 kB]
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:50.9534631Z #10 2.711 Get:10 http://archive.ubuntu.com/ubuntu resolute/main amd64 Packages [1874 kB]
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:51.0587794Z #10 2.817 Get:11 http://archive.ubuntu.com/ubuntu resolute/restricted amd64 Packages [189 kB]
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:51.1649109Z #10 2.817 Get:12 http://archive.ubuntu.com/ubuntu resolute/multiverse amd64 Packages [352 kB]
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:51.1649828Z #10 2.923 Get:13 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 Packages [1072 kB]
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:51.2692984Z #10 3.026 Get:14 http://archive.ubuntu.com/ubuntu resolute-updates/restricted amd64 Packages [743 kB]
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:51.3786055Z #10 3.136 Get:15 http://archive.ubuntu.com/ubuntu resolute-updates/multiverse amd64 Packages [26.1 kB]
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:51.5290122Z #10 3.136 Get:16 http://archive.ubuntu.com/ubuntu resolute-updates/universe amd64 Packages [491 kB]
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:51.5291084Z #10 3.136 Get:17 http://archive.ubuntu.com/ubuntu resolute-backports/universe amd64 Packages [3308 B]
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:51.6263606Z #10 3.384 Fetched 27.3 MB in 3s (9994 kB/s)
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:52.2550361Z #10 3.384 Reading package lists...
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:52.9359640Z #10 4.031 Reading package lists...
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:53.1553687Z #10 4.706 Building dependency tree...
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:53.1554456Z #10 4.913 Reading state information...
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:53.2627810Z #10 4.961 file is already the newest version (1:5.46-5build2).
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:53.2628988Z #10 4.961 Solving dependencies...
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:53.4327616Z #10 5.191 The following NEW packages will be installed:
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:53.5848723Z #10 5.192   desktop-file-utils patchelf zstd
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:53.6692138Z #10 5.427 0 upgraded, 3 newly installed, 0 to remove and 27 not upgraded.
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:53.6692578Z #10 5.427 Need to get 832 kB of archives.
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:53.6693021Z #10 5.427 After this operation, 2507 kB of additional disk space will be used.
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:53.6693543Z #10 5.427 Get:1 http://archive.ubuntu.com/ubuntu resolute/main amd64 desktop-file-utils amd64 0.28-1build1 [54.3 kB]
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:54.0036293Z #10 5.762 Get:2 http://archive.ubuntu.com/ubuntu resolute/universe amd64 patchelf amd64 0.18.0-1.4build1 [106 kB]
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:54.1485783Z #10 5.907 Get:3 http://archive.ubuntu.com/ubuntu resolute/main amd64 zstd amd64 1.5.7+dfsg-3 [672 kB]
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:55.4612583Z #10 7.219 Fetched 832 kB in 1s (862 kB/s)
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:55.6411818Z #10 7.399 Selecting previously unselected package desktop-file-utils.
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:55.8294367Z #10 7.399 (Reading database ... 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:55.8294778Z (Reading database ... 5%
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:55.8295032Z (Reading database ... 10%
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:55.8295344Z (Reading database ... 15%
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:55.8295538Z (Reading database ... 20%
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:55.8295738Z (Reading database ... 25%
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:55.8295951Z (Reading database ... 30%
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:55.8296218Z (Reading database ... 35%
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:55.8296454Z (Reading database ... 40%
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:55.8296702Z (Reading database ... 45%
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:55.8296957Z (Reading database ... 50%
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:55.8297201Z (Reading database ... 55%
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:55.8297469Z (Reading database ... 60%
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:55.8297736Z (Reading database ... 65%
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:55.8298174Z (Reading database ... 70%
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:55.8298436Z (Reading database ... 75%
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:55.8298699Z (Reading database ... 80%
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:55.8298961Z (Reading database ... 85%
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:55.8299228Z (Reading database ... 90%
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:55.8299485Z (Reading database ... 95%
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:55.8299760Z (Reading database ... 100%
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:55.8300157Z (Reading database ... 67721 files and directories currently installed.)
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:55.8300792Z #10 7.435 Preparing to unpack .../desktop-file-utils_0.28-1build1_amd64.deb ...
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:55.8301251Z #10 7.437 Unpacking desktop-file-utils (0.28-1build1) ...
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:55.8675826Z #10 7.625 Selecting previously unselected package patchelf.
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:56.1037889Z #10 7.635 Preparing to unpack .../patchelf_0.18.0-1.4build1_amd64.deb ...
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:56.1038639Z #10 7.636 Unpacking patchelf (0.18.0-1.4build1) ...
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:56.1038932Z #10 7.656 Selecting previously unselected package zstd.
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:56.1039246Z #10 7.665 Preparing to unpack .../zstd_1.5.7+dfsg-3_amd64.deb ...
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:56.1039536Z #10 7.666 Unpacking zstd (1.5.7+dfsg-3) ...
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:56.1039804Z #10 7.706 Setting up desktop-file-utils (0.28-1build1) ...
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:56.1040077Z #10 7.710 Setting up patchelf (0.18.0-1.4build1) ...
+Build + package (AppImage)	Build AppImage	2026-11-15T23:29:56.1040320Z #10 7.711 Setting up zstd (1.5.7+dfsg-3) ...
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:02.3654405Z #10 DONE 14.1s
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:02.5163887Z 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:02.5164617Z #11 [build  3/10] COPY volume-cartographer/ /src/volume-cartographer/
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:02.6564721Z #11 DONE 0.3s
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:02.7984304Z 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:02.7985078Z #12 [build  4/10] COPY spiral-fitting/ /src/spiral-fitting/
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:02.7985519Z #12 DONE 0.1s
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:02.7985678Z 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:02.7985866Z #13 [build  5/10] COPY vc_object_store/ /src/vc_object_store/
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:02.7986245Z #13 DONE 0.1s
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:02.9496583Z 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:02.9497241Z #14 [build  6/10] COPY vc_reader/ /src/vc_reader/
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:02.9664845Z #14 DONE 0.2s
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:03.1251853Z 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:03.1254012Z #15 [build  7/10] COPY vesuvius/src/vc3d_fiber_format/ /src/vesuvius/src/vc3d_fiber_format/
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:03.1257634Z #15 DONE 0.0s
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:03.1258079Z 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:03.1258601Z #16 [build  8/10] WORKDIR /src/volume-cartographer
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:03.1258990Z #16 DONE 0.0s
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:03.1259120Z 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:03.1260168Z #17 [build  9/10] RUN --mount=type=cache,target=/var/cache/ccache     ccache --zero-stats  && cmake --preset ci-release-gcc -DVC_USE_CCACHE=ON       -DVC_GIT_SHA1="4dd979274b9bfcee9d2d6249a8c73e0a4ab68289" -DVC_GIT_COMMIT_DATE="2026-11-16"  && ninja -C build/ci-release-gcc  && ccache --show-stats
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:03.1261440Z #17 0.076 Statistics zeroed
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:03.1261782Z #17 0.138 -- The C compiler identification is GNU 15.2.0
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:03.2471871Z #17 0.202 -- The CXX compiler identification is GNU 15.2.0
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:03.2472270Z #17 0.210 -- Detecting C compiler ABI info
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:03.2472638Z #17 0.260 -- Detecting C compiler ABI info - done
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:03.3479676Z #17 0.272 -- Check for working C compiler: /usr/bin/gcc - skipped
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:03.3480246Z #17 0.272 -- Detecting C compile features
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:03.3480614Z #17 0.272 -- Detecting C compile features - done
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:03.3481036Z #17 0.286 -- Detecting CXX compiler ABI info
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:03.3481417Z #17 0.347 -- Detecting CXX compiler ABI info - done
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:03.3481880Z #17 0.359 -- Check for working CXX compiler: /usr/bin/g++ - skipped
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:03.3482316Z #17 0.360 -- Detecting CXX compile features
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:03.3482689Z #17 0.360 -- Detecting CXX compile features - done
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:03.4485430Z #17 0.370 -- ccache with PCH: CCACHE_SLOPPINESS=pch_defines,time_macros
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:03.4486156Z #17 0.461 -- Performing Test HAVE_STDATOMIC
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:03.5934314Z #17 0.606 -- Performing Test HAVE_STDATOMIC - Success
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:03.7565508Z #17 0.636 -- Found OpenGL: /usr/lib/x86_64-linux-gnu/libOpenGL.so
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:03.7566054Z #17 0.769 -- Found Threads: TRUE
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:03.9724900Z #17 0.985 -- Found AMD headers in: /usr/include/suitesparse
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:04.1477652Z #17 0.986 -- Found AMD library: /usr/lib/x86_64-linux-gnu/libamd.so
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:04.1478400Z #17 0.987 -- Found CAMD headers in: /usr/include/suitesparse
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:04.1478770Z #17 0.988 -- Found CAMD library: /usr/lib/x86_64-linux-gnu/libcamd.so
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:04.1479211Z #17 0.989 -- Found CCOLAMD headers in: /usr/include/suitesparse
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:04.1479545Z #17 0.990 -- Found CCOLAMD library: /usr/lib/x86_64-linux-gnu/libccolamd.so
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:04.1479996Z #17 0.991 -- Found CHOLMOD headers in: /usr/include/suitesparse
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:04.1480317Z #17 0.992 -- Found CHOLMOD library: /usr/lib/x86_64-linux-gnu/libcholmod.so
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:04.1480721Z #17 0.992 -- Found COLAMD headers in: /usr/include/suitesparse
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:04.1481049Z #17 0.993 -- Found COLAMD library: /usr/lib/x86_64-linux-gnu/libcolamd.so
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:04.1481438Z #17 0.994 -- Found SPQR headers in: /usr/include/suitesparse
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:04.1481745Z #17 0.995 -- Found SPQR library: /usr/lib/x86_64-linux-gnu/libspqr.so
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:04.1482057Z #17 0.996 -- Found Config headers in: /usr/include/suitesparse
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:04.1482798Z #17 0.997 -- Found Config library: /usr/lib/x86_64-linux-gnu/libsuitesparseconfig.so
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:04.1483826Z #17 0.999 -- Found Intel Thread Building Blocks (TBB) library (2022.3 / ) include location: . Assuming SuiteSparseQR was compiled with TBB.
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:04.1484502Z #17 0.999 -- Looking for shm_open in rt
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:04.1484872Z #17 1.050 -- Looking for shm_open in rt - found
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:04.1485576Z #17 1.050 -- Adding librt to SuiteSparse_config libraries (required on Linux & Unix [not OSX] if SuiteSparse is compiled with timing).
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:04.1486336Z #17 1.055 -- Could NOT find METIS (missing: METIS_INCLUDE_DIR) 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:04.1486756Z #17 1.055 -- Looking for cholmod_metis
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:04.1487181Z #17 1.160 -- Looking for cholmod_metis - found
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:04.3293144Z #17 1.161 -- Found SuiteSparse: /usr/include/suitesparse (found suitable version "7.12.2", minimum required is "7.11.0") found components: AMD CAMD CCOLAMD CHOLMOD COLAMD SPQR Config
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:04.3294409Z #17 1.169 -- Found required Ceres dependency: Eigen version 3.4.0 in /usr/share/eigen3/cmake
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:04.3295014Z #17 1.175 -- Found required Ceres dependency: glog
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:04.3295601Z #17 1.176 -- Found required Ceres dependency: gflags
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:04.3296725Z #17 1.176 -- Found Ceres version: 2.2.0 installed in: /usr with components: [EigenSparse, SparseLinearAlgebraLibrary, LAPACK, SuiteSparse, SchurSpecializations]
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:04.3297541Z #17 1.184 -- Found OpenCV: /usr (found version "4.10.0")
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:04.3298422Z #17 1.186 -- Found nlohmann_json: /usr/share/cmake/nlohmann_json/nlohmann_jsonConfig.cmake (found version "3.11.3")
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:04.3299177Z #17 1.191 -- Found PkgConfig: /usr/bin/pkg-config (found version "2.5.1")
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:04.3579053Z #17 1.370 -- Found OpenMP_C: -fopenmp (found version "4.5")
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:04.5808170Z #17 1.442 -- Found OpenMP_CXX: -fopenmp (found version "4.5")
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:04.5808751Z #17 1.443 -- Found OpenMP: TRUE (found version "4.5")
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:06.1340978Z #17 3.146 -- Creating target: igl::core (igl_core)
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:06.2969017Z #17 3.159 CMake Warning (dev) at /usr/share/cmake-4.2/Modules/FetchContent.cmake:1963 (message):
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:06.2969590Z #17 3.159   Calling FetchContent_Populate(pastix) is deprecated, call
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:06.2970002Z #17 3.159   FetchContent_MakeAvailable(pastix) instead.  Policy CMP0169 can be set to
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:06.2970449Z #17 3.159   OLD to allow FetchContent_Populate(pastix) to be called directly for now,
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:06.2970869Z #17 3.159   but the ability to call it with declared details will be removed completely
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:06.2971197Z #17 3.159   in a future version.
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:06.2971439Z #17 3.159 Call Stack (most recent call first):
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:06.2971741Z #17 3.159   libs/flatboi/CMakeLists.txt:31 (FetchContent_Populate)
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:06.2972125Z #17 3.159 This warning is for project developers.  Use -Wno-dev to suppress it.
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:06.2972452Z #17 3.159 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:16.2579851Z #17 13.27 CMake Deprecation Warning at build/ci-release-gcc/_deps/pastix-src/CMakeLists.txt:24 (cmake_minimum_required):
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:16.2581039Z #17 13.27   Compatibility with CMake < 3.10 will be removed from a future version of
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:16.2581491Z #17 13.27   CMake.
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:16.2581792Z #17 13.27 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:16.2582184Z #17 13.27   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:16.2582749Z #17 13.27   to tell CMake that the project requires at least <min> but has been updated
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:16.2583305Z #17 13.27   to work with policies introduced by <max> or earlier.
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:16.2583650Z #17 13.27 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:16.2605780Z #17 13.27 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:16.4180735Z #17 13.33 -- The Fortran compiler identification is GNU 15.2.0
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:16.4181247Z #17 13.34 -- Detecting Fortran compiler ABI info
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:16.4181935Z #17 13.43 -- Detecting Fortran compiler ABI info - done
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:16.5444572Z #17 13.45 -- Check for working Fortran compiler: /usr/bin/gfortran - skipped
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:16.5445628Z #17 13.46 -- Submodule update
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:16.5446590Z #17 13.49 CMake Deprecation Warning at build/ci-release-gcc/_deps/pastix-src/cmake_modules/morse_cmake/modules/find/FindMorseCommon.cmake:22 (cmake_minimum_required):
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:16.5447630Z #17 13.49   Compatibility with CMake < 3.10 will be removed from a future version of
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:16.5448310Z #17 13.49   CMake.
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:16.5448560Z #17 13.49 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:16.5448941Z #17 13.49   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:16.5449553Z #17 13.49   to tell CMake that the project requires at least <min> but has been updated
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:16.5450118Z #17 13.49   to work with policies introduced by <max> or earlier.
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:16.5450554Z #17 13.49 Call Stack (most recent call first):
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:16.5451212Z #17 13.49   build/ci-release-gcc/_deps/pastix-src/cmake_modules/morse_cmake/modules/find/FindMorseInit.cmake:34 (include)
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:16.5452088Z #17 13.49   build/ci-release-gcc/_deps/pastix-src/cmake_modules/morse_cmake/modules/MorseInit.cmake:66 (include)
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:16.5452768Z #17 13.49   build/ci-release-gcc/_deps/pastix-src/CMakeLists.txt:81 (include)
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:16.5453166Z #17 13.49 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:16.5453356Z #17 13.49 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:16.5454040Z #17 13.49 CMake Deprecation Warning at build/ci-release-gcc/_deps/pastix-src/cmake_modules/morse_cmake/modules/find/LibrariesAbsolutePath.cmake:22 (cmake_minimum_required):
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:16.5454938Z #17 13.49   Compatibility with CMake < 3.10 will be removed from a future version of
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:16.5455345Z #17 13.49   CMake.
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:16.5455545Z #17 13.49 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:16.5455872Z #17 13.49   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:16.5456430Z #17 13.49   to tell CMake that the project requires at least <min> but has been updated
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:16.5456926Z #17 13.49   to work with policies introduced by <max> or earlier.
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:16.5457299Z #17 13.49 Call Stack (most recent call first):
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:16.5457869Z #17 13.49   build/ci-release-gcc/_deps/pastix-src/cmake_modules/morse_cmake/modules/find/FindMorseInit.cmake:40 (include)
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:16.5458864Z #17 13.49   build/ci-release-gcc/_deps/pastix-src/cmake_modules/morse_cmake/modules/MorseInit.cmake:66 (include)
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:16.5459527Z #17 13.49   build/ci-release-gcc/_deps/pastix-src/CMakeLists.txt:81 (include)
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:16.5459939Z #17 13.49 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:16.5460144Z #17 13.49 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:16.5460784Z #17 13.50 CMake Deprecation Warning at build/ci-release-gcc/_deps/pastix-src/cmake_modules/morse_cmake/modules/Sanitizer.cmake:1 (cmake_minimum_required):
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:16.5461649Z #17 13.50   Compatibility with CMake < 3.10 will be removed from a future version of
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:16.5462109Z #17 13.50   CMake.
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:16.5462329Z #17 13.50 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:16.5462686Z #17 13.50   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:16.5463320Z #17 13.50   to tell CMake that the project requires at least <min> but has been updated
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:16.5463844Z #17 13.50   to work with policies introduced by <max> or earlier.
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:16.5464122Z #17 13.50 Call Stack (most recent call first):
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:16.5464509Z #17 13.50   build/ci-release-gcc/_deps/pastix-src/cmake_modules/morse_cmake/modules/MorseInit.cmake:70 (include)
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:16.5464962Z #17 13.50   build/ci-release-gcc/_deps/pastix-src/CMakeLists.txt:81 (include)
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:16.5465243Z #17 13.50 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:16.5465384Z #17 13.50 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:16.5465547Z #17 13.50 -- Performing Test HAVE_C_TSAN
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:16.5465789Z #17 13.56 -- Performing Test HAVE_C_TSAN - Success
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:16.6869198Z #17 13.56 -- Performing Test HAVE_CXX_TSAN
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:16.6870026Z #17 13.64 -- Performing Test HAVE_CXX_TSAN - Success
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:16.6871361Z #17 13.64 -- Performing Test HAVE_C_ASAN
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:16.6871989Z #17 13.70 -- Performing Test HAVE_C_ASAN - Success
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:16.8207555Z #17 13.70 -- Performing Test HAVE_CXX_ASAN
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:16.8211047Z #17 13.78 -- Performing Test HAVE_CXX_ASAN - Success
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:16.8211977Z #17 13.78 -- Performing Test HAVE_C_LSAN
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:16.8213043Z #17 13.83 -- Performing Test HAVE_C_LSAN - Success
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:16.9397376Z #17 13.83 -- Performing Test HAVE_CXX_LSAN
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:16.9397908Z #17 13.92 -- Performing Test HAVE_CXX_LSAN - Success
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:16.9398457Z #17 13.92 -- Performing Test HAVE_C_MSAN
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:16.9398727Z #17 13.95 -- Performing Test HAVE_C_MSAN - Failed
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:17.0481078Z #17 13.95 -- Performing Test HAVE_CXX_MSAN
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:17.0481620Z #17 13.99 -- Performing Test HAVE_CXX_MSAN - Failed
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:17.0482067Z #17 13.99 -- Performing Test HAVE_C_UBSAN
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:17.0482478Z #17 14.06 -- Performing Test HAVE_C_UBSAN - Success
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:17.2404819Z #17 14.06 -- Performing Test HAVE_CXX_UBSAN
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:17.2405302Z #17 14.14 -- Performing Test HAVE_CXX_UBSAN - Success
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:17.2406011Z #17 14.25 CMake Deprecation Warning at build/ci-release-gcc/_deps/pastix-src/cmake_modules/CheckSystem.cmake:2 (cmake_minimum_required):
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:17.2406765Z #17 14.25   Compatibility with CMake < 3.10 will be removed from a future version of
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:17.2407192Z #17 14.25   CMake.
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:17.2407408Z #17 14.25 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:17.2407751Z #17 14.25   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:17.2408433Z #17 14.25   to tell CMake that the project requires at least <min> but has been updated
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:17.2408949Z #17 14.25   to work with policies introduced by <max> or earlier.
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:17.2409382Z #17 14.25 Call Stack (most recent call first):
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:17.2409830Z #17 14.25   build/ci-release-gcc/_deps/pastix-src/CMakeLists.txt:94 (include)
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:17.2410454Z #17 14.25 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:17.2410690Z #17 14.25 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:17.3506936Z #17 14.26 -- Building for target x86_64
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:17.3507598Z #17 14.26 -- Found target X86_64
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:17.3507933Z #17 14.26 -- Performing Test HAVE_WALL
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:17.3508671Z #17 14.31 -- Performing Test HAVE_WALL - Success
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:17.3509042Z #17 14.31 -- Performing Test HAVE_WEXTRA
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:17.3509460Z #17 14.36 -- Performing Test HAVE_WEXTRA - Success
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:17.4587931Z #17 14.37 -- Performing Test HAVE_G3
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:17.4588571Z #17 14.42 -- Performing Test HAVE_G3 - Success
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:17.4588974Z #17 14.42 -- Performing Test HAVE_ATOMIC_GCC_32_BUILTINS
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:17.4589420Z #17 14.47 -- Performing Test HAVE_ATOMIC_GCC_32_BUILTINS - Success
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:17.5672693Z #17 14.47 -- Performing Test HAVE_ATOMIC_GCC_64_BUILTINS
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:17.5673513Z #17 14.53 -- Performing Test HAVE_ATOMIC_GCC_64_BUILTINS - Success
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:17.5674262Z #17 14.53 -- Performing Test HAVE_ATOMIC_GCC_128_BUILTINS
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:17.5674728Z #17 14.58 -- Performing Test HAVE_ATOMIC_GCC_128_BUILTINS - Failed
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:17.6849207Z #17 14.58 -- Performing Test HAVE_ATOMIC_GCC_128_BUILTINS
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:17.6849708Z #17 14.63 -- Performing Test HAVE_ATOMIC_GCC_128_BUILTINS - Success
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:17.6850178Z #17 14.63 -- Performing Test HAVE_ATOMIC_XLC_32_BUILTINS
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:17.6850648Z #17 14.67 -- Performing Test HAVE_ATOMIC_XLC_32_BUILTINS - Failed
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:17.6851079Z #17 14.67 -- Performing Test HAVE_ATOMIC_MIPOSPRO_32_BUILTINS
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:17.6851400Z #17 14.70 -- Performing Test HAVE_ATOMIC_MIPOSPRO_32_BUILTINS - Failed
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:17.8627059Z #17 14.70 -- Performing Test HAVE_ATOMIC_SUN_32
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:17.8627450Z #17 14.72 -- Performing Test HAVE_ATOMIC_SUN_32 - Failed
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:17.8628443Z #17 14.72 -- 	 support for 32 bits atomics - found
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:17.8628863Z #17 14.72 -- 	 support for 64 bits atomics - found
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:17.8629110Z #17 14.72 -- 	 support for 128 bits atomics - found
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:17.8629370Z #17 14.72 -- Performing Test HAVE_FALLTHROUGH
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:17.8829529Z #17 14.90 -- Performing Test HAVE_FALLTHROUGH - Success
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:17.9841983Z #17 14.90 -- Performing Test HAVE_BUILTIN_EXPECT
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:17.9842783Z #17 14.94 -- Performing Test HAVE_BUILTIN_EXPECT - Success
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:17.9843449Z #17 14.95 -- Looking for sched_setaffinity
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:17.9843819Z #17 15.00 -- Looking for sched_setaffinity - found
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:18.0882326Z #17 15.00 -- Performing Test HAVE_TIMESPEC_TV_NSEC
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:18.0882918Z #17 15.05 -- Performing Test HAVE_TIMESPEC_TV_NSEC - Success
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:18.0883353Z #17 15.05 -- Looking for clock_gettime in rt
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:18.0883682Z #17 15.10 -- Looking for clock_gettime in rt - found
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:18.1901462Z #17 15.10 -- Looking for include file stdarg.h
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:18.1902294Z #17 15.15 -- Looking for include file stdarg.h - found
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:18.1902660Z #17 15.15 -- Performing Test HAVE_VA_COPY
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:18.1902990Z #17 15.20 -- Performing Test HAVE_VA_COPY - Success
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:18.2907878Z #17 15.20 -- Looking for asprintf
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:18.2908440Z #17 15.25 -- Looking for asprintf - found
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:18.2908688Z #17 15.25 -- Looking for vasprintf
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:18.2908922Z #17 15.30 -- Looking for vasprintf - found
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:18.3931560Z #17 15.30 -- Looking for include file getopt.h
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:18.3932519Z #17 15.35 -- Looking for include file getopt.h - found
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:18.3933087Z #17 15.35 -- Looking for include file unistd.h
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:18.3933566Z #17 15.41 -- Looking for include file unistd.h - found
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:18.4951895Z #17 15.41 -- Looking for getopt_long
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:18.4954266Z #17 15.46 -- Looking for getopt_long - found
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:18.4954912Z #17 15.46 -- Looking for include file errno.h
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:18.4955254Z #17 15.51 -- Looking for include file errno.h - found
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:18.5963437Z #17 15.51 -- Looking for include file stddef.h
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:18.5963987Z #17 15.56 -- Looking for include file stddef.h - found
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:18.5964393Z #17 15.56 -- Looking for include file stdbool.h
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:18.5964792Z #17 15.61 -- Looking for include file stdbool.h - found
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:18.7267384Z #17 15.61 -- Looking for getrusage
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:18.7268169Z #17 15.66 -- Looking for getrusage - found
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:18.7268737Z #17 15.66 -- Looking for RUSAGE_THREAD
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:18.7269157Z #17 15.69 -- Looking for RUSAGE_THREAD - not found
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:18.7269548Z #17 15.69 -- Looking for include file limits.h
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:18.7269938Z #17 15.74 -- Looking for include file limits.h - found
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:18.8291365Z #17 15.74 -- Looking for include file string.h
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:18.8292061Z #17 15.79 -- Looking for include file string.h - found
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:18.8292676Z #17 15.79 -- Looking for include file libgen.h
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:18.8293069Z #17 15.84 -- Looking for include file libgen.h - found
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:18.9357533Z #17 15.84 -- Looking for include file complex.h
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:18.9358203Z #17 15.89 -- Looking for include file complex.h - found
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:18.9358502Z #17 15.89 -- Looking for include file sys/param.h
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:18.9358896Z #17 15.95 -- Looking for include file sys/param.h - found
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.0387587Z #17 15.95 -- Looking for include file sys/types.h
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.0388437Z #17 16.00 -- Looking for include file sys/types.h - found
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.0388965Z #17 16.00 -- Looking for include file syslog.h
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.0389345Z #17 16.05 -- Looking for include file syslog.h - found
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.1389895Z #17 16.05 -- Looking for getline
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.1391422Z #17 16.10 -- Looking for getline - found
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.1391748Z #17 16.10 -- Looking for mkdtemp
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.1392123Z #17 16.15 -- Looking for mkdtemp - found
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.1392706Z #17 16.15 CMake Deprecation Warning at build/ci-release-gcc/_deps/pastix-src/cmake_modules/CheckSubnormals.cmake:2 (cmake_minimum_required):
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.1393353Z #17 16.15   Compatibility with CMake < 3.10 will be removed from a future version of
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.1393669Z #17 16.15   CMake.
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.1393986Z #17 16.15 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.1394296Z #17 16.15   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.1394825Z #17 16.15   to tell CMake that the project requires at least <min> but has been updated
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.1395268Z #17 16.15   to work with policies introduced by <max> or earlier.
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.1395660Z #17 16.15 Call Stack (most recent call first):
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.1396050Z #17 16.15   build/ci-release-gcc/_deps/pastix-src/CMakeLists.txt:95 (include)
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.1396450Z #17 16.15 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.1396612Z #17 16.15 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.1396801Z #17 16.15 -- Performing Test HAVE_FTZ_MACROS
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.2602418Z #17 16.21 -- Performing Test HAVE_FTZ_MACROS - Success
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.2602983Z #17 16.21 -- Performing Test HAVE_DAZ_MACROS
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.2603544Z #17 16.27 -- Performing Test HAVE_DAZ_MACROS - Success
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.3684975Z #17 16.27 -- Looking for sqrt
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.3685442Z #17 16.32 -- Looking for sqrt - not found
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.3685783Z #17 16.33 -- Looking for sqrt
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.3686094Z #17 16.38 -- Looking for sqrt - found
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.5128490Z #17 16.38 -- Found M: /usr/lib/x86_64-linux-gnu/libm.so
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.5129745Z #17 16.38 CMake Deprecation Warning at build/ci-release-gcc/_deps/pastix-src/cmake_modules/morse_cmake/modules/find/FindMorseCommon.cmake:22 (cmake_minimum_required):
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.5130765Z #17 16.38   Compatibility with CMake < 3.10 will be removed from a future version of
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.5131275Z #17 16.38   CMake.
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.5131516Z #17 16.38 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.5131871Z #17 16.38   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.5132467Z #17 16.38   to tell CMake that the project requires at least <min> but has been updated
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.5133011Z #17 16.38   to work with policies introduced by <max> or earlier.
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.5133422Z #17 16.38 Call Stack (most recent call first):
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.5134049Z #17 16.38   build/ci-release-gcc/_deps/pastix-src/cmake_modules/morse_cmake/modules/find/FindMorseInit.cmake:34 (include)
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.5134973Z #17 16.38   build/ci-release-gcc/_deps/pastix-src/cmake_modules/morse_cmake/modules/find/FindCBLAS.cmake:83 (include)
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.5135697Z #17 16.38   build/ci-release-gcc/_deps/pastix-src/CMakeLists.txt:272 (find_package)
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.5136138Z #17 16.38 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.5136361Z #17 16.38 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.5137109Z #17 16.38 CMake Deprecation Warning at build/ci-release-gcc/_deps/pastix-src/cmake_modules/morse_cmake/modules/find/LibrariesAbsolutePath.cmake:22 (cmake_minimum_required):
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.5138300Z #17 16.38   Compatibility with CMake < 3.10 will be removed from a future version of
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.5138758Z #17 16.38   CMake.
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.5138983Z #17 16.38 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.5139359Z #17 16.38   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.5139935Z #17 16.38   to tell CMake that the project requires at least <min> but has been updated
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.5140464Z #17 16.38   to work with policies introduced by <max> or earlier.
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.5140860Z #17 16.38 Call Stack (most recent call first):
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.5141519Z #17 16.38   build/ci-release-gcc/_deps/pastix-src/cmake_modules/morse_cmake/modules/find/FindMorseInit.cmake:40 (include)
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.5142424Z #17 16.38   build/ci-release-gcc/_deps/pastix-src/cmake_modules/morse_cmake/modules/find/FindCBLAS.cmake:83 (include)
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.5143594Z #17 16.38   build/ci-release-gcc/_deps/pastix-src/CMakeLists.txt:272 (find_package)
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.5144040Z #17 16.38 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.5144248Z #17 16.38 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.5144538Z #17 16.42 -- Looking for Fortran openblas_set_num_threads
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.5144966Z #17 16.52 -- Looking for Fortran openblas_set_num_threads - found
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.6672603Z #17 16.53 -- CBLAS_BLAS BLAS
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.6673048Z #17 16.53 -- Looking for cblas_dscal
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.6673408Z #17 16.60 -- Looking for cblas_dscal - found
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.6673772Z #17 16.60 -- Looking for cblas_zgemm3m
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.6674125Z #17 16.68 -- Looking for cblas_zgemm3m - found
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.7809865Z #17 16.68 -- Looking for cblas_cgemm3m
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.7810370Z #17 16.76 -- Looking for cblas_cgemm3m - found
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.7810748Z #17 16.76 -- CBLAS_WORKS 1
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.7811135Z #17 16.76 -- Looking for cblas: test with blas succeeded
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.7811643Z #17 16.76 -- Found CBLAS: /usr/lib/x86_64-linux-gnu/libopenblas.so
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.7812602Z #17 16.76 CMake Deprecation Warning at build/ci-release-gcc/_deps/pastix-src/cmake_modules/morse_cmake/modules/find/FindMorseCommon.cmake:22 (cmake_minimum_required):
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.7813588Z #17 16.76   Compatibility with CMake < 3.10 will be removed from a future version of
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.7814031Z #17 16.76   CMake.
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.7814193Z #17 16.76 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.7814462Z #17 16.76   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.7814880Z #17 16.76   to tell CMake that the project requires at least <min> but has been updated
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.7815243Z #17 16.76   to work with policies introduced by <max> or earlier.
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.7815554Z #17 16.76 Call Stack (most recent call first):
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.7815985Z #17 16.76   build/ci-release-gcc/_deps/pastix-src/cmake_modules/morse_cmake/modules/find/FindMorseInit.cmake:34 (include)
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.7816585Z #17 16.76   build/ci-release-gcc/_deps/pastix-src/cmake_modules/morse_cmake/modules/find/FindLAPACKE.cmake:78 (include)
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.7817073Z #17 16.76   build/ci-release-gcc/_deps/pastix-src/CMakeLists.txt:280 (find_package)
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.7817376Z #17 16.76 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.7817526Z #17 16.76 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.7818255Z #17 16.76 CMake Deprecation Warning at build/ci-release-gcc/_deps/pastix-src/cmake_modules/morse_cmake/modules/find/LibrariesAbsolutePath.cmake:22 (cmake_minimum_required):
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.7818917Z #17 16.76   Compatibility with CMake < 3.10 will be removed from a future version of
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.7819221Z #17 16.76   CMake.
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.7819384Z #17 16.76 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.7819634Z #17 16.76   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.7820029Z #17 16.76   to tell CMake that the project requires at least <min> but has been updated
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.7820389Z #17 16.76   to work with policies introduced by <max> or earlier.
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.7820724Z #17 16.76 Call Stack (most recent call first):
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.7821326Z #17 16.76   build/ci-release-gcc/_deps/pastix-src/cmake_modules/morse_cmake/modules/find/FindMorseInit.cmake:40 (include)
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.7821962Z #17 16.76   build/ci-release-gcc/_deps/pastix-src/cmake_modules/morse_cmake/modules/find/FindLAPACKE.cmake:78 (include)
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.7822516Z #17 16.76   build/ci-release-gcc/_deps/pastix-src/CMakeLists.txt:280 (find_package)
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.7822890Z #17 16.76 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.7823048Z #17 16.76 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.7823214Z #17 16.79 -- Looking for LAPACKE_dgeqrf
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.8885524Z #17 16.85 -- Looking for LAPACKE_dgeqrf - not found
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.8886102Z #17 16.85 -- Looking for lapacke : test with lapack fails
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.8886427Z #17 16.86 -- Checking for one of the modules 'lapacke'
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:19.8887011Z #17 16.90 -- Looking for LAPACKE - found using PkgConfig
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.0385097Z #17 16.90 -- Looking for LAPACKE_dgeqrf
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.0385489Z #17 16.98 -- Looking for LAPACKE_dgeqrf - found
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.0385854Z #17 16.98 -- Looking for LAPACKE_dlascl_work
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.0386112Z #17 17.05 -- Looking for LAPACKE_dlascl_work - found
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.1468642Z #17 17.05 -- Found LAPACKE: /usr/lib/x86_64-linux-gnu/liblapacke.so
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.1469726Z #17 17.05 CMake Deprecation Warning at build/ci-release-gcc/_deps/pastix-src/cmake_modules/morse_cmake/modules/find/FindMorseCommon.cmake:22 (cmake_minimum_required):
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.1470748Z #17 17.05   Compatibility with CMake < 3.10 will be removed from a future version of
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.1471156Z #17 17.05   CMake.
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.1471323Z #17 17.05 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.1471579Z #17 17.05   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.1472026Z #17 17.05   to tell CMake that the project requires at least <min> but has been updated
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.1472416Z #17 17.05   to work with policies introduced by <max> or earlier.
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.1472695Z #17 17.05 Call Stack (most recent call first):
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.1473128Z #17 17.05   build/ci-release-gcc/_deps/pastix-src/cmake_modules/morse_cmake/modules/find/FindMorseInit.cmake:34 (include)
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.1473743Z #17 17.05   build/ci-release-gcc/_deps/pastix-src/cmake_modules/morse_cmake/modules/find/FindHWLOC.cmake:54 (include)
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.1474452Z #17 17.05   build/ci-release-gcc/_deps/pastix-src/CMakeLists.txt:286 (find_package)
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.1474926Z #17 17.05 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.1475173Z #17 17.05 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.1475972Z #17 17.05 CMake Deprecation Warning at build/ci-release-gcc/_deps/pastix-src/cmake_modules/morse_cmake/modules/find/LibrariesAbsolutePath.cmake:22 (cmake_minimum_required):
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.1476962Z #17 17.05   Compatibility with CMake < 3.10 will be removed from a future version of
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.1477286Z #17 17.05   CMake.
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.1477448Z #17 17.05 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.1477698Z #17 17.05   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.1478312Z #17 17.05   to tell CMake that the project requires at least <min> but has been updated
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.1478735Z #17 17.05   to work with policies introduced by <max> or earlier.
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.1479093Z #17 17.05 Call Stack (most recent call first):
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.1479535Z #17 17.05   build/ci-release-gcc/_deps/pastix-src/cmake_modules/morse_cmake/modules/find/FindMorseInit.cmake:40 (include)
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.1480111Z #17 17.05   build/ci-release-gcc/_deps/pastix-src/cmake_modules/morse_cmake/modules/find/FindHWLOC.cmake:54 (include)
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.1480596Z #17 17.05   build/ci-release-gcc/_deps/pastix-src/CMakeLists.txt:286 (find_package)
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.1480907Z #17 17.05 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.1481071Z #17 17.05 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.1481361Z #17 17.06 -- FindHWLOC needs pkg-config program and PKG_CONFIG_PATH set HWLOC.pc file path.
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.1481737Z #17 17.06 -- Checking for one of the modules 'hwloc'
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.1482004Z #17 17.10 -- Looking for HWLOC - found using PkgConfig
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.1482262Z #17 17.11 -- Looking for hwloc_topology_init
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.1482506Z #17 17.16 -- Looking for hwloc_topology_init - found
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.2845323Z #17 17.16 -- Found HWLOC: /usr/lib/x86_64-linux-gnu/libhwloc.so
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.2846649Z #17 17.16 CMake Deprecation Warning at build/ci-release-gcc/_deps/pastix-src/cmake_modules/morse_cmake/modules/find/FindMorseCommon.cmake:22 (cmake_minimum_required):
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.2847700Z #17 17.16   Compatibility with CMake < 3.10 will be removed from a future version of
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.2850113Z #17 17.16   CMake.
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.2850800Z #17 17.16 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.2851358Z #17 17.16   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.2852262Z #17 17.16   to tell CMake that the project requires at least <min> but has been updated
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.2852879Z #17 17.16   to work with policies introduced by <max> or earlier.
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.2853175Z #17 17.16 Call Stack (most recent call first):
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.2853686Z #17 17.16   build/ci-release-gcc/_deps/pastix-src/cmake_modules/morse_cmake/modules/find/FindMorseInit.cmake:34 (include)
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.2854381Z #17 17.16   build/ci-release-gcc/_deps/pastix-src/cmake_modules/morse_cmake/modules/find/FindSCOTCH.cmake:61 (include)
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.2854878Z #17 17.16   build/ci-release-gcc/_deps/pastix-src/CMakeLists.txt:436 (find_package)
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.2855256Z #17 17.16 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.2855414Z #17 17.16 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.2855979Z #17 17.16 CMake Deprecation Warning at build/ci-release-gcc/_deps/pastix-src/cmake_modules/morse_cmake/modules/find/LibrariesAbsolutePath.cmake:22 (cmake_minimum_required):
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.2856707Z #17 17.16   Compatibility with CMake < 3.10 will be removed from a future version of
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.2857047Z #17 17.16   CMake.
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.2857206Z #17 17.16 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.2857508Z #17 17.16   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.2857932Z #17 17.16   to tell CMake that the project requires at least <min> but has been updated
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.2858519Z #17 17.16   to work with policies introduced by <max> or earlier.
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.2858810Z #17 17.16 Call Stack (most recent call first):
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.2859315Z #17 17.16   build/ci-release-gcc/_deps/pastix-src/cmake_modules/morse_cmake/modules/find/FindMorseInit.cmake:40 (include)
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.2859977Z #17 17.16   build/ci-release-gcc/_deps/pastix-src/cmake_modules/morse_cmake/modules/find/FindSCOTCH.cmake:61 (include)
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.2860469Z #17 17.16   build/ci-release-gcc/_deps/pastix-src/CMakeLists.txt:436 (find_package)
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.2860852Z #17 17.16 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.2860999Z #17 17.16 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.2861172Z #17 17.17 -- Looking for SCOTCH_graphInit
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.2861489Z #17 17.23 -- Looking for SCOTCH_graphInit - found
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.2861736Z #17 17.23 -- Looking for SCOTCH_contextInit
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.2861979Z #17 17.30 -- Looking for SCOTCH_contextInit - found
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.4027275Z #17 17.30 -- Performing Test SCOTCH_Num_4
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.4027763Z #17 17.36 -- Performing Test SCOTCH_Num_4 - Success
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.4028405Z #17 17.36 -- Performing Test SCOTCH_Num_8
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.4029009Z #17 17.41 -- Performing Test SCOTCH_Num_8 - Failed
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.5312397Z #17 17.42 -- Found SCOTCH: /usr/lib/x86_64-linux-gnu/libscotch.so;/usr/lib/x86_64-linux-gnu/libscotcherr.so;/usr/lib/x86_64-linux-gnu/libz.so;/usr/lib/x86_64-linux-gnu/libm.so;/usr/lib/x86_64-linux-gnu/librt.a
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.5314506Z #17 17.42 CMake Deprecation Warning at build/ci-release-gcc/_deps/pastix-src/cmake_modules/morse_cmake/modules/find/FindMorseCommon.cmake:22 (cmake_minimum_required):
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.5315708Z #17 17.42   Compatibility with CMake < 3.10 will be removed from a future version of
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.5316415Z #17 17.42   CMake.
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.5316858Z #17 17.42 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.5317265Z #17 17.42   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.5317899Z #17 17.42   to tell CMake that the project requires at least <min> but has been updated
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.5318491Z #17 17.42   to work with policies introduced by <max> or earlier.
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.5318849Z #17 17.42 Call Stack (most recent call first):
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.5319484Z #17 17.42   build/ci-release-gcc/_deps/pastix-src/cmake_modules/morse_cmake/modules/find/FindMorseInit.cmake:34 (include)
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.5320377Z #17 17.42   build/ci-release-gcc/_deps/pastix-src/cmake_modules/morse_cmake/modules/find/FindGTG.cmake:54 (include)
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.5321447Z #17 17.42   build/ci-release-gcc/_deps/pastix-src/CMakeLists.txt:477 (find_package)
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.5322028Z #17 17.42 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.5322276Z #17 17.42 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.5322886Z #17 17.42 CMake Deprecation Warning at build/ci-release-gcc/_deps/pastix-src/cmake_modules/morse_cmake/modules/find/LibrariesAbsolutePath.cmake:22 (cmake_minimum_required):
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.5323522Z #17 17.42   Compatibility with CMake < 3.10 will be removed from a future version of
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.5323830Z #17 17.42   CMake.
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.5323991Z #17 17.42 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.5324250Z #17 17.42   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.5324675Z #17 17.42   to tell CMake that the project requires at least <min> but has been updated
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.5325049Z #17 17.42   to work with policies introduced by <max> or earlier.
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.5325329Z #17 17.42 Call Stack (most recent call first):
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.5325767Z #17 17.42   build/ci-release-gcc/_deps/pastix-src/cmake_modules/morse_cmake/modules/find/FindMorseInit.cmake:40 (include)
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.5326350Z #17 17.42   build/ci-release-gcc/_deps/pastix-src/cmake_modules/morse_cmake/modules/find/FindGTG.cmake:54 (include)
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.5326824Z #17 17.42   build/ci-release-gcc/_deps/pastix-src/CMakeLists.txt:477 (find_package)
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.5327126Z #17 17.42 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.5327276Z #17 17.42 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.5327453Z #17 17.43 -- Checking for one of the modules 'gtg'
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.5327691Z #17 17.44 -- Use internal SPM
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.5328355Z #17 17.44 CMake Deprecation Warning at build/ci-release-gcc/_deps/pastix-src/spm/CMakeLists.txt:14 (cmake_minimum_required):
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.5328864Z #17 17.44   Compatibility with CMake < 3.10 will be removed from a future version of
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.5329166Z #17 17.44   CMake.
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.5329337Z #17 17.44 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.5329591Z #17 17.44   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.5330005Z #17 17.44   to tell CMake that the project requires at least <min> but has been updated
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.5330363Z #17 17.44   to work with policies introduced by <max> or earlier.
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.5330610Z #17 17.44 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.5330754Z #17 17.44 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.5331133Z #17 17.54 CMake Deprecation Warning at build/ci-release-gcc/_deps/pastix-src/cmake_modules/CheckSystem.cmake:2 (cmake_minimum_required):
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.5331655Z #17 17.54   Compatibility with CMake < 3.10 will be removed from a future version of
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.5331950Z #17 17.54   CMake.
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.5332106Z #17 17.54 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.5332342Z #17 17.54   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.5332731Z #17 17.54   to tell CMake that the project requires at least <min> but has been updated
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.5333068Z #17 17.54   to work with policies introduced by <max> or earlier.
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.5333340Z #17 17.54 Call Stack (most recent call first):
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.5333661Z #17 17.54   build/ci-release-gcc/_deps/pastix-src/spm/CMakeLists.txt:98 (include)
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.5333952Z #17 17.54 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.5334095Z #17 17.54 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.6910771Z #17 17.55 -- Building for target x86_64
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.6911270Z #17 17.55 -- Found target X86_64
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.6912145Z #17 17.56 CMake Deprecation Warning at build/ci-release-gcc/_deps/pastix-src/cmake_modules/morse_cmake/modules/find/FindMorseCommon.cmake:22 (cmake_minimum_required):
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.6912890Z #17 17.56   Compatibility with CMake < 3.10 will be removed from a future version of
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.6913210Z #17 17.56   CMake.
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.6913376Z #17 17.56 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.6913711Z #17 17.56   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.6914118Z #17 17.56   to tell CMake that the project requires at least <min> but has been updated
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.6914808Z #17 17.56   to work with policies introduced by <max> or earlier.
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.6915341Z #17 17.56 Call Stack (most recent call first):
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.6915894Z #17 17.56   build/ci-release-gcc/_deps/pastix-src/cmake_modules/morse_cmake/modules/find/FindMorseInit.cmake:34 (include)
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.6916822Z #17 17.56   build/ci-release-gcc/_deps/pastix-src/cmake_modules/morse_cmake/modules/find/FindCBLAS.cmake:83 (include)
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.6917612Z #17 17.56   build/ci-release-gcc/_deps/pastix-src/spm/CMakeLists.txt:123 (find_package)
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.6918229Z #17 17.56 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.6918445Z #17 17.56 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.6919121Z #17 17.56 CMake Deprecation Warning at build/ci-release-gcc/_deps/pastix-src/cmake_modules/morse_cmake/modules/find/LibrariesAbsolutePath.cmake:22 (cmake_minimum_required):
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.6920047Z #17 17.56   Compatibility with CMake < 3.10 will be removed from a future version of
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.6920533Z #17 17.56   CMake.
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.6920778Z #17 17.56 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.6921174Z #17 17.56   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.6921813Z #17 17.56   to tell CMake that the project requires at least <min> but has been updated
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.6922389Z #17 17.56   to work with policies introduced by <max> or earlier.
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.6922821Z #17 17.56 Call Stack (most recent call first):
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.6923403Z #17 17.56   build/ci-release-gcc/_deps/pastix-src/cmake_modules/morse_cmake/modules/find/FindMorseInit.cmake:40 (include)
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.6924075Z #17 17.56   build/ci-release-gcc/_deps/pastix-src/cmake_modules/morse_cmake/modules/find/FindCBLAS.cmake:83 (include)
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.6924658Z #17 17.56   build/ci-release-gcc/_deps/pastix-src/spm/CMakeLists.txt:123 (find_package)
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.6924972Z #17 17.56 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.6925119Z #17 17.56 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.6925384Z #17 17.59 -- Looking for Fortran openblas_set_num_threads
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.6925700Z #17 17.70 -- Looking for Fortran openblas_set_num_threads - found
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.8488555Z #17 17.70 -- CBLAS_BLAS BLAS
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.8488957Z #17 17.70 -- Looking for cblas_dscal
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.8490601Z #17 17.78 -- Looking for cblas_dscal - found
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.8490986Z #17 17.78 -- Looking for cblas_zgemm3m
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.8491335Z #17 17.86 -- Looking for cblas_zgemm3m - found
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.9656757Z #17 17.86 -- Looking for cblas_cgemm3m
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.9658509Z #17 17.94 -- Looking for cblas_cgemm3m - found
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.9659267Z #17 17.94 -- CBLAS_WORKS 1
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.9659862Z #17 17.94 -- Looking for cblas: test with blas succeeded
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.9660967Z #17 17.94 CMake Deprecation Warning at build/ci-release-gcc/_deps/pastix-src/cmake_modules/morse_cmake/modules/find/FindMorseCommon.cmake:22 (cmake_minimum_required):
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.9661920Z #17 17.94   Compatibility with CMake < 3.10 will be removed from a future version of
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.9662390Z #17 17.94   CMake.
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.9662620Z #17 17.94 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.9662972Z #17 17.94   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.9663549Z #17 17.94   to tell CMake that the project requires at least <min> but has been updated
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.9664054Z #17 17.94   to work with policies introduced by <max> or earlier.
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.9664443Z #17 17.94 Call Stack (most recent call first):
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.9665039Z #17 17.94   build/ci-release-gcc/_deps/pastix-src/cmake_modules/morse_cmake/modules/find/FindMorseInit.cmake:34 (include)
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.9665874Z #17 17.94   build/ci-release-gcc/_deps/pastix-src/cmake_modules/morse_cmake/modules/find/FindLAPACKE.cmake:78 (include)
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.9666622Z #17 17.94   build/ci-release-gcc/_deps/pastix-src/spm/CMakeLists.txt:124 (find_package)
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.9667055Z #17 17.94 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.9667251Z #17 17.94 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.9668467Z #17 17.94 CMake Deprecation Warning at build/ci-release-gcc/_deps/pastix-src/cmake_modules/morse_cmake/modules/find/LibrariesAbsolutePath.cmake:22 (cmake_minimum_required):
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.9669637Z #17 17.94   Compatibility with CMake < 3.10 will be removed from a future version of
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.9670068Z #17 17.94   CMake.
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.9670291Z #17 17.94 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.9670654Z #17 17.94   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.9671262Z #17 17.94   to tell CMake that the project requires at least <min> but has been updated
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.9671811Z #17 17.94   to work with policies introduced by <max> or earlier.
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.9672261Z #17 17.94 Call Stack (most recent call first):
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.9672676Z #17 17.94   build/ci-release-gcc/_deps/pastix-src/cmake_modules/morse_cmake/modules/find/FindMorseInit.cmake:40 (include)
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.9673249Z #17 17.94   build/ci-release-gcc/_deps/pastix-src/cmake_modules/morse_cmake/modules/find/FindLAPACKE.cmake:78 (include)
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.9673756Z #17 17.94   build/ci-release-gcc/_deps/pastix-src/spm/CMakeLists.txt:124 (find_package)
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.9674069Z #17 17.94 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.9674221Z #17 17.94 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:20.9674387Z #17 17.98 -- Looking for LAPACKE_dgeqrf
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:21.1379952Z #17 18.06 -- Looking for LAPACKE_dgeqrf - found
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:21.1381721Z #17 18.06 -- Looking for LAPACKE_dlascl_work
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:21.1382295Z #17 18.15 -- Looking for LAPACKE_dlascl_work - found
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:21.2389600Z #17 18.15 -- Looking for lapacke: test with lapack succeeded
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:21.2390576Z #17 18.15 -- Found LAPACKE: /usr/lib/x86_64-linux-gnu/liblapacke.so;/usr/lib/x86_64-linux-gnu/libopenblas.so;-lm;-ldl
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:21.2391237Z #17 18.15 -- Looking for LAPACKE_zlassq_work
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:21.2391633Z #17 18.24 -- Looking for LAPACKE_zlassq_work - found
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:21.2392031Z #17 18.24 -- Add definition LAPACKE_WITH_LASSQ
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:21.2392444Z #17 18.24 -- Add definition LAPACKE_WITH_LASCL
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:21.2393355Z #17 18.24 CMake Deprecation Warning at build/ci-release-gcc/_deps/pastix-src/cmake_modules/morse_cmake/modules/find/FindMorseCommon.cmake:22 (cmake_minimum_required):
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:21.2394356Z #17 18.24   Compatibility with CMake < 3.10 will be removed from a future version of
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:21.2394719Z #17 18.24   CMake.
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:21.2394882Z #17 18.24 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:21.2395140Z #17 18.24   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:21.2395543Z #17 18.24   to tell CMake that the project requires at least <min> but has been updated
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:21.2395899Z #17 18.24   to work with policies introduced by <max> or earlier.
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:21.2396176Z #17 18.24 Call Stack (most recent call first):
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:21.2396702Z #17 18.24   build/ci-release-gcc/_deps/pastix-src/cmake_modules/morse_cmake/modules/find/FindMorseInit.cmake:34 (include)
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:21.2397315Z #17 18.24   build/ci-release-gcc/_deps/pastix-src/cmake_modules/morse_cmake/modules/find/FindSCOTCH.cmake:61 (include)
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:21.2397869Z #17 18.24   build/ci-release-gcc/_deps/pastix-src/spm/CMakeLists.txt:192 (find_package)
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:21.2398601Z #17 18.24 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:21.2398765Z #17 18.24 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:21.2399252Z #17 18.24 CMake Deprecation Warning at build/ci-release-gcc/_deps/pastix-src/cmake_modules/morse_cmake/modules/find/LibrariesAbsolutePath.cmake:22 (cmake_minimum_required):
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:21.2399883Z #17 18.24   Compatibility with CMake < 3.10 will be removed from a future version of
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:21.2400181Z #17 18.24   CMake.
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:21.2400339Z #17 18.24 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:21.2400580Z #17 18.24   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:21.2400979Z #17 18.24   to tell CMake that the project requires at least <min> but has been updated
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:21.2401606Z #17 18.24   to work with policies introduced by <max> or earlier.
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:21.2402054Z #17 18.24 Call Stack (most recent call first):
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:21.2402521Z #17 18.24   build/ci-release-gcc/_deps/pastix-src/cmake_modules/morse_cmake/modules/find/FindMorseInit.cmake:40 (include)
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:21.2403096Z #17 18.24   build/ci-release-gcc/_deps/pastix-src/cmake_modules/morse_cmake/modules/find/FindSCOTCH.cmake:61 (include)
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:21.2403581Z #17 18.24   build/ci-release-gcc/_deps/pastix-src/spm/CMakeLists.txt:192 (find_package)
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:21.2403886Z #17 18.24 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:21.2404031Z #17 18.24 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:21.2404196Z #17 18.25 -- Looking for SCOTCH_graphInit
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:21.3595352Z #17 18.31 -- Looking for SCOTCH_graphInit - found
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:21.3596314Z #17 18.31 -- Looking for SCOTCH_contextInit
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:21.3596955Z #17 18.37 -- Looking for SCOTCH_contextInit - found
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:21.4720598Z #17 18.37 -- Performing Test SCOTCH_Num_4
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:21.4721239Z #17 18.43 -- Performing Test SCOTCH_Num_4 - Success
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:21.4721689Z #17 18.43 -- Performing Test SCOTCH_Num_8
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:21.4722061Z #17 18.48 -- Performing Test SCOTCH_Num_8 - Failed
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:21.6435457Z #17 18.49 -- Generate precision dependencies in /src/volume-cartographer/build/ci-release-gcc/_deps/pastix-src/spm
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:21.6436562Z #17 18.54 -- Generate precision dependencies in /src/volume-cartographer/build/ci-release-gcc/_deps/pastix-src/spm - Done
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:21.6437389Z #17 18.55 CMake Deprecation Warning at build/ci-release-gcc/_deps/pastix-src/cmake_modules/CheckSystem.cmake:2 (cmake_minimum_required):
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:21.6438187Z #17 18.55   Compatibility with CMake < 3.10 will be removed from a future version of
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:21.6438590Z #17 18.55   CMake.
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:21.6438766Z #17 18.55 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:21.6439019Z #17 18.55   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:21.6439545Z #17 18.55   to tell CMake that the project requires at least <min> but has been updated
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:21.6439975Z #17 18.55   to work with policies introduced by <max> or earlier.
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:21.6440286Z #17 18.55 Call Stack (most recent call first):
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:21.6440640Z #17 18.55   build/ci-release-gcc/_deps/pastix-src/spm/src/CMakeLists.txt:15 (include)
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:21.6441073Z #17 18.55 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:21.6441227Z #17 18.55 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:21.6441392Z #17 18.56 -- Building for target x86_64
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:21.6441693Z #17 18.56 -- Found target X86_64
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:21.6442107Z #17 18.56 -- Generate precision dependencies in /src/volume-cartographer/build/ci-release-gcc/_deps/pastix-src/spm/src
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:21.6442808Z #17 18.66 -- Generate precision dependencies in /src/volume-cartographer/build/ci-release-gcc/_deps/pastix-src/spm/src - Done
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:21.7514550Z #17 18.66 -- No installation of spm_env.sh - already in the default environment
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:21.7515986Z #17 18.76 -- Generate precision dependencies in /src/volume-cartographer/build/ci-release-gcc/_deps/pastix-src/kernels
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:21.8552278Z #17 18.82 -- Generate precision dependencies in /src/volume-cartographer/build/ci-release-gcc/_deps/pastix-src/kernels - Done
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:21.8553622Z #17 18.83 -- Generate precision dependencies in /src/volume-cartographer/build/ci-release-gcc/_deps/pastix-src/kernels
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:21.8554868Z #17 18.87 -- Generate precision dependencies in /src/volume-cartographer/build/ci-release-gcc/_deps/pastix-src/kernels - Done
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:21.9948730Z #17 18.87 -- Generate precision dependencies in /src/volume-cartographer/build/ci-release-gcc/_deps/pastix-src/kernels
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:21.9949753Z #17 19.01 -- Generate precision dependencies in /src/volume-cartographer/build/ci-release-gcc/_deps/pastix-src/kernels - Done
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.1447425Z #17 19.01 -- Generate precision dependencies in /src/volume-cartographer/build/ci-release-gcc/_deps/pastix-src/kernels
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.1448966Z #17 19.05 -- Generate precision dependencies in /src/volume-cartographer/build/ci-release-gcc/_deps/pastix-src/kernels - Done
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.1449893Z #17 19.16 -- Generate precision dependencies in /src/volume-cartographer/build/ci-release-gcc/_deps/pastix-src/refinement
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.2976208Z #17 19.21 -- Generate precision dependencies in /src/volume-cartographer/build/ci-release-gcc/_deps/pastix-src/refinement - Done
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.2977537Z #17 19.31 -- Generate precision dependencies in /src/volume-cartographer/build/ci-release-gcc/_deps/pastix-src
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.3985070Z #17 19.36 -- Generate precision dependencies in /src/volume-cartographer/build/ci-release-gcc/_deps/pastix-src - Done
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.3986024Z #17 19.36 -- Generate precision dependencies in /src/volume-cartographer/build/ci-release-gcc/_deps/pastix-src
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.3986849Z #17 19.41 -- Generate precision dependencies in /src/volume-cartographer/build/ci-release-gcc/_deps/pastix-src - Done
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.5122335Z #17 19.41 -- Generate precision dependencies in /src/volume-cartographer/build/ci-release-gcc/_deps/pastix-src
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.5123306Z #17 19.46 -- Generate precision dependencies in /src/volume-cartographer/build/ci-release-gcc/_deps/pastix-src - Done
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.5124095Z #17 19.46 -- Generate precision dependencies in /src/volume-cartographer/build/ci-release-gcc/_deps/pastix-src
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.5124881Z #17 19.52 -- Generate precision dependencies in /src/volume-cartographer/build/ci-release-gcc/_deps/pastix-src - Done
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.6239187Z #17 19.52 -- Generate precision dependencies in /src/volume-cartographer/build/ci-release-gcc/_deps/pastix-src
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.6240149Z #17 19.59 -- Generate precision dependencies in /src/volume-cartographer/build/ci-release-gcc/_deps/pastix-src - Done
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.6240945Z #17 19.59 -- Generate precision dependencies in /src/volume-cartographer/build/ci-release-gcc/_deps/pastix-src
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.6241778Z #17 19.64 -- Generate precision dependencies in /src/volume-cartographer/build/ci-release-gcc/_deps/pastix-src - Done
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.7313133Z #17 19.64 -- Generate precision dependencies in /src/volume-cartographer/build/ci-release-gcc/_deps/pastix-src
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.7314170Z #17 19.70 -- Generate precision dependencies in /src/volume-cartographer/build/ci-release-gcc/_deps/pastix-src - Done
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.7314901Z #17 19.70 -- No installation of pastix_env.sh - already in the default environment
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.7315228Z #17 19.70 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.7315400Z #17 19.70 Configuration of Pastix:
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.7315643Z #17 19.70        PASTIX_VERSION ......: 6.4.0
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.7315892Z #17 19.70        BUILD_TYPE ..........: Release
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.7316121Z #17 19.70        BUILDNAME ...........: 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.7316337Z #17 19.70        SITE ................: 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.7316531Z #17 19.70 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.7316770Z #17 19.70        Compiler: C .........: /usr/bin/gcc (GNU)
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.7317052Z #17 19.70        Compiler: Fortran ...: /usr/bin/gfortran (GNU)
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.7317327Z #17 19.70        Linker: .............: /usr/bin/ld
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.7317547Z #17 19.70 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.7317717Z #17 19.70        Build type ..........: Release
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.7318134Z #17 19.70        Build shared ........: OFF
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.7318499Z #17 19.70        CFlags ..............:  -Wall -Wextra -mcx16 -Drestrict=
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.7318775Z #17 19.70        LDFlags .............: 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.7318979Z #17 19.70        EXE LDFlags .........: 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.7319175Z #17 19.70 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.7319338Z #17 19.70        Implementation paradigm
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.7319559Z #17 19.70        MPI .................: OFF
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.7319775Z #17 19.70        CUDA ................: OFF
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.7319971Z #17 19.70 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.7320129Z #17 19.70        Ordering selected
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.7320565Z #17 19.70        SCOTCH ..............: ON
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.7320908Z #17 19.70          Mutithreaded ......: ON
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.7321121Z #17 19.70        PTSCOTCH ............: OFF
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.7321338Z #17 19.70        METIS ...............: OFF
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.7321529Z #17 19.70 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.7321683Z #17 19.70        Runtime specific
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.7321881Z #17 19.70        PARSEC ..............: OFF
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.7322085Z #17 19.70        STARPU ..............: OFF
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.7322276Z #17 19.70 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.7322424Z #17 19.70        Kernels specific
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.7322634Z #17 19.70        CBLAS ...............: TRUE
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.7322849Z #17 19.70        LAPACKE .............: TRUE
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.7323058Z #17 19.70        HWLOC ...............: TRUE
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.7323269Z #17 19.70 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.7323429Z #17 19.70        Trace ...............: OFF
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.7323635Z #17 19.70 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.7323789Z #17 19.70        Binaries to build
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.7323990Z #17 19.70        documentation .......: OFF
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.7324208Z #17 19.70        testing .............: OFF
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.7324425Z #17 19.70        precisions ..........: d
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.7324644Z #17 19.70 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.7324824Z #17 19.70        INSTALL_PREFIX ......: /usr/local
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.7325043Z #17 19.70 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.7325184Z #17 19.70 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.7325421Z #17 19.70 -- Configuration is done - A summary of the current configuration
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.7325894Z #17 19.70    has been written in /src/volume-cartographer/build/ci-release-gcc/_deps/pastix-build/config.log
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.7326280Z #17 19.72 -- Looking for a CUDA compiler
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.7326523Z #17 19.74 -- Looking for a CUDA compiler - NOTFOUND
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.9000315Z #17 19.75 CMake Warning (dev) at /src/vc_reader/cmake/NativeTargets.cmake:3 (find_package):
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.9001079Z #17 19.75   Policy CMP0167 is not set: The FindBoost module is removed.  Run "cmake
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.9001531Z #17 19.75   --help-policy CMP0167" for policy details.  Use the cmake_policy command to
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.9001905Z #17 19.75   set the policy and suppress this warning.
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.9002154Z #17 19.75 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.9002332Z #17 19.75 Call Stack (most recent call first):
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.9002595Z #17 19.75   /src/vc_reader/CMakeLists.txt:39 (include)
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.9002916Z #17 19.75 This warning is for project developers.  Use -Wno-dev to suppress it.
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.9003210Z #17 19.75 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.9003544Z #17 19.75 -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.90.0/BoostConfig.cmake (found version "1.90.0")
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.9004052Z #17 19.76 CMake Error at /src/vc_reader/cmake/NativeTargets.cmake:4 (find_package):
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.9004458Z #17 19.76   Could not find a package configuration file provided by "concurrentqueue"
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.9004792Z #17 19.76   with any of the following names:
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.9005008Z #17 19.76 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.9005182Z #17 19.76     concurrentqueueConfig.cmake
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.9005410Z #17 19.76     concurrentqueue-config.cmake
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.9005625Z #17 19.76 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.9005876Z #17 19.76   Add the installation prefix of "concurrentqueue" to CMAKE_PREFIX_PATH or
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.9006278Z #17 19.76   set "concurrentqueue_DIR" to a directory containing one of the above files.
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.9006688Z #17 19.76   If "concurrentqueue" provides a separate development package or SDK, be
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.9006999Z #17 19.76   sure it has been installed.
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.9007222Z #17 19.76 Call Stack (most recent call first):
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.9007472Z #17 19.76   /src/vc_reader/CMakeLists.txt:39 (include)
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.9007694Z #17 19.76 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.9007838Z #17 19.76 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.9008284Z #17 19.76 -- Configuring incomplete, errors occurred!
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.9888132Z #17 ERROR: process "/bin/sh -c ccache --zero-stats  && cmake --preset ci-release-gcc -DVC_USE_CCACHE=ON       -DVC_GIT_SHA1=\"${VC_GIT_SHA1}\" -DVC_GIT_COMMIT_DATE=\"${VC_GIT_COMMIT_DATE}\"  && ninja -C build/ci-release-gcc  && ccache --show-stats" did not complete successfully: exit code: 1
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.9970927Z ------
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.9972426Z  > [build  9/10] RUN --mount=type=cache,target=/var/cache/ccache     ccache --zero-stats  && cmake --preset ci-release-gcc -DVC_USE_CCACHE=ON       -DVC_GIT_SHA1="4dd979274b9bfcee9d2d6249a8c73e0a4ab68289" -DVC_GIT_COMMIT_DATE="2026-11-16"  && ninja -C build/ci-release-gcc  && ccache --show-stats:
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.9973782Z 19.76 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.9974176Z 19.76   Add the installation prefix of "concurrentqueue" to CMAKE_PREFIX_PATH or
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.9974812Z 19.76   set "concurrentqueue_DIR" to a directory containing one of the above files.
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.9975462Z 19.76   If "concurrentqueue" provides a separate development package or SDK, be
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.9976027Z 19.76   sure it has been installed.
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.9976382Z 19.76 Call Stack (most recent call first):
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.9976706Z 19.76   /src/vc_reader/CMakeLists.txt:39 (include)
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.9977055Z 19.76 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.9977269Z 19.76 
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.9977557Z 19.76 -- Configuring incomplete, errors occurred!
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.9977920Z ------
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:22.9981425Z ERROR: failed to build: failed to solve: process "/bin/sh -c ccache --zero-stats  && cmake --preset ci-release-gcc -DVC_USE_CCACHE=ON       -DVC_GIT_SHA1=\"${VC_GIT_SHA1}\" -DVC_GIT_COMMIT_DATE=\"${VC_GIT_COMMIT_DATE}\"  && ninja -C build/ci-release-gcc  && ccache --show-stats" did not complete successfully: exit code: 1
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:23.0179662Z ##[group]Reference
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:23.1076065Z builder-4c847412-29c7-4ecd-bedb-53d8fa2a51d6/builder-4c847412-29c7-4ecd-bedb-53d8fa2a51d60/xuras38j4pw510fgwfsuty92x
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:23.1077389Z ##[endgroup]
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:23.1077905Z ##[group]Check build summary support
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:23.1080163Z Build summary supported!
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:23.1081047Z ##[endgroup]
+Build + package (AppImage)	Build AppImage	2026-11-15T23:30:23.1105049Z ##[error]buildx failed with: ERROR: failed to build: failed to solve: process "/bin/sh -c ccache --zero-stats  && cmake --preset ci-release-gcc -DVC_USE_CCACHE=ON       -DVC_GIT_SHA1=\"${VC_GIT_SHA1}\" -DVC_GIT_COMMIT_DATE=\"${VC_GIT_COMMIT_DATE}\"  && ninja -C build/ci-release-gcc  && ccache --show-stats" did not complete successfully: exit code: 1

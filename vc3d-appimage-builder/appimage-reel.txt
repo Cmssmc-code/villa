@@ -1,0 +1,39 @@
+REAL SEGMENT with the AppImage built after the fix (run 43774811522)
+====================================================================
+
+Where: fork Cmssmc-code/villa, GitHub-hosted ubuntu-24.04, 16/11/2026 01:23-01:25 UTC.
+Run: https://github.com/Cmssmc-code/villa/actions/runs/43785970414 -> success
+Branch essai-ci/appimage-reel fb41254c7 = 82bb0b101 + one test-only workflow
+(.github/workflows/essai-appimage-reel.yml, not part of the fix). Full log: journaux/fork-appimage-reel-43785970414.log
+
+AppImage: VC3D-82bb0b1-2026-11-16-linux-x86_64.AppImage (137 640 440 bytes,
+  sha256 acf1c9c3054ab4dfb09f7aed300b562b779caf0157e752c74ebcf0408fa4d4dd), downloaded from run 43774811522.
+Host prerequisites: the same GL/X11/font list as the "Smoke test the AppImage" step of vc3d-linux.yml.
+Data (public bucket):
+  https://vesuvius-challenge-open-data.s3.us-east-1.amazonaws.com/PHerc0800/segments/20251029010146-auto_grown_20251029010146642/mesh/intermediate/tifxyz_original/
+  meta.json e65b15f0..., x.tif ae146dd6..., y.tif 34362f60..., z.tif 850c19ec... (42 x 42 grid)
+
+Commands (APPIMAGE_EXTRACT_AND_RUN=1, tools called through the AppImage symlink dispatch):
+  ./vc_tifxyz2obj ../seg ../out/seg0800.obj
+  ./vc_obj2tifxyz ../out/seg0800.obj ../out/retour
+
+Output:
+  Point dims: [42 x 42] cols: 42 rows: 42
+  UVs: scaled by 1/scale from meta.json  (u*= 20, v*= 20 )
+  vc_tifxyz2obj rc=0
+  OBJ bytes=246972 v=1444 f=2738
+  ...
+  Loaded OBJ file:  Vertices: 1444  UVs: 1444  Faces: 2738
+  UV-metric mode: grid 741 x 741  scale(OBJ units): 1, 1
+  Valid grid points: 547600 / 549081 (99.7303%)
+  Successfully converted to tifxyz format
+  vc_obj2tifxyz rc=0
+  retour: meta.json 307 B, x.tif / y.tif / z.tif 2 196 542 B each
+
+Cross-check with the Windows package of the same night (run 43774798604, see
+nuit-1611\ci-fork\journaux\essai-paquet-pr2557.txt), same segment, same commands:
+  Windows OBJ: 254 042 bytes with CRLF = 246 972 + 7 070 line ends -> same line count.
+  Same 1444 vertices and 2738 faces; the face lines are identical; every v / vt / vn value
+  differs by at most 1e-6 (71 normal lines differ in the 6th decimal, rounding).
+  Same 741 x 741 grid and same tif sizes after the round trip.
+Copies: journaux/linux-seg0800.obj (from the run artifact).

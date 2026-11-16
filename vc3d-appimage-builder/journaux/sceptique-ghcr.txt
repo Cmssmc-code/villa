@@ -1,0 +1,23 @@
+Sceptic check, 16/11/2026 ~02:40 (python -I ghcr_check.py / ghcr_tag.py, anonymous ghcr.io token)
+deps hash at origin/main: 6309e96d71462b0a
+deps hash at 26be73018105: 6309e96d71462b0a
+deps hash at 294ac4cf2^: 334019be88aaa209
+pin in commit: ARG BUILDER_IMAGE=ghcr.io/scrollprize/villa/volume-cartographer@sha256:e1c9abfd3f89cdb24fa0c4330d907408035669630f6450643d9055f486daab9b
+  builder-ubuntu-26.04 -> sha256:940775339354... type=v1+json
+     child sha256:e1c9abfd3f89... linux/amd64
+  sha256:e1c9abfd3f89cdb24fa0c4330d907408035669630f6450643d9055f486daab9b -> sha256:e1c9abfd3f89... type=v1+json
+     arch=amd64 created=2026-11-14T13:19:49 deps-hash=6309e96d71462b0a rev=
+     child sha256:0647c9445c99... unknown/unknown
+  builder-ubuntu-26.04-294ac4cf2: HTTP 404
+  builder-ubuntu-26.04-294ac4cf2a: HTTP 404
+  sha256:e1c9abfd3f89cdb24fa0c4330d907408035669630f6450643d9055f486daab9b -> sha256:e1c9abfd3f89... type=v1+json
+     arch=amd64 created=2026-11-14T13:19:49 deps-hash=6309e96d71462b0a rev=
+  sha256:1bebf104edbd6c290ddbaf8036c919635259f3722e8eddb31340b240baf1ed68 -> sha256:1bebf104edbd... type=v1+json
+     arch=amd64 created=2026-10-29T04:03:32 deps-hash=675836fc3d478d17 rev=
+tags with builder: ['builder-ubuntu-26.04-e12e3c2a76079967afcf74b3ad9310515920355f', 'builder-ubuntu-26.04-9f1c18b694c08ba123c96fbebaa3bb83fc4a07a0', 'builder-ubuntu-26.04-fe0596748ea35a6089cccd8d1b1b646d0bc5349f', 'builder-ubuntu-26.04-64d6389e726fe93a971d1e2768c3d8ec983fd0e5', 'builder-ubuntu-26.04-05ff9ea39bf1077f8749fc1fe06f43a548350143', 'builder-ubuntu-26.04-504832c25b0b528aa56d0e370696703c0bf76d40', 'builder-ubuntu-26.04-5b2ca4ff3296eec2b9c73af3fb2e7df6a80bce8d', 'builder-ubuntu-26.04-11b6d3c22eb364421d810fb3ca6e099fe167728d', 'builder-ubuntu-26.04-39a8cf3a124bdd5540ee826e1cb30047c8dc8c85', 'builder-ubuntu-26.04-e1aa625a649223b4b353d6455413023677db3300', 'builder-ubuntu-26.04-baf5e605bb42a3d55a62b7c5c728e0908137225c', 'builder-ubuntu-26.04-294ac4cf20834388f5a34b578900b3f71207d07d']
+294ac4cf20 sha256:940775339354 [('sha256:e1c9abfd3f89', 'amd64'), ('sha256:0647c9445c99', 'unknown')]
+baf5e605bb sha256:508335dde623 [('sha256:482eaf9d14f1', 'amd64'), ('sha256:2080d63303b0', 'unknown')]
+e1aa625a64 sha256:a1a5acbf8cdc [('sha256:1bebf104edbd', 'amd64'), ('sha256:8d9d5f9dafc1', 'unknown')]
+
+Upstream main runs of vc3d-linux.yml (gh run list --event push):
+43611898774 failure 2d3fb38d3 2026-11-14T15:45 ; 43598995101 failure 294ac4cf2 2026-11-14T13:17 (CMake Error NativeTargets.cmake:4, concurrentqueue) ; 43483836475 success 97fb9336c 2026-11-13

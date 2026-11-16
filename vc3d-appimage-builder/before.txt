@@ -1,0 +1,32 @@
+BEFORE: VC3D Linux AppImage workflow (.github/workflows/vc3d-linux.yml) on main 2d3fb38d3
+==========================================================================================
+
+Command: the "Build AppImage" step of vc3d-linux.yml, i.e.
+  docker buildx build -f volume-cartographer/scripts/Dockerfile.appimage ...
+Dockerfile.appimage line 24 on main pins the builder image:
+  ARG BUILDER_IMAGE=ghcr.io/scrollprize/villa/volume-cartographer@sha256:1bebf104edbd6c290ddbaf8036c919635259f3722e8eddb31340b240baf1ed68
+That image carries the label vc-builder-deps-hash=675836fc3d478d17 (read from ghcr.io, see verifier.py).
+The hash that volume-cartographer/scripts/ci.sh computes for main (Dockerfile + install_build_deps.sh) is 6309e96d71462b0a.
+Since #2546 (294ac4cf2), vc_reader/cmake/NativeTargets.cmake needs the concurrentqueue CMake package, which that old image does not have.
+
+1) Team runner, ScrollPrize/villa, push of main 2d3fb38d3 (14/11/2026)
+   https://github.com/ScrollPrize/villa/actions/runs/43611898774  -> failure (job "Build + package (AppImage)")
+   journaux/amont-main-linux-43611898774.log, lines 1525-1527:
+     #16 18.93 CMake Error at /src/vc_reader/cmake/NativeTargets.cmake:4 (find_package):
+     #16 18.93   Could not find a package configuration file provided by "concurrentqueue"
+     #16 18.93   with any of the following names:
+
+2) Fork Cmssmc-code/villa, branch essai-ci/avant = main 2d3fb38d3 + one test-only commit
+   (runs-on -> GitHub-hosted ubuntu-24.04, timeout 330 min, free runner disk; the fork has no Blacksmith runners)
+   https://github.com/Cmssmc-code/villa/actions/runs/43774795375  -> failure after 4 min
+   journaux/fork-linux-43774795375.log:
+     line 213: #8 [build  1/10] FROM ghcr.io/scrollprize/villa/volume-cartographer@sha256:1bebf104edbd...
+     line 989: #17 19.76 CMake Error at /src/vc_reader/cmake/NativeTargets.cmake:4 (find_package):
+     line 990: #17 19.76   Could not find a package configuration file provided by "concurrentqueue"
+
+   Same result on branch essai-ci/pr2557 (main + #2557 + test-only commit):
+   https://github.com/Cmssmc-code/villa/actions/runs/43774804955 -> failure, same concurrentqueue error
+   (journaux/fork-linux-43774804955.log, line 987).
+
+Note: the PR CI (vc3d-ci.yml) still passes with the old pin because its jobs run
+install_build_deps.sh inside the container before building. Dockerfile.appimage does not.

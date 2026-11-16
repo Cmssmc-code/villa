@@ -1,0 +1,257 @@
+real-segment	Set up job	﻿2026-11-16T01:23:22.8748160Z Current runner version: '2.338.2'
+real-segment	Set up job	2026-11-16T01:23:22.8764134Z ##[group]Runner Image Provisioner
+real-segment	Set up job	2026-11-16T01:23:22.8764794Z Hosted Compute Agent
+real-segment	Set up job	2026-11-16T01:23:22.8765193Z Version: 20261103.629
+real-segment	Set up job	2026-11-16T01:23:22.8765694Z Commit: 15dbd9ccb5dbf34fae002b6ed1a2670f52df37bc
+real-segment	Set up job	2026-11-16T01:23:22.8766212Z Build Date: 2026-11-03T17:26:59Z
+real-segment	Set up job	2026-11-16T01:23:22.8766937Z Worker ID: {d13def91-a7b8-4e6f-a35b-5eb1de35a444}
+real-segment	Set up job	2026-11-16T01:23:22.8767462Z Region: us-west-2
+real-segment	Set up job	2026-11-16T01:23:22.8767851Z Cloud: AWS
+real-segment	Set up job	2026-11-16T01:23:22.8768272Z ##[endgroup]
+real-segment	Set up job	2026-11-16T01:23:22.8769472Z ##[group]Operating System
+real-segment	Set up job	2026-11-16T01:23:22.8769966Z Ubuntu
+real-segment	Set up job	2026-11-16T01:23:22.8770342Z 24.04.5
+real-segment	Set up job	2026-11-16T01:23:22.8770704Z LTS
+real-segment	Set up job	2026-11-16T01:23:22.8771085Z ##[endgroup]
+real-segment	Set up job	2026-11-16T01:23:22.8771461Z ##[group]Runner Image
+real-segment	Set up job	2026-11-16T01:23:22.8771862Z Image: ubuntu-24.04
+real-segment	Set up job	2026-11-16T01:23:22.8772277Z Version: 20261111.127.1
+real-segment	Set up job	2026-11-16T01:23:22.8773023Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261111.127/images/ubuntu/Ubuntu2404-Readme.md
+real-segment	Set up job	2026-11-16T01:23:22.8774446Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261111.127
+real-segment	Set up job	2026-11-16T01:23:22.8775113Z ##[endgroup]
+real-segment	Set up job	2026-11-16T01:23:22.8775961Z ##[group]GITHUB_TOKEN Permissions
+real-segment	Set up job	2026-11-16T01:23:22.8777734Z Actions: read
+real-segment	Set up job	2026-11-16T01:23:22.8778155Z Contents: read
+real-segment	Set up job	2026-11-16T01:23:22.8778545Z Metadata: read
+real-segment	Set up job	2026-11-16T01:23:22.8778935Z ##[endgroup]
+real-segment	Set up job	2026-11-16T01:23:22.8780383Z Secret source: Actions
+real-segment	Set up job	2026-11-16T01:23:22.8781066Z Cache mode: write
+real-segment	Set up job	2026-11-16T01:23:22.8781535Z Prepare workflow directory
+real-segment	Set up job	2026-11-16T01:23:22.9000477Z Prepare all required actions
+real-segment	Set up job	2026-11-16T01:23:22.9035278Z Getting action download info
+real-segment	Set up job	2026-11-16T01:23:23.2837552Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+real-segment	Set up job	2026-11-16T01:23:24.4312051Z Complete job name: real-segment
+real-segment	Download the AppImage of run 43774811522	﻿2026-11-16T01:23:24.4905946Z ##[group]Run gh run download 43774811522 -R "Cmssmc-code/villa" -n VC3D-linux-appimage -D dist
+real-segment	Download the AppImage of run 43774811522	2026-11-16T01:23:24.4907539Z ^[[36;1mgh run download 43774811522 -R "Cmssmc-code/villa" -n VC3D-linux-appimage -D dist^[[0m
+real-segment	Download the AppImage of run 43774811522	2026-11-16T01:23:24.4908365Z ^[[36;1mrm -f dist/*-debug.tar.zst^[[0m
+real-segment	Download the AppImage of run 43774811522	2026-11-16T01:23:24.4908893Z ^[[36;1mls -l dist^[[0m
+real-segment	Download the AppImage of run 43774811522	2026-11-16T01:23:24.4909343Z ^[[36;1msha256sum dist/*.AppImage^[[0m
+real-segment	Download the AppImage of run 43774811522	2026-11-16T01:23:24.6843310Z shell: /usr/bin/bash -e {0}
+real-segment	Download the AppImage of run 43774811522	2026-11-16T01:23:24.6844031Z env:
+real-segment	Download the AppImage of run 43774811522	2026-11-16T01:23:24.6847741Z   GH_TOKEN: ***
+real-segment	Download the AppImage of run 43774811522	2026-11-16T01:23:24.6848203Z ##[endgroup]
+real-segment	Download the AppImage of run 43774811522	2026-11-16T01:24:17.2299705Z total 134416
+real-segment	Download the AppImage of run 43774811522	2026-11-16T01:24:17.2300708Z -rwxr-xr-x 1 runner runner 137640440 Nov 16 01:24 VC3D-82bb0b1-2026-11-16-linux-x86_64.AppImage
+real-segment	Download the AppImage of run 43774811522	2026-11-16T01:24:17.3171470Z acf1c9c3054ab4dfb09f7aed300b562b779caf0157e752c74ebcf0408fa4d4dd  dist/VC3D-82bb0b1-2026-11-16-linux-x86_64.AppImage
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	﻿2026-11-16T01:24:17.3256135Z ##[group]Run sudo apt-get update
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:17.3256808Z ^[[36;1msudo apt-get update^[[0m
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:17.3257192Z ^[[36;1msudo apt-get install -y --no-install-recommends \^[[0m
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:17.3257679Z ^[[36;1m  libglvnd0 libglx0 libegl1 libopengl0 libgl1 libgl1-mesa-dri libglx-mesa0 \^[[0m
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:17.3258124Z ^[[36;1m  libx11-6 libx11-xcb1 libxcb1 libice6 libsm6 \^[[0m
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:17.3258482Z ^[[36;1m  libfontconfig1 libfreetype6 libharfbuzz0b^[[0m
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:17.3285651Z shell: /usr/bin/bash -e {0}
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:17.3286041Z ##[endgroup]
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:17.4883491Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [152 B]
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:17.5996086Z Get:5 https://packages.microsoft.com/ubuntu/24.04/prod noble InRelease [3600 B]
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:17.6054952Z Hit:2 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble InRelease
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:17.6495216Z Get:6 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:17.6631095Z Get:3 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:17.6632069Z Get:7 https://packages.microsoft.com/ubuntu/24.04/prod noble/main arm64 Packages [702 kB]
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:17.7510477Z Get:8 https://packages.microsoft.com/ubuntu/24.04/prod noble/main amd64 Packages [772 kB]
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:17.8729580Z Get:4 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:17.9797455Z Get:9 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1450 kB]
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:18.0821228Z Get:16 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [1195 kB]
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:18.1913699Z Get:10 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/main Translation-en [315 kB]
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:18.2488456Z Get:11 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [1713 kB]
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:18.3547584Z Get:12 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/universe Translation-en [345 kB]
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:18.4108958Z Get:13 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [1883 kB]
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:18.4864117Z Get:14 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/restricted Translation-en [430 kB]
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:18.5244482Z Get:17 http://security.ubuntu.com/ubuntu noble-security/main Translation-en [238 kB]
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:18.5427045Z Get:15 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/multiverse Translation-en [14.6 kB]
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:18.6160099Z Get:18 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1228 kB]
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:18.7554077Z Get:19 http://security.ubuntu.com/ubuntu noble-security/universe Translation-en [248 kB]
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:18.8453275Z Get:20 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [1788 kB]
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:18.9973137Z Get:21 http://security.ubuntu.com/ubuntu noble-security/restricted Translation-en [411 kB]
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:28.1466592Z Fetched 13.1 MB in 2s (8081 kB/s)
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:28.9988432Z Reading package lists...
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:29.0274792Z Reading package lists...
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:29.1944658Z Building dependency tree...
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:29.1957592Z Reading state information...
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:29.3320115Z libglvnd0 is already the newest version (1.7.0-1build1).
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:29.3320552Z libglvnd0 set to manually installed.
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:29.3320992Z libglx0 is already the newest version (1.7.0-1build1).
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:29.3321297Z libglx0 set to manually installed.
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:29.3321602Z libgl1 is already the newest version (1.7.0-1build1).
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:29.3321919Z libgl1 set to manually installed.
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:29.3322246Z libgl1-mesa-dri is already the newest version (25.2.8-0ubuntu0.24.04.4).
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:29.3322609Z libgl1-mesa-dri set to manually installed.
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:29.3322942Z libglx-mesa0 is already the newest version (25.2.8-0ubuntu0.24.04.4).
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:29.3323299Z libglx-mesa0 set to manually installed.
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:29.3324004Z libx11-6 is already the newest version (2:1.8.7-1ubuntu0.1).
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:29.3324317Z libx11-6 set to manually installed.
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:29.3324681Z libx11-xcb1 is already the newest version (2:1.8.7-1ubuntu0.1).
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:29.3325013Z libx11-xcb1 set to manually installed.
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:29.3325356Z libxcb1 is already the newest version (1.15-1ubuntu2).
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:29.3325741Z libxcb1 set to manually installed.
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:29.3326079Z libice6 is already the newest version (2:1.0.10-1build3).
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:29.3326662Z libice6 set to manually installed.
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:29.3326950Z libsm6 is already the newest version (2:1.2.3-1build3).
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:29.3327515Z libsm6 set to manually installed.
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:29.3327858Z libfontconfig1 is already the newest version (2.15.0-1.1ubuntu2).
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:29.3328186Z libfontconfig1 set to manually installed.
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:29.3328582Z libfreetype6 is already the newest version (2.13.2+dfsg-1ubuntu0.2).
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:29.3328955Z libfreetype6 set to manually installed.
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:29.3329266Z libharfbuzz0b is already the newest version (8.3.0-2build2).
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:29.3329802Z libharfbuzz0b set to manually installed.
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:29.3330108Z The following additional packages will be installed:
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:29.3330434Z   libegl-mesa0
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:29.3836924Z The following NEW packages will be installed:
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:29.3842679Z   libegl-mesa0 libegl1 libopengl0
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:29.4007320Z 0 upgraded, 3 newly installed, 0 to remove and 23 not upgraded.
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:29.4008124Z Need to get 179 kB of archives.
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:29.4008700Z After this operation, 726 kB of additional disk space will be used.
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:29.4009090Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [152 B]
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:29.5389991Z Get:2 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/main amd64 libegl-mesa0 amd64 25.2.8-0ubuntu0.24.04.4 [117 kB]
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:29.7665276Z Get:3 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble/main amd64 libegl1 amd64 1.7.0-1build1 [28.7 kB]
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:29.8449569Z Get:4 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble/main amd64 libopengl0 amd64 1.7.0-1build1 [32.8 kB]
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:30.9260808Z Fetched 179 kB in 0s (394 kB/s)
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:31.0122948Z Selecting previously unselected package libegl-mesa0:amd64.
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:31.2985269Z (Reading database ... 
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:31.2985781Z (Reading database ... 5%
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:31.2986038Z (Reading database ... 10%
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:31.2986503Z (Reading database ... 15%
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:31.2986807Z (Reading database ... 20%
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:31.2987027Z (Reading database ... 25%
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:31.2987315Z (Reading database ... 30%
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:31.2987573Z (Reading database ... 35%
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:31.2987806Z (Reading database ... 40%
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:31.2988029Z (Reading database ... 45%
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:31.2988240Z (Reading database ... 50%
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:31.3704241Z (Reading database ... 55%
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:31.9116106Z (Reading database ... 60%
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:32.1303384Z (Reading database ... 65%
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:32.2664961Z (Reading database ... 70%
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:32.3996557Z (Reading database ... 75%
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:32.5798615Z (Reading database ... 80%
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:34.2126971Z (Reading database ... 85%
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:35.1791321Z (Reading database ... 90%
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:36.1197870Z (Reading database ... 95%
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:36.1199233Z (Reading database ... 100%
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:36.1199912Z (Reading database ... 216380 files and directories currently installed.)
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:36.1242808Z Preparing to unpack .../libegl-mesa0_25.2.8-0ubuntu0.24.04.4_amd64.deb ...
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:36.1273502Z Unpacking libegl-mesa0:amd64 (25.2.8-0ubuntu0.24.04.4) ...
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:36.1806940Z Selecting previously unselected package libegl1:amd64.
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:36.1906199Z Preparing to unpack .../libegl1_1.7.0-1build1_amd64.deb ...
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:36.1910105Z Unpacking libegl1:amd64 (1.7.0-1build1) ...
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:36.2051008Z Selecting previously unselected package libopengl0:amd64.
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:36.2148059Z Preparing to unpack .../libopengl0_1.7.0-1build1_amd64.deb ...
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:36.2152790Z Unpacking libopengl0:amd64 (1.7.0-1build1) ...
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:36.2397312Z Setting up libopengl0:amd64 (1.7.0-1build1) ...
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:36.2409633Z Setting up libegl-mesa0:amd64 (25.2.8-0ubuntu0.24.04.4) ...
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:36.2419921Z Setting up libegl1:amd64 (1.7.0-1build1) ...
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:36.2432781Z Processing triggers for libc-bin (2.39-0ubuntu8.9) ...
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:41.5397896Z 
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:41.5398692Z Running kernel seems to be up-to-date.
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:41.5399048Z 
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:41.5399288Z No services need to be restarted.
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:41.5399449Z 
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:41.5399568Z No containers need to be restarted.
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:41.5399717Z 
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:41.5399857Z No user sessions are running outdated binaries.
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:41.5400091Z 
+real-segment	Runtime host prerequisites (same list as vc3d-linux.yml)	2026-11-16T01:24:41.5400261Z No VM guests are running outdated hypervisor (qemu) binaries on this host.
+real-segment	Real segment from the public bucket (PHerc0800)	﻿2026-11-16T01:24:42.2491490Z ##[group]Run B=https://vesuvius-challenge-open-data.s3.us-east-1.amazonaws.com/PHerc0800/segments/20251029010146-auto_grown_20251029010146642/mesh/intermediate/tifxyz_original
+real-segment	Real segment from the public bucket (PHerc0800)	2026-11-16T01:24:42.2492573Z ^[[36;1mB=https://vesuvius-challenge-open-data.s3.us-east-1.amazonaws.com/PHerc0800/segments/20251029010146-auto_grown_20251029010146642/mesh/intermediate/tifxyz_original^[[0m
+real-segment	Real segment from the public bucket (PHerc0800)	2026-11-16T01:24:42.2493158Z ^[[36;1mmkdir seg^[[0m
+real-segment	Real segment from the public bucket (PHerc0800)	2026-11-16T01:24:42.2493489Z ^[[36;1mfor f in meta.json x.tif y.tif z.tif; do curl -fsSL -o "seg/$f" "$B/$f"; done^[[0m
+real-segment	Real segment from the public bucket (PHerc0800)	2026-11-16T01:24:42.2493820Z ^[[36;1mls -l seg^[[0m
+real-segment	Real segment from the public bucket (PHerc0800)	2026-11-16T01:24:42.2494091Z ^[[36;1msha256sum seg/*^[[0m
+real-segment	Real segment from the public bucket (PHerc0800)	2026-11-16T01:24:42.2520372Z shell: /usr/bin/bash -e {0}
+real-segment	Real segment from the public bucket (PHerc0800)	2026-11-16T01:24:42.2520700Z ##[endgroup]
+real-segment	Real segment from the public bucket (PHerc0800)	2026-11-16T01:24:43.3235854Z total 64
+real-segment	Real segment from the public bucket (PHerc0800)	2026-11-16T01:24:43.3236507Z -rw-r--r-- 1 runner runner  1213 Nov 16 01:24 meta.json
+real-segment	Real segment from the public bucket (PHerc0800)	2026-11-16T01:24:43.3236971Z -rw-r--r-- 1 runner runner 18812 Nov 16 01:24 x.tif
+real-segment	Real segment from the public bucket (PHerc0800)	2026-11-16T01:24:43.3237467Z -rw-r--r-- 1 runner runner 18430 Nov 16 01:24 y.tif
+real-segment	Real segment from the public bucket (PHerc0800)	2026-11-16T01:24:43.3237992Z -rw-r--r-- 1 runner runner 18004 Nov 16 01:24 z.tif
+real-segment	Real segment from the public bucket (PHerc0800)	2026-11-16T01:24:43.3245956Z e65b15f00aa1244a75c6e0dc004580286b40e999cb647bcd0580a06f25a86c03  seg/meta.json
+real-segment	Real segment from the public bucket (PHerc0800)	2026-11-16T01:24:43.3246635Z ae146dd6355919fe8f2f7f427980926ffac1faf407d2b5914491808235df4d24  seg/x.tif
+real-segment	Real segment from the public bucket (PHerc0800)	2026-11-16T01:24:43.3247210Z 34362f60692860d40cb2546c974f04617f7ae59a2cc133bfefab0ccb55ad39f7  seg/y.tif
+real-segment	Real segment from the public bucket (PHerc0800)	2026-11-16T01:24:43.3247804Z 850c19ec82a2dc153a603ea0f540b14df466c3c9e4723e7f64b3a7bc9947d86e  seg/z.tif
+real-segment	vc_tifxyz2obj then vc_obj2tifxyz from the AppImage	﻿2026-11-16T01:24:43.3277669Z ##[group]Run a="$(ls VC3D-*.AppImage)"
+real-segment	vc_tifxyz2obj then vc_obj2tifxyz from the AppImage	2026-11-16T01:24:43.3278082Z ^[[36;1ma="$(ls VC3D-*.AppImage)"^[[0m
+real-segment	vc_tifxyz2obj then vc_obj2tifxyz from the AppImage	2026-11-16T01:24:43.3278353Z ^[[36;1mchmod +x "$a"^[[0m
+real-segment	vc_tifxyz2obj then vc_obj2tifxyz from the AppImage	2026-11-16T01:24:43.3278602Z ^[[36;1mln -sf "$a" vc_tifxyz2obj^[[0m
+real-segment	vc_tifxyz2obj then vc_obj2tifxyz from the AppImage	2026-11-16T01:24:43.3278863Z ^[[36;1mln -sf "$a" vc_obj2tifxyz^[[0m
+real-segment	vc_tifxyz2obj then vc_obj2tifxyz from the AppImage	2026-11-16T01:24:43.3279108Z ^[[36;1mmkdir -p ../out^[[0m
+real-segment	vc_tifxyz2obj then vc_obj2tifxyz from the AppImage	2026-11-16T01:24:43.3279319Z ^[[36;1mset +e^[[0m
+real-segment	vc_tifxyz2obj then vc_obj2tifxyz from the AppImage	2026-11-16T01:24:43.3279663Z ^[[36;1m./vc_tifxyz2obj ../seg ../out/seg0800.obj 2>&1 | tail -20; rc1=${PIPESTATUS[0]}^[[0m
+real-segment	vc_tifxyz2obj then vc_obj2tifxyz from the AppImage	2026-11-16T01:24:43.3280063Z ^[[36;1mecho "vc_tifxyz2obj rc=$rc1"^[[0m
+real-segment	vc_tifxyz2obj then vc_obj2tifxyz from the AppImage	2026-11-16T01:24:43.3280359Z ^[[36;1mls -l ../out^[[0m
+real-segment	vc_tifxyz2obj then vc_obj2tifxyz from the AppImage	2026-11-16T01:24:43.3280755Z ^[[36;1mecho "OBJ bytes=$(wc -c < ../out/seg0800.obj) v=$(grep -c '^v ' ../out/seg0800.obj) f=$(grep -c '^f ' ../out/seg0800.obj)"^[[0m
+real-segment	vc_tifxyz2obj then vc_obj2tifxyz from the AppImage	2026-11-16T01:24:43.3281174Z ^[[36;1msha256sum ../out/seg0800.obj^[[0m
+real-segment	vc_tifxyz2obj then vc_obj2tifxyz from the AppImage	2026-11-16T01:24:43.3281614Z ^[[36;1m./vc_obj2tifxyz ../out/seg0800.obj ../out/retour 2>&1 | tail -20; rc2=${PIPESTATUS[0]}^[[0m
+real-segment	vc_tifxyz2obj then vc_obj2tifxyz from the AppImage	2026-11-16T01:24:43.3281980Z ^[[36;1mecho "vc_obj2tifxyz rc=$rc2"^[[0m
+real-segment	vc_tifxyz2obj then vc_obj2tifxyz from the AppImage	2026-11-16T01:24:43.3282317Z ^[[36;1mls -l ../out/retour^[[0m
+real-segment	vc_tifxyz2obj then vc_obj2tifxyz from the AppImage	2026-11-16T01:24:43.3282797Z ^[[36;1mpython3 -c "import json,sys; m=json.load(open('../out/retour/meta.json')); print('retour meta:', {k: m.get(k) for k in ('format','scale','bbox')})" || true^[[0m
+real-segment	vc_tifxyz2obj then vc_obj2tifxyz from the AppImage	2026-11-16T01:24:43.3283293Z ^[[36;1m[ "$rc1" -eq 0 ] && [ "$rc2" -eq 0 ]^[[0m
+real-segment	vc_tifxyz2obj then vc_obj2tifxyz from the AppImage	2026-11-16T01:24:43.3308699Z shell: /usr/bin/bash -e {0}
+real-segment	vc_tifxyz2obj then vc_obj2tifxyz from the AppImage	2026-11-16T01:24:43.3309030Z env:
+real-segment	vc_tifxyz2obj then vc_obj2tifxyz from the AppImage	2026-11-16T01:24:43.3309323Z   APPIMAGE_EXTRACT_AND_RUN: 1
+real-segment	vc_tifxyz2obj then vc_obj2tifxyz from the AppImage	2026-11-16T01:24:43.3309588Z ##[endgroup]
+real-segment	vc_tifxyz2obj then vc_obj2tifxyz from the AppImage	2026-11-16T01:24:44.2120740Z Point dims: [42 x 42] cols: 42 rows: 42
+real-segment	vc_tifxyz2obj then vc_obj2tifxyz from the AppImage	2026-11-16T01:24:44.2121386Z UVs: scaled by 1/scale from meta.json  (u*= 20, v*= 20 )
+real-segment	vc_tifxyz2obj then vc_obj2tifxyz from the AppImage	2026-11-16T01:24:44.2121792Z       (meta scale = [0.05, 0.05])
+real-segment	vc_tifxyz2obj then vc_obj2tifxyz from the AppImage	2026-11-16T01:24:44.2122103Z vc_tifxyz2obj rc=0
+real-segment	vc_tifxyz2obj then vc_obj2tifxyz from the AppImage	2026-11-16T01:24:44.2131815Z total 244
+real-segment	vc_tifxyz2obj then vc_obj2tifxyz from the AppImage	2026-11-16T01:24:44.2132119Z -rw-r--r-- 1 runner runner 246972 Nov 16 01:24 seg0800.obj
+real-segment	vc_tifxyz2obj then vc_obj2tifxyz from the AppImage	2026-11-16T01:24:44.2183420Z OBJ bytes=246972 v=1444 f=2738
+real-segment	vc_tifxyz2obj then vc_obj2tifxyz from the AppImage	2026-11-16T01:24:44.2193229Z 2b756369e815454bfc4f36fb18fdf35bf6095676db23cf263125441590151e8b  ../out/seg0800.obj
+real-segment	vc_tifxyz2obj then vc_obj2tifxyz from the AppImage	2026-11-16T01:24:44.5097993Z Converting OBJ to tifxyz format
+real-segment	vc_tifxyz2obj then vc_obj2tifxyz from the AppImage	2026-11-16T01:24:44.5098315Z Input: "../out/seg0800.obj"
+real-segment	vc_tifxyz2obj then vc_obj2tifxyz from the AppImage	2026-11-16T01:24:44.5098596Z Output: "../out/retour"
+real-segment	vc_tifxyz2obj then vc_obj2tifxyz from the AppImage	2026-11-16T01:24:44.5098811Z Stretch factor: 1
+real-segment	vc_tifxyz2obj then vc_obj2tifxyz from the AppImage	2026-11-16T01:24:44.5099032Z Mesh units: 1 micrometers per OBJ unit
+real-segment	vc_tifxyz2obj then vc_obj2tifxyz from the AppImage	2026-11-16T01:24:44.5099327Z UV mode: metric (default)
+real-segment	vc_tifxyz2obj then vc_obj2tifxyz from the AppImage	2026-11-16T01:24:44.5099581Z UV->OBJ scale: 1 OBJ units / UV unit
+real-segment	vc_tifxyz2obj then vc_obj2tifxyz from the AppImage	2026-11-16T01:24:44.5100028Z Loaded OBJ file:
+real-segment	vc_tifxyz2obj then vc_obj2tifxyz from the AppImage	2026-11-16T01:24:44.5100247Z   Vertices: 1444
+real-segment	vc_tifxyz2obj then vc_obj2tifxyz from the AppImage	2026-11-16T01:24:44.5100467Z   UVs: 1444
+real-segment	vc_tifxyz2obj then vc_obj2tifxyz from the AppImage	2026-11-16T01:24:44.5100708Z   Faces: 2738
+real-segment	vc_tifxyz2obj then vc_obj2tifxyz from the AppImage	2026-11-16T01:24:44.5100920Z UV bounds: [40, 40] to [780, 780]
+real-segment	vc_tifxyz2obj then vc_obj2tifxyz from the AppImage	2026-11-16T01:24:44.5101196Z UV-metric mode: grid 741 x 741  scale(OBJ units): 1, 1
+real-segment	vc_tifxyz2obj then vc_obj2tifxyz from the AppImage	2026-11-16T01:24:44.5101507Z Valid grid points: 547600 / 549081 (99.7303%)
+real-segment	vc_tifxyz2obj then vc_obj2tifxyz from the AppImage	2026-11-16T01:24:44.5101777Z Scale from UV (micrometers): 1, 1
+real-segment	vc_tifxyz2obj then vc_obj2tifxyz from the AppImage	2026-11-16T01:24:44.5102053Z Saving to tifxyz format...
+real-segment	vc_tifxyz2obj then vc_obj2tifxyz from the AppImage	2026-11-16T01:24:44.5102307Z Successfully converted to tifxyz format
+real-segment	vc_tifxyz2obj then vc_obj2tifxyz from the AppImage	2026-11-16T01:24:44.5104319Z vc_obj2tifxyz rc=0
+real-segment	vc_tifxyz2obj then vc_obj2tifxyz from the AppImage	2026-11-16T01:24:44.5112462Z total 6448
+real-segment	vc_tifxyz2obj then vc_obj2tifxyz from the AppImage	2026-11-16T01:24:44.5112764Z -rw-r--r-- 1 runner runner     307 Nov 16 01:24 meta.json
+real-segment	vc_tifxyz2obj then vc_obj2tifxyz from the AppImage	2026-11-16T01:24:44.5114721Z -rw-r--r-- 1 runner runner 2196542 Nov 16 01:24 x.tif
+real-segment	vc_tifxyz2obj then vc_obj2tifxyz from the AppImage	2026-11-16T01:24:44.5115068Z -rw-r--r-- 1 runner runner 2196542 Nov 16 01:24 y.tif
+real-segment	vc_tifxyz2obj then vc_obj2tifxyz from the AppImage	2026-11-16T01:24:44.5115338Z -rw-r--r-- 1 runner runner 2196542 Nov 16 01:24 z.tif
+real-segment	vc_tifxyz2obj then vc_obj2tifxyz from the AppImage	2026-11-16T01:24:44.5244978Z retour meta: {'format': 'tifxyz', 'scale': [1.0, 1.0], 'bbox': [[3085.5146484375, 5891.77880859375, 11599.6162109375], [3717.66162109375, 6622.96484375, 12516.8623046875]]}
+real-segment	Upload outputs	﻿2026-11-16T01:24:44.5335256Z ##[group]Run actions/upload-artifact@v4
+real-segment	Upload outputs	2026-11-16T01:24:44.5335552Z with:
+real-segment	Upload outputs	2026-11-16T01:24:44.5335811Z   name: appimage-reel-outputs
+real-segment	Upload outputs	2026-11-16T01:24:44.5336071Z   path: out/
+real-segment	Upload outputs	2026-11-16T01:24:44.5336473Z   if-no-files-found: warn
+real-segment	Upload outputs	2026-11-16T01:24:44.5336755Z   compression-level: 6
+real-segment	Upload outputs	2026-11-16T01:24:44.5336958Z   overwrite: false
+real-segment	Upload outputs	2026-11-16T01:24:44.5337193Z   include-hidden-files: false
+real-segment	Upload outputs	2026-11-16T01:24:44.5337460Z ##[endgroup]
+real-segment	Upload outputs	2026-11-16T01:24:48.4429743Z (node:2545) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+real-segment	Upload outputs	2026-11-16T01:24:48.4430727Z (Use `node --trace-deprecation ...` to show where the warning was created)
+real-segment	Upload outputs	2026-11-16T01:24:48.4517042Z With the provided path, there will be 5 files uploaded
+real-segment	Upload outputs	2026-11-16T01:24:48.4520379Z Artifact name is valid!
+real-segment	Upload outputs	2026-11-16T01:24:48.4520847Z Root directory input is valid!
+real-segment	Upload outputs	2026-11-16T01:24:48.9394866Z Beginning upload of artifact content to blob storage
+real-segment	Upload outputs	2026-11-16T01:24:49.3175397Z (node:2545) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+real-segment	Upload outputs	2026-11-16T01:24:50.4183228Z Uploaded bytes 5159213
+real-segment	Upload outputs	2026-11-16T01:24:50.5070838Z Finished uploading artifact content to blob storage!
+real-segment	Upload outputs	2026-11-16T01:24:50.5071555Z SHA256 digest of uploaded artifact zip is 1d54dd2235deef3e52a065955c97d2735b21abde2f6a31f5aeaab97d408f3236
+real-segment	Upload outputs	2026-11-16T01:24:50.5072428Z Finalizing artifact upload
+real-segment	Upload outputs	2026-11-16T01:24:50.9337275Z Artifact appimage-reel-outputs.zip successfully finalized. Artifact ID 14190178001
+real-segment	Upload outputs	2026-11-16T01:24:50.9338319Z Artifact appimage-reel-outputs has been successfully uploaded! Final size is 5159213 bytes. Artifact ID is 14190178001
+real-segment	Upload outputs	2026-11-16T01:24:50.9341801Z Artifact download URL: https://github.com/Cmssmc-code/villa/actions/runs/43785970414/artifacts/14190178001
+real-segment	Complete job	﻿2026-11-16T01:24:50.9499734Z Cleaning up orphan processes
+real-segment	Complete job	2026-11-16T01:24:50.9737753Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
