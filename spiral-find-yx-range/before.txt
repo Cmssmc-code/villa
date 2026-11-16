@@ -1,0 +1,41 @@
+BEFORE: origin/main 2d3fb38d3 (spiral-fitting from `git archive origin/main`), Windows 11, CPU only.
+
+Data: PHerc0332 surface predictions, local mirror of
+  https://vesuvius-challenge-open-data.s3.us-east-1.amazonaws.com/PHerc0332/representations/predictions/surfaces/20251211183505-surface-20260413222639-surface-m7-L2-th0.2.zarr/0
+  (zarr v2, shape 8398 x 3941 x 3941 uint8, chunks 192^3, blosc zstd; mirrored chunk rows z 21 and 22,
+  about 44 MB compressed and 195 stored chunks per chunk row)
+Python 3.14.10, zarr 3.4.2, numpy 2.5.4 (venv-pywin + donnees-spirale-cpu\extra on PYTHONPATH).
+
+Command (run through mesure.py, which puts the whole process tree in a Windows job object and
+reports wall time and user+kernel CPU time of all processes; normal priority):
+
+  cd <origin/main>\spiral-fitting
+  python extract_surface_tracks.py --backend cpu --predictions <mirror>\0 --out A<n>-64p2.dbm
+         --z-min 4032 --z-max 4096 --no-packed-store --kimimaro-parallel 1
+
+Output of run A1-64p2 (journaux\run-A1-64p2.txt, progress bars trimmed):
+
+  backend: cpu (Kimimaro), as requested
+  opening %USERPROFILE%/Dev/vesuvius/donnees-spirale-cpu/PHerc0332-20251211183505-surface-m7-L2-th0.2.zarr/0
+  extracting horizontal ribbons
+  horizontal ribbons: 100% 4/4 [03:11<00:00]
+  finding yx range for vertical passes
+  finding yx range: 100% 22/22 [01:32<00:00,  4.20s/it]      <- 22 single-slice reads, all in chunk row z 21
+    yx range (full-res): [768 384] .. [3455 3839]
+  extracting vertical zx-plane tracks
+  vertical y-stride slabs: 100% 42/42 [00:25<00:00]
+  extracting vertical zy-plane tracks
+  vertical x-stride slabs: 100% 54/54 [00:33<00:00]
+
+  MESURE A1-64p2: rc=0 wall=345.6s cpu=220.6s peak_proc_mem=1338MB
+
+Output store: 100 keys, 1983 tracks, 127696 vertices, fingerprint 0795c83cd244afe5 (scripts\compare.py).
+
+find_yx_range alone (scripts\phase_yx.py, fresh process, same data, z 4032..4096), journaux\phase_yx-1.txt:
+  A round 0: wall 165.23 s cpu 127.53 s range [768, 384] .. [3455, 3839]
+  A round 1: wall 79.48 s cpu 122.20 s range [768, 384] .. [3455, 3839]
+(That run was made while the PC was starving low-priority processes; see PR.md.)
+
+Why: each `predictions_zarr_array[z]` touches every chunk of the chunk row that contains z, so the
+whole 192-slice chunk row is decompressed for one slice. With a z range under 20 x 192 slices,
+several sampled slices fall in the same chunk row and that row is decompressed again for each one.

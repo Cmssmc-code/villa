@@ -1,0 +1,5 @@
+=== 03:42:45 main in %USERPROFILE%/Dev/vesuvius/nuit-1611/acceleration-python/main-arbre/spiral-fitting
+rc=1 2 failed, 29 passed, 9 skipped in 333.73s (0:05:33)
+=== 03:48:34 branche in %USERPROFILE%/Dev/vesuvius/wt-accel-py/spiral-fitting
+rc=1 2 failed, 29 passed, 9 skipped in 326.19s (0:05:26)
+FIN rc=0

@@ -1,0 +1,8 @@
+MESURE A1-64: start 03:05:31 rc=0 ok wall=414.9s cpu=233.4s cpu/wall=0.56 processes=4 peak_job_mem=1340MB peak_proc_mem=1337MB free_mem_start=3774MB free_mem_end=2155MB
+MESURE B1-64: start 03:12:26 rc=0 ok wall=248.7s cpu=121.1s cpu/wall=0.49 processes=4 peak_job_mem=1342MB peak_proc_mem=1339MB free_mem_start=2178MB free_mem_end=1981MB
+MESURE A1-64p2: start 03:32:06 rc=0 ok wall=345.6s cpu=220.6s cpu/wall=0.64 processes=4 peak_job_mem=1341MB peak_proc_mem=1338MB free_mem_start=1954MB free_mem_end=3567MB
+MESURE B1-64p2: start 03:37:52 rc=0 ok wall=294.6s cpu=114.9s cpu/wall=0.39 processes=3 peak_job_mem=1341MB peak_proc_mem=1339MB free_mem_start=3582MB free_mem_end=3608MB
+MESURE A2-64p2: start 03:42:51 rc=0 ok wall=407.8s cpu=216.3s cpu/wall=0.53 processes=3 peak_job_mem=1341MB peak_proc_mem=1339MB free_mem_start=3839MB free_mem_end=4186MB
+MESURE B2-64p2: start 03:49:40 rc=0 ok wall=280.7s cpu=111.7s cpu/wall=0.40 processes=4 peak_job_mem=1342MB peak_proc_mem=1339MB free_mem_start=3836MB free_mem_end=3344MB
+MESURE A3-64p2: start 03:54:23 rc=0 ok wall=285.1s cpu=220.4s cpu/wall=0.77 processes=3 peak_job_mem=1343MB peak_proc_mem=1341MB free_mem_start=3224MB free_mem_end=1734MB
+MESURE B3-64p2: start 03:59:09 rc=0 ok wall=148.6s cpu=114.1s cpu/wall=0.77 processes=3 peak_job_mem=1343MB peak_proc_mem=1340MB free_mem_start=1732MB free_mem_end=749MB

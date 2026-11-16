@@ -1,0 +1,102 @@
+.......FFssss..ss....s..s..............s                                 [100%]
+================================== FAILURES ===================================
+______________________ test_dbm_equal_to_default[opts1] _______________________
+
+tmp_path = WindowsPath('%USERPROFILE%/AppData/Local/Temp/pytest-of-user/pytest-2/test_dbm_equal_to_default_opts1')
+opts = {'slab_workers': 3, 'kimimaro_parallel': 1}
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000002AAED25BAC0>
+
+    @pytest.mark.parametrize('opts', [
+        dict(kimimaro_parallel=1),
+        dict(slab_workers=3, kimimaro_parallel=1),
+    ])
+    def test_dbm_equal_to_default(tmp_path, opts, monkeypatch):
+        volume = _blobs((64, 128, 128), 0.03, 7)
+        with monkeypatch.context() as reference:
+            reference.setattr(est, 'prepare_cc_labels', _reference_labels)
+            want = _run(tmp_path, 'ref', volume)
+>       got = _run(tmp_path, 'new', volume, **opts)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_cc_labels.py:95: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_cc_labels.py:70: in _run
+    est.extract_horizontal(volume, db)
+extract_surface_tracks.py:273: in extract_horizontal
+    _run_slabs(predictions_zarr_array, tracks_db, jobs, 'horizontal ribbons')
+extract_surface_tracks.py:255: in _run_slabs
+    pool = ProcessPoolExecutor(slab_workers, mp_context=multiprocessing.get_context('fork'))
+                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+%USERPROFILE%\AppData\Roaming\uv\python\cpython-3.14-windows-x86_64-none\Lib\multiprocessing\context.py:259: in get_context
+    return super().get_context(method)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <multiprocessing.context.DefaultContext object at 0x000002AAD352D7F0>
+method = 'fork'
+
+    def get_context(self, method=None):
+        if method is None:
+            return self
+        try:
+            ctx = _concrete_contexts[method]
+        except KeyError:
+>           raise ValueError('cannot find context for %r' % method) from None
+E           ValueError: cannot find context for 'fork'
+
+%USERPROFILE%\AppData\Roaming\uv\python\cpython-3.14-windows-x86_64-none\Lib\multiprocessing\context.py:200: ValueError
+---------------------------- Captured stderr call -----------------------------
+horizontal ribbons:   0%|          | 0/4 [00:00<?, ?it/s]horizontal ribbons:  25%|██▌       | 1/4 [00:05<00:15,  5.13s/it]horizontal ribbons:  50%|█████     | 2/4 [00:17<00:18,  9.21s/it]horizontal ribbons:  75%|███████▌  | 3/4 [00:23<00:07,  7.98s/it]horizontal ribbons: 100%|██████████| 4/4 [00:27<00:00,  6.37s/it]horizontal ribbons: 100%|██████████| 4/4 [00:27<00:00,  6.91s/it]
+finding yx range:   0%|          | 0/22 [00:00<?, ?it/s]finding yx range: 100%|██████████| 22/22 [00:00<00:00, 1329.36it/s]
+vertical y-stride slabs:   0%|          | 0/2 [00:00<?, ?it/s]vertical y-stride slabs:  50%|█████     | 1/2 [00:04<00:04,  4.27s/it]vertical y-stride slabs: 100%|██████████| 2/2 [00:08<00:00,  4.09s/it]vertical y-stride slabs: 100%|██████████| 2/2 [00:08<00:00,  4.12s/it]
+vertical x-stride slabs:   0%|          | 0/2 [00:00<?, ?it/s]vertical x-stride slabs:  50%|█████     | 1/2 [00:04<00:04,  4.71s/it]vertical x-stride slabs: 100%|██████████| 2/2 [00:09<00:00,  4.96s/it]vertical x-stride slabs: 100%|██████████| 2/2 [00:09<00:00,  4.93s/it]
+__________________________ test_slab_workers_on_zarr __________________________
+
+tmp_path = WindowsPath('%USERPROFILE%/AppData/Local/Temp/pytest-of-user/pytest-2/test_slab_workers_on_zarr0')
+
+    def test_slab_workers_on_zarr(tmp_path):
+        # Workers forked after the parent has read the zarr array (find_yx_range) must still read it.
+        zarr = pytest.importorskip('zarr')
+        volume = _blobs((64, 128, 128), 0.03, 7)
+        arr = zarr.open_array(str(tmp_path / 'pred.zarr'), mode='w', shape=volume.shape, chunks=(32, 64, 64), dtype='u1')
+        arr[:] = volume
+        want = _run(tmp_path, 'ref', volume)
+>       got = _run(tmp_path, 'new', zarr.open_array(str(tmp_path / 'pred.zarr'), mode='r'),
+                   slab_workers=3, kimimaro_parallel=1)
+
+tests\test_cc_labels.py:107: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_cc_labels.py:70: in _run
+    est.extract_horizontal(volume, db)
+extract_surface_tracks.py:273: in extract_horizontal
+    _run_slabs(predictions_zarr_array, tracks_db, jobs, 'horizontal ribbons')
+extract_surface_tracks.py:255: in _run_slabs
+    pool = ProcessPoolExecutor(slab_workers, mp_context=multiprocessing.get_context('fork'))
+                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+%USERPROFILE%\AppData\Roaming\uv\python\cpython-3.14-windows-x86_64-none\Lib\multiprocessing\context.py:259: in get_context
+    return super().get_context(method)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <multiprocessing.context.DefaultContext object at 0x000002AAD352D7F0>
+method = 'fork'
+
+    def get_context(self, method=None):
+        if method is None:
+            return self
+        try:
+            ctx = _concrete_contexts[method]
+        except KeyError:
+>           raise ValueError('cannot find context for %r' % method) from None
+E           ValueError: cannot find context for 'fork'
+
+%USERPROFILE%\AppData\Roaming\uv\python\cpython-3.14-windows-x86_64-none\Lib\multiprocessing\context.py:200: ValueError
+---------------------------- Captured stderr call -----------------------------
+horizontal ribbons:   0%|          | 0/4 [00:00<?, ?it/s]horizontal ribbons:  25%|██▌       | 1/4 [00:06<00:19,  6.57s/it]horizontal ribbons:  50%|█████     | 2/4 [00:17<00:17,  8.88s/it]horizontal ribbons:  75%|███████▌  | 3/4 [00:20<00:06,  6.55s/it]horizontal ribbons: 100%|██████████| 4/4 [00:26<00:00,  6.19s/it]horizontal ribbons: 100%|██████████| 4/4 [00:26<00:00,  6.62s/it]
+finding yx range:   0%|          | 0/22 [00:00<?, ?it/s]finding yx range: 100%|██████████| 22/22 [00:00<00:00, 1282.34it/s]
+vertical y-stride slabs:   0%|          | 0/2 [00:00<?, ?it/s]vertical y-stride slabs:  50%|█████     | 1/2 [00:06<00:06,  6.73s/it]vertical y-stride slabs: 100%|██████████| 2/2 [00:27<00:00, 14.91s/it]vertical y-stride slabs: 100%|██████████| 2/2 [00:27<00:00, 13.68s/it]
+vertical x-stride slabs:   0%|          | 0/2 [00:00<?, ?it/s]vertical x-stride slabs:  50%|█████     | 1/2 [00:28<00:28, 28.93s/it]vertical x-stride slabs: 100%|██████████| 2/2 [00:33<00:00, 14.59s/it]vertical x-stride slabs: 100%|██████████| 2/2 [00:33<00:00, 16.74s/it]
+=========================== short test summary info ===========================
+FAILED tests/test_cc_labels.py::test_dbm_equal_to_default[opts1] - ValueError...
+FAILED tests/test_cc_labels.py::test_slab_workers_on_zarr - ValueError: canno...
+2 failed, 29 passed, 9 skipped in 333.73s (0:05:33)

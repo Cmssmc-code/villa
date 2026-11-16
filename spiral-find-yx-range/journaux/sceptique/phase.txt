@@ -1,0 +1,12 @@
+command (one fresh process each): python phase.py <tree>/spiral-fitting <PHerc0332 m7-L2-th0.2 mirror>/0 <z_min> <z_max>
+A = git archive 2d3fb38d3 (origin/main), B = git archive 27a2feefe; Python 3.14.10, zarr 3.4.2, numpy 2.5.4; data copied to donnees-sceptique-spirale-yx-range
+04:15:51
+PHASE tree=A z=4032..4096 wall=74.5s cpu=131.9s blosc_decodes=4290 range=[768, 384]..[3455, 3839]
+04:17:14
+PHASE tree=B z=4032..4096 wall=11.3s cpu=13.4s blosc_decodes=390 range=[768, 384]..[3455, 3839]
+04:17:26
+PHASE tree=A z=4032..4416 wall=57.1s cpu=109.2s blosc_decodes=4165 range=[768, 384]..[3455, 3839]
+04:18:25
+PHASE tree=B z=4032..4416 wall=11.9s cpu=10.9s blosc_decodes=397 range=[768, 384]..[3455, 3839]
+04:18:39
+04:18:39

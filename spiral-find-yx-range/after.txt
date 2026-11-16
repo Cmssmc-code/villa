@@ -1,0 +1,38 @@
+AFTER: branch spiral-find-yx-range-read-rows, commit 27a2feefe (parent origin/main 2d3fb38d3),
+one file changed: spiral-fitting/extract_surface_tracks.py (+15 -6). Same PC, same venv, same data
+and same command as before.txt (only the spiral-fitting tree differs).
+
+  cd <branch>\spiral-fitting
+  python extract_surface_tracks.py --backend cpu --predictions <mirror>\0 --out B<n>-64p2.dbm
+         --z-min 4032 --z-max 4096 --no-packed-store --kimimaro-parallel 1
+
+Output of run B1-64p2 (journaux\run-B1-64p2.txt, progress bars trimmed):
+
+  backend: cpu (Kimimaro), as requested
+  opening %USERPROFILE%/Dev/vesuvius/donnees-spirale-cpu/PHerc0332-20251211183505-surface-m7-L2-th0.2.zarr/0
+  extracting horizontal ribbons
+  horizontal ribbons: 100% 4/4 [02:47<00:00]
+  finding yx range for vertical passes
+  finding yx range: 100% 2/2 [00:47<00:00, 23.70s/it]        <- 2 reads (17 + 5 slices), same 22 slices
+    yx range (full-res): [768 384] .. [3455 3839]
+  extracting vertical zx-plane tracks
+  vertical y-stride slabs: 100% 42/42 [00:35<00:00]
+  extracting vertical zy-plane tracks
+  vertical x-stride slabs: 100% 54/54 [00:41<00:00]
+
+  MESURE B1-64p2: rc=0 wall=294.6s cpu=114.9s peak_proc_mem=1339MB
+
+Output store: identical to main (scripts\compare.py, journaux\compare-64p2.txt):
+  100 keys, 1983 tracks, 127696 vertices, fingerprint 0795c83cd244afe5, SAME keys and bytes, RESULT IDENTICAL
+
+All alternated runs (A = main, B = branch): see journaux\mesures.txt and the table in PR.md.
+
+find_yx_range alone (scripts\phase_yx.py), journaux\phase_yx-1.txt:
+  B round 0: wall 36.57 s cpu 21.06 s range [768, 384] .. [3455, 3839]
+  B round 1: wall 47.14 s cpu 20.69 s range [768, 384] .. [3455, 3839]
+
+Module tests (python -m pytest -q tests/test_cc_labels.py tests/test_extract_surface_tracks.py):
+  origin/main: 2 failed, 29 passed, 9 skipped   (journaux\tests-main.txt)
+  branch     : 2 failed, 29 passed, 9 skipped   (journaux\tests-branche.txt)
+  The same 2 tests fail on both: test_dbm_equal_to_default[opts1] and test_slab_workers_on_zarr,
+  "ValueError: cannot find context for 'fork'" (fork does not exist on Windows; unrelated to this change).

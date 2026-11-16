@@ -1,0 +1,12 @@
+whole command, one run each, A = git archive 2d3fb38d3, B = git archive 27a2feefe, data copied to donnees-sceptique-spirale-yx-range
+python extract_surface_tracks.py --backend cpu --predictions <mirror>/0 --out <out>.dbm --z-min 4032 --z-max 4096 --no-packed-store --kimimaro-parallel 1 (through mesure.py)
+MESURE FULL-A: start 04:19:59 rc=0 ok wall=190.0s cpu=226.5s cpu/wall=1.19 processes=3 peak_job_mem=1342MB peak_proc_mem=1339MB free_mem_start=1688MB free_mem_end=3575MB
+MESURE FULL-B: start 04:23:10 rc=0 ok wall=109.6s cpu=120.8s cpu/wall=1.10 processes=3 peak_job_mem=1343MB peak_proc_mem=1340MB free_mem_start=3577MB free_mem_end=4122MB
+A finding yx range: 100%|##########| 22/22 [01:19<00
+B finding yx range: 100%|##########| 2/2 [00:17<00:0
+04:19:59
+04:23:10
+out-A.dbm: 100 keys sha256=ecedb9da9f297a47
+out-B.dbm: 100 keys sha256=ecedb9da9f297a47
+IDENTICAL
+FIN rc=0

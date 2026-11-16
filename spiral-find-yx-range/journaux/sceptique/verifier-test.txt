@@ -1,0 +1,33 @@
+=== 1. Branch content
+27a2feefe spiral-fitting: decode each chunk row once when finding the yx range
+
+=== 2. find_yx_range only, z 4032..4096, A then B (one round)
+EXPECTED: (A reads 22 slices one by one, B reads 2 batches) both print
+          range [768, 384] .. [3455, 3839]; B takes less wall and cpu time.
+OBTAINED:
+A round 0: wall 46.39 s cpu 92.92 s range [768, 384] .. [3455, 3839]
+B round 0: wall 15.98 s cpu 19.84 s range [768, 384] .. [3455, 3839]
+
+=== 3. Full extract_surface_tracks runs recorded tonight (same command, same data)
+EXPECTED: RESULT IDENTICAL, fingerprint 0795c83cd244afe5 for every store
+OBTAINED:
+%USERPROFILE%\Dev\vesuvius\donnees-acceleration-python\A1-64p2.dbm: 100 keys, 1983 tracks, 127696 vertices, fingerprint 0795c83cd244afe5
+%USERPROFILE%\Dev\vesuvius\donnees-acceleration-python\B1-64p2.dbm: 100 keys, 1983 tracks, 127696 vertices, fingerprint 0795c83cd244afe5, SAME keys and bytes
+%USERPROFILE%\Dev\vesuvius\donnees-acceleration-python\A2-64p2.dbm: 100 keys, 1983 tracks, 127696 vertices, fingerprint 0795c83cd244afe5, SAME keys and bytes
+%USERPROFILE%\Dev\vesuvius\donnees-acceleration-python\B2-64p2.dbm: 100 keys, 1983 tracks, 127696 vertices, fingerprint 0795c83cd244afe5, SAME keys and bytes
+%USERPROFILE%\Dev\vesuvius\donnees-acceleration-python\A3-64p2.dbm: 100 keys, 1983 tracks, 127696 vertices, fingerprint 0795c83cd244afe5, SAME keys and bytes
+%USERPROFILE%\Dev\vesuvius\donnees-acceleration-python\B3-64p2.dbm: 100 keys, 1983 tracks, 127696 vertices, fingerprint 0795c83cd244afe5, SAME keys and bytes
+RESULT IDENTICAL
+
+=== 4. Timings recorded tonight (mesure.py: wall and cpu of the whole process tree)
+EXPECTED: B lines have about half the cpu of A lines
+OBTAINED:
+MESURE A1-64p2: start 03:32:06 rc=0 ok wall=345.6s cpu=220.6s cpu/wall=0.64 processes=4 peak_job_mem=1341MB peak_proc_mem=1338MB free_mem_start=1954MB free_mem_end=3567MB
+MESURE B1-64p2: start 03:37:52 rc=0 ok wall=294.6s cpu=114.9s cpu/wall=0.39 processes=3 peak_job_mem=1341MB peak_proc_mem=1339MB free_mem_start=3582MB free_mem_end=3608MB
+MESURE A2-64p2: start 03:42:51 rc=0 ok wall=407.8s cpu=216.3s cpu/wall=0.53 processes=3 peak_job_mem=1341MB peak_proc_mem=1339MB free_mem_start=3839MB free_mem_end=4186MB
+MESURE B2-64p2: start 03:49:40 rc=0 ok wall=280.7s cpu=111.7s cpu/wall=0.40 processes=4 peak_job_mem=1342MB peak_proc_mem=1339MB free_mem_start=3836MB free_mem_end=3344MB
+MESURE A3-64p2: start 03:54:23 rc=0 ok wall=285.1s cpu=220.4s cpu/wall=0.77 processes=3 peak_job_mem=1343MB peak_proc_mem=1341MB free_mem_start=3224MB free_mem_end=1734MB
+MESURE B3-64p2: start 03:59:09 rc=0 ok wall=148.6s cpu=114.1s cpu/wall=0.77 processes=3 peak_job_mem=1343MB peak_proc_mem=1340MB free_mem_start=1732MB free_mem_end=749MB
+
+Appuyez sur une touche pour continuer... 
+FIN rc=0

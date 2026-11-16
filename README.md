@@ -15,3 +15,4 @@ Proof files (screenshots, scripts and logs) for pull requests to ScrollPrize/vil
 - `vc3d-appimage-builder/`: The VC3D Linux AppImage build after vc_reader started to need concurrentqueue (builder image pin).
 - `vc3d-installer-object-convert/`: The VC3D Windows installer ships vc_object_convert next to VC3D.
 - `vc-object-convert-in-place/`: vc_object_convert --in-place on Windows: before and after on real VC3D project stores.
+- `spiral-find-yx-range/`: extract_surface_tracks.py: the yx range step decodes each chunk row of the predictions once (timings and identical outputs on PHerc0332).

@@ -1,0 +1,3 @@
+donnees-acceleration-python/A1-64.dbm: 100 keys, 1983 tracks, 127696 vertices, fingerprint 0795c83cd244afe5
+donnees-acceleration-python/B1-64.dbm: 100 keys, 1983 tracks, 127696 vertices, fingerprint 0795c83cd244afe5, SAME keys and bytes
+RESULT IDENTICAL
