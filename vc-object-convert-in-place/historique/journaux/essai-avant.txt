@@ -1,0 +1,171 @@
+label avant; date 2026-11-16 03:57:52
+binary main: %USERPROFILE%\Dev\vesuvius\nuit-1611\historique-windows\bin\main\vc_object_convert.exe
+  sha256 exe f3395a428c02104464ba6a201fe7392bc9c2b9965fff32599306518db76ea61e
+  sha256 libvc_objects.dll e08ba273c47b2688f311f85b893bcb8aa651c26fba224cf7e4d0abd42d1e77b6
+binary corrige: %USERPROFILE%\Dev\vesuvius\nuit-1611\historique-windows\bin\corrige\vc_object_convert.exe
+  sha256 exe 24c844d21e3fbce94746e3ebfd087a7ac4f8913d087f1cc541c2e0fba512996d
+  sha256 libvc_objects.dll e08ba273c47b2688f311f85b893bcb8aa651c26fba224cf7e4d0abd42d1e77b6
+
+=== store p1: p1.vcobj (source %USERPROFILE%\Dev\vesuvius\donnees-historique-windows\source\p1) ===
+[prepare, main] $ vc_object_convert.exe "p1.vcobj" s22.vcobj -> rc=0 (0.1s)
+  s22.vcobj: user_version=22 integrity=ok history_enabled=1 tables=49 rows=230
+  s22.vcobj: history tables present: {'journal': 5, 'object_revisions': 2, 'geometry_revisions': 2, 'history_generations': 1, 'store_commits': 2, 'object_versions': 2, 'relationship_versions': 0, 'geometry_revision_chunks': 4}
+[main] run 1 $ vc_object_convert.exe --remove-history-and-disable store.vcobj -> rc=1 (0.1s)
+  output: vc_object_convert: filesystem error: cannot replace file: Accès refusé [%USERPROFILE%\Dev\vesuvius\donnees-historique-windows\essais-avant\p1\main\store.vcobj.policy-75bce8e1-2081-450b-8403-8ee940743452] [%USERPROFILE%\Dev\vesuvius\donnees-historique-windows\essais-avant\p1\main\store.vcobj]
+  store file changed: False
+  files left: ['store.vcobj', 'store.vcobj-owner']
+  store.vcobj: user_version=22 integrity=ok history_enabled=1 tables=49 rows=230
+  store.vcobj: history tables present: {'journal': 5, 'object_revisions': 2, 'geometry_revisions': 2, 'history_generations': 1, 'store_commits': 2, 'object_versions': 2, 'relationship_versions': 0, 'geometry_revision_chunks': 4}
+  objects/edges/geometry_chunks: {'edges': 0, 'geometry_chunks': 8, 'objects': 2} (s22 reference: {'objects': 2, 'edges': 0, 'geometry_chunks': 8})
+[main] run 2 $ vc_object_convert.exe --enable-history store.vcobj -> rc=0 (0.0s)
+  output: History policy updated atomically
+  store file changed: False
+  files left: ['store.vcobj', 'store.vcobj-owner']
+  store.vcobj: user_version=22 integrity=ok history_enabled=1 tables=49 rows=230
+  store.vcobj: history tables present: {'journal': 5, 'object_revisions': 2, 'geometry_revisions': 2, 'history_generations': 1, 'store_commits': 2, 'object_versions': 2, 'relationship_versions': 0, 'geometry_revision_chunks': 4}
+  objects/edges/geometry_chunks: {'edges': 0, 'geometry_chunks': 8, 'objects': 2} (s22 reference: {'objects': 2, 'edges': 0, 'geometry_chunks': 8})
+[main] run 3 $ vc_object_convert.exe --remove-history-and-disable store.vcobj -> rc=1 (0.1s)
+  output: vc_object_convert: filesystem error: cannot replace file: Accès refusé [%USERPROFILE%\Dev\vesuvius\donnees-historique-windows\essais-avant\p1\main\store.vcobj.policy-03259d0e-a78b-48d0-a62a-830e747c5e10] [%USERPROFILE%\Dev\vesuvius\donnees-historique-windows\essais-avant\p1\main\store.vcobj]
+  store file changed: False
+  files left: ['store.vcobj', 'store.vcobj-owner']
+  store.vcobj: user_version=22 integrity=ok history_enabled=1 tables=49 rows=230
+  store.vcobj: history tables present: {'journal': 5, 'object_revisions': 2, 'geometry_revisions': 2, 'history_generations': 1, 'store_commits': 2, 'object_versions': 2, 'relationship_versions': 0, 'geometry_revision_chunks': 4}
+  objects/edges/geometry_chunks: {'edges': 0, 'geometry_chunks': 8, 'objects': 2} (s22 reference: {'objects': 2, 'edges': 0, 'geometry_chunks': 8})
+[main] $ vc_object_convert.exe --in-place "p1.vcobj" -> rc=1 (0.1s)
+  output: vc_object_convert: filesystem error: cannot replace file: Accès refusé [%USERPROFILE%\Dev\vesuvius\donnees-historique-windows\essais-avant\p1\main-inplace\p1.vcobj.convert-af512256-edfc-4fd2-8c2d-d9bbe3a692f3] [%USERPROFILE%\Dev\vesuvius\donnees-historique-windows\essais-avant\p1\main-inplace\p1.vcobj]
+  p1.vcobj: user_version=21 integrity=ok history_enabled=1 tables=49 rows=231
+  p1.vcobj: history tables present: {'journal': 5, 'object_revisions': 2, 'geometry_revisions': 2, 'history_generations': 1, 'store_commits': 2, 'object_versions': 2, 'relationship_versions': 0, 'geometry_revision_chunks': 4}
+[corrige] run 1 $ vc_object_convert.exe --remove-history-and-disable store.vcobj -> rc=1 (0.4s)
+  output: vc_object_convert: filesystem error: cannot replace file: Accès refusé [%USERPROFILE%\Dev\vesuvius\donnees-historique-windows\essais-avant\p1\corrige\store.vcobj.policy-54af1725-a2a2-4874-8154-c788ba3e53a0] [%USERPROFILE%\Dev\vesuvius\donnees-historique-windows\essais-avant\p1\corrige\store.vcobj]
+  store file changed: False
+  files left: ['store.vcobj', 'store.vcobj-owner']
+  store.vcobj: user_version=22 integrity=ok history_enabled=1 tables=49 rows=230
+  store.vcobj: history tables present: {'journal': 5, 'object_revisions': 2, 'geometry_revisions': 2, 'history_generations': 1, 'store_commits': 2, 'object_versions': 2, 'relationship_versions': 0, 'geometry_revision_chunks': 4}
+  objects/edges/geometry_chunks: {'edges': 0, 'geometry_chunks': 8, 'objects': 2} (s22 reference: {'objects': 2, 'edges': 0, 'geometry_chunks': 8})
+[corrige] run 2 $ vc_object_convert.exe --enable-history store.vcobj -> rc=0 (0.0s)
+  output: History policy updated atomically
+  store file changed: False
+  files left: ['store.vcobj', 'store.vcobj-owner']
+  store.vcobj: user_version=22 integrity=ok history_enabled=1 tables=49 rows=230
+  store.vcobj: history tables present: {'journal': 5, 'object_revisions': 2, 'geometry_revisions': 2, 'history_generations': 1, 'store_commits': 2, 'object_versions': 2, 'relationship_versions': 0, 'geometry_revision_chunks': 4}
+  objects/edges/geometry_chunks: {'edges': 0, 'geometry_chunks': 8, 'objects': 2} (s22 reference: {'objects': 2, 'edges': 0, 'geometry_chunks': 8})
+[corrige] run 3 $ vc_object_convert.exe --remove-history-and-disable store.vcobj -> rc=1 (0.1s)
+  output: vc_object_convert: filesystem error: cannot replace file: Accès refusé [%USERPROFILE%\Dev\vesuvius\donnees-historique-windows\essais-avant\p1\corrige\store.vcobj.policy-28e3af92-9446-4f50-b73a-59be21b07ac5] [%USERPROFILE%\Dev\vesuvius\donnees-historique-windows\essais-avant\p1\corrige\store.vcobj]
+  store file changed: False
+  files left: ['store.vcobj', 'store.vcobj-owner']
+  store.vcobj: user_version=22 integrity=ok history_enabled=1 tables=49 rows=230
+  store.vcobj: history tables present: {'journal': 5, 'object_revisions': 2, 'geometry_revisions': 2, 'history_generations': 1, 'store_commits': 2, 'object_versions': 2, 'relationship_versions': 0, 'geometry_revision_chunks': 4}
+  objects/edges/geometry_chunks: {'edges': 0, 'geometry_chunks': 8, 'objects': 2} (s22 reference: {'objects': 2, 'edges': 0, 'geometry_chunks': 8})
+[corrige] $ vc_object_convert.exe --in-place "p1.vcobj" -> rc=0 (0.1s)
+  p1.vcobj: user_version=22 integrity=ok history_enabled=1 tables=49 rows=230
+  p1.vcobj: history tables present: {'journal': 5, 'object_revisions': 2, 'geometry_revisions': 2, 'history_generations': 1, 'store_commits': 2, 'object_versions': 2, 'relationship_versions': 0, 'geometry_revision_chunks': 4}
+
+=== store projet-ete: projet été.vcobj (source %USERPROFILE%\Dev\vesuvius\donnees-historique-windows\source\projet-ete) ===
+[prepare, main] $ vc_object_convert.exe "projet été.vcobj" s22.vcobj -> rc=0 (0.1s)
+  s22.vcobj: user_version=22 integrity=ok history_enabled=1 tables=46 rows=363
+  s22.vcobj: history tables present: {'journal': 13, 'object_revisions': 6, 'geometry_revisions': 6, 'history_generations': 1, 'store_commits': 6, 'object_versions': 6, 'relationship_versions': 0, 'geometry_revision_chunks': 20}
+[main] run 1 $ vc_object_convert.exe --remove-history-and-disable store.vcobj -> rc=1 (0.1s)
+  output: vc_object_convert: filesystem error: cannot replace file: Accès refusé [%USERPROFILE%\Dev\vesuvius\donnees-historique-windows\essais-avant\projet-ete\main\store.vcobj.policy-bd7e1b9a-30a5-4ae9-b010-b1c820d718d7] [%USERPROFILE%\Dev\vesuvius\donnees-historique-windows\essais-avant\projet-ete\main\store.vcobj]
+  store file changed: False
+  files left: ['store.vcobj', 'store.vcobj-owner']
+  store.vcobj: user_version=22 integrity=ok history_enabled=1 tables=46 rows=363
+  store.vcobj: history tables present: {'journal': 13, 'object_revisions': 6, 'geometry_revisions': 6, 'history_generations': 1, 'store_commits': 6, 'object_versions': 6, 'relationship_versions': 0, 'geometry_revision_chunks': 20}
+  objects/edges/geometry_chunks: {'edges': 0, 'geometry_chunks': 28, 'objects': 5} (s22 reference: {'objects': 5, 'edges': 0, 'geometry_chunks': 28})
+[main] run 2 $ vc_object_convert.exe --enable-history store.vcobj -> rc=0 (0.1s)
+  output: History policy updated atomically
+  store file changed: False
+  files left: ['store.vcobj', 'store.vcobj-owner']
+  store.vcobj: user_version=22 integrity=ok history_enabled=1 tables=46 rows=363
+  store.vcobj: history tables present: {'journal': 13, 'object_revisions': 6, 'geometry_revisions': 6, 'history_generations': 1, 'store_commits': 6, 'object_versions': 6, 'relationship_versions': 0, 'geometry_revision_chunks': 20}
+  objects/edges/geometry_chunks: {'edges': 0, 'geometry_chunks': 28, 'objects': 5} (s22 reference: {'objects': 5, 'edges': 0, 'geometry_chunks': 28})
+[main] run 3 $ vc_object_convert.exe --remove-history-and-disable store.vcobj -> rc=1 (0.1s)
+  output: vc_object_convert: filesystem error: cannot replace file: Accès refusé [%USERPROFILE%\Dev\vesuvius\donnees-historique-windows\essais-avant\projet-ete\main\store.vcobj.policy-182a2186-4129-4eb8-aef9-308ef965ea8f] [%USERPROFILE%\Dev\vesuvius\donnees-historique-windows\essais-avant\projet-ete\main\store.vcobj]
+  store file changed: False
+  files left: ['store.vcobj', 'store.vcobj-owner']
+  store.vcobj: user_version=22 integrity=ok history_enabled=1 tables=46 rows=363
+  store.vcobj: history tables present: {'journal': 13, 'object_revisions': 6, 'geometry_revisions': 6, 'history_generations': 1, 'store_commits': 6, 'object_versions': 6, 'relationship_versions': 0, 'geometry_revision_chunks': 20}
+  objects/edges/geometry_chunks: {'edges': 0, 'geometry_chunks': 28, 'objects': 5} (s22 reference: {'objects': 5, 'edges': 0, 'geometry_chunks': 28})
+[main] $ vc_object_convert.exe --in-place "projet été.vcobj" -> rc=1 (0.1s)
+  output: vc_object_convert: filesystem error: cannot replace file: Accès refusé [%USERPROFILE%\Dev\vesuvius\donnees-historique-windows\essais-avant\projet-ete\main-inplace\projet été.vcobj.convert-1c26d998-2335-4508-a7c6-b4461210b06b] [%USERPROFILE%\Dev\vesuvius\donnees-historique-windows\essais-avant\projet-ete\main-inplace\projet été.vcobj]
+  projet été.vcobj: user_version=21 integrity=ok history_enabled=1 tables=46 rows=364
+  projet été.vcobj: history tables present: {'journal': 13, 'object_revisions': 6, 'geometry_revisions': 6, 'history_generations': 1, 'store_commits': 6, 'object_versions': 6, 'relationship_versions': 0, 'geometry_revision_chunks': 20}
+[corrige] run 1 $ vc_object_convert.exe --remove-history-and-disable store.vcobj -> rc=1 (0.1s)
+  output: vc_object_convert: filesystem error: cannot replace file: Accès refusé [%USERPROFILE%\Dev\vesuvius\donnees-historique-windows\essais-avant\projet-ete\corrige\store.vcobj.policy-19b626e4-af50-450d-b9bb-eef7d5086689] [%USERPROFILE%\Dev\vesuvius\donnees-historique-windows\essais-avant\projet-ete\corrige\store.vcobj]
+  store file changed: False
+  files left: ['store.vcobj', 'store.vcobj-owner']
+  store.vcobj: user_version=22 integrity=ok history_enabled=1 tables=46 rows=363
+  store.vcobj: history tables present: {'journal': 13, 'object_revisions': 6, 'geometry_revisions': 6, 'history_generations': 1, 'store_commits': 6, 'object_versions': 6, 'relationship_versions': 0, 'geometry_revision_chunks': 20}
+  objects/edges/geometry_chunks: {'edges': 0, 'geometry_chunks': 28, 'objects': 5} (s22 reference: {'objects': 5, 'edges': 0, 'geometry_chunks': 28})
+[corrige] run 2 $ vc_object_convert.exe --enable-history store.vcobj -> rc=0 (0.0s)
+  output: History policy updated atomically
+  store file changed: False
+  files left: ['store.vcobj', 'store.vcobj-owner']
+  store.vcobj: user_version=22 integrity=ok history_enabled=1 tables=46 rows=363
+  store.vcobj: history tables present: {'journal': 13, 'object_revisions': 6, 'geometry_revisions': 6, 'history_generations': 1, 'store_commits': 6, 'object_versions': 6, 'relationship_versions': 0, 'geometry_revision_chunks': 20}
+  objects/edges/geometry_chunks: {'edges': 0, 'geometry_chunks': 28, 'objects': 5} (s22 reference: {'objects': 5, 'edges': 0, 'geometry_chunks': 28})
+[corrige] run 3 $ vc_object_convert.exe --remove-history-and-disable store.vcobj -> rc=1 (0.1s)
+  output: vc_object_convert: filesystem error: cannot replace file: Accès refusé [%USERPROFILE%\Dev\vesuvius\donnees-historique-windows\essais-avant\projet-ete\corrige\store.vcobj.policy-7d3db75b-f219-4983-8f88-1e7af6f0c04b] [%USERPROFILE%\Dev\vesuvius\donnees-historique-windows\essais-avant\projet-ete\corrige\store.vcobj]
+  store file changed: False
+  files left: ['store.vcobj', 'store.vcobj-owner']
+  store.vcobj: user_version=22 integrity=ok history_enabled=1 tables=46 rows=363
+  store.vcobj: history tables present: {'journal': 13, 'object_revisions': 6, 'geometry_revisions': 6, 'history_generations': 1, 'store_commits': 6, 'object_versions': 6, 'relationship_versions': 0, 'geometry_revision_chunks': 20}
+  objects/edges/geometry_chunks: {'edges': 0, 'geometry_chunks': 28, 'objects': 5} (s22 reference: {'objects': 5, 'edges': 0, 'geometry_chunks': 28})
+[corrige] $ vc_object_convert.exe --in-place "projet été.vcobj" -> rc=0 (0.1s)
+  projet été.vcobj: user_version=22 integrity=ok history_enabled=1 tables=46 rows=363
+  projet été.vcobj: history tables present: {'journal': 13, 'object_revisions': 6, 'geometry_revisions': 6, 'history_generations': 1, 'store_commits': 6, 'object_versions': 6, 'relationship_versions': 0, 'geometry_revision_chunks': 20}
+
+=== store open-data-1447: PHerc1447.vcobj (source %USERPROFILE%\Dev\vesuvius\donnees-historique-windows\source\open-data-1447) ===
+[prepare, main] $ vc_object_convert.exe "PHerc1447.vcobj" s22.vcobj -> rc=0 (0.2s)
+  s22.vcobj: user_version=22 integrity=ok history_enabled=1 tables=46 rows=1185
+  s22.vcobj: history tables present: {'journal': 41, 'object_revisions': 22, 'geometry_revisions': 7, 'history_generations': 1, 'store_commits': 8, 'object_versions': 22, 'relationship_versions': 0, 'geometry_revision_chunks': 48}
+[main] run 1 $ vc_object_convert.exe --remove-history-and-disable store.vcobj -> rc=1 (0.1s)
+  output: vc_object_convert: filesystem error: cannot replace file: Accès refusé [%USERPROFILE%\Dev\vesuvius\donnees-historique-windows\essais-avant\open-data-1447\main\store.vcobj.policy-76a76964-c9fd-4f6b-adbb-60d92a116e97] [%USERPROFILE%\Dev\vesuvius\donnees-historique-windows\essais-avant\open-data-1447\main\store.vcobj]
+  store file changed: False
+  files left: ['store.vcobj', 'store.vcobj-owner']
+  store.vcobj: user_version=22 integrity=ok history_enabled=1 tables=46 rows=1185
+  store.vcobj: history tables present: {'journal': 41, 'object_revisions': 22, 'geometry_revisions': 7, 'history_generations': 1, 'store_commits': 8, 'object_versions': 22, 'relationship_versions': 0, 'geometry_revision_chunks': 48}
+  objects/edges/geometry_chunks: {'edges': 0, 'geometry_chunks': 40, 'objects': 16} (s22 reference: {'objects': 16, 'edges': 0, 'geometry_chunks': 40})
+[main] run 2 $ vc_object_convert.exe --enable-history store.vcobj -> rc=0 (0.0s)
+  output: History policy updated atomically
+  store file changed: False
+  files left: ['store.vcobj', 'store.vcobj-owner']
+  store.vcobj: user_version=22 integrity=ok history_enabled=1 tables=46 rows=1185
+  store.vcobj: history tables present: {'journal': 41, 'object_revisions': 22, 'geometry_revisions': 7, 'history_generations': 1, 'store_commits': 8, 'object_versions': 22, 'relationship_versions': 0, 'geometry_revision_chunks': 48}
+  objects/edges/geometry_chunks: {'edges': 0, 'geometry_chunks': 40, 'objects': 16} (s22 reference: {'objects': 16, 'edges': 0, 'geometry_chunks': 40})
+[main] run 3 $ vc_object_convert.exe --remove-history-and-disable store.vcobj -> rc=1 (0.1s)
+  output: vc_object_convert: filesystem error: cannot replace file: Accès refusé [%USERPROFILE%\Dev\vesuvius\donnees-historique-windows\essais-avant\open-data-1447\main\store.vcobj.policy-c68d48ad-ab31-454c-87ab-539c12b1e04f] [%USERPROFILE%\Dev\vesuvius\donnees-historique-windows\essais-avant\open-data-1447\main\store.vcobj]
+  store file changed: False
+  files left: ['store.vcobj', 'store.vcobj-owner']
+  store.vcobj: user_version=22 integrity=ok history_enabled=1 tables=46 rows=1185
+  store.vcobj: history tables present: {'journal': 41, 'object_revisions': 22, 'geometry_revisions': 7, 'history_generations': 1, 'store_commits': 8, 'object_versions': 22, 'relationship_versions': 0, 'geometry_revision_chunks': 48}
+  objects/edges/geometry_chunks: {'edges': 0, 'geometry_chunks': 40, 'objects': 16} (s22 reference: {'objects': 16, 'edges': 0, 'geometry_chunks': 40})
+[main] $ vc_object_convert.exe --in-place "PHerc1447.vcobj" -> rc=1 (0.3s)
+  output: vc_object_convert: filesystem error: cannot replace file: Accès refusé [%USERPROFILE%\Dev\vesuvius\donnees-historique-windows\essais-avant\open-data-1447\main-inplace\PHerc1447.vcobj.convert-74820cf6-0570-43c8-b886-f45d6caf109f] [%USERPROFILE%\Dev\vesuvius\donnees-historique-windows\essais-avant\open-data-1447\main-inplace\PHerc1447.vcobj]
+  PHerc1447.vcobj: user_version=21 integrity=ok history_enabled=1 tables=46 rows=1188
+  PHerc1447.vcobj: history tables present: {'journal': 41, 'object_revisions': 22, 'geometry_revisions': 7, 'history_generations': 1, 'store_commits': 8, 'object_versions': 22, 'relationship_versions': 0, 'geometry_revision_chunks': 48}
+[corrige] run 1 $ vc_object_convert.exe --remove-history-and-disable store.vcobj -> rc=1 (0.4s)
+  output: vc_object_convert: filesystem error: cannot replace file: Accès refusé [%USERPROFILE%\Dev\vesuvius\donnees-historique-windows\essais-avant\open-data-1447\corrige\store.vcobj.policy-13e1b738-819d-461b-a074-557e2af64f2d] [%USERPROFILE%\Dev\vesuvius\donnees-historique-windows\essais-avant\open-data-1447\corrige\store.vcobj]
+  store file changed: False
+  files left: ['store.vcobj', 'store.vcobj-owner']
+  store.vcobj: user_version=22 integrity=ok history_enabled=1 tables=46 rows=1185
+  store.vcobj: history tables present: {'journal': 41, 'object_revisions': 22, 'geometry_revisions': 7, 'history_generations': 1, 'store_commits': 8, 'object_versions': 22, 'relationship_versions': 0, 'geometry_revision_chunks': 48}
+  objects/edges/geometry_chunks: {'edges': 0, 'geometry_chunks': 40, 'objects': 16} (s22 reference: {'objects': 16, 'edges': 0, 'geometry_chunks': 40})
+[corrige] run 2 $ vc_object_convert.exe --enable-history store.vcobj -> rc=0 (0.1s)
+  output: History policy updated atomically
+  store file changed: False
+  files left: ['store.vcobj', 'store.vcobj-owner']
+  store.vcobj: user_version=22 integrity=ok history_enabled=1 tables=46 rows=1185
+  store.vcobj: history tables present: {'journal': 41, 'object_revisions': 22, 'geometry_revisions': 7, 'history_generations': 1, 'store_commits': 8, 'object_versions': 22, 'relationship_versions': 0, 'geometry_revision_chunks': 48}
+  objects/edges/geometry_chunks: {'edges': 0, 'geometry_chunks': 40, 'objects': 16} (s22 reference: {'objects': 16, 'edges': 0, 'geometry_chunks': 40})
+[corrige] run 3 $ vc_object_convert.exe --remove-history-and-disable store.vcobj -> rc=1 (0.1s)
+  output: vc_object_convert: filesystem error: cannot replace file: Accès refusé [%USERPROFILE%\Dev\vesuvius\donnees-historique-windows\essais-avant\open-data-1447\corrige\store.vcobj.policy-df724c16-d899-47d3-a352-5d8900a9fd0a] [%USERPROFILE%\Dev\vesuvius\donnees-historique-windows\essais-avant\open-data-1447\corrige\store.vcobj]
+  store file changed: False
+  files left: ['store.vcobj', 'store.vcobj-owner']
+  store.vcobj: user_version=22 integrity=ok history_enabled=1 tables=46 rows=1185
+  store.vcobj: history tables present: {'journal': 41, 'object_revisions': 22, 'geometry_revisions': 7, 'history_generations': 1, 'store_commits': 8, 'object_versions': 22, 'relationship_versions': 0, 'geometry_revision_chunks': 48}
+  objects/edges/geometry_chunks: {'edges': 0, 'geometry_chunks': 40, 'objects': 16} (s22 reference: {'objects': 16, 'edges': 0, 'geometry_chunks': 40})
+[corrige] $ vc_object_convert.exe --in-place "PHerc1447.vcobj" -> rc=0 (0.3s)
+  PHerc1447.vcobj: user_version=22 integrity=ok history_enabled=1 tables=46 rows=1185
+  PHerc1447.vcobj: history tables present: {'journal': 41, 'object_revisions': 22, 'geometry_revisions': 7, 'history_generations': 1, 'store_commits': 8, 'object_versions': 22, 'relationship_versions': 0, 'geometry_revision_chunks': 48}
+
+FIN

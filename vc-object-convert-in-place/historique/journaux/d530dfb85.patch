@@ -1,0 +1,53 @@
+From d530dfb8571e67e4dd6437ca26bd433fba02b34b Mon Sep 17 00:00:00 2001
+From: Cmssmc-code <208856190+Cmssmc-code@users.noreply.github.com>
+Date: Mon, 16 Nov 2026 03:59:25 +0100
+Subject: [PATCH] vc_object_convert: make history maintenance work on Windows
+
+On Windows, `vc_object_convert --remove-history-and-disable store.vcobj`
+(and `--enable-history` when it has something to change) built and
+validated the staged sibling, then failed at the final step with
+"cannot replace file: Access denied" and left the store unchanged.
+changeHistoryMode still held its exclusive SQLite connection, and an
+open statement on it, on the original file, and Windows does not allow
+replacing an open file.
+
+Finalize that statement and close the connection just before the
+replacement on Windows, as --in-place now does. The service ownership
+guard is still held, so other store clients stay excluded. Other
+platforms are unchanged.
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+---
+ vc_object_store/src/StoreConversion.cpp | 9 ++++++++-
+ 1 file changed, 8 insertions(+), 1 deletion(-)
+
+diff --git a/vc_object_store/src/StoreConversion.cpp b/vc_object_store/src/StoreConversion.cpp
+index 50b15c728..448b1e304 100644
+--- a/vc_object_store/src/StoreConversion.cpp
++++ b/vc_object_store/src/StoreConversion.cpp
+@@ -69,7 +69,8 @@ void changeHistoryMode(const std::filesystem::path& input, HistoryMode mode)
+     OwnershipGuard ownership(path, OwnershipGuard::Mode::Service);
+     auto source=exclusive(path,kSchemaVersion);
+     const bool enabled=mode==HistoryMode::On;
+-    Statement policy(source.get(),"SELECT history_enabled,sealed,spatial_enabled,commit_sequence,generation FROM store_manifest"); policy.row();
++    auto policyRow=std::make_unique<Statement>(source.get(),"SELECT history_enabled,sealed,spatial_enabled,commit_sequence,generation FROM store_manifest");
++    auto& policy=*policyRow; policy.row();
+     if (policy.i64(1)) throw std::runtime_error("history policy: sealed stores require a new export");
+     if ((policy.i64(0)!=0)==enabled) return;
+     if (policy.i64(3)==INT64_MAX) throw std::runtime_error("history policy: commit sequence exhausted");
+@@ -248,6 +249,12 @@ void changeHistoryMode(const std::filesystem::path& input, HistoryMode mode)
+         auto verified=ObjectStore::open(staged.path,OpenOptions{.readOnly=true}); auto read=verified.read();
+         if (verified.provisioning(read).history!=mode) throw std::runtime_error("history policy: reopen failed");
+     }
++#ifdef _WIN32
++    // Windows refuses to replace a file that is still open. Finalize the last
++    // statement and close the locked connection first; the service ownership
++    // guard still excludes clients.
++    policyRow.reset(); sourceChunks.reset(); source.reset();
++#endif
+     vcr::platform::replace_file(staged.path,path,true);
+     vcr::platform::sync_directory(path.parent_path(),"vcobj history policy");
+ }
+-- 
+2.56.0.windows.2
+

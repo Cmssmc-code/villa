@@ -1,0 +1,52 @@
+date 2026-11-16 04:11:49
+bin main: vc_object_convert.exe f3395a428c021044 libvc_objects.dll e08ba273c47b2688
+
+=== case natif: PHerc1447.vcobj (copy of %USERPROFILE%\Dev\vesuvius\donnees-sceptique-vc-object-convert-historique\source\natif) ===
+  already schema 22 (native main store), used as is
+  s22 reference: {'user_version': 22, 'integrity': 'ok', 'history_enabled': 1, 'objects': 16, 'objects_hash': '521d1f8ebd837536', 'geometry_chunks': 40, 'current_chunks_missing': 0, 'history_tables': ['geometry_revisions', 'history_generations', 'journal', 'object_revisions', 'object_versions', 'store_commits']}
+  [main] run 1: vc_object_convert.exe --remove-history-and-disable store.vcobj -> rc=1 (0.4s)
+    output: vc_object_convert: filesystem error: cannot replace file: Accès refusé [%USERPROFILE%\Dev\vesuvius\donnees-sceptique-vc-object-convert-historique\essais-main\natif\main\store.vcobj.policy-52aab76b-802c-4322-b7b2-f98ed806b220] [%USERPROFILE%\Dev\vesuvius\donnees-sceptique-vc-object-convert-historique\essais-main\natif\main\store.vcobj]
+    state: {'user_version': 22, 'integrity': 'ok', 'history_enabled': 1, 'objects': 16, 'objects_hash': '521d1f8ebd837536', 'geometry_chunks': 40, 'current_chunks_missing': 0, 'history_tables': ['geometry_revisions', 'history_generations', 'journal', 'object_revisions', 'object_versions', 'store_commits']}
+    objects same as s22: True; leftover files: []
+  [main] run 2: vc_object_convert.exe --enable-history store.vcobj -> rc=0 (0.0s)
+    output: History policy updated atomically
+    state: {'user_version': 22, 'integrity': 'ok', 'history_enabled': 1, 'objects': 16, 'objects_hash': '521d1f8ebd837536', 'geometry_chunks': 40, 'current_chunks_missing': 0, 'history_tables': ['geometry_revisions', 'history_generations', 'journal', 'object_revisions', 'object_versions', 'store_commits']}
+    objects same as s22: True; leftover files: []
+  [main] run 3: vc_object_convert.exe --remove-history-and-disable store.vcobj -> rc=1 (0.1s)
+    output: vc_object_convert: filesystem error: cannot replace file: Accès refusé [%USERPROFILE%\Dev\vesuvius\donnees-sceptique-vc-object-convert-historique\essais-main\natif\main\store.vcobj.policy-b0f979de-c663-4915-bcd6-73e3ab2ccb6c] [%USERPROFILE%\Dev\vesuvius\donnees-sceptique-vc-object-convert-historique\essais-main\natif\main\store.vcobj]
+    state: {'user_version': 22, 'integrity': 'ok', 'history_enabled': 1, 'objects': 16, 'objects_hash': '521d1f8ebd837536', 'geometry_chunks': 40, 'current_chunks_missing': 0, 'history_tables': ['geometry_revisions', 'history_generations', 'journal', 'object_revisions', 'object_versions', 'store_commits']}
+    objects same as s22: True; leftover files: []
+
+=== case avant: avant.vcobj (copy of %USERPROFILE%\Dev\vesuvius\donnees-sceptique-vc-object-convert-historique\source\avant) ===
+  [prepare, main] vc_object_convert.exe avant.vcobj s22.vcobj -> rc=0 (0.2s)
+  s22 reference: {'user_version': 22, 'integrity': 'ok', 'history_enabled': 1, 'objects': 1, 'objects_hash': '767bc95a587950df', 'geometry_chunks': 4, 'current_chunks_missing': 0, 'history_tables': ['geometry_revisions', 'history_generations', 'journal', 'object_revisions', 'object_versions', 'store_commits']}
+  [main] run 1: vc_object_convert.exe --remove-history-and-disable store.vcobj -> rc=1 (0.1s)
+    output: vc_object_convert: filesystem error: cannot replace file: Accès refusé [%USERPROFILE%\Dev\vesuvius\donnees-sceptique-vc-object-convert-historique\essais-main\avant\main\store.vcobj.policy-69d40b69-dcd9-4b27-bc66-e0bf01c3c471] [%USERPROFILE%\Dev\vesuvius\donnees-sceptique-vc-object-convert-historique\essais-main\avant\main\store.vcobj]
+    state: {'user_version': 22, 'integrity': 'ok', 'history_enabled': 1, 'objects': 1, 'objects_hash': '767bc95a587950df', 'geometry_chunks': 4, 'current_chunks_missing': 0, 'history_tables': ['geometry_revisions', 'history_generations', 'journal', 'object_revisions', 'object_versions', 'store_commits']}
+    objects same as s22: True; leftover files: []
+  [main] run 2: vc_object_convert.exe --enable-history store.vcobj -> rc=0 (0.0s)
+    output: History policy updated atomically
+    state: {'user_version': 22, 'integrity': 'ok', 'history_enabled': 1, 'objects': 1, 'objects_hash': '767bc95a587950df', 'geometry_chunks': 4, 'current_chunks_missing': 0, 'history_tables': ['geometry_revisions', 'history_generations', 'journal', 'object_revisions', 'object_versions', 'store_commits']}
+    objects same as s22: True; leftover files: []
+  [main] run 3: vc_object_convert.exe --remove-history-and-disable store.vcobj -> rc=1 (0.1s)
+    output: vc_object_convert: filesystem error: cannot replace file: Accès refusé [%USERPROFILE%\Dev\vesuvius\donnees-sceptique-vc-object-convert-historique\essais-main\avant\main\store.vcobj.policy-7fae6d8d-b11c-44e7-8046-e8eb2df1125d] [%USERPROFILE%\Dev\vesuvius\donnees-sceptique-vc-object-convert-historique\essais-main\avant\main\store.vcobj]
+    state: {'user_version': 22, 'integrity': 'ok', 'history_enabled': 1, 'objects': 1, 'objects_hash': '767bc95a587950df', 'geometry_chunks': 4, 'current_chunks_missing': 0, 'history_tables': ['geometry_revisions', 'history_generations', 'journal', 'object_revisions', 'object_versions', 'store_commits']}
+    objects same as s22: True; leftover files: []
+
+=== case p1: p1.vcobj (copy of %USERPROFILE%\Dev\vesuvius\donnees-sceptique-vc-object-convert-historique\source\p1) ===
+  [prepare, main] vc_object_convert.exe p1.vcobj s22.vcobj -> rc=0 (0.2s)
+  s22 reference: {'user_version': 22, 'integrity': 'ok', 'history_enabled': 1, 'objects': 2, 'objects_hash': '9c98498f4bd36d54', 'geometry_chunks': 8, 'current_chunks_missing': 0, 'history_tables': ['geometry_revisions', 'history_generations', 'journal', 'object_revisions', 'object_versions', 'store_commits']}
+  [main] run 1: vc_object_convert.exe --remove-history-and-disable store.vcobj -> rc=1 (0.1s)
+    output: vc_object_convert: filesystem error: cannot replace file: Accès refusé [%USERPROFILE%\Dev\vesuvius\donnees-sceptique-vc-object-convert-historique\essais-main\p1\main\store.vcobj.policy-d720450e-d8ea-4ce3-8857-7fed35b33390] [%USERPROFILE%\Dev\vesuvius\donnees-sceptique-vc-object-convert-historique\essais-main\p1\main\store.vcobj]
+    state: {'user_version': 22, 'integrity': 'ok', 'history_enabled': 1, 'objects': 2, 'objects_hash': '9c98498f4bd36d54', 'geometry_chunks': 8, 'current_chunks_missing': 0, 'history_tables': ['geometry_revisions', 'history_generations', 'journal', 'object_revisions', 'object_versions', 'store_commits']}
+    objects same as s22: True; leftover files: []
+  [main] run 2: vc_object_convert.exe --enable-history store.vcobj -> rc=0 (0.0s)
+    output: History policy updated atomically
+    state: {'user_version': 22, 'integrity': 'ok', 'history_enabled': 1, 'objects': 2, 'objects_hash': '9c98498f4bd36d54', 'geometry_chunks': 8, 'current_chunks_missing': 0, 'history_tables': ['geometry_revisions', 'history_generations', 'journal', 'object_revisions', 'object_versions', 'store_commits']}
+    objects same as s22: True; leftover files: []
+  [main] run 3: vc_object_convert.exe --remove-history-and-disable store.vcobj -> rc=1 (0.1s)
+    output: vc_object_convert: filesystem error: cannot replace file: Accès refusé [%USERPROFILE%\Dev\vesuvius\donnees-sceptique-vc-object-convert-historique\essais-main\p1\main\store.vcobj.policy-178a44a1-ae12-4e68-8818-05a7dacff207] [%USERPROFILE%\Dev\vesuvius\donnees-sceptique-vc-object-convert-historique\essais-main\p1\main\store.vcobj]
+    state: {'user_version': 22, 'integrity': 'ok', 'history_enabled': 1, 'objects': 2, 'objects_hash': '9c98498f4bd36d54', 'geometry_chunks': 8, 'current_chunks_missing': 0, 'history_tables': ['geometry_revisions', 'history_generations', 'journal', 'object_revisions', 'object_versions', 'store_commits']}
+    objects same as s22: True; leftover files: []
+
+FIN

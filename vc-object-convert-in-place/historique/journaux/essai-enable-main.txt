@@ -1,0 +1,12 @@
+--enable-history with main, on a store whose history was removed (2026-11-16 ~04:07, Windows 11)
+
+Store: fresh copy of p1 converted to schema 22 by main (s22.vcobj), history removed with the fixed build:
+  $ (fixed build) vc_object_convert.exe --remove-history-and-disable store.vcobj
+  History policy updated atomically
+  rc=0
+Then a copy of that store, with main 2d3fb38d3:
+  $ (main) vc_object_convert.exe --enable-history store.vcobj
+  vc_object_convert: filesystem error: cannot replace file: Accès refusé [...\essai-enable\main\store.vcobj.policy-24ccd741-07f6-4130-b2ef-ec8bec899a7a] [...\essai-enable\main\store.vcobj]
+  rc=1
+  history_enabled stays 0; files left: store.vcobj, store.vcobj-owner
+With the fixed build the same --enable-history call returns rc=0 and history_enabled=1 (journaux\essai-apres.txt, run 2).

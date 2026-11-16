@@ -1,0 +1,52 @@
+date 2026-11-16 04:12:36
+bin fix: vc_object_convert.exe f3395a428c021044 libvc_objects.dll 7924a56a9c2a452f
+
+=== case natif: PHerc1447.vcobj (copy of %USERPROFILE%\Dev\vesuvius\donnees-sceptique-vc-object-convert-historique\source\natif) ===
+  already schema 22 (native main store), used as is
+  s22 reference: {'user_version': 22, 'integrity': 'ok', 'history_enabled': 1, 'objects': 16, 'objects_hash': '521d1f8ebd837536', 'geometry_chunks': 40, 'current_chunks_missing': 0, 'history_tables': ['geometry_revisions', 'history_generations', 'journal', 'object_revisions', 'object_versions', 'store_commits']}
+  [fix] run 1: vc_object_convert.exe --remove-history-and-disable store.vcobj -> rc=0 (0.5s)
+    output: History policy updated atomically
+    state: {'user_version': 22, 'integrity': 'ok', 'history_enabled': 0, 'objects': 16, 'objects_hash': '521d1f8ebd837536', 'geometry_chunks': 40, 'current_chunks_missing': None, 'history_tables': []}
+    objects same as s22: True; leftover files: []
+  [fix] run 2: vc_object_convert.exe --enable-history store.vcobj -> rc=0 (0.1s)
+    output: History policy updated atomically
+    state: {'user_version': 22, 'integrity': 'ok', 'history_enabled': 1, 'objects': 16, 'objects_hash': '521d1f8ebd837536', 'geometry_chunks': 40, 'current_chunks_missing': 0, 'history_tables': ['geometry_revisions', 'history_generations', 'journal', 'object_revisions', 'object_versions', 'store_commits']}
+    objects same as s22: True; leftover files: []
+  [fix] run 3: vc_object_convert.exe --remove-history-and-disable store.vcobj -> rc=0 (0.1s)
+    output: History policy updated atomically
+    state: {'user_version': 22, 'integrity': 'ok', 'history_enabled': 0, 'objects': 16, 'objects_hash': '521d1f8ebd837536', 'geometry_chunks': 40, 'current_chunks_missing': None, 'history_tables': []}
+    objects same as s22: True; leftover files: []
+
+=== case avant: avant.vcobj (copy of %USERPROFILE%\Dev\vesuvius\donnees-sceptique-vc-object-convert-historique\source\avant) ===
+  [prepare, main] vc_object_convert.exe avant.vcobj s22.vcobj -> rc=0 (0.1s)
+  s22 reference: {'user_version': 22, 'integrity': 'ok', 'history_enabled': 1, 'objects': 1, 'objects_hash': '767bc95a587950df', 'geometry_chunks': 4, 'current_chunks_missing': 0, 'history_tables': ['geometry_revisions', 'history_generations', 'journal', 'object_revisions', 'object_versions', 'store_commits']}
+  [fix] run 1: vc_object_convert.exe --remove-history-and-disable store.vcobj -> rc=0 (0.1s)
+    output: History policy updated atomically
+    state: {'user_version': 22, 'integrity': 'ok', 'history_enabled': 0, 'objects': 1, 'objects_hash': '767bc95a587950df', 'geometry_chunks': 4, 'current_chunks_missing': None, 'history_tables': []}
+    objects same as s22: True; leftover files: []
+  [fix] run 2: vc_object_convert.exe --enable-history store.vcobj -> rc=0 (0.2s)
+    output: History policy updated atomically
+    state: {'user_version': 22, 'integrity': 'ok', 'history_enabled': 1, 'objects': 1, 'objects_hash': '767bc95a587950df', 'geometry_chunks': 4, 'current_chunks_missing': 0, 'history_tables': ['geometry_revisions', 'history_generations', 'journal', 'object_revisions', 'object_versions', 'store_commits']}
+    objects same as s22: True; leftover files: []
+  [fix] run 3: vc_object_convert.exe --remove-history-and-disable store.vcobj -> rc=0 (0.1s)
+    output: History policy updated atomically
+    state: {'user_version': 22, 'integrity': 'ok', 'history_enabled': 0, 'objects': 1, 'objects_hash': '767bc95a587950df', 'geometry_chunks': 4, 'current_chunks_missing': None, 'history_tables': []}
+    objects same as s22: True; leftover files: []
+
+=== case p1: p1.vcobj (copy of %USERPROFILE%\Dev\vesuvius\donnees-sceptique-vc-object-convert-historique\source\p1) ===
+  [prepare, main] vc_object_convert.exe p1.vcobj s22.vcobj -> rc=0 (0.1s)
+  s22 reference: {'user_version': 22, 'integrity': 'ok', 'history_enabled': 1, 'objects': 2, 'objects_hash': '9c98498f4bd36d54', 'geometry_chunks': 8, 'current_chunks_missing': 0, 'history_tables': ['geometry_revisions', 'history_generations', 'journal', 'object_revisions', 'object_versions', 'store_commits']}
+  [fix] run 1: vc_object_convert.exe --remove-history-and-disable store.vcobj -> rc=0 (0.1s)
+    output: History policy updated atomically
+    state: {'user_version': 22, 'integrity': 'ok', 'history_enabled': 0, 'objects': 2, 'objects_hash': '9c98498f4bd36d54', 'geometry_chunks': 8, 'current_chunks_missing': None, 'history_tables': []}
+    objects same as s22: True; leftover files: []
+  [fix] run 2: vc_object_convert.exe --enable-history store.vcobj -> rc=0 (0.1s)
+    output: History policy updated atomically
+    state: {'user_version': 22, 'integrity': 'ok', 'history_enabled': 1, 'objects': 2, 'objects_hash': '9c98498f4bd36d54', 'geometry_chunks': 8, 'current_chunks_missing': 0, 'history_tables': ['geometry_revisions', 'history_generations', 'journal', 'object_revisions', 'object_versions', 'store_commits']}
+    objects same as s22: True; leftover files: []
+  [fix] run 3: vc_object_convert.exe --remove-history-and-disable store.vcobj -> rc=0 (0.1s)
+    output: History policy updated atomically
+    state: {'user_version': 22, 'integrity': 'ok', 'history_enabled': 0, 'objects': 2, 'objects_hash': '9c98498f4bd36d54', 'geometry_chunks': 8, 'current_chunks_missing': None, 'history_tables': []}
+    objects same as s22: True; leftover files: []
+
+FIN

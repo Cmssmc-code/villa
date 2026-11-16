@@ -1,0 +1,52 @@
+AFTER: same commands, same stores, fixed build
+
+Machine: Windows 11, MinGW (MSYS2 ucrt64), same PC.
+Date: 2026-11-16 04:01 (local time).
+Script: journaux\essai.py (label "apres"), full log: journaux\essai-apres.txt
+
+Fixed build ("apres"):
+  vc_object_convert.exe sha256 24c844d21e3fbce94746e3ebfd087a7ac4f8913d087f1cc541c2e0fba512996d (commit e8b3d3dd9, first commit of #2575)
+  libvc_objects.dll     sha256 79983fb07ba035af2cfdb1631e4df764f0484a7ba95248d861650fa49c23712f
+                        = main 2d3fb38d3 with only vc_object_store/src/StoreConversion.cpp taken at commit d530dfb85
+                        (recipe: binaire\RECETTE.txt, commands: binaire\compilation.log)
+The main binary was run again in the same session as a control: still rc=1, "cannot replace file", for all three stores.
+
+On a fresh copy of each schema-22 store (made by main with the two-path conversion), three runs in a row:
+  1. $ vc_object_convert.exe --remove-history-and-disable store.vcobj
+  2. $ vc_object_convert.exe --enable-history store.vcobj
+  3. $ vc_object_convert.exe --remove-history-and-disable store.vcobj
+
+p1:
+  run 1 rc=0 "History policy updated atomically"  history_enabled=0 commit_sequence 2->3, history tables: none, integrity ok
+  run 2 rc=0 "History policy updated atomically"  history_enabled=1 commit_sequence 4, integrity ok
+  run 3 rc=0 "History policy updated atomically"  history_enabled=0 commit_sequence 5, history tables: none, integrity ok
+  objects 2 (same as before), geometry_chunks 8 (same)
+projet été:
+  run 1 rc=0  history_enabled=0, history tables: none, integrity ok
+  run 2 rc=0  history_enabled=1, integrity ok
+  run 3 rc=0  history_enabled=0, history tables: none, integrity ok
+  objects 5 (same as before); geometry_chunks 28 -> 24: 4 chunks used only by archived revisions are dropped,
+  as vc_object_store/docs/schema-conversion.md says ("drops archived states and history-only storage")
+PHerc1447:
+  run 1 rc=0  history_enabled=0 commit_sequence 9, history tables: none (journal 41 -> table gone), integrity ok
+  run 2 rc=0  history_enabled=1, integrity ok
+  run 3 rc=0  history_enabled=0, history tables: none, integrity ok
+  objects 16 (same as before), geometry_chunks 40 (same)
+Files left after each run: store.vcobj and store.vcobj-owner only (as before the fix; no .policy-<uuid> file).
+
+Non-regression of the first commit (--in-place), fixed build, fresh schema-21 copies:
+  $ vc_object_convert.exe --in-place p1.vcobj           -> rc=0, user_version 22, integrity ok
+  $ vc_object_convert.exe --in-place "projet été.vcobj" -> rc=0, user_version 22, integrity ok
+  $ vc_object_convert.exe --in-place PHerc1447.vcobj    -> rc=0, user_version 22, integrity ok
+
+verifier.cmd (this folder) replays the main/fix comparison on p1 and "projet été" in about 10 seconds:
+  first run 2026-11-16 04:05, last line "TOUT EST CONFORME : main fails, the fix works and --in-place still works."
+  (journaux\verifier-essai1.txt)
+
+Not verified:
+  - Linux and macOS: the change is inside #ifdef _WIN32, other platforms compile the same code as before
+    except that the policy statement is now owned by a std::unique_ptr (same lifetime there).
+  - The content of the current geometry after history removal was checked by counts (objects, chunks) and
+    integrity_check only, not by comparing every geometry value.
+  - The repository's C++ tests for vc_object_store were not run on this PC.
+  - The full VC3D package was not rebuilt; only libvc_objects.dll was relinked with the changed object.

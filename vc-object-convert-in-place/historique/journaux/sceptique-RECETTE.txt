@@ -1,0 +1,15 @@
+Produit : %USERPROFILE%\Dev\vesuvius\nuit-1611\sceptique-vc-object-convert-historique\fab\sceptique\libvc_objects.dll
+Fabriqué le 2026-11-16 à 04:12:17 par le coordinateur (nuit-1511/wf/hors_arbre.py), hors de l'arbre partagé.
+Base : arbre compilé %USERPROFILE%\Dev\vesuvius\wt-vc3d au commit 2d3fb38d33a18b257230c0bd23986436c3d4722e (main).
+Seul fichier différent de main : vc_object_store/src/StoreConversion.cpp, pris au commit d530dfb85.
+git diff --stat de ce fichier entre main et ce commit :
+vc_object_store/src/StoreConversion.cpp | 9 ++++++++-
+ 1 file changed, 8 insertions(+), 1 deletion(-)
+Règles ninja reprises : compilation CXX_COMPILER__vc_objects_unscanned_Release, lien CXX_SHARED_LIBRARY_LINKER__vc_objects_Release (mêmes options, mêmes objets, mêmes bibliothèques ;
+  seul l'objet object_store/src/CMakeFiles/vc_objects.dir/StoreConversion.cpp.obj est remplacé).
+Taille : 13920979 octets (le même fichier compilé depuis main : 13919919 octets).
+SHA-256 : 7924a56a9c2a452f435296c2287cfb1c30dc4a6d562dd43f8034a25548903dd7
+SHA-256 du .cpp compilé : 85910801d3c719dde870c3b07a4b7fdb7cce065a0c2ac14e16df50c5a58c096a
+Journal complet des deux commandes : %USERPROFILE%\Dev\vesuvius\nuit-1611\sceptique-vc-object-convert-historique\fab\sceptique\compilation.log
+Mode d'emploi : copier un dossier de binaires de main (outils-vc3d/bin-main-2d3fb38d3 + DLL de dépendances),
+  puis y remplacer libvc_objects.dll par ce fichier. Tout le reste est le main ordinaire.

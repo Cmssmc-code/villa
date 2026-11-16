@@ -1,0 +1,50 @@
+
+=== real store p1 (p1.vcobj) ===
+  schema-22 copy made by main (two-path conversion): rc=0, schema 22, history_enabled=1, objects=2
+  AVANT (main): --remove-history-and-disable store.vcobj
+    message: vc_object_convert: filesystem error: cannot replace file: Acc�s refus� [%USERPROFILE%\AppData\Local\Temp\verifier-vc3d\convert-history\p1\AVANT\store
+    exit code                          expected: 1                      got: 1                      OK
+    'cannot replace file' shown        expected: True                   got: True                   OK
+    history_enabled                    expected: 1                      got: 1                      OK
+  APRES (fix): --remove-history-and-disable store.vcobj
+    message: History policy updated atomically
+    exit code                          expected: 0                      got: 0                      OK
+    history_enabled                    expected: 0                      got: 0                      OK
+    history tables left                expected: []                     got: []                     OK
+    objects (same as before)           expected: 2                      got: 2                      OK
+    integrity_check                    expected: ok                     got: ok                     OK
+  APRES (fix): --enable-history store.vcobj
+    exit code                          expected: 0                      got: 0                      OK
+    history_enabled                    expected: 1                      got: 1                      OK
+    integrity_check                    expected: ok                     got: ok                     OK
+  APRES (fix): --in-place p1.vcobj (first commit of the PR, still works)
+    exit code                          expected: 0                      got: 0                      OK
+    schema after                       expected: 22                     got: 22                     OK
+    objects                            expected: 2                      got: 2                      OK
+
+=== real store projet-ete (projet �t�.vcobj) ===
+  schema-22 copy made by main (two-path conversion): rc=0, schema 22, history_enabled=1, objects=5
+  AVANT (main): --remove-history-and-disable store.vcobj
+    message: vc_object_convert: filesystem error: cannot replace file: Acc�s refus� [%USERPROFILE%\AppData\Local\Temp\verifier-vc3d\convert-history\projet-ete\AVA
+    exit code                          expected: 1                      got: 1                      OK
+    'cannot replace file' shown        expected: True                   got: True                   OK
+    history_enabled                    expected: 1                      got: 1                      OK
+  APRES (fix): --remove-history-and-disable store.vcobj
+    message: History policy updated atomically
+    exit code                          expected: 0                      got: 0                      OK
+    history_enabled                    expected: 0                      got: 0                      OK
+    history tables left                expected: []                     got: []                     OK
+    objects (same as before)           expected: 5                      got: 5                      OK
+    integrity_check                    expected: ok                     got: ok                     OK
+  APRES (fix): --enable-history store.vcobj
+    exit code                          expected: 0                      got: 0                      OK
+    history_enabled                    expected: 1                      got: 1                      OK
+    integrity_check                    expected: ok                     got: ok                     OK
+  APRES (fix): --in-place projet �t�.vcobj (first commit of the PR, still works)
+    exit code                          expected: 0                      got: 0                      OK
+    schema after                       expected: 22                     got: 22                     OK
+    objects                            expected: 5                      got: 5                      OK
+
+Duration: 4.9 s
+TOUT EST CONFORME : main fails, the fix works and --in-place still works.
+Appuyez sur une touche pour continuer... 

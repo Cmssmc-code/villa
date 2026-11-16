@@ -1,0 +1,4 @@
+main --enable-history on the native PHerc1447 store after history removal by the fixed build (2026-11-16 04:12:46)
+vc_object_convert: filesystem error: cannot replace file: Accès refusé [%USERPROFILE%\Dev\vesuvius\donnees-sceptique-vc-object-convert-historique\enable-main\store.vcobj.policy-4902bfea-bf8e-4229-910b-1c316958bea7] [%USERPROFILE%\Dev\vesuvius\donnees-sceptique-vc-object-convert-historique\enable-main\store.vcobj]
+rc=1
+history_enabled 0

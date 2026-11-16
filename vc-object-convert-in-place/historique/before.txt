@@ -1,0 +1,40 @@
+BEFORE: vc_object_convert --remove-history-and-disable on Windows (main 2d3fb38d3, and PR #2575 first commit e8b3d3dd9)
+
+Machine: Windows 11, MinGW (MSYS2 ucrt64) build of main 2d3fb38d3 made on this PC.
+Date: 2026-11-16 03:57 (local time).
+Script: journaux\essai.py (label "avant"), full log: journaux\essai-avant.txt
+
+Binaries:
+  main      vc_object_convert.exe sha256 f3395a428c02104464ba6a201fe7392bc9c2b9965fff32599306518db76ea61e
+            libvc_objects.dll     sha256 e08ba273c47b2688f311f85b893bcb8aa651c26fba224cf7e4d0abd42d1e77b6 (main)
+  #2575     vc_object_convert.exe sha256 24c844d21e3fbce94746e3ebfd087a7ac4f8913d087f1cc541c2e0fba512996d (commit e8b3d3dd9)
+            libvc_objects.dll     same as main (e08ba273...)
+
+Data: three real object stores at schema 21 (fresh copies each time):
+  p1.vcobj, "projet été.vcobj"  VC3D projects made on 2026-11-15 with the official package VC3D-97fb933 on scroll PHerc1447
+  PHerc1447.vcobj               object store of the same scroll used by the PR #2575 check
+Each one is first converted to schema 22 by main with the normal two-path conversion (this works on Windows):
+  $ vc_object_convert.exe p1.vcobj s22.vcobj   -> rc=0, s22.vcobj: user_version=22, integrity ok, history_enabled=1
+
+Then, on a fresh copy of s22.vcobj named store.vcobj:
+  $ vc_object_convert.exe --remove-history-and-disable store.vcobj
+
+Result with main, all three stores (same with the #2575 binary: the code is in libvc_objects.dll, not touched by #2575):
+  p1:          rc=1
+    vc_object_convert: filesystem error: cannot replace file: Accès refusé [...\store.vcobj.policy-75bce8e1-2081-450b-8403-8ee940743452] [...\store.vcobj]
+  projet été:  rc=1   same message (.policy-bd7e1b9a-...)
+  PHerc1447:   rc=1   same message (.policy-76a76964-...)
+  ("Accès refusé" = "Access denied" on this French Windows.)
+
+State after the failure (each store):
+  store file changed: False
+  files left: store.vcobj, store.vcobj-owner (the .policy-<uuid> sibling is removed by the tool)
+  user_version=22, integrity_check ok, history_enabled=1, history tables still present
+  e.g. PHerc1447: journal 41 rows, object_revisions 22, geometry_revisions 7, store_commits 8, object_versions 22
+
+So the command never works on Windows: the store keeps its history. Nothing is damaged.
+
+--enable-history on these stores returns rc=0 without doing anything (history is already enabled, the code
+returns early before the replacement), so it cannot show the failure here. On a store whose history was first
+removed (with the fixed build), main's --enable-history fails the same way: rc=1, "cannot replace file",
+history_enabled stays 0 (journaux\essai-enable-main.txt).
