@@ -1,0 +1,79 @@
+=== essai cli-apres/new, 2026-11-16 02:05:15, BIN=%USERPROFILE%/Dev/vesuvius/nuit-1611/convert-paquet/inst-apres/bin
+--- fichiers avant (sha256)
+6eb083081a7646637814707516bf3c3a9bb0fb3da2b56e3c59eaaadef212b03b *p1.vcobj
+809032b280329d26888513dca0f4a4fccb3447c130553feaa4e5c338028b898b *p1.vcobj.mapping.json
+d9fb81c2b2ef99498e0b1ee5402882060bfe7e8aef0b7630cd94ed1a02567c94 *p1.vcobj.report.json
+ce63c373735b6a5bff4ec8d2967543985e559fd25d9d99a480995fe40a630f70 *p1.vcproj
+7ccbfffec2377294f24076b8e71c5409f43090716861fa85974f8e7f172a2880 *projet été.vcobj
+fa2aa77f314c21b04371db66086dd7fe42cf025367eeb0ed31d6aa5479bfe1f4 *projet été.vcobj.mapping.json
+bea204e0ff4a72974f61eb8a3db523a9162200064a15c35ae80d50c63a8c8f9e *projet été.vcobj.report.json
+abf1b94523add8f1aba3c91061eb5e70cfd0cd000ab7d1b22715cfd091403aa3 *projet été.vcproj
+--- user_version / application_id des magasins
+new\p1.vcobj user_version 22 application_id 0x56434f42
+new\projet �t�.vcobj user_version 22 application_id 0x56434f42
+--- ping
+{"id": 791158140, "jsonrpc": "2.0", "result": {"pid": 23368, "pong": true, "protocolVersion": 2, "version": "f546487-2026-11-16"}}
+(0.9 s)
+--- volume.open p1.vcproj
+{"id": 791159231, "jsonrpc": "2.0", "result": {"opened": true, "volumeId": "20250521151220", "volumeIds": ["20250521151220"], "vpkgPath": "%USERPROFILE%\\Dev\\vesuvius\\donnees-convert-paquet\\essais\\cli-apres\\new"}}
+(0.8 s)
+--- screenshot.capture (p1)
+{"id": 791164630, "jsonrpc": "2.0", "result": {"base64": null, "filePath": "%USERPROFILE%/Dev/vesuvius/nuit-1611/convert-paquet/gui/captures/cli-apres/new/p1.png", "format": "png", "height": 1171, "width": 1920}}
+(0.8 s)
+touch: cannot touch '%USERPROFILE%/Dev/vesuvius/nuit-1611/convert-paquet/gui/CAPTURE-cli-apres/new-p1': No such file or directory
+--- segments.list
+{"id": 791165713, "jsonrpc": "2.0", "result": {"loading": false, "segments": [{"active": false, "bound": true, "catalog": false, "id": "2c63849f-e868-5182-a011-37fcfd6743f9", "name": "20250502160708188_original", "store": "c2b2e989-2208-4975-8a87-42056c223477", "tags": ["paths"], "writable": true}]}}
+(0.0 s)
+--- points.list
+{"id": 791165925, "jsonrpc": "2.0", "result": {"collections": [{"color": [0.0012512588873505592, 0.5635853409767151, 0.19330424070358276], "id": 1, "name": "plis été", "points": [{"id": 3, "position": {"x": 4230, "y": 4190, "z": 12150}, "winding": null}, {"id": 2, "position": {"x": 4200, "y": 4180, "z": 12148}, "winding": null}, {"id": 1, "position": {"x": 4171, "y": 4171, "z": 12148}, "winding": null}], "store": "c2b2e989-2208-4975-8a87-42056c223477", "uuid": "c83cc5ef-943c-4fec-8f2e-e80c70854b4b"}]}}
+(0.0 s)
+--- volume.open projet été.vcproj
+{"id": 791172168, "jsonrpc": "2.0", "result": {"opened": true, "volumeId": "20250521151220", "volumeIds": ["20250521151220"], "vpkgPath": "%USERPROFILE%\\Dev\\vesuvius\\donnees-convert-paquet\\essais\\cli-apres\\new"}}
+(0.2 s)
+--- screenshot.capture (projet___t__)
+{"id": 791176799, "jsonrpc": "2.0", "result": {"base64": null, "filePath": "%USERPROFILE%/Dev/vesuvius/nuit-1611/convert-paquet/gui/captures/cli-apres/new/projet___t__.png", "format": "png", "height": 1171, "width": 1920}}
+(0.1 s)
+touch: cannot touch '%USERPROFILE%/Dev/vesuvius/nuit-1611/convert-paquet/gui/CAPTURE-cli-apres/new-projet___t__': No such file or directory
+--- segments.list
+{"id": 791177436, "jsonrpc": "2.0", "result": {"loading": false, "segments": [{"active": false, "bound": true, "catalog": false, "id": "09f10f4e-d698-565a-a2fa-5720f5b63530", "name": "auto_grown_20250502161744358", "store": "279ded74-f608-4ff9-aff7-9b4550e7cd6b", "tags": ["cat1"], "writable": true}, {"active": false, "bound": true, "catalog": false, "id": "7829902d-d3e6-439e-bf45-b0dfb98ac5fc", "name": "auto_grown_20261115004106362", "store": "279ded74-f608-4ff9-aff7-9b4550e7cd6b", "tags": ["paths"], "writable": true}, {"active": false, "bound": true, "catalog": false, "id": "83fd5ed7-39ae-4678-ae49-0853cd024e95", "name": "auto_grown_20261115002935256", "store": "279ded74-f608-4ff9-aff7-9b4550e7cd6b", "tags": ["paths"], "writable": true}]}}
+(0.0 s)
+--- points.list
+{"id": 791177817, "jsonrpc": "2.0", "result": {"collections": [{"color": [0.0012512588873505592, 0.5635853409767151, 0.19330424070358276], "id": 3, "name": "plis été", "points": [{"id": 3, "position": {"x": 4230, "y": 4190, "z": 12150}, "winding": null}, {"id": 2, "position": {"x": 4200, "y": 4180, "z": 12148}, "winding": null}, {"id": 1, "position": {"x": 4171, "y": 4171, "z": 12148}, "winding": null}], "store": "279ded74-f608-4ff9-aff7-9b4550e7cd6b", "uuid": "c83cc5ef-943c-4fec-8f2e-e80c70854b4b"}, {"color": [0.808740496635437, 0.5850093364715576, 0.47987303137779236], "id": 2, "name": "graines été", "points": [{"id": 4, "position": {"x": 4171, "y": 4171, "z": 12148}, "winding": null}], "store": "279ded74-f608-4ff9-aff7-9b4550e7cd6b", "uuid": "a35d50a2-4fdd-4720-9776-51c77881b76c"}]}}
+(0.0 s)
+--- lanceur.log
+02:05:16 BIN=%USERPROFILE%\Dev\vesuvius\nuit-1611\convert-paquet\inst-apres\bin PATH=%USERPROFILE%\Dev\vesuvius\nuit-1611\convert-paquet\inst-apres\bin;C:\Windows\System32;C:\Windows QT_PLUGIN_PATH=None
+02:05:16 VC3D pid=23368 pont=vc3d-conv-26572
+02:06:25 STOP demandé
+02:06:25 pic mémoire 1347404 Ko
+02:06:41 VC3D tué (pas fermé en 15 s)
+02:06:43 annonce du pont retirée
+02:06:43 verrou-fenetre relâché
+02:06:43 FIN rc=0
+--- stderr VC3D (lignes store/convert/Unavailable)
+--- fichiers après (sha256)
+total 2313
+drwxr-xr-x 1 user 197121       0 Nov 16 02:06 .
+drwxr-xr-x 1 user 197121       0 Nov 16 01:05 ..
+-rw-r--r-- 1 user 197121  749568 Nov 16 02:06 p1.vcobj
+-rw-r--r-- 1 user 197121       0 Nov 16 02:05 p1.vcobj-owner
+-rw-r--r-- 1 user 197121     438 Nov 16 01:05 p1.vcobj.mapping.json
+-rw-r--r-- 1 user 197121    1828 Nov 16 01:05 p1.vcobj.report.json
+-rw-r--r-- 1 user 197121     813 Nov 15 00:30 p1.vcproj
+-rw-r--r-- 1 user 197121 1511424 Nov 16 02:06 projet été.vcobj
+-rw-r--r-- 1 user 197121       0 Nov 16 02:06 projet été.vcobj-owner
+-rw-r--r-- 1 user 197121   32768 Nov 16 02:06 projet été.vcobj-shm
+-rw-r--r-- 1 user 197121   45352 Nov 16 02:06 projet été.vcobj-wal
+-rw-r--r-- 1 user 197121    1050 Nov 16 01:05 projet été.vcobj.mapping.json
+-rw-r--r-- 1 user 197121    1762 Nov 16 01:05 projet été.vcobj.report.json
+-rw-r--r-- 1 user 197121     833 Nov 15 00:26 projet été.vcproj
+ce63c373735b6a5bff4ec8d2967543985e559fd25d9d99a480995fe40a630f70 *p1.vcproj
+abf1b94523add8f1aba3c91061eb5e70cfd0cd000ab7d1b22715cfd091403aa3 *projet été.vcproj
+a7867d5ccc19c975bd258cc81ec2c48afb45c02bdc3658b4ce452930e56fd18f *p1.vcobj
+ee06d6762a4a7ab1ba4d50d838d3837ed4694b0bd854580de77f4c53a6a92c72 *projet été.vcobj
+--- user_version / application_id après
+new\p1.vcobj user_version 22 application_id 0x56434f42
+new\projet �t�.vcobj user_version 22 application_id 0x56434f42
+--- .vcproj : différences avec la source
+p1.vcproj inchangé
+projet été.vcproj inchangé
+=== FIN 02:06:45

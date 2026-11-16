@@ -1,0 +1,7 @@
+# 2026-11-16 02:41:55 read-only look at wt-vc3d/volume-cartographer/build/ci-windows-mingw (HEAD now 2d3fb38d3; build.ninja written 2026-11-15 05:15:48 by the configure of the local merge 269c75927 = main + #2557 + #2559 + this change, see preuves-vc3d-conversion-projet/paquet-fusion.txt)
+$ grep -rln vc_object_convert.exe\") --include=cmake_install.cmake .
+./cmake_install.cmake
+./object_store/cmake_install.cmake
+$ component of each install rule of vc_object_convert.exe:
+./cmake_install.cmake:341: if(CMAKE_INSTALL_COMPONENT STREQUAL "vc_runtime" OR NOT CMAKE_INSTALL_COMPONENT)
+./object_store/cmake_install.cmake:46: if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)

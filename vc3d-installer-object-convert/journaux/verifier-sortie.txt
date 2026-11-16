@@ -1,0 +1,16 @@
+=== 1. vc_object_convert.exe dans les installateurs de la CI ===
+Attendu : AVANT = aucune ligne ; APRÈS = bin\vc_object_convert.exe
+--- AVANT (main + #2557) :
+    (aucune ligne)
+--- APRÈS (main + #2557 + ce commit) :
+2026-11-16 00:36:00 .....                    335362  bin\vc_object_convert.exe
+
+=== 2. Conversion d'un vrai ancien magasin avec l'outil de l'installateur APRÈS ===
+Attendu : rc=0, source_schema 21, target_schema 22, validation ok
+Obtenu : rc=0
+  "source_schema": 21,
+  "target_schema": 22,
+  "validation": "ok"
+
+Journaux : %USERPROFILE%\Dev\vesuvius\preuves-vc3d-installateur-convert\journaux
+Appuyez sur une touche pour continuer... 

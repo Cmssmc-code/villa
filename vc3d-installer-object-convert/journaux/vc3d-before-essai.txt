@@ -1,0 +1,72 @@
+=== essai gui-avant, 2026-11-16 02:03:06, BIN=%USERPROFILE%/Dev/vesuvius/nuit-1611/convert-paquet/inst-avant/bin
+--- fichiers avant (sha256)
+d36cfd3ea217df0ca320506eab917d02b46234881a5e21c98cd84b182f1320f0 *p1.vcobj
+ce63c373735b6a5bff4ec8d2967543985e559fd25d9d99a480995fe40a630f70 *p1.vcproj
+4246ef4c8a3851f55db7ce24059e1fba4190c2cb207705f9d85d7afe6163f5a7 *projet été.vcobj
+abf1b94523add8f1aba3c91061eb5e70cfd0cd000ab7d1b22715cfd091403aa3 *projet été.vcproj
+--- user_version / application_id des magasins
+gui-avant\p1.vcobj user_version 21 application_id 0x56434f42
+gui-avant\projet �t�.vcobj user_version 21 application_id 0x56434f42
+--- ping
+{"id": 791014175, "jsonrpc": "2.0", "result": {"pid": 24224, "pong": true, "protocolVersion": 2, "version": "4675779-2026-11-15"}}
+(0.0 s)
+--- volume.open p1.vcproj
+{"id": 791014286, "jsonrpc": "2.0", "result": {"opened": true, "volumeId": "20250521151220-8.640um-1.2m-116keV-masked.zarr-84a3d170bf03b388", "volumeIds": ["20250521151220-8.640um-1.2m-116keV-masked.zarr-84a3d170bf03b388"], "vpkgPath": "%USERPROFILE%\\Dev\\vesuvius\\donnees-convert-paquet\\essais\\gui-avant"}}
+(4.2 s)
+--- screenshot.capture (p1)
+{"id": 791023321, "jsonrpc": "2.0", "result": {"base64": null, "filePath": "%USERPROFILE%/Dev/vesuvius/nuit-1611/convert-paquet/gui/captures/gui-avant/p1.png", "format": "png", "height": 1171, "width": 1920}}
+(0.5 s)
+--- segments.list
+{"error": {"code": -32000, "message": "No project or no volume open"}, "id": 791024743, "jsonrpc": "2.0"}
+(0.0 s)
+--- points.list
+{"id": 791025496, "jsonrpc": "2.0", "result": {"collections": []}}
+(0.0 s)
+--- volume.open projet été.vcproj
+{"id": 791032096, "jsonrpc": "2.0", "result": {"opened": true, "volumeId": "20250521151220", "volumeIds": ["20250521151220"], "vpkgPath": "%USERPROFILE%\\Dev\\vesuvius\\donnees-convert-paquet\\essais\\gui-avant"}}
+(2.6 s)
+--- screenshot.capture (projet___t__)
+{"id": 791039539, "jsonrpc": "2.0", "result": {"base64": null, "filePath": "%USERPROFILE%/Dev/vesuvius/nuit-1611/convert-paquet/gui/captures/gui-avant/projet___t__.png", "format": "png", "height": 1171, "width": 1920}}
+(0.1 s)
+--- segments.list
+{"error": {"code": -32000, "message": "No project or no volume open"}, "id": 791040058, "jsonrpc": "2.0"}
+(0.0 s)
+--- points.list
+{"id": 791040399, "jsonrpc": "2.0", "result": {"collections": []}}
+(0.0 s)
+--- lanceur.log
+02:03:07 BIN=%USERPROFILE%\Dev\vesuvius\nuit-1611\convert-paquet\inst-avant\bin PATH=%USERPROFILE%\Dev\vesuvius\nuit-1611\convert-paquet\inst-avant\bin;C:\Windows\System32;C:\Windows QT_PLUGIN_PATH=None
+02:03:07 VC3D pid=24224 pont=vc3d-conv-26064
+02:03:46 capture gui-avant-p1: 2 images
+02:04:01 capture gui-avant-projet___t__: 2 images
+02:04:07 STOP demandé
+02:04:07 pic mémoire 1474412 Ko
+02:04:23 VC3D tué (pas fermé en 15 s)
+02:04:26 annonce du pont retirée
+02:04:26 verrou-fenetre relâché
+02:04:26 FIN rc=0
+--- stderr VC3D (lignes store/convert/Unavailable)
+--- fichiers après (sha256)
+total 2236
+drwxr-xr-x 1 user 197121       0 Nov 16 02:03 .
+drwxr-xr-x 1 user 197121       0 Nov 16 02:03 ..
+-rw-r--r-- 1 user 197121  757760 Nov 15 00:41 p1.vcobj
+-rw-r--r-- 1 user 197121       0 Nov 16 02:03 p1.vcobj-owner
+-rw-r--r-- 1 user 197121     862 Nov 16 02:03 p1.vcproj
+-rw-r--r-- 1 user 197121 1519616 Nov 15 00:42 projet été.vcobj
+-rw-r--r-- 1 user 197121       0 Nov 16 02:03 projet été.vcobj-owner
+-rw-r--r-- 1 user 197121     833 Nov 15 00:26 projet été.vcproj
+6d93963c3cf2724a9298133c7640afc539e048c193c480cb5aa5aa9bad7d422c *p1.vcproj
+abf1b94523add8f1aba3c91061eb5e70cfd0cd000ab7d1b22715cfd091403aa3 *projet été.vcproj
+d36cfd3ea217df0ca320506eab917d02b46234881a5e21c98cd84b182f1320f0 *p1.vcobj
+4246ef4c8a3851f55db7ce24059e1fba4190c2cb207705f9d85d7afe6163f5a7 *projet été.vcobj
+--- user_version / application_id après
+gui-avant\p1.vcobj user_version 21 application_id 0x56434f42
+gui-avant\projet �t�.vcobj user_version 21 application_id 0x56434f42
+--- .vcproj : différences avec la source
+22c22
+<     "current_volume": "20250521151220"
+---
+>     "current_volume": "20250521151220-8.640um-1.2m-116keV-masked.zarr-84a3d170bf03b388"
+projet été.vcproj inchangé
+=== FIN 02:04:28

@@ -1,0 +1,86 @@
+BEFORE: Windows installer built WITHOUT the commit (main + #2557 only)
+=====================================================================
+
+Machine: Windows 11, no GPU. Night of 2026-11-16.
+
+Why main + #2557: on main (2d3fb38d3) the package step of the VC3D Windows workflow fails
+(`file INSTALL cannot find .../bench_fiber_projection.exe`), fixed by PR #2557. So "before" and
+"after" both include #2557; the only difference between them is the commit of this PR.
+
+Data: the two real projects made on 2026-11-15 with the official package VC3D-97fb933-2026-11-13-win64
+  p1.vcproj           (1 segment, collection "plis été" with 3 points), store p1.vcobj
+  projet été.vcproj   (3 segments, collections "plis été" 3 points, "graines été" 1 point), store "projet été.vcobj"
+  Volume: https://vesuvius-challenge-open-data.s3.us-east-1.amazonaws.com/PHerc1447/volumes/20250521151220-8.640um-1.2m-116keV-masked.zarr
+  Both stores: PRAGMA user_version = 21, application_id = 0x56434f42 (schema 21, the format of the current release).
+  sha256 p1.vcobj d36cfd3e..., "projet été.vcobj" 4246ef4c...
+
+1) What the installer contains
+------------------------------
+Installer from the official workflow (vc3d-windows.yml) run on my fork, GitHub-hosted runner:
+  run 43774798604, branch essai-ci/pr2557 = main 2d3fb38d3 + #2557 (4675779f1) + 1a02553ad (fork test only:
+  changes `runs-on` to a GitHub-hosted runner; not part of any PR). Conclusion: success
+  (Build, Package (NSIS installer + ZIP), Smoke test packaged tree: all green).
+  https://github.com/Cmssmc-code/villa/actions/runs/43774798604
+  Artifact VC3D-1a02553-2026-11-16-win64.exe, sha256 f33601e9c96b2179ec61a7d5b392cee37315f3fb89f1ff7a3234ffc0181da870
+
+$ 7z l -ba VC3D-1a02553-2026-11-16-win64.exe       (journaux\listes\VC3D-1a02553-2026-11-16-win64.exe.liste.txt)
+  19 .exe = 18 programs + Uninstall.exe. No vc_object_convert.exe:
+  bin\libvc_object_formats.dll
+  bin\libvc_object_geometry.dll
+  bin\libvc_objects.dll
+  (no other "vc_object" entry)
+
+Same result for the installer I built locally on 2026-11-15 from main + #2557 (4675779, 18 programs) and for the
+official 2026-11-13 installer 97fb933 (18 programs). The .zip packages of 97fb933 and 4675779 do contain
+vc_object_convert.exe (journaux\listes\*.zip.exe.txt).
+
+2) The user follows the error message: convert the store with vc_object_convert
+-------------------------------------------------------------------------------
+The store raises (vc_object_store/src/Database.cpp:66):
+  "object store: unsupported database schema (convert upstream stores with vc_object_convert): <path>"
+
+Installer 4675779 (main + #2557) extracted to inst-avant\ (journaux\cli-essai.txt, script journaux\cli-essai.sh):
+=== 2026-11-16 01:05:49 avant : installer tree .../inst-avant/bin
+--- programs in bin: 18 ; vc_object_convert.exe present: NO
+--- stores before conversion
+p1.vcobj user_version 21
+projet été.vcobj user_version 21
+$ cd <installer>\bin && vc_object_convert "old\p1.vcobj" "new\p1.vcobj"
+'vc_object_convert.exe' n'est pas reconnu en tant que commande interne
+ou externe, un programme exécutable ou un fichier de commandes.
+rc=1
+$ cd <installer>\bin && vc_object_convert "old\projet été.vcobj" "new\projet été.vcobj"
+'vc_object_convert.exe' n'est pas reconnu en tant que commande interne
+ou externe, un programme exécutable ou un fichier de commandes.
+rc=1
+--- stores after conversion
+(no converted store)
+
+(French Windows: "'vc_object_convert.exe' is not recognized as an internal or external command".)
+
+3) VC3D of the same installer opens the two projects
+----------------------------------------------------
+VC3D.exe from inst-avant\bin, hidden desktop, VC3D agent bridge (journaux\vc3d-before-essai.txt, script journaux\essai.sh).
+Fresh copies of the two projects (stores at schema 21).
+
+--- ping
+{"result": {"pid": 24224, "pong": true, "protocolVersion": 2, "version": "4675779-2026-11-15"}}
+--- volume.open p1.vcproj
+{"result": {"opened": true, "volumeId": "20250521151220-8.640um-1.2m-116keV-masked.zarr-84a3d170bf03b388", ...}}
+--- segments.list
+{"error": {"code": -32000, "message": "No project or no volume open"}}
+--- points.list
+{"result": {"collections": []}}
+--- volume.open projet été.vcproj
+{"result": {"opened": true, "volumeId": "20250521151220", ...}}
+--- segments.list
+{"error": {"code": -32000, "message": "No project or no volume open"}}
+--- points.list
+{"result": {"collections": []}}
+
+Screenshot captures\before\p1.png: the volume is shown, no segment; status bar "Unavailable project stores:" /
+"p1.vcobj: object store: unsu..." (text cut by the window width).
+Stores after the run: still user_version 21; no converted store.
+
+Result: with this installer, the user sees no segment and no point, and cannot do what the message asks,
+because vc_object_convert.exe is not installed.

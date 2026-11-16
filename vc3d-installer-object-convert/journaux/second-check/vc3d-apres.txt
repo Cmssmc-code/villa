@@ -1,0 +1,40 @@
+=== essai apres, 2026-11-16 03:24:57, BIN=%USERPROFILE%\Dev\vesuvius\nuit-1611\sceptique-vc3d-installateur-convert\inst-apres\bin, DOSSIER=%USERPROFILE%/Dev/vesuvius/donnees-sceptique-convert/projets/apres
+--- ping
+{"id": 795950646, "jsonrpc": "2.0", "result": {"pid": 7624, "pong": true, "protocolVersion": 2, "version": "f546487-2026-11-16"}}
+(0.0 s)
+--- volume.open p1.vcproj
+{"id": 795951259, "jsonrpc": "2.0", "result": {"opened": true, "volumeId": "20250521151220", "volumeIds": ["20250521151220"], "vpkgPath": "%USERPROFILE%\\Dev\\vesuvius\\donnees-sceptique-convert\\projets\\apres"}}
+(0.9 s)
+--- screenshot.capture (p1)
+{"id": 795957742, "jsonrpc": "2.0", "result": {"base64": null, "filePath": "%USERPROFILE%/Dev/vesuvius/nuit-1611/sceptique-vc3d-installateur-convert/gui/captures/apres/p1.png", "format": "png", "height": 1171, "width": 1920}}
+(0.6 s)
+--- segments.list
+{"id": 795958885, "jsonrpc": "2.0", "result": {"loading": false, "segments": [{"active": false, "bound": true, "catalog": false, "id": "2c63849f-e868-5182-a011-37fcfd6743f9", "name": "20250502160708188_original", "store": "c2b2e989-2208-4975-8a87-42056c223477", "tags": ["paths"], "writable": true}]}}
+(0.0 s)
+
+--- points.list
+{"id": 795959231, "jsonrpc": "2.0", "result": {"collections": [{"color": [0.0012512588873505592, 0.5635853409767151, 0.19330424070358276], "id": 1, "name": "plis �t�", "points": [{"id": 3, "position": {"x": 4230, "y": 4190, "z": 12150}, "winding": null}, {"id": 2, "position": {"x": 4200, "y": 4180, "z": 12148}, "winding": null}, {"id": 1, "position": {"x": 4171, "y": 4171, "z": 12148}, "winding": 
+--- volume.open PHerc1447.vcproj
+{"id": 795962717, "jsonrpc": "2.0", "result": {"opened": true, "volumeId": "20250521151220", "volumeIds": ["20250521151220", "20250521151220-surface-20260413222639-surface-m7-L0-th0.2.zarr-9279f79c1a22f778"], "vpkgPath": "%USERPROFILE%\\Dev\\vesuvius\\donnees-sceptique-convert\\projets\\apres"}}
+(2.9 s)
+--- screenshot.capture (PHerc1447)
+{"id": 795971021, "jsonrpc": "2.0", "result": {"base64": null, "filePath": "%USERPROFILE%/Dev/vesuvius/nuit-1611/sceptique-vc3d-installateur-convert/gui/captures/apres/PHerc1447.png", "format": "png", "height": 1171, "width": 1920}}
+(0.1 s)
+--- segments.list
+{"id": 795971344, "jsonrpc": "2.0", "result": {"loading": false, "segments": [{"active": false, "bound": true, "catalog": true, "id": "09f10f4e-d698-565a-a2fa-5720f5b63530", "name": "auto_grown_20250502161744358", "store": "a6433976-5c92-4536-81c4-39e61773ec15", "tags": [], "writable": true}, {"active": false, "bound": true, "catalog": true, "id": "18896169-3d1e-5401-9141-b4d462ebf54d", "name": "a
+--- points.list
+{"id": 795971803, "jsonrpc": "2.0", "result": {"collections": []}}
+(0.0 s)
+
+--- lanceur.log
+03:24:57 BIN=%USERPROFILE%\Dev\vesuvius\nuit-1611\sceptique-vc3d-installateur-convert\inst-apres\bin PATH=%USERPROFILE%\Dev\vesuvius\nuit-1611\sceptique-vc3d-installateur-convert\inst-apres\bin;C:\Windows\System32;C:\Windows QT_PLUGIN_PATH=None
+03:24:57 VC3D pid=7624 pont=vc3d-scept-21556
+03:26:16 STOP demandé
+03:26:16 pic mémoire 1652124 Ko
+03:26:32 VC3D tué (pas fermé en 15 s)
+03:26:35 annonce du pont retirée
+03:26:35 verrou-fenetre relâché
+03:26:35 FIN rc=0
+--- stderr VC3D (lignes store/convert/Unavailable)
+=== FIN 03:26:36
+FIN rc=0

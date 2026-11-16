@@ -1,0 +1,8 @@
+02:05:16 BIN=%USERPROFILE%\Dev\vesuvius\nuit-1611\convert-paquet\inst-apres\bin PATH=%USERPROFILE%\Dev\vesuvius\nuit-1611\convert-paquet\inst-apres\bin;C:\Windows\System32;C:\Windows QT_PLUGIN_PATH=None
+02:05:16 VC3D pid=23368 pont=vc3d-conv-26572
+02:06:25 STOP demandé
+02:06:25 pic mémoire 1347404 Ko
+02:06:41 VC3D tué (pas fermé en 15 s)
+02:06:43 annonce du pont retirée
+02:06:43 verrou-fenetre relâché
+02:06:43 FIN rc=0

@@ -1,0 +1,78 @@
+=== 2026-11-16 01:05:49 avant : installer tree %USERPROFILE%/Dev/vesuvius/nuit-1611/convert-paquet/inst-avant/bin
+--- programs in bin: 18 ; vc_object_convert.exe present: NO
+--- stores before conversion
+p1.vcobj user_version 21
+projet �t�.vcobj user_version 21
+$ cd <installer>\bin && vc_object_convert "old\p1.vcobj" "new\p1.vcobj"
+'vc_object_convert.exe' n'est pas reconnu en tant que commande interne
+ou externe, un programme ex�cutable ou un fichier de commandes.
+rc=1
+$ cd <installer>\bin && vc_object_convert "old\projet été.vcobj" "new\projet été.vcobj"
+'vc_object_convert.exe' n'est pas reconnu en tant que commande interne
+ou externe, un programme ex�cutable ou un fichier de commandes.
+rc=1
+--- stores after conversion
+(no converted store)
+--- originals unchanged:
+d36cfd3ea217df0ca320506eab917d02b46234881a5e21c98cd84b182f1320f0 *p1.vcobj
+4246ef4c8a3851f55db7ce24059e1fba4190c2cb207705f9d85d7afe6163f5a7 *projet été.vcobj
+d36cfd3ea217df0ca320506eab917d02b46234881a5e21c98cd84b182f1320f0 *p1/p1.vcobj
+4246ef4c8a3851f55db7ce24059e1fba4190c2cb207705f9d85d7afe6163f5a7 *projet-ete/projet été.vcobj
+=== 2026-11-16 01:05:54 apres : installer tree %USERPROFILE%/Dev/vesuvius/nuit-1611/convert-paquet/inst-apres/bin
+--- programs in bin: 19 ; vc_object_convert.exe present: yes
+--- stores before conversion
+p1.vcobj user_version 21
+projet �t�.vcobj user_version 21
+$ cd <installer>\bin && vc_object_convert "old\p1.vcobj" "new\p1.vcobj"
+{
+  "copied_artifacts": 0,
+  "copied_rows": {
+    "a49f4d7b-04b0-4aed-81c5-1b90e6df7621": {
+      "database_identity": 1,
+      "edge_tags": 0,
+      "edges": 0,
+      "fibers": 0,
+      "geometry_chunks": 8,
+      "geometry_current_chunks": 0,
+      "geometry_deltas": 0,
+      "geometry_materializations": 0,
+      "geometry_revision_chunks": 4,
+      "geometry_revisions": 2,
+      "history_checked": 0,
+      "history_dirty_edges": 0,
+      "history_dirty_objects": 0,
+      "history_expected": 0,
+      "history_generations": 1,
+      "history_required": 0,
+rc=0
+$ cd <installer>\bin && vc_object_convert "old\projet été.vcobj" "new\projet été.vcobj"
+{
+  "copied_artifacts": 0,
+  "copied_rows": {
+    "04de6fd1-110e-43ba-892f-c3fe28809ec6": {
+      "database_identity": 1,
+      "edge_tags": 0,
+      "edges": 0,
+      "fibers": 0,
+      "geometry_chunks": 28,
+      "geometry_current_chunks": 0,
+      "geometry_deltas": 0,
+      "geometry_materializations": 0,
+      "geometry_revision_chunks": 20,
+      "geometry_revisions": 6,
+      "history_checked": 0,
+      "history_dirty_edges": 0,
+      "history_dirty_objects": 0,
+      "history_expected": 0,
+      "history_generations": 1,
+      "history_required": 0,
+rc=0
+--- stores after conversion
+p1.vcobj user_version 22
+projet �t�.vcobj user_version 22
+--- originals unchanged:
+d36cfd3ea217df0ca320506eab917d02b46234881a5e21c98cd84b182f1320f0 *p1.vcobj
+4246ef4c8a3851f55db7ce24059e1fba4190c2cb207705f9d85d7afe6163f5a7 *projet été.vcobj
+d36cfd3ea217df0ca320506eab917d02b46234881a5e21c98cd84b182f1320f0 *p1/p1.vcobj
+4246ef4c8a3851f55db7ce24059e1fba4190c2cb207705f9d85d7afe6163f5a7 *projet-ete/projet été.vcobj
+FIN rc=0 2026-11-16 01:05:56
