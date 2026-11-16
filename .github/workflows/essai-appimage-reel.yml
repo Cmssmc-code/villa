@@ -1,0 +1,71 @@
+name: Fork test only - AppImage on a real segment
+
+# Test-only workflow for the Cmssmc-code/villa fork. It runs two CLI tools from
+# the AppImage built by run 43774811522 (main 2d3fb38d3 + builder-image pin +
+# #2557) on a real PHerc0800 segment from the public bucket.
+on:
+  push:
+    branches: ['essai-ci/appimage-reel']
+
+permissions:
+  actions: read
+  contents: read
+
+jobs:
+  real-segment:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - name: Download the AppImage of run 43774811522
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh run download 43774811522 -R "${{ github.repository }}" -n VC3D-linux-appimage -D dist
+          rm -f dist/*-debug.tar.zst
+          ls -l dist
+          sha256sum dist/*.AppImage
+
+      - name: Runtime host prerequisites (same list as vc3d-linux.yml)
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            libglvnd0 libglx0 libegl1 libopengl0 libgl1 libgl1-mesa-dri libglx-mesa0 \
+            libx11-6 libx11-xcb1 libxcb1 libice6 libsm6 \
+            libfontconfig1 libfreetype6 libharfbuzz0b
+
+      - name: Real segment from the public bucket (PHerc0800)
+        run: |
+          B=https://vesuvius-challenge-open-data.s3.us-east-1.amazonaws.com/PHerc0800/segments/20251029010146-auto_grown_20251029010146642/mesh/intermediate/tifxyz_original
+          mkdir seg
+          for f in meta.json x.tif y.tif z.tif; do curl -fsSL -o "seg/$f" "$B/$f"; done
+          ls -l seg
+          sha256sum seg/*
+
+      - name: vc_tifxyz2obj then vc_obj2tifxyz from the AppImage
+        working-directory: dist
+        env:
+          APPIMAGE_EXTRACT_AND_RUN: '1'
+        run: |
+          a="$(ls VC3D-*.AppImage)"
+          chmod +x "$a"
+          ln -sf "$a" vc_tifxyz2obj
+          ln -sf "$a" vc_obj2tifxyz
+          mkdir -p ../out
+          set +e
+          ./vc_tifxyz2obj ../seg ../out/seg0800.obj 2>&1 | tail -20; rc1=${PIPESTATUS[0]}
+          echo "vc_tifxyz2obj rc=$rc1"
+          ls -l ../out
+          echo "OBJ bytes=$(wc -c < ../out/seg0800.obj) v=$(grep -c '^v ' ../out/seg0800.obj) f=$(grep -c '^f ' ../out/seg0800.obj)"
+          sha256sum ../out/seg0800.obj
+          ./vc_obj2tifxyz ../out/seg0800.obj ../out/retour 2>&1 | tail -20; rc2=${PIPESTATUS[0]}
+          echo "vc_obj2tifxyz rc=$rc2"
+          ls -l ../out/retour
+          python3 -c "import json,sys; m=json.load(open('../out/retour/meta.json')); print('retour meta:', {k: m.get(k) for k in ('format','scale','bbox')})" || true
+          [ "$rc1" -eq 0 ] && [ "$rc2" -eq 0 ]
+
+      - name: Upload outputs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: appimage-reel-outputs
+          path: out/
