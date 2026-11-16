@@ -1,0 +1,14 @@
+=== vc_object_convert --remove-history-and-disable p1-22.vcobj
+vc_object_convert: filesystem error: cannot replace file: Accès refusé [%USERPROFILE%\Dev\vesuvius\donnees-fibres-22\conv3\p1-22.vcobj.policy-156821ad-0ff8-4a9c-8a32-e6ca840ba2a5] [%USERPROFILE%\Dev\vesuvius\donnees-fibres-22\conv3\p1-22.vcobj]
+rc=1
+drwxr-xr-x 1 user 197121      0 Nov 16 02:22 .
+drwxr-xr-x 1 user 197121      0 Nov 16 02:22 ..
+-rw-r--r-- 1 user 197121 749568 Nov 16 02:22 p1-22.vcobj
+-rw-r--r-- 1 user 197121      0 Nov 16 02:22 p1-22.vcobj-owner
+=== vc_object_convert --enable-history p1-22.vcobj
+History policy updated atomically
+rc=0
+drwxr-xr-x 1 user 197121      0 Nov 16 02:22 .
+drwxr-xr-x 1 user 197121      0 Nov 16 02:22 ..
+-rw-r--r-- 1 user 197121 749568 Nov 16 02:22 p1-22.vcobj
+-rw-r--r-- 1 user 197121      0 Nov 16 02:22 p1-22.vcobj-owner

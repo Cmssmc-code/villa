@@ -1,0 +1,67 @@
+=== 2026-11-16 03:16:13  vc_object_convert --in-place, main 2d3fb38d3 + commit e8b3d3dd9 (ConvertStore.cpp only)
+binary: %USERPROFILE%\Dev\vesuvius\preuves-vc-object-convert-in-place\binaire\corrige\vc_object_convert.exe  sha256 24c844d21e3fbce9...
+Windows 11, MSYS2 UCRT64 build. Data: object stores of two real VC3D projects (PHerc1447, made 2026-11-15 with the official package VC3D-97fb933-2026-11-13-win64, store schema 21).
+
+--- store: p1.vcobj  (copy of donnees\p1\, sha256 d36cfd3ea217df0c..., schema 21)
+$ cd %USERPROFILE%\AppData\Local\Temp\verifier-vc3d\convert-in-place\corrige\p1
+$ vc_object_convert.exe --in-place "p1.vcobj"
+  {
+    "copied_artifacts": 0,
+    "copied_rows": {
+      "a49f4d7b-04b0-4aed-81c5-1b90e6df7621": {
+        "database_identity": 1,
+        "edge_tags": 0,
+  [... 50 more lines, full output in journaux\ ...]
+    "physical_databases": 1,
+    "source": "%USERPROFILE%\\AppData\\Local\\Temp\\verifier-vc3d\\convert-in-place\\corrige\\p1\\p1.vcobj",
+    "source_schema": 21,
+    "target_schema": 22,
+    "validation": "ok"
+  }
+exit code: 0   (0.1 s)
+schema (PRAGMA user_version) of p1.vcobj after the command: 22   integrity_check: ok
+files in the folder after the command:
+          0  p1.vcobj-owner
+        438  p1.vcobj.mapping.json
+       1858  p1.vcobj.report.json
+      32768  p1.vcobj-shm
+     749568  p1.vcobj
+
+reference: `vc_object_convert "p1.vcobj" reference.vcobj` with main -> exit code 0, schema 22, 50 tables, 232 rows, integrity_check ok
+same row count in every table as the reference conversion: yes
+leftover .convert-/.members- files: none
+second run of the same command on the converted store (the docs say existing mapping/report files are not overwritten): exit code 1, message: vc_object_convert: output already exists: p1.vcobj.mapping.json
+  store after the second run: schema 22, integrity_check ok, row counts unchanged: yes
+
+--- store: projet été.vcobj  (copy of donnees\projet-ete\, sha256 4246ef4c8a3851f5..., schema 21)
+$ cd %USERPROFILE%\AppData\Local\Temp\verifier-vc3d\convert-in-place\corrige\projet-ete
+$ vc_object_convert.exe --in-place "projet été.vcobj"
+  {
+    "copied_artifacts": 0,
+    "copied_rows": {
+      "04de6fd1-110e-43ba-892f-c3fe28809ec6": {
+        "database_identity": 1,
+        "edge_tags": 0,
+  [... 47 more lines, full output in journaux\ ...]
+    "physical_databases": 1,
+    "source": "%USERPROFILE%\\AppData\\Local\\Temp\\verifier-vc3d\\convert-in-place\\corrige\\projet-ete\\projet été.vcobj",
+    "source_schema": 21,
+    "target_schema": 22,
+    "validation": "ok"
+  }
+exit code: 0   (0.1 s)
+schema (PRAGMA user_version) of projet été.vcobj after the command: 22   integrity_check: ok
+files in the folder after the command:
+          0  projet été.vcobj-owner
+       1050  projet été.vcobj.mapping.json
+       1808  projet été.vcobj.report.json
+      32768  projet été.vcobj-shm
+    1511424  projet été.vcobj
+
+reference: `vc_object_convert "projet été.vcobj" reference.vcobj` with main -> exit code 0, schema 22, 47 tables, 365 rows, integrity_check ok
+same row count in every table as the reference conversion: yes
+leftover .convert-/.members- files: none
+second run of the same command on the converted store (the docs say existing mapping/report files are not overwritten): exit code 1, message: vc_object_convert: output already exists: projet été.vcobj.mapping.json
+  store after the second run: schema 22, integrity_check ok, row counts unchanged: yes
+
+VERDICT: as expected

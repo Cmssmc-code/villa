@@ -1,0 +1,59 @@
+date 2026-11-16 03:40:29
+binary main: %USERPROFILE%\Dev\vesuvius\nuit-1611\sceptique-vc-object-convert-in-place\bin\main\vc_object_convert.exe sha256 f3395a428c02104464ba6a201fe7392bc9c2b9965fff32599306518db76ea61e
+binary corrige: %USERPROFILE%\Dev\vesuvius\nuit-1611\sceptique-vc-object-convert-in-place\bin\corrige\vc_object_convert.exe sha256 24c844d21e3fbce94746e3ebfd087a7ac4f8913d087f1cc541c2e0fba512996d
+
+===== store p1: p1.vcobj  (source sha256 d36cfd3ea217df0c)
+[ref main] $ vc_object_convert.exe "p1.vcobj" reference.vcobj -> rc=0 (0.1s)
+[ref main] reference.vcobj schema=22 integrity=ok tables=49 rows=230
+[main] $ vc_object_convert.exe --in-place "p1.vcobj" -> rc=1 (0.1s)
+[main]   | vc_object_convert: filesystem error: cannot replace file: Accès refusé [%USERPROFILE%\Dev\vesuvius\donnees-sceptique-vc-object-convert-in-place\essais\main-p1\p1.vcobj.convert-dee9525c-14d3-45e4-8f45-bc44d58baba2] [%USERPROFILE%\Dev\vesuvius\donnees-sceptique-vc-object-convert-in-place\essais\main
+[main] files before: ['p1.vcobj', 'p1.vcobj-shm', 'p1.vcobj-wal', 'p1.vcproj']
+[main] files after : ['p1.vcobj', 'p1.vcobj-owner', 'p1.vcobj-shm', 'p1.vcobj.mapping.json', 'p1.vcobj.report.json', 'p1.vcproj']
+[main] store schema=21 integrity=ok tables=49 rows=231
+[corrige] $ vc_object_convert.exe --in-place "p1.vcobj" -> rc=0 (0.3s)
+[corrige]   | "source_schema": 21,
+[corrige]   | "target_schema": 22,
+[corrige]   | "validation": "ok"
+[corrige] files before: ['p1.vcobj', 'p1.vcobj-shm', 'p1.vcobj-wal', 'p1.vcproj']
+[corrige] files after : ['p1.vcobj', 'p1.vcobj-owner', 'p1.vcobj-shm', 'p1.vcobj.mapping.json', 'p1.vcobj.report.json', 'p1.vcproj']
+[corrige] store schema=22 integrity=ok tables=49 rows=230
+[corrige] same row count per table as reference: True
+[corrige] second run -> rc=1 | vc_object_convert: output already exists: p1.vcobj.mapping.json
+
+===== store projet-ete: projet été.vcobj  (source sha256 4246ef4c8a3851f5)
+[ref main] $ vc_object_convert.exe "projet été.vcobj" reference.vcobj -> rc=0 (0.1s)
+[ref main] reference.vcobj schema=22 integrity=ok tables=46 rows=363
+[main] $ vc_object_convert.exe --in-place "projet été.vcobj" -> rc=1 (4.2s)
+[main]   | vc_object_convert: filesystem error: cannot replace file: Accès refusé [%USERPROFILE%\Dev\vesuvius\donnees-sceptique-vc-object-convert-in-place\essais\main-projet-ete\projet été.vcobj.convert-a182023e-ac13-4fda-9016-c6342bc80bd4] [%USERPROFILE%\Dev\vesuvius\donnees-sceptique-vc-object-convert-in-p
+[main] files before: ['projet été.vcobj', 'projet été.vcobj-shm', 'projet été.vcobj-wal', 'projet été.vcproj']
+[main] files after : ['projet été.vcobj', 'projet été.vcobj-owner', 'projet été.vcobj-shm', 'projet été.vcobj.mapping.json', 'projet été.vcobj.report.json', 'projet été.vcproj']
+[main] store schema=21 integrity=ok tables=46 rows=364
+[corrige] $ vc_object_convert.exe --in-place "projet été.vcobj" -> rc=0 (0.2s)
+[corrige]   | "source_schema": 21,
+[corrige]   | "target_schema": 22,
+[corrige]   | "validation": "ok"
+[corrige] files before: ['projet été.vcobj', 'projet été.vcobj-shm', 'projet été.vcobj-wal', 'projet été.vcproj']
+[corrige] files after : ['projet été.vcobj', 'projet été.vcobj-owner', 'projet été.vcobj-shm', 'projet été.vcobj.mapping.json', 'projet été.vcobj.report.json', 'projet été.vcproj']
+[corrige] store schema=22 integrity=ok tables=46 rows=363
+[corrige] same row count per table as reference: True
+[corrige] second run -> rc=1 | vc_object_convert: output already exists: projet été.vcobj.mapping.json
+
+===== store open-data-1447: PHerc1447.vcobj  (source sha256 429d330953d27c1d)
+[ref main] $ vc_object_convert.exe "PHerc1447.vcobj" reference.vcobj -> rc=0 (0.2s)
+[ref main] reference.vcobj schema=22 integrity=ok tables=46 rows=1185
+[main] $ vc_object_convert.exe --in-place "PHerc1447.vcobj" -> rc=1 (0.5s)
+[main]   | vc_object_convert: filesystem error: cannot replace file: Accès refusé [%USERPROFILE%\Dev\vesuvius\donnees-sceptique-vc-object-convert-in-place\essais\main-open-data-1447\PHerc1447.vcobj.convert-a950d716-fc32-4775-b48d-d21c399dcaf6] [%USERPROFILE%\Dev\vesuvius\donnees-sceptique-vc-object-convert-i
+[main] files before: ['PHerc1447.vcobj', 'PHerc1447.vcobj-shm', 'PHerc1447.vcobj-wal', 'PHerc1447.vcproj']
+[main] files after : ['PHerc1447.vcobj', 'PHerc1447.vcobj-owner', 'PHerc1447.vcobj-shm', 'PHerc1447.vcobj.mapping.json', 'PHerc1447.vcobj.report.json', 'PHerc1447.vcproj']
+[main] store schema=21 integrity=ok tables=46 rows=1188
+[corrige] $ vc_object_convert.exe --in-place "PHerc1447.vcobj" -> rc=0 (0.3s)
+[corrige]   | "source_schema": 21,
+[corrige]   | "target_schema": 22,
+[corrige]   | "validation": "ok"
+[corrige] files before: ['PHerc1447.vcobj', 'PHerc1447.vcobj-shm', 'PHerc1447.vcobj-wal', 'PHerc1447.vcproj']
+[corrige] files after : ['PHerc1447.vcobj', 'PHerc1447.vcobj-owner', 'PHerc1447.vcobj-shm', 'PHerc1447.vcobj.mapping.json', 'PHerc1447.vcobj.report.json', 'PHerc1447.vcproj']
+[corrige] store schema=22 integrity=ok tables=46 rows=1185
+[corrige] same row count per table as reference: True
+[corrige] second run -> rc=1 | vc_object_convert: output already exists: PHerc1447.vcobj.mapping.json
+
+FIN rc=0

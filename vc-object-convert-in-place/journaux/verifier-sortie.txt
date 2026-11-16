@@ -1,0 +1,19 @@
+[main 2d3fb38d3] p1.vcobj
+  expected : exit code 1, "cannot replace file", store still schema 21 (the defect)
+  obtained : exit code 1, schema 21 -> 21, message: vc_object_convert: filesystem error: cannot replace file: Accès refusé [%USERPROFILE%\AppData\Local\Temp\veri
+  => defect reproduced
+[main 2d3fb38d3] projet été.vcobj
+  expected : exit code 1, "cannot replace file", store still schema 21 (the defect)
+  obtained : exit code 1, schema 21 -> 21, message: vc_object_convert: filesystem error: cannot replace file: Accès refusé [%USERPROFILE%\AppData\Local\Temp\veri
+  => defect reproduced
+[fix e8b3d3dd9] p1.vcobj
+  expected : exit code 0, store schema 21 -> 22, integrity ok, same rows as a normal conversion
+  obtained : exit code 0, schema 21 -> 22, integrity ok, same rows as a normal conversion: yes
+  => fixed
+[fix e8b3d3dd9] projet été.vcobj
+  expected : exit code 0, store schema 21 -> 22, integrity ok, same rows as a normal conversion
+  obtained : exit code 0, schema 21 -> 22, integrity ok, same rows as a normal conversion: yes
+  => fixed
+
+RESULT: as expected (defect on main, fixed with the change)
+Appuyez sur une touche pour continuer... 

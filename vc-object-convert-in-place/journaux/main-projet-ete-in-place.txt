@@ -1,0 +1,1 @@
+vc_object_convert: filesystem error: cannot replace file: Accès refusé [%USERPROFILE%\AppData\Local\Temp\verifier-vc3d\convert-in-place\main\projet-ete\projet été.vcobj.convert-16ac6ef6-3c04-4826-8043-59089267625f] [%USERPROFILE%\AppData\Local\Temp\verifier-vc3d\convert-in-place\main\projet-ete\projet été.vcobj]

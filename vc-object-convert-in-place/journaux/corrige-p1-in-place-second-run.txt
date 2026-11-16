@@ -1,0 +1,1 @@
+vc_object_convert: output already exists: p1.vcobj.mapping.json

@@ -1,0 +1,13 @@
+Produit : %USERPROFILE%\Dev\vesuvius\nuit-1611\fibres-22\bin-corrige\corrige\vc_object_convert.exe
+Fabrique le 2026-11-16 a 03:12:53 par l'agent fibres-22 (nuit-1611/fibres-22/fabrique.py), hors de l'arbre partage.
+Base : arbre compile %USERPROFILE%\Dev\vesuvius\wt-vc3d au commit 2d3fb38d33a18b257230c0bd23986436c3d4722e (main).
+Seul fichier different de main : vc_object_store/src/migration/ConvertStore.cpp, pris au commit e8b3d3dd9.
+git diff --stat de ce fichier entre main et ce commit :
+vc_object_store/src/migration/ConvertStore.cpp | 5 +++++
+ 1 file changed, 5 insertions(+)
+Regles ninja reprises : compilation CXX_COMPILER__vc_object_migration_unscanned_Release, archive CXX_STATIC_LIBRARY_LINKER__vc_object_migration_Release, lien CXX_EXECUTABLE_LINKER__vc_object_convert_Release (memes options, memes objets,
+  memes bibliotheques ; seul l'objet object_store/src/CMakeFiles/vc_object_migration.dir/migration/ConvertStore.cpp.obj est remplace).
+Taille : 1216229 octets (vc_object_convert.exe de main : 1216229 octets).
+SHA-256 : 24c844d21e3fbce94746e3ebfd087a7ac4f8913d087f1cc541c2e0fba512996d
+SHA-256 du .cpp compile : 615b9098ec619332f56a1c40bc3f9315f8f2df1fdd29d932a9efa5ff0c27c569
+Journal complet des commandes : %USERPROFILE%\Dev\vesuvius\nuit-1611\fibres-22\bin-corrige\corrige\compilation.log

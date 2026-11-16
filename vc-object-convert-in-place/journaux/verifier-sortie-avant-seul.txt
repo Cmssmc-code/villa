@@ -1,0 +1,12 @@
+ECART : binary missing: %USERPROFILE%\Dev\vesuvius\preuves-vc-object-convert-in-place\binaire\corrige\vc_object_convert.exe (only the other part is replayed)
+[main 2d3fb38d3] p1.vcobj
+  expected : exit code 1, "cannot replace file", store still schema 21 (the defect)
+  obtained : exit code 1, schema 21 -> 21, message: vc_object_convert: filesystem error: cannot replace file: Accès refusé [%USERPROFILE%\AppData\Local\Temp\veri
+  => defect reproduced
+[main 2d3fb38d3] projet été.vcobj
+  expected : exit code 1, "cannot replace file", store still schema 21 (the defect)
+  obtained : exit code 1, schema 21 -> 21, message: vc_object_convert: filesystem error: cannot replace file: Accès refusé [%USERPROFILE%\AppData\Local\Temp\veri
+  => defect reproduced
+
+RESULT: ECART, see above
+Appuyez sur une touche pour continuer... 

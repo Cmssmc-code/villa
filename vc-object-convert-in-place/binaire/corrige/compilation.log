@@ -1,0 +1,13 @@
+=== 2026-11-16 02:31:08 fabrique.py corrige e8b3d3dd9
+
+$ %USERPROFILE%\Dev\vesuvius\outils-vc3d\msys64\ucrt64\bin\g++.exe -DGLOG_NO_ABBREVIATED_SEVERITIES -iquote %USERPROFILE%/Dev/vesuvius/wt-vc3d/vc_object_store/src/migration -I%USERPROFILE%/Dev/vesuvius/wt-vc3d/volume-cartographer/build/ci-windows-mingw/object_store/src/vc_object_migration_autogen/include -I%USERPROFILE%/Dev/vesuvius/wt-vc3d/volume-cartographer/core/include -I%USERPROFILE%/Dev/vesuvius/wt-vc3d/vc_object_store/src -I%USERPROFILE%/Dev/vesuvius/wt-vc3d/vc_object_store/src/../include -I%USERPROFILE%/Dev/vesuvius/wt-vc3d/vc_reader/include -I%USERPROFILE%/Dev/vesuvius/wt-vc3d/volume-cartographer/build/ci-windows-mingw/reader/include -isystem %USERPROFILE%/Dev/vesuvius/outils-vc3d/msys64/ucrt64/include/concurrentqueue -O3 -DNDEBUG -std=gnu++23 -pipe -march=x86-64 -fno-omit-frame-pointer -fasynchronous-unwind-tables -ffunction-sections -fdata-sections -Wa,-mbig-obj -O3 -Wno-psabi -Wno-ignored-attributes -Wno-narrowing -MD -MT %USERPROFILE%/Dev/vesuvius/nuit-1611/fibres-22/bin-corrige/corrige/travail/ConvertStore.cpp.obj -MF %USERPROFILE%/Dev/vesuvius/nuit-1611/fibres-22/bin-corrige/corrige/travail/ConvertStore.cpp.obj.d -o %USERPROFILE%/Dev/vesuvius/nuit-1611/fibres-22/bin-corrige/corrige/travail/ConvertStore.cpp.obj -c %USERPROFILE%/Dev/vesuvius/nuit-1611/fibres-22/bin-corrige/corrige/travail/ConvertStore.cpp
+[rc=0 en 2384 s]
+
+$ %USERPROFILE%\Dev\vesuvius\outils-vc3d\msys64\ucrt64\bin\ar.exe qc %USERPROFILE%/Dev/vesuvius/nuit-1611/fibres-22/bin-corrige/corrige/travail/libvc_object_migration.a object_store/src/CMakeFiles/vc_object_migration.dir/vc_object_migration_autogen/mocs_compilation.cpp.obj %USERPROFILE%/Dev/vesuvius/nuit-1611/fibres-22/bin-corrige/corrige/travail/ConvertStore.cpp.obj object_store/src/CMakeFiles/vc_object_migration.dir/migration/ConvertSchema21.cpp.obj
+[rc=0 en 3 s]
+
+$ %USERPROFILE%\Dev\vesuvius\outils-vc3d\msys64\ucrt64\bin\ranlib.exe %USERPROFILE%/Dev/vesuvius/nuit-1611/fibres-22/bin-corrige/corrige/travail/libvc_object_migration.a
+[rc=0 en 60 s]
+
+$ %USERPROFILE%\Dev\vesuvius\outils-vc3d\msys64\ucrt64\bin\g++.exe -O3 -DNDEBUG -Wl,--gc-sections -Wl,--as-needed -o %USERPROFILE%/Dev/vesuvius/nuit-1611/fibres-22/bin-corrige/corrige/vc_object_convert.exe -Wl,--out-implib,%USERPROFILE%/Dev/vesuvius/nuit-1611/fibres-22/bin-corrige/corrige/travail/vc_object_convert.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @%USERPROFILE%/Dev/vesuvius/nuit-1611/fibres-22/bin-corrige/corrige/travail/lien.rsp
+[rc=0 en 57 s]

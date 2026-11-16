@@ -1,0 +1,31 @@
+=== 2026-11-16 02:24:30  vc_object_convert --in-place, main 2d3fb38d3 (unchanged)
+binary: %USERPROFILE%\Dev\vesuvius\preuves-vc-object-convert-in-place\binaire\main\vc_object_convert.exe  sha256 f3395a428c021044...
+Windows 11, MSYS2 UCRT64 build. Data: object stores of two real VC3D projects (PHerc1447, made 2026-11-15 with the official package VC3D-97fb933-2026-11-13-win64, store schema 21).
+
+--- store: p1.vcobj  (copy of donnees\p1\, sha256 d36cfd3ea217df0c..., schema 21)
+$ cd %USERPROFILE%\AppData\Local\Temp\verifier-vc3d\convert-in-place\main\p1
+$ vc_object_convert.exe --in-place "p1.vcobj"
+  vc_object_convert: filesystem error: cannot replace file: Accès refusé [%USERPROFILE%\AppData\Local\Temp\verifier-vc3d\convert-in-place\main\p1\p1.vcobj.convert-d9f9b0da-22df-437a-97ca-85edc9482488] [%USERPROFILE%\AppData\Local\Temp\verifier-vc3d\convert-in-place\main\p1\p1.vcobj]
+exit code: 1   (1.8 s)
+schema (PRAGMA user_version) of p1.vcobj after the command: 21   integrity_check: ok
+files in the folder after the command:
+          0  p1.vcobj-owner
+        438  p1.vcobj.mapping.json
+       1852  p1.vcobj.report.json
+      32768  p1.vcobj-shm
+     757760  p1.vcobj
+
+--- store: projet été.vcobj  (copy of donnees\projet-ete\, sha256 4246ef4c8a3851f5..., schema 21)
+$ cd %USERPROFILE%\AppData\Local\Temp\verifier-vc3d\convert-in-place\main\projet-ete
+$ vc_object_convert.exe --in-place "projet été.vcobj"
+  vc_object_convert: filesystem error: cannot replace file: Accès refusé [%USERPROFILE%\AppData\Local\Temp\verifier-vc3d\convert-in-place\main\projet-ete\projet été.vcobj.convert-1424e94d-ff43-47bc-9467-cf9b10847a35] [%USERPROFILE%\AppData\Local\Temp\verifier-vc3d\convert-in-place\main\projet-ete\projet été.vcobj]
+exit code: 1   (0.1 s)
+schema (PRAGMA user_version) of projet été.vcobj after the command: 21   integrity_check: ok
+files in the folder after the command:
+          0  projet été.vcobj-owner
+       1050  projet été.vcobj.mapping.json
+       1802  projet été.vcobj.report.json
+      32768  projet été.vcobj-shm
+    1519616  projet été.vcobj
+
+VERDICT: as expected

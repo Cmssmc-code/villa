@@ -1,0 +1,152 @@
+=== a-en-place : (cd %USERPROFILE%/Dev/vesuvius/donnees-fibres-22/conv2/a) vc_object_convert --in-place p1.vcobj
+vc_object_convert: filesystem error: cannot replace file: Accès refusé [%USERPROFILE%\Dev\vesuvius\donnees-fibres-22\conv2\a\p1.vcobj.convert-8931990e-883c-4f43-b609-3e1e5c0c45fe] [%USERPROFILE%\Dev\vesuvius\donnees-fibres-22\conv2\a\p1.vcobj]
+rc=1
+--- fichiers :
+757760 ./p1.vcobj
+0 ./p1.vcobj-owner
+438 ./p1.vcobj.mapping.json
+1810 ./p1.vcobj.report.json
+=== b-en-place-chemin-windows : (cd %USERPROFILE%/Dev/vesuvius/donnees-fibres-22/conv2/b) vc_object_convert --in-place %USERPROFILE%\Dev\vesuvius\donnees-fibres-22\conv2\b\p1.vcobj carte.json rapport.json
+vc_object_convert: filesystem error: cannot replace file: Accès refusé [%USERPROFILE%\Dev\vesuvius\donnees-fibres-22\conv2\b\p1.vcobj.convert-0a888734-1b68-41f7-83ff-0155b7e0af07] [%USERPROFILE%\Dev\vesuvius\donnees-fibres-22\conv2\b\p1.vcobj]
+rc=1
+--- fichiers :
+438 ./carte.json
+757760 ./p1.vcobj
+0 ./p1.vcobj-owner
+1810 ./rapport.json
+=== c-en-place-accent-wal : (cd %USERPROFILE%/Dev/vesuvius/donnees-fibres-22/conv2/c) vc_object_convert --in-place projet été.vcobj
+vc_object_convert: filesystem error: cannot replace file: Accès refusé [%USERPROFILE%\Dev\vesuvius\donnees-fibres-22\conv2\c\projet été.vcobj.convert-c6e66b14-b765-4d69-8217-c6b95b0703d9] [%USERPROFILE%\Dev\vesuvius\donnees-fibres-22\conv2\c\projet été.vcobj]
+rc=1
+--- fichiers :
+1519616 ./projet été.vcobj
+0 ./projet été.vcobj-owner
+32768 ./projet été.vcobj-shm
+1050 ./projet été.vcobj.mapping.json
+1744 ./projet été.vcobj.report.json
+=== d-copie-sous-dossier : (cd %USERPROFILE%/Dev/vesuvius/donnees-fibres-22/conv2/d) vc_object_convert p1.vcobj sortie\p1-22.vcobj
+vc_object_convert: object store: cannot open sortie\p1-22.vcobj.building-a5cc7d67-f799-4a7d-907c-6507df134903: unable to open database file
+rc=1
+--- fichiers :
+757760 ./p1.vcobj
+32768 ./p1.vcobj-shm
+0 ./p1.vcobj-wal
+=== e-copie-sous-dossier-existant : (cd %USERPROFILE%/Dev/vesuvius/donnees-fibres-22/conv2/e) vc_object_convert p1.vcobj sortie\p1-22.vcobj
+{
+  "copied_artifacts": 0,
+  "copied_rows": {
+    "a49f4d7b-04b0-4aed-81c5-1b90e6df7621": {
+      "database_identity": 1,
+      "edge_tags": 0,
+      "edges": 0,
+      "fibers": 0,
+      "geometry_chunks": 8,
+      "geometry_current_chunks": 0,
+      "geometry_deltas": 0,
+      "geometry_materializations": 0,
+      "geometry_revision_chunks": 4,
+      "geometry_revisions": 2,
+      "history_checked": 0,
+      "history_dirty_edges": 0,
+      "history_dirty_objects": 0,
+      "history_expected": 0,
+      "history_generations": 1,
+      "history_required": 0,
+      "history_validated_edges": 0,
+      "journal": 5,
+      "key_allocators": 1,
+      "object_bounds": 2,
+      "object_head_records": 0,
+      "object_heads": 2,
+      "object_relationship_deltas": 0,
+      "object_relationship_heads": 0,
+      "object_revisions": 2,
+      "object_tags": 2,
+      "object_versions": 2,
+      "objects": 2,
+      "relationship_revisions": 0,
+      "relationship_versions": 0,
+      "source_collections": 1,
+      "source_identity_dirty": 0,
+      "source_points": 3,
+      "spatial_regions": 24,
+      "spatial_regions_rtree": 24,
+      "store_changes": 2,
+rc=0
+--- fichiers :
+757760 ./p1.vcobj
+32768 ./p1.vcobj-shm
+0 ./p1.vcobj-wal
+749568 ./sortie/p1-22.vcobj
+438 ./sortie/p1-22.vcobj.mapping.json
+1677 ./sortie/p1-22.vcobj.report.json
+=== f-historique-off : (cd %USERPROFILE%/Dev/vesuvius/donnees-fibres-22/conv2/f) vc_object_convert --remove-history-and-disable p1.vcobj
+vc_object_convert: maintenance: unexpected vcobj schema
+rc=1
+--- fichiers :
+757760 ./p1.vcobj
+0 ./p1.vcobj-owner
+=== f2-historique-on : (cd %USERPROFILE%/Dev/vesuvius/donnees-fibres-22/conv2/f) vc_object_convert --enable-history p1.vcobj
+vc_object_convert: maintenance: unexpected vcobj schema
+rc=1
+--- fichiers :
+757760 ./p1.vcobj
+0 ./p1.vcobj-owner
+=== g-deja-22 : (cd %USERPROFILE%/Dev/vesuvius/donnees-fibres-22/conv2/g) vc_object_convert --in-place p1.vcobj
+vc_object_convert: filesystem error: cannot replace file: Accès refusé [%USERPROFILE%\Dev\vesuvius\donnees-fibres-22\conv2\g\p1.vcobj.convert-cf45d124-7a10-42c2-8fb4-bbc94781b3d2] [%USERPROFILE%\Dev\vesuvius\donnees-fibres-22\conv2\g\p1.vcobj]
+rc=1
+--- fichiers :
+757760 ./p1.vcobj
+0 ./p1.vcobj-owner
+438 ./p1.vcobj.mapping.json
+1810 ./p1.vcobj.report.json
+=== g2-deja-22-copie : (cd %USERPROFILE%/Dev/vesuvius/donnees-fibres-22/conv2/g) vc_object_convert p1.vcobj p1-bis.vcobj
+{
+  "copied_artifacts": 0,
+  "copied_rows": {
+    "a49f4d7b-04b0-4aed-81c5-1b90e6df7621": {
+      "database_identity": 1,
+      "edge_tags": 0,
+      "edges": 0,
+      "fibers": 0,
+      "geometry_chunks": 8,
+      "geometry_current_chunks": 0,
+      "geometry_deltas": 0,
+      "geometry_materializations": 0,
+      "geometry_revision_chunks": 4,
+      "geometry_revisions": 2,
+      "history_checked": 0,
+      "history_dirty_edges": 0,
+      "history_dirty_objects": 0,
+      "history_expected": 0,
+      "history_generations": 1,
+      "history_required": 0,
+      "history_validated_edges": 0,
+      "journal": 5,
+      "key_allocators": 1,
+      "object_bounds": 2,
+      "object_head_records": 0,
+      "object_heads": 2,
+      "object_relationship_deltas": 0,
+      "object_relationship_heads": 0,
+      "object_revisions": 2,
+      "object_tags": 2,
+      "object_versions": 2,
+      "objects": 2,
+      "relationship_revisions": 0,
+      "relationship_versions": 0,
+      "source_collections": 1,
+      "source_identity_dirty": 0,
+      "source_points": 3,
+      "spatial_regions": 24,
+      "spatial_regions_rtree": 24,
+      "store_changes": 2,
+rc=0
+--- fichiers :
+749568 ./p1-bis.vcobj
+438 ./p1-bis.vcobj.mapping.json
+1670 ./p1-bis.vcobj.report.json
+757760 ./p1.vcobj
+0 ./p1.vcobj-owner
+438 ./p1.vcobj.mapping.json
+1810 ./p1.vcobj.report.json
+FIN rc=0
